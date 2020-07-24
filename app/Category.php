@@ -3,13 +3,18 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Kalnoy\Nestedset\NodeTrait;
 
 class Category extends Model
 {
-    protected $table='category'; 
-    
+    use NodeTrait;
+
     public function products()
     {
-        return $this->belongsToMany('App\Product');
+        return $this->hasMany(Product::class);
     }
+
+   
+    
+    
 }

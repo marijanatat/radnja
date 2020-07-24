@@ -21,13 +21,14 @@
             <header class="with-background">
                 <div class="top-nav container">
                     <div class="top-nav-left">
-                        @include('nav')
+                   
                         
                             <div class="logo-left"> 
                                    <a href="" class="title" style="font-style: bold;color:white;font-size:25px;margin-right:15px">Dečija radnja </a>                   
                                 <img  src="/img/baby.svg" alt="kolica za bebe" style="height: 70%">                 
                             </div>
                    
+           
                            {{menu('main','partials.menus.main')}}
                       </div>
     
@@ -47,8 +48,9 @@
                     </div> <!-- end hero-copy -->
     
                     <div class="hero-image">
+                        {{-- <img src="img/deca.jpg" alt="deca"> --}}
                     
-                        <img src="img/deca.jpg" alt="deca">
+                        {{-- <img src="img/deca.jpg" alt="deca"> --}}
                     </div> <!-- end hero-image -->
                 </div> <!-- end hero -->
             </header>
@@ -99,7 +101,7 @@
           <blog-posts></blog-posts>
         
             @include('partials.footer')
-            @include('footer1')
+            @include('footer')
         </div>
         <script src="js/app.js"></script>
 

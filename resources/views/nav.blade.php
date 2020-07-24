@@ -1,7 +1,8 @@
 
 @extends('layouts.novilay')
 
-@section('navbar')
+@section('nav')
+
 <nav class="flex items-center justify-between flex-wrap bg-black p-6   w-full  pin-t fixed z-10 top-0 mt-0">
     <div class="block lg:hidden">
       <button id="nav-toggle"

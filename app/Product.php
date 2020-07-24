@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     protected $guarded=[];
+
     public function manufacturer()
     {
         return $this->belongsTo(Manufacturer::class);
@@ -29,10 +30,7 @@ class Product extends Model
 
 
 
-    public function categories()
-    {
-        return $this->belongsTo('App\Category');
-    }  
+   
 
     public function presentPrice()
     {
