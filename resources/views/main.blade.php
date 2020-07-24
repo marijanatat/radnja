@@ -21,6 +21,7 @@
             <header class="with-background">
                 <div class="top-nav container">
                     <div class="top-nav-left">
+                        @include('nav')
                         
                             <div class="logo-left"> 
                                    <a href="" class="title" style="font-style: bold;color:white;font-size:25px;margin-right:15px">Dečija radnja </a>                   
@@ -98,7 +99,7 @@
           <blog-posts></blog-posts>
         
             @include('partials.footer')
-            @include('footer')
+            @include('footer1')
         </div>
         <script src="js/app.js"></script>
 
