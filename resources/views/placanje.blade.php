@@ -2,19 +2,60 @@
 
 @section('placanje') 
 
-<div class="breadcrumbs">
+{{-- <div class="breadcrumbs">
     <a href="/" class=" text-white font-bold text-xl  ml-16">Home</a>
     <i class="fa fa-chevron-right breadcrumb-separator  text-white  text-s"></i>
     <span class="ml-2 text-blue-800 font-bold text-xl">Plaćanje</span>
-</div>
+</div> --}}
+
+
 
  
-    <div class="container ">
-        <div class="mx-1 md:mx-5 my-3 text-md xl:text-xl   p-2 md:p-4 w-full">
-        <h2 class=" w-full text-blue-800 text-4xl px-5 font-bold leading-none tracking-widest p-4 ">Plaćanje</h2>
+    <div class=" ">
+      
+        <nav class="flex items-center justify-between flex-wrap  p-6   w-full  pin-t z-10 top-0 mt-0" style="background-color: rgb(13, 194, 185)">
+            <div class="block lg:hidden">
+              <button id="nav-toggle"
+                class="flex items-center px-3 py-2  rounded text-gray-600 font-bold border border-red-900  hover:text-red-700 hover:border-white">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <title>Menu</title>
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+              </button>
+            </div>
+        
+            <div class="w-full flex-grow lg:flex lg:items-end lg:w-auto hidden pt-6 lg:pt-0" id="nav-content">
+              <ul class="list-reset lg:flex justify-start flex-1 items-center">
+                <li class="mr-3">
+                  <a class="inline-block px-2  lg:px-4 py-2 text-white text-lg  lg:text-2xl hover:no-underline no-underline"
+                    href="#">Home</a>
+                </li>
+                <li class="mr-3">
+                  <a class="inline-block  px-2  lg:px-4  text-lg  lg:text-2xl no-underline hover:text-gray-800 hover:no-underline  py-2 "
+                    href="#" style="color:gray">Shop</a>
+                </li>
+                <li class="mr-3">
+                  <a class="inline-block px-2  lg:px-4  text-gray-500 text-lg  lg:text-2xl no-underline hover:text-gray-200 hover:no-underline py-2 "
+                    href="#">About us</a>
+                </li>
+                <li class="mr-3">
+                  <a class="inline-block  px-2  lg:px-4 text-gray-500 text-lg  lg:text-2xl no-underline hover:text-gray-200 hover:no-underline   py-2 "
+                    href="#">Projects</a>
+                </li>
+                <li class="mr-3">
+                  <a class="inline-block  px-2  lg:px-4 text-gray-500 text-lg  lg:text-2xl no-underline hover:text-gray-200 hover:no-underline   py-2 "
+                    href="#">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+      
+            
+      <div class="container mx-1 md:mx-5 my-3 text-md xl:text-xl   p-2 md:p-4 w-full">
+          <h2 class=" w-full text-blue-800 text-4xl px-5 font-bold leading-none tracking-widest p-4 my-8 ">Plaćanje</h2>
         </div>
         
-        <div class="w-full text-blue-800 text-2xl px-5 pb-5 pt-2">
+        <div class=" container w-full text-blue-800 text-2xl px-5 pb-5 pt-2">
             Proizvode koje želite da poručite putem internet prodavnice, možete platiti na više načina:
             <ul>
                 <li>1. plaćanje pouzećem gotovinom prilikom preuzimanja pošiljke</li>
@@ -23,7 +64,7 @@
             </ul>
             
         </div>
-        <div class="w-full text-blue-800 text-xl px-5 pb-5 pt-2">
+        <div class="container w-full text-blue-800 text-xl px-5 pb-5 pt-2">
             <ul>
                 
                     <li style="flex justify-content-between items-center">

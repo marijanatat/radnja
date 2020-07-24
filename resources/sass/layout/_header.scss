@@ -1,7 +1,12 @@
 header.with-background {
-  background: url('/img/b.png');
-  background-size: cover;
+  // background: url('/img/b.png');
+ 
    color: $white;
+      background: url('./img/alvin-mahmudov-vKuEhorbvYI-unsplash-1.jpg');
+      background-size: cover;
+      // background: url('./img/ramin-talebi-u_b0jWnkgM0-unsplash-1.jpg');
+      
+
   
 
   .top-nav {
@@ -9,10 +14,12 @@ header.with-background {
     justify-content: space-between;
     padding: 40px 0;
     letter-spacing: 1.5px;
+    
 
     .logo {
       font-weight: bold;
       font-size: 28px;
+    
     }
 
     ul {
@@ -22,7 +29,8 @@ header.with-background {
       // width: 40%;
 
       a {
-        color: $white;
+        // color: $white;
+        color:$gray-background;
         &:hover {
           color: darken($white, 10%);
         }
@@ -73,7 +81,7 @@ header {
     .logo {
       font-weight: bold;
       font-size: 28px;
-      color: $white;
+      color: $gray-background;
       margin-right: 58px;
     }
 
@@ -132,9 +140,11 @@ header {
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
+      color: $gray-background;
 
       .title{
         margin-right: 7px;
+        color: $gray-background;
       }
     }
     

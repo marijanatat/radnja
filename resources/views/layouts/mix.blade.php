@@ -192,9 +192,9 @@ body {
 <body >
     <div id="app" >
         
-       <div class="slantedDivA">
+       {{-- <div class="slantedDivA">
           <h2 class=" w-full text-black-800 text-4xl px-5 font-bold leading-none tracking-widest p-4">Kako poručiti?</h2>
-       </div>
+       </div> --}}
 
     </div>
     <div>
