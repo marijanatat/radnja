@@ -92,17 +92,7 @@ class CategoriesTableSeeder extends Seeder
                         ],
                     ],
                 ],
-                [    
-                    'name' => 'Aksesoar',
-                    'slug'=>'aksesoar',
-                    'children' => [
-                            ['name' => 'Šešir','slug'=>'šešir'],
-                            ['name' => 'Kaiš','slug'=>'kaiš'],
-                            ['name' => 'Tregeri','slug'=>'tregeri'],
-                            ['name' => 'Rukavice','slug'=>'rukavice'],
-                          
-                    ],
-                ],
+            
 
                 //devojcice
 
@@ -139,17 +129,7 @@ class CategoriesTableSeeder extends Seeder
                             ],
                         ],
                     ],
-                    [    
-                        'name' => 'Aksesoar',
-                        'slug'=>'aksesoar',
-                        'children' => [
-                                ['name' => 'Šeširi','slug'=>'šeširi'],
-                                ['name' => 'Trake','slug'=>'trake'],
-                                ['name' => 'Kaiš','slug'=>'kaiš'],
-                                ['name' => 'Torbica','slug'=>'torbica'],
-                             
-                        ],
-                    ],
+                   
 
                     //mukarci
             
