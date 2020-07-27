@@ -1,6 +1,6 @@
 
 
-<ul>
+<ul class="mr-3">
     @guest
 <li><a href="{{route('register')}}">Sign up </a></li>
 <li><a href="{{route('login')}}">Log in </a></li>
@@ -9,7 +9,7 @@
 
 
 <li>
-    <a href="{{ route('users.edit') }}">My Account</a>
+    <a href="{{ route('users.edit') }}" class="ml-8">My Account</a>
 </li>
 <li>
     <a class="dropdown-item" href="{{ route('logout') }}"
