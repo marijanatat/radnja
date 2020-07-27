@@ -27,6 +27,7 @@ class CategoriesTableSeeder extends Seeder
                                     ['name' => 'Bebi kompletici','slug'=>'bebi-kompletići'],
                                     ['name' => 'Benkice','slug'=>'benkice'],
                                     ['name' => 'Helanke','slug'=>'helanke'],
+                                   
                             ],
                         ],
                         [    
@@ -37,6 +38,7 @@ class CategoriesTableSeeder extends Seeder
                                     ['name' => 'Zeke','slug'=>'zeke'],
                                     ['name' => 'Bebi setovi','slug'=>'bebi-setovi'],
                                     ['name' => 'Bebi kompletici','slug'=>'bebi-kompletići'],
+                                   
                             ],
                         ],
                     ],
@@ -52,8 +54,104 @@ class CategoriesTableSeeder extends Seeder
                             ['name' => 'Trake','slug'=>'trake'],
                             ['name' => 'Čarape','slug'=>'čarape'],
                             ['name' => 'Pelene','slug'=>'pelene'],
+                            ['name' => 'nehodajuce_cipele','slug'=>'nehodajuce-cipele'],
                     ],
                 ],
+
+               //decaci
+
+               [
+                'name' => 'Dečaci',
+                'slug'=>'dečaci',
+                    'children' => [
+                        [    
+                            'name' => 'Moda',
+                            'slug'=>'moda',
+                            'children' => [
+                                    ['name' => 'Majice',  'slug'=>'majice'],
+                                    ['name' => 'Duksevi','slug'=>'duksevi'],
+                                    ['name' => 'Trenerke kompleti','slug'=>'trenerke-kompleti'],
+                                    ['name' => 'Donji deo trenerke','slug'=>'donji-deo-trenerke'],
+                                    ['name' => 'Pantalone','slug'=>'pantalone'],
+                                    ['name' => 'Šorcevi','slug'=>'šorcevi'],
+                                    ['name' => 'Jakne','slug'=>'jakne'],
+                                   
+                            ],
+                        ],
+                        [    
+                            'name' => 'Veš',
+                            'slug'=>'veš',
+                                'children' => [
+                                    ['name' => 'Gaće','slug'=>'gaće'],
+                                    ['name' => 'Bokserice','slug'=>'bokserice'],
+                                    ['name' => 'Potkošulja','slug'=>'potkošulja'],
+                                    ['name' => 'Čarape','slug'=>'čarape'],
+                                    ['name' => 'Pidžama','slug'=>'pidžama'],
+                                   
+                            ],
+                        ],
+                    ],
+                ],
+                [    
+                    'name' => 'Aksesoar',
+                    'slug'=>'aksesoar',
+                    'children' => [
+                            ['name' => 'Šešir','slug'=>'šešir'],
+                            ['name' => 'Kaiš','slug'=>'kaiš'],
+                            ['name' => 'Tregeri','slug'=>'tregeri'],
+                            ['name' => 'Rukavice','slug'=>'rukavice'],
+                          
+                    ],
+                ],
+
+                //devojcice
+
+                [
+                    'name' => 'Devojčice',
+                    'slug'=>'devojčice',
+                        'children' => [
+                            [    
+                                'name' => 'Moda',
+                                'slug'=>'moda',
+                                'children' => [
+                                        ['name' => 'Majice',  'slug'=>'majice'],
+                                        ['name' => 'Haljine','slug'=>'haljine'],
+                                        ['name' => 'Suknje','slug'=>'suknje'],
+                                        ['name' => 'Helanke','slug'=>'helanke'],
+                                        ['name' => 'Trenerke','slug'=>'trenerke'],
+                                        ['name' => 'Jakne','slug'=>'jakne'],
+                                        ['name' => 'Džemperi','slug'=>'džemperi'],
+                                       
+                                ],
+                            ],
+                            [    
+                                'name' => 'Veš',
+                                'slug'=>'veš',
+                                    'children' => [
+                                        ['name' => 'Gaće','slug'=>'gaće'],
+                                        ['name' => 'Bebi-dol','slug'=>'bebi-dol'],
+                                        ['name' => 'Pidžama','slug'=>'pidžama'],
+                                        ['name' => 'Spavaćica','slug'=>'spavaćica'],
+                                        ['name' => 'Potkošulja','slug'=>'potkošulja'],
+                                        ['name' => 'Čarape','slug'=>'čarape'],
+                                       
+                                ],
+                            ],
+                        ],
+                    ],
+                    [    
+                        'name' => 'Aksesoar',
+                        'slug'=>'aksesoar',
+                        'children' => [
+                                ['name' => 'Šeširi','slug'=>'šeširi'],
+                                ['name' => 'Trake','slug'=>'trake'],
+                                ['name' => 'Kaiš','slug'=>'kaiš'],
+                                ['name' => 'Torbica','slug'=>'torbica'],
+                             
+                        ],
+                    ],
+
+                    //mukarci
             
 
             [

@@ -2,17 +2,19 @@
 
 @section('isporuka')
     
-<div class="breadcrumbs">
+{{-- <div class="breadcrumbs">
     <a href="/" class=" text-white  text-xl ml-16">Home</a>
     <i class="fa fa-chevron-right breadcrumb-separator  text-white  text-sm"></i>
     <span class="ml-2 text-blue-800 font-bold text-xl">Isporuka</span>
-</div>
-    <div class="container pb-5 ">
-        <div class="mx-1 md:mx-5 my-3 text-md xl:text-xl   p-2 md:p-4">
+</div> --}}
+<br>
+<br>
+    <div class="w-full p-8 bg-white py-8 ">
+        <div class="mx-1 md:mx-5 my-5 text-md xl:text-xl   p-4 md:p-4">
         <h2 class=" w-full text-blue-800 text-4xl px-7 font-bold leading-none tracking-widest xl:p-5 items-center">Način isporuke</h2>
         </div>
         
-        <div class="w-full text-blue-800 text-2xl  pb-3 pt-2">
+        <div class="w-full text-blue-800 text-xl  pb-3 pt-2">
             U zavisnosti od raspoložive količine određenog artikla i mogućnosti njegovog nabavljanja, a u skladu sa našom poslovnom politikom, očekivani rok isporuke proizvoda iz naše ponude je 72h (do 3 radna dana). Artikle za kojima potražnja nije toliko učestala, kao i one kod kojih je uvozni proces komplikovaniji, na svojoj adresi možete očekivati sa nešto dužim rokom isporuke. 
            
      

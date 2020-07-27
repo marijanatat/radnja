@@ -1,9 +1,7 @@
 
-@extends('layouts.novilay')
 
-@section('nav')
 
-<nav class="flex items-center justify-between flex-wrap bg-black p-6   w-full  pin-t fixed z-10 top-0 mt-0">
+<nav class="flex items-center justify-between flex-wrap bg-blue-600 p-6   w-full  pin-t fixed z-10 top-0 mt-0">
     <div class="block lg:hidden">
       <button id="nav-toggle"
         class="flex items-center px-3 py-2  rounded text-gray-600 font-bold border border-red-900  hover:text-red-700 hover:border-white">
@@ -18,19 +16,27 @@
       <ul class="list-reset lg:flex justify-start flex-1 items-center">
         <li class="mr-3">
           <a class="inline-block px-2  lg:px-4 py-2 text-white text-lg  lg:text-2xl hover:no-underline no-underline"
-            href="#">Home</a>
+            href="#">Shop</a>
         </li>
         <li class="mr-3">
           <a class="inline-block  px-2  lg:px-4 text-gray-500 text-lg  lg:text-2xl no-underline hover:text-gray-200 hover:no-underline  py-2 "
-            href="#">About me</a>
+            href="#">About us</a>
         </li>
         <li class="mr-3">
           <a class="inline-block px-2  lg:px-4  text-gray-500 text-lg  lg:text-2xl no-underline hover:text-gray-200 hover:no-underline py-2 "
-            href="#">Resume</a>
+            href="#">Bebe</a>
         </li>
         <li class="mr-3">
           <a class="inline-block  px-2  lg:px-4 text-gray-500 text-lg  lg:text-2xl no-underline hover:text-gray-200 hover:no-underline   py-2 "
-            href="#">Projects</a>
+            href="#">Zene</a>
+        </li>
+        <li class="mr-3">
+          <a class="inline-block  px-2  lg:px-4 text-gray-500 text-lg  lg:text-2xl no-underline hover:text-gray-200 hover:no-underline   py-2 "
+            href="#">Muskaric</a>
+        </li>
+        <li class="mr-3">
+          <a class="inline-block  px-2  lg:px-4 text-gray-500 text-lg  lg:text-2xl no-underline hover:text-gray-200 hover:no-underline   py-2 "
+            href="#">Ostalo</a>
         </li>
         <li class="mr-3">
           <a class="inline-block  px-2  lg:px-4 text-gray-500 text-lg  lg:text-2xl no-underline hover:text-gray-200 hover:no-underline   py-2 "
@@ -39,4 +45,3 @@
       </ul>
     </div>
   </nav>
-  @endsection
