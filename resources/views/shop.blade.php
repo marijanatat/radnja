@@ -5,11 +5,11 @@
 
 @section('content')
 
-@component('components.breadcrumbs')
+{{-- @component('components.breadcrumbs')
         <a href="/">Home</a>
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
         <span>Shop</span>
-    @endcomponent
+    @endcomponent --}}
 
     <div class="container">
         @if (session()->has('success_message'))
@@ -34,14 +34,24 @@
         <h3>By Category</h3>
         <ul>
             @foreach ($categories as $category)
-            <li class="{{request()->category==$category->slug ? 'active':''}}"><a
-                    href="{{route('shop.index',['category'=>$category->slug])}}">{{$category->name}}</a></li>
+            <button class="{{request()->category==$category->id ? 'active':''}}">{{$category->name}}</button>
+                @foreach ($category->children as $child)
+                    <li class="{{request()->category==$child->id ? 'active':''}}"><a
+                        href="{{route('shop.index',['category'=>$child->id])}}"> - {{$child->name}}</a>
+                        @foreach ($child->children as $ch)
+                            <li class="{{request()->category==$ch->id ? 'active':''}}"><a
+                                href="{{route('shop.index',['category'=>$ch->id])}}">&nbsp;&nbsp; - {{$ch->name}}</a>
+                        @endforeach
+                    </li>
+                @endforeach   
+             </li>
+
             @endforeach
         </ul>
     </div> <!-- end sidebar -->
     <div>
         <div class="products-header">
-            <h1 class="stylish-heading">{{$categoryName}}</h1>
+            <h1 class="stylish-heading font-bold text-2xl pt-2">{{$categoryName}}</h1>
             <div>
                 <strong style="font: bold;font-size:20px;margin-righ:2px">Price :</strong>
                 <a href="{{route('shop.index',['category'=>$category->category,'sort'=>'low_high'])}}"
@@ -55,12 +65,12 @@
 
             @forelse ($products as $product)
             <div class="product">
-                <a href="{{route('shop.show',$product->slug)}}"><img src="{{productImage($product->image)}}" style="height:140px;"
-                        alt="product"></a>
+                {{-- <a href="{{route('shop.show',$product->slug)}}"><img src="{{productImage($product->image)}}" style="height:140px;"
+                        alt="product"></a> --}}
                 <a href="{{route('shop.show',$product->slug)}}">
                     <div class="product-name">{{$product->name}}</div>
                 </a>
-                <div class="product-price">{{$product->presentPrice()}}</div>
+                <div class="product-price">{{presentPrice($product->price)}}</div>
             </div>
             @empty
             <div style="text-align:left; color:gray">No items in this category</div>

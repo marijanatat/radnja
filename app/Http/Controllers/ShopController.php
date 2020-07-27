@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ShopController extends Controller
 {
@@ -15,17 +16,20 @@ class ShopController extends Controller
      */
     public function index()
     {
+        $categories = Category::all();
         if(request()->category){
-            $products=Product::with('categories')->whereHas('categories',function($query){
-               $query->where('slug',request()->category);
-            });
-            $categories=Category::all();
-            $categoryName=optional($categories->where('slug',request()->category)->first())->name;
+            // $products=Product::with('categories')->whereHas('categories',function($query){
+            //    $query->where('slug',request()->category);
+            // });
+
+            $products = Product::where('category_id', request()->category);
+            $categoryName=optional($categories->where('id',request()->category)->first())->name;
         }else{
-            $products=Product::where('featured',true);
+            // $products=Product::where('featured',true);
            
-            $categories=Category::all();
-            $categoryName='Featured';
+            // $categories=Category::all();
+            $categoryName='Svi proizvodi';
+            $products = DB::table('products');
         }
       
         if(request()->sort==='low_high') {
@@ -39,7 +43,7 @@ class ShopController extends Controller
 
         return view('shop', [
             'products'=>$products,
-             'categories'=>$categories,
+             'categories'=>$categories->toTree(),
              'categoryName'=>$categoryName
             ]);
     }
