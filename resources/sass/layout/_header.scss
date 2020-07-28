@@ -6,7 +6,8 @@ header.with-background {
       background-size: cover;
       border-bottom-left-radius: 50% 20%;
   border-bottom-right-radius: 50% 20%;
-
+  height: 700px;
+z-index: -2;
       // background: url('./img/ramin-talebi-u_b0jWnkgM0-unsplash-1.jpg');
       
 
@@ -30,10 +31,11 @@ header.with-background {
       // text-transform: uppercase;
       // justify-content: space-between;
       // width: 40%;
+      color: $white;
 
       a {
         // color: $white;
-        color:$gray-background;
+        color:$white;
         &:hover {
           color: darken($white, 10%);
         }
@@ -153,8 +155,9 @@ header {
     
   }
 
-  .top-nav-right {
-    display: flex;
+   .top-nav-right {
+     display: flex;
     align-items: center;
-  }
+   
+  } 
 }

@@ -19,9 +19,9 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example', require('./components/Example.vue'));
-Vue.component('blog-posts', require('./components/BlogPosts.vue'));
-Vue.component('blog-image', require('./components/BlogImage.vue'));
+// Vue.component('example', require('./components/Example.vue'));
+// Vue.component('blog-posts', require('./components/BlogPosts.vue'));
+// Vue.component('blog-image', require('./components/BlogImage.vue'));
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -29,6 +29,6 @@ Vue.component('blog-image', require('./components/BlogImage.vue'));
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
-    el: '#app',
-});
+// const app = new Vue({
+//     el: '#app',
+// });
