@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('css/main.css') }}">
         <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
         <script src="js/app.js"></script>
@@ -46,7 +47,7 @@
   font-size: 16px;
   color: rgb(223, 37, 37);
   text-align: center;
-  padding: 14px 16px;
+  /* padding: 14px 16px; */
   text-decoration: none;
    
   
@@ -55,20 +56,26 @@
 
 /* The dropdown container */
 .dropdown {
- 
-   float: left; 
+  
+    /* float: left; */
    overflow: hidden; 
   
 }
 
   .dropdown-content {
+    padding-left: 10px;
+    padding-right: 10px;
   display: none;
   position: absolute;
+  left: 0;
+  right: 0;
   background-color: #f9f9f9;
- width: 800px;
+  color:rgb(20, 104, 107) !important;
+ max-width: 2000px;
  height: 300px;
+ width: 100%;
   /* min-width: 160px; */
-  max-width: 1000px;
+   /* max-width: 1000px;  */
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   
@@ -77,36 +84,51 @@
 /* Links inside the dropdown */
 .dropdown-content a {
    float: none; 
-  color: rgb(8, 77, 71);
-  padding: 12px 16px;
+  color: rgb(6, 245, 245);
+ 
+  padding-left: 8px;
+  padding-right: 16px;
   text-decoration: none;
   display: block;
   text-align: left;
+  width: 100%;
+  font-size: 12px;
+  
+}
+.dropdown-content span {
+   float: none; 
+  color:  #0a361b;
+  font-style: bold;
+  padding-top: 16px;
+  padding-left: 8px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  width: 100%;
+  font-size: 14px;
+  
   
 }
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color:white;
+  background-color:#f2f7e8;
+  /* background-color: #0f284e; */
+  /* color:#fc9700; */
   
- 
-
-
+  
 }
 
-/* .dropdown-content div:hover {
- display: block;
- 
-
-
-} */
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+ 
 }
 .dropbtn {
-  background-color: #0f284e;
+  background-color: #0a361b;
   color: white;
   padding: 30px;
   font-size: 16px;
@@ -160,7 +182,7 @@
     rgb(75, 216, 252),
     #233 10px,
     rgb(45, 190, 178) 10px,
-    rgb(33, 82, 14) 20px
+    rgb(20, 104, 107) !important 20px
    
   );
 }
@@ -197,9 +219,42 @@ transition: all 0.3s ease 0s;
   
   text-transform: capitalize;
   
+}
+#social{
+  color: white;
+  height: 60px;
+width: 60px;
+  margin-left: 60px;
+  margin-right: 10px;
+  font-size: 40px;
+   
+}
+#social a:hover{
+  font-size:50px;
+  transition: 0.1s ease-in;
+  color:#fc9700 ;
+}
+
+
+#social1{
+  color: white !important;
+  height: 60px;
   
  
+  font-size: 40px;
+   
 }
+#social1 a:hover{
+  font-size:50px;
+  transition:0.1s ease-in;
+  color:rgb(20, 104, 107);
+}
+ 
+/* //kkk */
+
+ 
+
+
 
         </style>
 
@@ -209,101 +264,13 @@ transition: all 0.3s ease 0s;
             <header class="with-background">
                 <div class="top-nav flex items-center justify-content-between ">
                     <div class="top-nav-left">
-                       
-                   
-                            <!-- dodat nav-->
-                             <nav class="navbar flex items-center bg-transparent justify-between flex-wrap  p-1  w-full  pin-t fixed z-10 top-0 mt-0 "> 
-                                <div class="block lg:hidden">
-                                  <button id="nav-toggle"
-                                    class="flex items-center px-3 py-2  rounded text-white font-bold border border-red-900  hover:text-red-700 hover:border-white">
-                                   
-                                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                      <title>Menu</title>
-                                      <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                                    </svg>
-                                  </button>
-                                </div>
+          
+                            <div>
+                              @include('nav')
+                            </div>
                             
-                                <div class="w-full flex-grow text-white lg:flex lg:items-end lg:w-auto hidden pt-6 lg:pt-0" id="nav-content">
-                                  <ul class="list-reset lg:flex justify-start flex-1 items-center">
-                                    <li>
-                                      <a href="">
-                                        <li class="hover:text-darker"><img src="{{asset('./img/baby.svg')}}"
-                                                alt="kolica za bebe" style="" class="w-12 h-12 bg-transparent   p-2 rounded-md"> </li>
-                                    </a>
-                                      {{-- <a class="inline-block px-2  lg:px-4 py-2 text-white text-lg  lg:text-2xl hover:no-underline no-underline"
-                                        href="/">Home</a> --}}
-                                    </li>
-                                    <li class="mr-3">
-                            
-                                      <a class="inline-block px-2  lg:px-4 py-2 text-white text-md  lg:text-base hover:no-underline no-underline"
-                                        href="#" style="color: white">Bebe</a>
-                                      
-                                    </li>
-                                     <li class="">
-                                      <a class="inline-block  text-md  lg:text-base no-underline hover:text-gray-200 hover:no-underline  py-2 "
-                                        href="#" style="color: white">Žene</a>
-                                      
-                                    </li>
-                                    <li class="mr-6">
-                                      <a class="inline-block px-2  lg:px-4  text-white text-md  lg:text-base no-underline hover:text-gray-200 hover:no-underline py-2 "
-                                        href="#" style="color: white">Muškarci</a>
-                                      
-                                    </li>
-                                    <li class="dropdown mr-6">
-                                        <button class="dropbtn inline-block px-2  lg:px-4 bg-transparent uppercase text-white  text-md  lg:text-base no-underline hover:text-gray-200 hover:no-underline py-2 "
-                                          href="#" >Textil</button>
-                                        
-                                            <div class="dropdown-content  ">
-                                           
-                                              
-                                                <div class="flex">
-                                                  <div class="div  w-1/2">
-                                                    <div class="w-full">
-                                                      <a href="#" style="color:gray">Link 1</a>
-                                                    </div>
-                                                    <a href="#" style="color:gray">Link 2</a>
-                                                    <a href="#" style="color:gray">Link 3</a>
-                                                  </div>
-                                              
-                                                 <div class="div w-1/2">
-                                                
-                                                    <a href="#" style="color:gray">Link 1</a>
-                                                    <a href="#" style="color:gray">Link 2</a>
-                                                    <a href="#" style="color:gray">Link 3</a>
-                                               </div>
-                                                </div>
-                                             
-                                            </div>
-                                           
-                                            
-                                            
-                                            
-                                         
-                                      </li>
-                                       <li class="mr-6">
-                                        <a class="inline-block px-2  lg:px-4  text-white text-md  lg:text-base no-underline hover:text-gray-500 hover:no-underline py-2 "
-                                          href="#" style="color: white;">Info</a>
-                                      </li> 
-
-
-                                     <div >
-                                       
-                                          @include('partials.menus.main-right') 
-                                      
-                                     </div>
-                                   
-                                  
-                                  </ul>
-                                </div>
-                                
-                              </div> <!-- end top-nav -->
-                              </nav>
-                             
-                            <!-- kraj-->
-                          
-                   
-           
+                        
+   
                            {{-- {{menu('main','partials.menus.main')}} --}}
                       </div>
     
@@ -313,15 +280,22 @@ transition: all 0.3s ease 0s;
                 </div> <!-- end top-nav --> --}}
              
 
-                <div class="hero container">
-                    <div class="hero-copy">
-                        <h1>Shop</h1>
+                <div class="hero container ">
+                    <div class="hero-copy ">
+                        <h1 class="">Shop</h1>
                         <p style="font-size:30px ">Ukoliko želite najbolje i najkvalitetnije za svoje dete kupujte kod nas.</p>
                   
-                        <div class="mb-4 font-xl ml-2">Pronadjite nas na društvenim mrežama </div> 
-                     <div class="hero-buttons">
-                            <a href="http://localhost/testsite/" class="button button-white " style="background-color:rgb(252, 141, 38); ">Facebook</a>
-                            <a href="https://github.com/marijanatat/e-commerce" class="button button-white" style="background-color:rgb(30, 190, 129)">Instagram</a>
+                        <div class="hidden md:block w3-animate-fading mb-8 text-2xl text-white ml-2">Pronadjite nas na društvenim mrežama :</div> 
+                     <div class="hero-buttons items-center flex ">
+                          <div id="social" >
+                            <a href=""  ><i class="fa fa-facebook-official" aria-hidden="true" ></i></a>
+                          </div>
+                          <div id="social1" >
+                            <a href="" X><i class="fa fa-instagram w-24" aria-hidden="true" ></i></a>
+                          </div>
+
+                            {{-- <a href="http://localhost/testsite/" class="button button-white " style="background-color:rgb(250, 125, 9); ">Facebook</a>
+                            <a href="https://github.com/marijanatat/e-commerce" class="button button-white" style="background-color:rgb(20, 104, 107) !important">Instagram</a> --}}
                         </div> 
 
                     </div> <!-- end hero-copy -->
@@ -340,10 +314,7 @@ transition: all 0.3s ease 0s;
                     <h1 class="text-center">Shop</h1>
     
                     <p class="section-description text-center " style="font-size:30px ">Naši proizvodi su isključivo domaće proizvodnje od najkvalitetnijeg 100% pamuka</p>
-                        
-
-
-                    {{-- <div class="text-center button-container"> --}}
+        
                         <div class="">
                             @include('kategorije')
                         </div>
@@ -372,8 +343,8 @@ transition: all 0.3s ease 0s;
                         
                     </div> <!-- end products -->
     
-                    <div class="text-center button-container">
-                        <a href="{{route('shop.index')}}" class="example_e button hover:bg-green-900">View more products</a>
+                    <div class="text-center button-container text-base xl:text-lg">
+                        <a href="{{route('shop.index')}}" class="example_e button hover:bg-rgb(20, 104, 107)" >View more products</a>
                     </div>
     
                 </div> <!-- end container -->
@@ -389,8 +360,7 @@ transition: all 0.3s ease 0s;
               <h2 class="stripe-4 text-transparent">O</h2>
 
             </div>
-    
-            
+         
 {{--      
           <blog-posts></blog-posts> --}}
 {{--         

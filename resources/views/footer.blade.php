@@ -1,20 +1,20 @@
-@extends('layouts.novilay')
+ @extends('layouts.novilay') 
 
 @section('footer')
 
 
-    <div class="w-full p-8"  style="background-color: rgb(42, 231, 238)">
+    <div class="w-full p-8"  style="background-color: rgb(20, 104, 107);padding-left:40px">
         <div class="sm:flex mb-0">
       <div class="sm:w-1/3 h-auto">
           <ul class="list-reset leading-normal">
               <div class="flex items-center ">
-                  <a href=""><li class="hover:text-darker"><img  src="{{asset('./img/baby.svg')}}" alt="kolica za bebe" style="" class="w-12 h-12 bg-blue-800 p-2 rounded-md">  </li></a>
-                  <a href="" class="ime"><li class="text-xl sm:text-2xl xl:text-4xl text-blue-800 ml-2 font-semibold ">Mob-ing</li></a>
+                  <a href=""><li class="hover:text-gray-500"><img  src="{{asset('./img/baby.svg')}}" alt="kolica za bebe" style="" class="w-12 h-12 bg-transparent p-2 rounded-md hover:bg-gray-500">  </li></a>
+              <a href="" class="ime"><li class="text-xl sm:text-2xl xl:text-4xl text-white ml-2 font-semibold italic hover:text-gray-500 " >Mob-ing</li></a>
               </div>
-              <li class="text-blue-800 text-xl xl:text-2xl"><i class="fa fa-address-card mr-2" aria-hidden="true"></i>Kneza Mihaila 37</li>
-              <li class="text-blue-800 text-xl xl:text-2xl"><i class="fa fa-home mr-2" aria-hidden="true"></i>Odžaci, Srbija</li>
-              <li class="text-blue-800 text-base xl:text-xl"><i class="fa fa-envelope mr-2" aria-hidden="true"></i>info.mobing@gmail.com</li>
-              <li class="text-blue-800 text-md xl:text-xl  "><i class="fa fa-phone-square mr-2" aria-hidden="true mt-2"></i>063/555-555 </li>
+              <li class="text-white text-base xl:text-xl hover:text-gray-500"><i class="fa fa-address-card mr-2 hover:text-gray-500" aria-hidden="true"></i>Kneza Mihaila 37</li>
+              <li class="text-white text-base xl:text-xl hover:text-gray-500"><i class="fa fa-home mr-2 hover:text-gray-500" aria-hidden="true"></i>Odžaci, Srbija</li>
+              <li class="text-white text-base xl:text-xl hover:text-gray-500"><i class="fa fa-envelope mr-2 hover:text-gray-500" aria-hidden="true"></i>info.mobing@gmail.com</li>
+              <li class="text-white text-base xl:text-xl  hover:text-gray-500 "><i class="fa fa-phone-square mr-2 hover:text-gray-500" aria-hidden="true mt-2"></i>063/555-555 </li>
             
           </ul>
       </div>
@@ -22,19 +22,19 @@
         
         
           <ul class="list-reset leading-normal mt-4 sm:mt-12 md:mt-8">
-            <a href="{{route('porucivanje')}}"><li class="text-blue-800 text-base xl:text-xl "><i class="fa fa-angle-double-left  mr-2" aria-hidden="true"></i>O nama</li></a>
-          <a href="{{route('porucivanje')}}"><li class="text-blue-800 text-base xl:text-xl"><i class="fa fa-angle-double-left  mr-2" aria-hidden="true"></i>Uputstvo za kupovinu</li></a>
-          <a href="{{route('placanje')}}"><li class="text-blue-800 text-base xl:text-xl"><i class="fa fa-angle-double-left  mr-2" aria-hidden="true"></i>Plaćanje</li></a>
-          <a href="{{route('isporuka')}}"><li class="text-blue-800 text-base xl:text-xl"><i class="fa fa-angle-double-left  mr-2" aria-hidden="true"></i>Isporuka</li></a>
-              <a href="{{route('reklamacije')}}"><li class="text-blue-800 text-base xl:text-xl"><i class="fa fa-angle-double-left  mr-2" aria-hidden="true"></i>Reklamacije</li></a>
-              <a href="{{route('otkazivanje')}}"><li class="text-blue-800 text-base xl:text-xl"><i class="fa fa-angle-double-left  mr-2" aria-hidden="true"></i>Otkazivanje porudžbine</li></a>
-          <a href="{{route('privatnost')}}"><li class="text-blue-800 text-base xl:text-xl"><i class="fa fa-angle-double-left  mr-2" aria-hidden="true"></i>Politika privatnosti</li></a>
+            <a href="{{route('about')}}"><li class="text-white text-base xl:text-xl hover:text-gray-500 "><i class="fa fa-angle-double-left  mr-2" aria-hidden="true"></i>O nama</li></a>
+          <a href="{{route('porucivanje')}}"><li class="text-white text-base xl:text-xl hover:text-gray-500"><i class="fa fa-angle-double-left  mr-2 " aria-hidden="true"></i>Uputstvo za kupovinu</li></a>
+          <a href="{{route('placanje')}}"><li class="text-white text-base xl:text-xl hover:text-gray-500"><i class="fa fa-angle-double-left  mr-2 " aria-hidden="true"></i>Plaćanje</li></a>
+          <a href="{{route('isporuka')}}"><li class="text-white text-base xl:text-xl hover:text-gray-500"><i class="fa fa-angle-double-left  mr-2 " aria-hidden="true"></i>Isporuka</li></a>
+              <a href="{{route('reklamacije')}}"><li class="text-white text-base xl:text-xl hover:text-gray5700"><i class="fa fa-angle-double-left  mr-2 " aria-hidden="true"></i>Reklamacije</li></a>
+              <a href="{{route('otkazivanje')}}"><li class="text-white text-base xl:text-xl hover:text-gray-500"><i class="fa fa-angle-double-left  mr-2 " aria-hidden="true"></i>Otkazivanje porudžbine</li></a>
+          <a href="{{route('privatnost')}}"><li class="text-white text-base xl:text-xl hover:text-gray-500"><i class="fa fa-angle-double-left  mr-2 " aria-hidden="true"></i>Politika privatnosti</li></a>
           </ul>
     
       </div>
       <div class="sm:w-1/3 h-auto sm:mt-0 mt-8">
         <div class="">
-            <p class="text-blue-800 text-base xl:text-xl">Ovde nas možete pronaći:</p>
+            <p class=" text-white text-base xl:text- hover:text-gray-500 p-2">Ovde nas možete pronaći:</p>
             <iframe  class="mapa w-64 h-56 md:w-96 md:h-64 pb-2" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1398.1260028649447!2d19.257321988241856!3d45.50500542734718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssr!2srs!4v1594243180190!5m2!1ssr!2srs"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
            
         </div>  
@@ -52,9 +52,9 @@
           
         </div>
     </div> --}}
-    <div>
+     <div>
         @include('partials.footer')
-    </div>
+    </div> 
 
 
   

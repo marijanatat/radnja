@@ -1,12 +1,10 @@
-@extends('layout')
-
-@section('title', 'Checkout')
+@extends('layouts.master')
 
 @section('extra-css')
  <style>
-     .mt-32{
+     /* .mt-32{
       margin-top:32px;
-  }
+  } */
  </style>
 @endsection
 
