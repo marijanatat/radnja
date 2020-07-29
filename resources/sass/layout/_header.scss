@@ -2,7 +2,8 @@ header.with-background {
   // background: url('/img/b.png');
  
    color: $white;
-      background: url('./img/alvin-mahmudov-vKuEhorbvYI-unsplash-1.jpg');
+       background: url('./img/alvin-mahmudov-vKuEhorbvYI-unsplash-1.jpg');
+      //  background: url('./img/ramin-talebi-u_b0jWnkgM0-unsplash.jpg');
       background-size: cover;
       border-bottom-left-radius: 50% 20%;
   border-bottom-right-radius: 50% 20%;
@@ -155,9 +156,9 @@ header {
     
   }
 
-   .top-nav-right {
+    .top-nav-right {
      display: flex;
     align-items: center;
    
-  } 
+   } 
 }

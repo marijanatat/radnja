@@ -1,14 +1,22 @@
-@extends('layout')
+@extends('layouts.master')
 
-@section('title', 'Shopping Cart')
+
 
 @section('content')
 
-@component('components.breadcrumbs')
+{{-- @component('components.breadcrumbs')
     <a href="#">Home</a>
     <i class="fa fa-chevron-right breadcrumb-separator"></i>
     <span>Shopping Cart</span>
-@endcomponent
+@endcomponent --}}
+
+<div class="mt-20">
+    @component('components.breadcrumbs')
+   <a href="/">Home</a>
+   <i class="fa fa-chevron-right breadcrumb-separator"></i>
+   <span>Shopping Cart</span>
+   @endcomponent 
+</div>
 
     <div class="cart-section container">
         <div>
