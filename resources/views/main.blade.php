@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Domaći pamuk</title>
+  <title>Mob-ing web shop</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat%7CRoboto:300,400,700" rel="stylesheet">
@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-  <script src="js/app.js"></script>
+  <script src="{{asset('js/app.js')}}"></script>
   <script>
     $(function () {
   $(document).scroll(function () {
@@ -35,12 +35,12 @@
 <body>
   <div id="app">
     <header class="with-background">
-      <div class="top-nav flex items-center justify-content-between ">
+      <div class="top-nav flex items-center">
         <div class="top-nav-left">
-
           <div>
             @include('nav')
           </div>
+
 
 
 
