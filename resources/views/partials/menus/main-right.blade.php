@@ -1,6 +1,6 @@
 
 
-<ul class="mr-3">
+<ul class="">
     @guest
 <li><a href="{{route('register')}}">Sign up </a></li>
 <li><a href="{{route('login')}}">Log in </a></li>

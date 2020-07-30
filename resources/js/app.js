@@ -6,7 +6,10 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
+var Turbolinks = require("turbolinks")
+Turbolinks.start()
+
+// window.Vue = require('vue');
 
 /**
  * The following block of code may be used to automatically register your
