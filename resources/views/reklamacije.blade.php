@@ -3,7 +3,7 @@
 
  @section('content') 
 
- <div class="mt-20 text-gray-700">
+ <div class="text-gray-700">
     @component('components.breadcrumbs')
    <a href="/">Home</a>
    <i class="fa fa-chevron-right breadcrumb-separator"></i>

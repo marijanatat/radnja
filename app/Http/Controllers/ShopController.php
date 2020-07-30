@@ -57,8 +57,7 @@ class ShopController extends Controller
 
         return view('shop', [
             'products'=>$products,
-             'categories'=>$categories->toTree(),
-             'categoryName'=>$categoryName
+            'categoryName'=>$categoryName
             ]);
     }
 
