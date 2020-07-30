@@ -21,6 +21,14 @@
 
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 <script src="js/app.js"></script>
+<script>
+  $(function () {
+$(document).scroll(function () {
+  var $nav = $(".navbar");
+  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+});
+});
+</script>
 </head>
 
 <body>
