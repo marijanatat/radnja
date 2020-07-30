@@ -41,20 +41,20 @@ class CategoriesTableSeeder extends Seeder
                                    
                             ],
                         ],
-                    ],
-                ],
-                [    
-                    'name' => 'Ostalo',
-                    'slug'=>'ostalo',
-                    'children' => [
-                            ['name' => 'Peškiri','slug'=>'peškiri'],
-                            ['name' => 'Podloge','slug'=>'podloge'],
-                            ['name' => 'Portikle','slug'=>'portikle'],
-                            ['name' => 'Šeširi','slug'=>'šeširi'],
-                            ['name' => 'Trake','slug'=>'trake'],
-                            ['name' => 'Čarape','slug'=>'čarape'],
-                            ['name' => 'Pelene','slug'=>'pelene'],
-                            ['name' => 'nehodajuce_cipele','slug'=>'nehodajuce-cipele'],
+                        [    
+                            'name' => 'Ostalo',
+                            'slug'=>'ostalo',
+                            'children' => [
+                                    ['name' => 'Peškiri','slug'=>'peškiri'],
+                                    ['name' => 'Podloge','slug'=>'podloge'],
+                                    ['name' => 'Portikle','slug'=>'portikle'],
+                                    ['name' => 'Šeširi','slug'=>'šeširi'],
+                                    ['name' => 'Trake','slug'=>'trake'],
+                                    ['name' => 'Čarape','slug'=>'čarape'],
+                                    ['name' => 'Pelene','slug'=>'pelene'],
+                                    ['name' => 'Nehodajuce cipele','slug'=>'nehodajuce-cipele'],
+                            ],
+                        ],
                     ],
                 ],
 

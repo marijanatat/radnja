@@ -1,328 +1,103 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Domaći pamuk</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat%7CRoboto:300,400,700" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Mob-ing web shop</title>
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat%7CRoboto:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-        <script src="js/app.js"></script>
-        <script>
-          $(function () {
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <script src="{{asset('js/app.js')}}"></script>
+  <script>
+    $(function () {
   $(document).scroll(function () {
     var $nav = $(".navbar");
     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
   });
 });
-        </script>
-        
-        <style>
+  </script>
 
-.navbar.scrolled {
-  background-color:rgb(20, 104, 107) !important;
-  transition: background-color 200ms linear;
-}
+</head>
 
-  navbar {
-  overflow: hidden;
-  /* background-color: #333; */
-  font-family: Arial;
-}
-
-/* Links inside the navbar */
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: rgb(223, 37, 37);
-  text-align: center;
-  /* padding: 14px 16px; */
-  text-decoration: none;
-   
-  
-}
-
-
-/* The dropdown container */
-.dropdown {
-  
-    /* float: left; */
-   overflow: hidden; 
-  
-}
-
-  .dropdown-content {
-    padding-left: 10px;
-    padding-right: 10px;
-  display: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  background-color: #f9f9f9;
-  color:rgb(20, 104, 107) !important;
- max-width: 2000px;
- height: 300px;
- width: 100%;
-  /* min-width: 160px; */
-   /* max-width: 1000px;  */
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-   float: none; 
-  color: rgb(6, 245, 245);
- 
-  padding-left: 8px;
-  padding-right: 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-  width: 100%;
-  font-size: 12px;
-  
-}
-.dropdown-content span {
-   float: none; 
-  color:  #0a361b;
-  font-style: bold;
-  padding-top: 16px;
-  padding-left: 8px;
-  padding-right: 16px;
-  padding-bottom: 8px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-  width: 100%;
-  font-size: 14px;
-  
-  
-}
-
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-  background-color:#f2f7e8;
-  /* background-color: #0f284e; */
-  /* color:#fc9700; */
-  
-  
-}
-
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
- 
-}
-.dropbtn {
-  background-color: #0a361b;
-  color: white;
-  padding: 30px;
-  font-size: 16px;
-  border: none;
-}
-.img-wrapper {  
-  
-  overflow: hidden; 
-}
-
-.inner-img {
-  transition: 0.3s;
-}
-
-.inner-img:hover {
-  transform: scale(1.1);
-}
+<body>
+  <div id="app">
+    <header class="with-background">
+      <div class="top-nav flex items-center">
+        <div class="top-nav-left">
+          <div>
+            @include('nav')
+          </div>
 
 
 
-.zig-zag {
-   border: none; 
-   width: 50%; 
-   margin: auto; 
-   margin-top: 5%;
-    margin-bottom: 5%;
-     height: 20px; 
-     background: linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -20px 0, linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -20px 0, linear-gradient(315deg, #ECEDDC 25%, transparent 25%), linear-gradient(45deg, #ECEDDC 25%, transparent 25%); background-size: 40px 40px; 
-     background-color: #3c434e;}
 
-/* Other styling elements, that are not necessary for the example */
+          {{-- {{menu('main','partials.menus.main')}} --}}
+        </div>
 
-.module {
-  background: white;
-  border: 1px solid #ccc;
- 
-  > h2 {
-    padding: 1rem;
-    margin: 0 0 0.5rem 0;
-    
-  }
-  > p {
-    padding: 0 1rem;
-  }
-}
-
-.stripe-4 {
-  color: white;
-  background: repeating-linear-gradient(
-    -55deg,
-    rgb(75, 216, 252),
-    #233 10px,
-    rgb(45, 190, 178) 10px,
-    rgb(20, 104, 107) !important 20px
-   
-  );
-}
-
-.example_e {
-border: none;
-background: #404040;
-color: #ffffff !important;
-font-weight: 100;
-padding: 20px;
-text-transform: uppercase;
-border-radius: 6px;
-display: inline-block;
-transition: all 0.3s ease 0s;
-}
-
-.example_e:hover {
-color: #fc9700 !important;
-font-weight: 700 !important;
-letter-spacing: 3px;
-background: none;
--webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
--moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-transition: all 0.3s ease 0s;
-}
-.mapa:hover,
-.mapa:focus {
-  width: 300px;
-  height: 300px;
-}
-
-.ime:hover,
-.ime:focus{
-  
-  text-transform: capitalize;
-  
-}
-#social{
-  color: white;
-  height: 60px;
-width: 60px;
-  margin-left: 60px;
-  margin-right: 10px;
-  font-size: 40px;
-   
-}
-#social a:hover{
-  font-size:50px;
-  transition: 0.1s ease-in;
-  color:#fc9700 ;
-}
-
-
-#social1{
-  color: white !important;
-  height: 60px;
-  
- 
-  font-size: 40px;
-   
-}
-#social1 a:hover{
-  font-size:50px;
-  transition:0.1s ease-in;
-  color:rgb(20, 104, 107);
-}
- 
-/* //kkk */
-
- 
-
-
-
-        </style>
-
-    </head>
-    <body>
-        <div id="app">
-            <header class="with-background">
-                <div class="top-nav flex items-center justify-content-between ">
-                    <div class="top-nav-left">
-          
-                            <div>
-                              @include('nav')
-                            </div>
-                            
-                        
-   
-                           {{-- {{menu('main','partials.menus.main')}} --}}
-                      </div>
-    
-                   {{-- <div class="top-nav-right">
+        {{-- <div class="top-nav-right">
                       @include('partials.menus.main-right') 
                     </div>
                 </div> <!-- end top-nav --> --}}
-             
 
-                <div class="hero container ">
-                    <div class="hero-copy ">
-                        <h1 class="">Shop</h1>
-                        <p style="font-size:30px ">Ukoliko želite najbolje i najkvalitetnije za svoje dete kupujte kod nas.</p>
-                  
-                        <div class="hidden md:block w3-animate-fading mb-8 text-2xl text-white ml-2">Pronadjite nas na društvenim mrežama :</div> 
-                     <div class="hero-buttons items-center flex ">
-                          <div id="social" >
-                            <a href=""  ><i class="fa fa-facebook-official" aria-hidden="true" ></i></a>
-                          </div>
-                          <div id="social1" >
-                            <a href="" X><i class="fa fa-instagram w-24" aria-hidden="true" ></i></a>
-                          </div>
 
-                            {{-- <a href="http://localhost/testsite/" class="button button-white " style="background-color:rgb(250, 125, 9); ">Facebook</a>
+        <div class="hero container ">
+          <div class="hero-copy ">
+            <h1 class="">Shop</h1>
+            <p style="font-size:30px ">Ukoliko želite najbolje i najkvalitetnije za svoje dete kupujte kod nas.</p>
+
+            <div class="hidden md:block w3-animate-fading mb-8 text-2xl text-white ml-2">Pronadjite nas na društvenim
+              mrežama :</div>
+            <div class="hero-buttons items-center flex ">
+              <div id="social">
+                <a href=""><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+              </div>
+              <div id="social1">
+                <a href="" X><i class="fa fa-instagram w-24" aria-hidden="true"></i></a>
+              </div>
+
+              {{-- <a href="http://localhost/testsite/" class="button button-white " style="background-color:rgb(250, 125, 9); ">Facebook</a>
                             <a href="https://github.com/marijanatat/e-commerce" class="button button-white" style="background-color:rgb(20, 104, 107) !important">Instagram</a> --}}
-                        </div> 
+            </div>
 
-                    </div> <!-- end hero-copy -->
-    
-                    <div class="hero-image">
-                        {{-- <img src="img/deca.jpg" alt="deca"> --}}
-                    
-                        {{-- <img src="img/deca.jpg" alt="deca"> --}}
-                    </div> <!-- end hero-image -->
-                </div> <!-- end hero -->
-            </header>
-    
-            <div class="featured-section" style="background-color: white">
-    
-                <div class="container">
-                    <h1 class="text-center">Shop</h1>
-    
-                    <p class="section-description text-center " style="font-size:30px ">Naši proizvodi su isključivo domaće proizvodnje od najkvalitetnijeg 100% pamuka</p>
-        
-                        <div class="">
-                            @include('kategorije')
-                        </div>
-                        {{-- <a href="#" class="button">Featured</a>
+          </div> <!-- end hero-copy -->
+
+          <div class="hero-image">
+            {{-- <img src="img/deca.jpg" alt="deca"> --}}
+
+            {{-- <img src="img/deca.jpg" alt="deca"> --}}
+          </div> <!-- end hero-image -->
+        </div> <!-- end hero -->
+    </header>
+
+    <div class="featured-section" style="background-color: white">
+
+      <div class="container">
+        <h1 class="text-center">Shop</h1>
+
+        <p class="section-description text-center " style="font-size:30px ">Naši proizvodi su isključivo domaće
+          proizvodnje od najkvalitetnijeg 100% pamuka</p>
+
+        <div class="">
+          @include('kategorije')
+        </div>
+        {{-- <a href="#" class="button">Featured</a>
                         <a href="#" class="button">On Sale</a> --}}
-                    {{-- </div> --}}
-    
-                    {{-- <div class="tabs">
+        {{-- </div> --}}
+
+        {{-- <div class="tabs">
                         <div class="tab">
                             Featured
                         </div>
@@ -330,48 +105,51 @@ width: 60px;
                             On Sale
                         </div>
                     </div> --}}
-    
-                    <div class="products text-center">
-                        @foreach ($products as $product)
-                        <div class="product">
-                            <a href="{{route('shop.show',$product->slug)}}"><img src="{{productImage($product->image)}}" style="height:140px;" alt="product"></a>
-                            <a href="{{route('shop.show',$product->slug)}}"><div class="product-name">{{$product->name}}</div></a>
-                            <div class="product-price">{{$product->presentPrice()}}</div>
-                        </div>
-                        @endforeach
-                       
-                        
-                    </div> <!-- end products -->
-    
-                    <div class="text-center button-container text-base xl:text-lg">
-                        <a href="{{route('shop.index')}}" class="example_e button hover:bg-rgb(20, 104, 107)" >View more products</a>
-                    </div>
-    
-                </div> <!-- end container -->
-    
-            </div> <!-- end featured-section -->
-            <div class="bg-color-white rounded-md border-gray-400  border-transparent opacity-25">
-              <hr class="zig-zag">
-               
-              <hr>
-            </div>
 
-            <div class="module">
-              <h2 class="stripe-4 text-transparent">O</h2>
+        <div class="products text-center">
+          @foreach ($products as $product)
+          <div class="product">
+            <a href="{{route('shop.show',$product->slug)}}"><img src="{{productImage($product->image)}}"
+                style="height:140px;" alt="product"></a>
+            <a href="{{route('shop.show',$product->slug)}}">
+              <div class="product-name">{{$product->name}}</div>
+            </a>
+            <div class="product-price">{{$product->presentPrice()}}</div>
+          </div>
+          @endforeach
 
-            </div>
-         
-{{--      
-          <blog-posts></blog-posts> --}}
-{{--         
-            @include('partials.footer') --}}
-            <div class="w-full ">
-              @include('footer')
-            </div>
+
+        </div> <!-- end products -->
+
+        <div class="text-center button-container text-base xl:text-lg">
+          <a href="{{route('shop.index')}}" class="example_e button hover:bg-rgb(20, 104, 107)">View more products</a>
         </div>
 
-        <script>
-          // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+      </div> <!-- end container -->
+
+    </div> <!-- end featured-section -->
+    <div class="bg-color-white rounded-md border-gray-400  border-transparent opacity-25">
+      <hr class="zig-zag">
+
+      <hr>
+    </div>
+
+    <div class="module">
+      <h2 class="stripe-4 text-transparent">O</h2>
+
+    </div>
+
+    {{--      
+          <blog-posts></blog-posts> --}}
+    {{--         
+            @include('partials.footer') --}}
+    <div class="w-full ">
+      @include('footer')
+    </div>
+  </div>
+
+  <script>
+    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
           window.onscroll = function() {scrollFunction()};
           
           function scrollFunction() {
@@ -383,9 +161,10 @@ width: 60px;
               document.getElementById("logo").style.fontSize = "35px";
             }
           }
-          </script>
-          
-     
+  </script>
 
-    </body>
+
+
+</body>
+
 </html>
