@@ -7,7 +7,7 @@
             </div>
     
             @if (!( request()->is('checkout')||request()->is('guestCheckout')))
-               {{menu('main','partials.menus.main')}}
+               {{-- {{menu('main','partials.menus.main')}} --}}
        
          <ul>
             <li><a href="{{route('shop.index')}}">Shop</a></li>

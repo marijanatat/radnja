@@ -28,6 +28,7 @@
 });
         </script>
         
+        
         <style>
 
 .navbar.scrolled {
@@ -53,14 +54,94 @@
   
 }
 
-.completed{
-            text-decoration: line-through;
-        }
-        img {
-    
-    width:  auto;
-    height: 300px;
-    object-fit: cover;
+
+/* The dropdown container */
+.dropdown {
+  
+    /* float: left; */
+   overflow: hidden; 
+  
+}
+
+  .dropdown-content {
+    padding-left: 10px;
+    padding-right: 10px;
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: #f9f9f9;
+  color:rgb(20, 104, 107) !important;
+ max-width: 2000px;
+ height: 300px;
+ width: 100%;
+  /* min-width: 160px; */
+   /* max-width: 1000px;  */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+   float: none; 
+  color: rgb(6, 245, 245);
+ 
+  padding-left: 8px;
+  padding-right: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  width: 100%;
+  font-size: 12px;
+  
+}
+.dropdown-content span {
+   float: none; 
+  color:  #0a361b;
+  font-style: bold;
+  padding-top: 16px;
+  padding-left: 8px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  width: 100%;
+  font-size: 14px;
+  
+  
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color:#f2f7e8;
+  /* background-color: #0f284e; */
+  /* color:#fc9700; */
+  
+  
+}
+
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+ 
+}
+.dropbtn {
+  background-color: #0a361b;
+  color: white;
+  padding: 30px;
+  font-size: 16px;
+  border: none;
+}
+.img-wrapper {  
+  
+  overflow: hidden; 
+}
+
+.inner-img {
+  transition: 0.3s;
 }
 
 .maincontainer{
@@ -75,10 +156,6 @@
   transform: translate(-50%, -50%);
 
 }
-
-
-
-
 
 
 
@@ -166,6 +243,7 @@ body {
   position: absolute;
   left: 0;
   right: 0;
+  top:80px;
   background-color: #f9f9f9;
   color:rgb(20, 104, 107) !important;
  max-width: 2000px;
@@ -358,17 +436,20 @@ width: 60px;
 <body >
     <div id="app" >
       
-
-      <div class="">
-        @include('nav')
-    </div>
+      <header>
+      <div class="top-nav flex items-center justify-content-between ">
+        <div class="top-nav-left">
+          @include('nav')
+      </div>
+    </header>
+      </div>
      <div class="bg-white">
        @yield('content')
      </div>
     <div class="">
       @include('footer')
     </div>
-
+  </div>
     {{-- <div>
         @yield('placanje')
      </div>

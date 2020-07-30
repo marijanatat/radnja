@@ -5,11 +5,11 @@
 
     <div class="w-full p-8"  style="background-color: rgb(20, 104, 107);padding-left:40px">
         <div class="sm:flex mb-0">
-      <div class="sm:w-1/3 h-auto">
+      <div class="sm:w-1/3 h-auto mt-4 sm:mt-12 md:mt-8">
           <ul class="list-reset leading-normal">
               <div class="flex items-center ">
                   <a href=""><li class="hover:text-gray-500"><img  src="{{asset('./img/baby.svg')}}" alt="kolica za bebe" style="" class="w-12 h-12 bg-transparent p-2 rounded-md hover:bg-gray-500">  </li></a>
-              <a href="" class="ime"><li class="text-xl sm:text-2xl xl:text-4xl text-white ml-2 font-semibold italic hover:text-gray-500 " >Mob-ing</li></a>
+              <a href="" class="ime"><li class="text-xl sm:text-2xl xl:text-4xl text-white ml-2 font-semibold  hover:text-gray-500 mb-2" >Mob-ing</li></a>
               </div>
               <li class="text-white text-base xl:text-xl hover:text-gray-500"><i class="fa fa-address-card mr-2 hover:text-gray-500" aria-hidden="true"></i>Kneza Mihaila 37</li>
               <li class="text-white text-base xl:text-xl hover:text-gray-500"><i class="fa fa-home mr-2 hover:text-gray-500" aria-hidden="true"></i>Odžaci, Srbija</li>

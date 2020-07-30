@@ -35,10 +35,10 @@
   transition: background-color 200ms linear;
 }
 
-  navbar {
-  overflow: hidden;
+  .navbar {
+  position: relative;
   /* background-color: #333; */
-  font-family: Arial;
+  /* font-family: Arial; */
 }
 
 /* Links inside the navbar */
@@ -69,6 +69,7 @@
   position: absolute;
   left: 0;
   right: 0;
+  top:80px;
   background-color: #f9f9f9;
   color:rgb(20, 104, 107) !important;
  max-width: 2000px;
@@ -131,8 +132,10 @@
   background-color: #0a361b;
   color: white;
   padding: 30px;
-  font-size: 16px;
+  font-size: 20px;
   border: none;
+ 
+  
 }
 .img-wrapper {  
   
@@ -356,10 +359,10 @@ width: 60px;
               <hr>
             </div>
 
-            <div class="module">
+            {{-- <div class="module">
               <h2 class="stripe-4 text-transparent">O</h2>
 
-            </div>
+            </div> --}}
          
 {{--      
           <blog-posts></blog-posts> --}}

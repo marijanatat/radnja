@@ -3,7 +3,7 @@ header.with-background {
  
    color: $white;
        background: url('./img/alvin-mahmudov-vKuEhorbvYI-unsplash-1.jpg');
-      //  background: url('./img/ramin-talebi-u_b0jWnkgM0-unsplash.jpg');
+       // background: url('./img/ramin-talebi-u_b0jWnkgM0-unsplash-1.jpg');
       background-size: cover;
       border-bottom-left-radius: 50% 20%;
   border-bottom-right-radius: 50% 20%;
@@ -81,7 +81,7 @@ header {
   .top-nav {
     display: flex;
     justify-content: space-between;
-    padding: 30px 0;
+    padding: 0px 0;
     letter-spacing: 1.5px;
 
     .logo {
