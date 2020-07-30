@@ -14,16 +14,16 @@ class ShopController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $categories = Category::all();
-        if(request()->category){
+        if($request->category){
             // $products=Product::with('categories')->whereHas('categories',function($query){
             //    $query->where('slug',request()->category);
             // });
 
-            $products = Product::where('category_id', request()->category);
-            $categoryName=optional($categories->where('id',request()->category)->first())->name;
+            $products = Product::where('category_id', $request->category);
+            $categoryName=optional($categories->where('id',$request->category)->first())->name;
         }else{
             // $products=Product::where('featured',true);
            
@@ -31,6 +31,20 @@ class ShopController extends Controller
             $categoryName='Svi proizvodi';
             $products = DB::table('products');
         }
+
+
+        if($request->has('genre')) {
+            return Product::where('genre',$request->genre)->get();
+           
+        }
+
+        if($request->has('size')) {
+            return Product::where('genre',$request->genre)->get();
+           
+        }
+
+
+
       
         if(request()->sort==='low_high') {
             $products=$products->orderBy('price')->paginate(9);
