@@ -24,7 +24,7 @@
   <script>
     $(function () {
   $(document).scroll(function () {
-    var $nav = $(".navbar");
+    var $nav = $(".navbar");    
     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
   });
 });

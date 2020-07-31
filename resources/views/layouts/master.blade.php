@@ -21,14 +21,14 @@
 
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 <script src="{{asset('js/app.js')}}"></script>
-<script>
+{{-- <script>
   $(function () {
 $(document).scroll(function () {
   var $nav = $(".navbar");
   $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
 });
 });
-</script>
+</script> --}}
 </head>
 
 <body>
@@ -38,7 +38,7 @@ $(document).scroll(function () {
     <header>
       <div class="top-nav flex items-center">
         <div class="top-nav-left">
-          @include('nav')
+          @include('partials.nav')
         </div>
       </div>
     </header>
