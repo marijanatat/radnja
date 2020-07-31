@@ -1,5 +1,5 @@
 
-<div class="">
+
     <div class="flex flex-col md:flex-row mx-5 mt-5 mb-0">
       <div class="flex md:w-1/3 ml-3 max-w-md md:max-w-full ">   
             <figure class="relative flex items-center"> 
@@ -31,7 +31,7 @@
        </div>
 
     </div>
-  </div>
+
 
   <div class="flex flex-col md:flex-row mx-5 mt-2 mb-0">
     <div class="flex md:w-1/3 ml-3 max-w-md md:max-w-full ">   
@@ -64,7 +64,7 @@
      </div>
 
   </div>
-</div>
+
   {{-- <div class="">
     <div class="flex flex-col md:flex-row mx-5 mt-5 mb-0">
       
@@ -101,6 +101,6 @@
   </div>
 
     </div> --}}
-  </div>
+  
  
  

@@ -98,51 +98,50 @@
           @include('kategorije')
         </div>
       
-      </div> 
-
+        
         <div class="bg-color-white rounded-md border-gray-400  border-transparent opacity-25">
           <hr class="zig-zag">
           <hr>
         </div>
-
+        
         <!-- div-->
-      <div class="flex w-full h-64 bg-gray-300  shadow-md mb-8 p-24 items-center">
-        <h2 class="text-blue-800 font-3xl uppercase items-center p-8 ">Ovo je samo deo našeg asortimana</h2>
-        {{-- <a href="#" class="button">Featured</a>
-        <a href="#" class="button">On Sale</a>  --}}
-      </div>
-
-       <!-- end div-->
-
-         {{-- <div class="tabs">
-                        <div class="tab">
-                            Featured
-                        </div>
-                        <div class="tab">
-                            On Sale
-                        </div>
-                    </div>  --}}
-
-        <div class="products text-center ">
+        <div class="w-full h-64 bg-gray-300 shadow-md mb-8 p-20 text-center">
+          <h2 class="text-blue-800 font-3xl uppercase p-8 ">Ovo je samo deo našeg asortimana</h2>
+          {{-- <a href="#" class="button">Featured</a>
+          <a href="#" class="button">On Sale</a>  --}}
+        </div>
+        
+        <!-- end div-->
+        
+        {{-- <div class="tabs">
+          <div class="tab">
+            Featured
+          </div>
+          <div class="tab">
+            On Sale
+          </div>
+        </div>  --}}
+        
+        <div class="products text-center">
           @foreach ($products as $product)
           <div class="product">
-            <a href="{{route('shop.show',$product->slug)}}"><img src="{{productImage($product->image)}}"
-                style="height:140px;" alt="product"></a>
-            <a href="{{route('shop.show',$product->slug)}}">
-              <div class="product-name">{{$product->name}}</div>
-            </a>
-            <div class="product-price">{{$product->presentPrice()}}</div>
+            <a href="{{route('shop.show',$product->slug)}}"><img class="mx-auto" src="{{productImage($product->image)}}"
+              style="height:140px;" alt="product"></a>
+              <a href="{{route('shop.show',$product->slug)}}">
+                <div class="product-name">{{$product->name}}</div>
+              </a>
+              <div class="product-price">{{$product->presentPrice()}}</div>
+            </div>
+            @endforeach
+            
+            
+          </div> <!-- end products -->
+          
+          <div class="text-center button-container text-base xl:text-lg">
+            <a href="{{route('shop.index')}}" class="example_e button hover:bg-rgb(20, 104, 107)">View more products</a>
           </div>
-          @endforeach
-
-
-        </div> <!-- end products -->
-
-        <div class="text-center button-container text-base xl:text-lg">
-          <a href="{{route('shop.index')}}" class="example_e button hover:bg-rgb(20, 104, 107)">View more products</a>
-        </div>
-
-      </div> <!-- end container -->
+          
+        </div> 
 
     </div> <!-- end featured-section -->
     
