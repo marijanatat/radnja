@@ -4,7 +4,7 @@
 <form id="contact-me" class="w-full mx-auto max-w-3xl bg-white shadow p-8 text-gray-700 ">
 
 
-    <h2 class="w-full my-2 text-3xl font-bold leading-tight my-5">Contact form</h2>
+    <h2 class="w-full my-2 text-3xl font-bold leading-tight ">Contact form</h2>
     <!-- name field -->
     <div class="flex flex-wrap mb-6">
         <div class="relative w-full appearance-none label-floating">

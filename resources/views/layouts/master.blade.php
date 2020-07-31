@@ -71,6 +71,6 @@ $(document).scroll(function () {
         @include('footer1')
     </div> --}}
 
-
+</body>
 
 </html>

@@ -15,7 +15,7 @@
   <div class="hidden lg:flex w-full" id="nav-content">
       <ul class="list-reset items-center w-full">
         
-          <div class="flex items-center ">
+          <div class="logo flex items-center ">
               <a href="/"><img src="{{asset('./img/baby.svg')}}" alt="kolica za bebe" style=""
                   class="w-16 h-16 bg-transparent  hover:text-red-800 py-2 px-2 rounded-md"> </a>
   

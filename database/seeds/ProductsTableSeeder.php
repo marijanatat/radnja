@@ -19,6 +19,7 @@ class ProductsTableSeeder extends Seeder
                 'slug' => 'majica-'.$i,
                 'details' => ' majica kratkih rukava',
                 'price' => rand(150, 1500),
+               
                 'description' =>'Lorem '. $i . ' ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
                  'quantity'=>'5',
                  'category_id'=>'25',
@@ -35,6 +36,7 @@ class ProductsTableSeeder extends Seeder
                 'slug' => 'pantalone-'.$i,
                 'details' => ' pantalone ',
                 'price' => rand(150, 1500),
+              
                 'description' =>'Lorem '. $i . ' ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
                  'quantity'=>'5',
                  'category_id'=>'29',
@@ -51,6 +53,7 @@ class ProductsTableSeeder extends Seeder
                 'slug' => 'duks-'.$i,
                 'details' => ' duks dugih rukava',
                 'price' => rand(150, 1500),
+              
                 'description' =>'Lorem '. $i . ' ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
                  'quantity'=>'5',
                  'category_id'=>'26',
@@ -67,6 +70,7 @@ class ProductsTableSeeder extends Seeder
                 'slug' => 'haljina-'.$i,
                 'details' => 'haljina',
                 'price' => rand(150, 1500),
+              
                 'description' =>'Lorem '. $i . ' ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
                  'quantity'=>'2',
                  'category_id'=>'41',

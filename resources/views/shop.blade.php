@@ -9,7 +9,7 @@
     @component('components.breadcrumbs')
    <a href="/">Home</a>
    <i class="fa fa-chevron-right breadcrumb-separator"></i>
-   <span>Otkazivanje</span>
+   <span>Shop</span>
    @endcomponent 
 </div>
 
