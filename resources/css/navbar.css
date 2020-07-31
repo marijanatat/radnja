@@ -203,7 +203,9 @@
   #social a:hover {
     font-size: 50px;
     transition: 0.1s ease-in;
-    color: #fc9700;
+    /* color: #fc9700; */
+    color:  #3B5998;
+   
   }
 
 
@@ -219,5 +221,6 @@
   #social1 a:hover {
     font-size: 50px;
     transition: 0.1s ease-in;
-    color: rgb(119, 237, 241);
+    /* color: rgb(119, 237, 241); */
+      color: #fc9700; 
   }

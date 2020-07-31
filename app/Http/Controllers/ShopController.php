@@ -39,7 +39,11 @@ class ShopController extends Controller
         }
 
         if($request->has('size')) {
-            return Product::where('genre',$request->genre)->get();
+            return Product::where('size',$request->size)->get();
+           
+        }
+        if($request->has('min','max')) {
+            return Product::whereBetween('price',[$request->min,$request->max])->get();
            
         }
 

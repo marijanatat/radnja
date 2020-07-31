@@ -1,16 +1,18 @@
-@extends('layout')
+@extends('layouts.master')
 
-@section('title', $product->name)
+{{-- @section('title', $product->name) --}}
 
 @section('content')
 
-    @component('components.breadcrumbs')
-    <a href="/">Home</a>
-    <i class="fa fa-chevron-right breadcrumb-separator"></i>
-    <span><a href="{{ route('shop.index') }}">Shop</a></span>
-    <i class="fa fa-chevron-right breadcrumb-separator"></i>
-    <span>{{ $product->name }}</span>
-@endcomponent
+    <div class="text-gray-700 hover:text-green-900">
+        @component('components.breadcrumbs')
+        <a href="/">Home</a>
+        <i class="fa fa-chevron-right breadcrumb-separator"></i>
+        <span><a href="{{ route('shop.index') }}">Shop</a></span>
+        <i class="fa fa-chevron-right breadcrumb-separator"></i>
+        <span>{{ $product->name }}</span>
+    @endcomponent
+    </div>
 
         <div class="container">
             @if (session()->has('success_message'))
@@ -54,7 +56,7 @@
 
         <div class="product-section-information">
             <div class="product-section-subtitle">{{$product->details}}</div>
-            <div>{!!$stock!!}</div>
+            {{-- <div>{!!$stock!!}</div> --}}
             <div>{{$product->quantity}}</div>
             <div class="product-section-price">{{$product->presentPrice()}}</div>
 
@@ -69,7 +71,7 @@
                  <input type="hidden" name="name" value="{{$product->name}}">
                 <input type="hidden" name="price" value="{{$product->price}}">
                 
-                <button type="submit" class="button button-plain">Add to cart</button>
+                <button type="submit" class="button button-plain transition duration-500 ease-in-out border border-gray-300 rounded-md bg-gray-500 hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110 ...">Add to cart</button>
 
              </form>
             @endif
@@ -80,7 +82,9 @@
     </div> <!-- end product-section -->
 
     @include('partials.might-like')
-   
+    @endsection
+  
+    @section('extra-js')
  <script>
     (function(){
         const currentImage = document.querySelector('#currentImage');
@@ -97,5 +101,5 @@
         }
     })();
 </script>
-
+@endsection
 
