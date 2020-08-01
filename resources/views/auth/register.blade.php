@@ -1,15 +1,15 @@
-@extends('layouts.app')
+@extends('layouts.master') 
 
 
 @section('content')
-<div class="container">
-    <div class="auth-pages">
+<div class="container ">
+    <div class="auth-pages mx-12 md:mx-32 mb-2 md:mb-8">
         <div class="auth-left">
-            @if (session()->has('success_message'))
-            <div class="alert alert-success">
-                {{ session()->get('success_message') }}
-            </div>
-            @endif @if(count($errors) > 0)
+                @if (session()->has('success_message'))
+                <div class="alert alert-success">
+                    {{ session()->get('success_message') }}
+                </div>
+                @endif @if(count($errors) > 0)
             <div class="alert alert-danger">
                 <ul>
                     @foreach ($errors->all() as $error)
@@ -18,7 +18,7 @@
                 </ul>
             </div>
             @endif
-            <h2 class="text-gray-700 text-lg">Registracija</h2>
+            <h2 class="text-gray-700 text-lg md:text-xl font-semibold">Registracija</h2>
             <div class="spacer"></div>
 
             <form action="{{ route('register') }}" method="POST">
@@ -31,9 +31,9 @@
 
                 <div class="login-container">
                     <button type="submit" class="auth-button">Registracija</button>
-                    <div class="already-have-container">
-                        <p><strong>Već imate nalog?</strong></p>
-                        <a href="{{ route('login') }}">Login</a>
+                    <div class="already-have-container ml-4">
+                        <p class="mb-2 text-gray-700 italic lg:-ml-8"><strong>Već imate nalog?</strong></p>
+                        <a href="{{ route('login') }}" class="font-md font-semibold ">Login</a>
                     </div>
                 </div>
 
@@ -42,8 +42,8 @@
             </form>
         </div>
 
-        <div class="auth-right ">
-            <img src="{{asset('./img/andrej-lisakov-Yy4sN6QzboU-unsplash.jpg')}}" alt="" >
+        <div class="auth-right hidden md:block">
+            <img src="{{asset('./img/andrej-lisakov-Yy4sN6QzboU-unsplash.jpg')}}" alt="slika ofingeri" class="w-2/3 h-2/3  object-center my-16 mx-16" >
             {{-- <h2>Benefits</h2>
             <div class="spacer"></div>
             <p><strong>Save time now.</strong></p>

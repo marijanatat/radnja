@@ -1,5 +1,5 @@
 .auth-pages{
-    margin:20px auto;
+     margin:20px auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap:100px;
@@ -27,6 +27,7 @@
 
     .auth-button{
         background: $text-color;
+        //color:rgb(185, 183, 183);
         color: $white;
         width: auto;
         border-radius: 5px;
@@ -43,14 +44,21 @@
     }
 
     .auth-right {
-        border-left: 1px solid $separator-color;
+        // border-left: 1px solid $separator-color;
         padding-left: 100px;
+     
      
 
     }
+    .already-have-container a {
+        text-align: right;
+        color:black;
 
+       
+       
+    }
     .auth-button-right{
-        color: $text-color;
+        color:rgb(185, 183, 183);
         border: 1px solid gray;
         border-radius: 5px;
         padding: 12px 40px;
