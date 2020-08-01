@@ -34,7 +34,7 @@
 </header> --}} 
 
 <nav style="background-color: rgb(20, 104, 107)"
-  class="flex items-center justify-between flex-wrap p-1  w-full  pin-t fixed z-10 top-0 mt-0 ">
+  class="flex items-center justify-between flex-wrap p-1  w-full  pin-t fixed z-10 top-0 mt-0">
   <div class="block lg:hidden">
     <button id="nav-toggle"
       class="flex items-center px-3 py-2  rounded text-gray-600 font-bold border border-red-900  hover:text-red-700 hover:border-white">
