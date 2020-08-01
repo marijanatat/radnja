@@ -36,9 +36,9 @@
     <header class="with-background">
       <div class="top-nav flex items-center">
         <div class="top-nav-left">
-          <div>
+          <nav class="navbar flex items-center bg-transparent justify-between flex-wrap  p-1  w-full  pin-t fixed z-10 top-0 mt-0 ">
             @include('nav')
-          </div>
+        </nav>
 
 
 
@@ -161,6 +161,11 @@
   </div>
 
   <script>
+
+    document.getElementById('nav-toggle').onclick = function(){
+      document.getElementById('nav-content').classList.toggle('hidden');
+    }
+
     // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
           // window.onscroll = function() {scrollFunction()};
           
