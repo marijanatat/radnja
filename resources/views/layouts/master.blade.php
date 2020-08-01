@@ -23,24 +23,18 @@
 
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 <script src="{{asset('js/app.js')}}"></script>
-{{-- <script>
-  $(function () {
-$(document).scroll(function () {
-  var $nav = $(".navbar");
-  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-});
-});
-</script> --}}
+
 </head>
 
 <body>
   <div id="app">
-
-
     <header>
       <div class="top-nav flex items-center">
         <div class="top-nav-left">
-          @include('partials.nav')
+          <nav style="background-color: rgb(20, 104, 107)"
+                class="flex items-center justify-between flex-wrap p-1 w-full pin-t fixed z-10 top-0 mt-0">
+              @include('nav')
+          </nav>
         </div>
       </div>
     </header>
@@ -73,7 +67,11 @@ $(document).scroll(function () {
   {{-- <div >
         @include('footer1')
     </div> --}}
-
+    <script>
+      document.getElementById('nav-toggle').onclick = function(){
+        document.getElementById('nav-content').classList.toggle('hidden');
+      }
+  </script> 
 </body>
 
 </html>

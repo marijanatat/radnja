@@ -33,11 +33,10 @@
     </div> <!-- end top-nav -->
 </header> --}} 
 
-<nav style="background-color: rgb(20, 104, 107)"
-  class="flex items-center justify-between flex-wrap p-1  w-full  pin-t fixed z-10 top-0 mt-0 ">
-  <div class="block lg:hidden">
+
+  <div class="block lg:hidden py-2">
     <button id="nav-toggle"
-      class="flex items-center px-3 py-2  rounded text-gray-600 font-bold border border-red-900  hover:text-red-700 hover:border-white">
+      class="flex items-center outline-none px-3 py-2 rounded text-gray-300 font-bold border border-gray-300 hover:text-gray-500 hover:border-gray-500 ">
       <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
         <title>Menu</title>
         <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -104,5 +103,4 @@
             </div>
       </div>
     </ul>
-</nav>
 
