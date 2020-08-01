@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.master')
 
 @section('title', 'Thank You')
 
@@ -6,11 +6,11 @@
 
 @endsection
 
-@section('body-class', 'sticky-footer')
+{{-- @section('body-class', 'sticky-footer') --}}
 
 @section('content')
 
-   <div class="thank-you-section">
+   <div class="thank-you-section h-screen">
        <h1>Thank you for <br> Your Order!</h1>
        <p>A confirmation email was sent</p>
        <div class="spacer"></div>
