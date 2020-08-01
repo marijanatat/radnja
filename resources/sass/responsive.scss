@@ -11,7 +11,7 @@
 @media only screen and (max-width : 992px) {
     header.with-background, header {
         .top-nav {
-            flex-direction: column;
+            // flex-direction: column;
 
             .logo {
                 margin: auto;
@@ -21,6 +21,7 @@
                 margin: 20px auto 0;
                 // width: 80%;
             }
+            
         }
 
         .top-nav-left {
