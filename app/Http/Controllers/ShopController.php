@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 
 class ShopController extends Controller
@@ -16,14 +17,14 @@ class ShopController extends Controller
      */
     public function index(Request $request)
     {
-        $categories = Category::all();
-        if($request->category){
-            // $products=Product::with('categories')->whereHas('categories',function($query){
-            //    $query->where('slug',request()->category);
-            // });
-
-            $products = Product::where('category_id', $request->category);
-            $categoryName=optional($categories->where('id',$request->category)->first())->name;
+        $categories = Category::get();
+            if($request->category){
+                $category = Category::find($request->category);
+                $categoryIds = $category->descendants()->pluck('id');
+                $categoryIds[] = $category->getKey();
+          
+            $products = Product::whereIn('category_id', $categoryIds);
+            $categoryName=optional($categories->where('id', $request->category)->first())->name;
         }else{
             // $products=Product::where('featured',true);
            
@@ -54,7 +55,7 @@ class ShopController extends Controller
             $products=$products->orderBy('price')->paginate(9);
 
         } elseif(request()->sort==='high_low') {
-            $products=$products->orderBy('price','dec')->paginate(9);
+            $products=$products->orderBy('price','desc')->paginate(9);
         }else{
             $products=$products->paginate(9);
         }

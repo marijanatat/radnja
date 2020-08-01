@@ -28,13 +28,9 @@ class Product extends Model
         ],
     ];
 
-
-
-   
-
     public function presentPrice()
     {
-        return number_format( $this->price).' DIN';
+        return number_format($this->price, 2, ',', '.') . ' RSD';
     }
 
     public function getRouteKeyName()

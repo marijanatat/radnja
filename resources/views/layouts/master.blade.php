@@ -19,6 +19,8 @@
 <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
+@yield('extra-css')
+
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 <script src="{{asset('js/app.js')}}"></script>
 {{-- <script>
@@ -48,6 +50,7 @@ $(document).scroll(function () {
     <div class="">
       @include('footer')
     </div>
+    @yield('extra-js')
   </div>
 
   {{-- <div>
