@@ -76,3 +76,7 @@ Route::view('/reklamacije','reklamacije')->name('reklamacije');
 Route::view('/otkazivanje','otkazivanje')->name('otkazivanje');
 Route::view('/privatnost','privatnost')->name('privatnost');
 Route::view('/about','about')->name('about');
+
+//Livewire
+Route::livewire('/shop-livewire', 'shop-livewire')
+    ->layout('layouts.master');

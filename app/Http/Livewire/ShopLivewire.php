@@ -1,0 +1,66 @@
+<?php
+
+namespace App\Http\Livewire;
+
+use App\Category;
+use App\Product;
+use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\DB;
+use Livewire\Component;
+
+class ShopLivewire extends Component
+{
+    public $requestedCategories = [];
+    // public $categoryIds = [];    
+    public $sort;
+    public $page;
+   
+
+    public function mount()
+    {
+
+    }
+
+    public function render()
+    {
+        $categories = Category::get();
+        $categoryIds = [];
+            if($this->requestedCategories){
+                $categories = (Category::whereIn('id', $this->requestedCategories))->get();
+                foreach ($categories as $category) {
+                    array_push($categoryIds, $category->descendants()->pluck('id'));  
+                    array_push($categoryIds, $category->getKey());                   
+
+                    // $this->categoryIds[] = $category->getKey();
+                }   
+            
+                    // $category = Category::find($this->requestedCategories);
+                    // $categoryIds = $category->descendants()->pluck('id');
+                    // $categoryIds[] = $category->getKey();
+                // dd(Arr::flatten($this->categoryIds));
+            $products = Product::whereIn('category_id', Arr::flatten($categoryIds));
+            // $categoryName=optional($categories->where('id', $this->requestedCategory)->first())->name;
+        }else{
+            // $products=Product::where('featured',true);
+           
+            // $categories=Category::all();
+            $categoryName='Svi proizvodi';
+            $products = DB::table('products');
+        }
+
+        if($this->sort==='low_high') {
+            $products=$products->orderBy('price')->paginate(9);
+
+        } elseif($this->sort==='high_low') {
+            $products=$products->orderBy('price','desc')->paginate(9);
+        }else{
+            $products=$products->get();
+        }
+
+        return view('livewire.shop-livewire', [
+            'products' => $products,
+            'categoryIds' => $categoryIds 
+        ]);
+    }
+}

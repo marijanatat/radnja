@@ -21,6 +21,8 @@
 
 @yield('extra-css')
 
+<livewire:styles>
+
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 <script src="{{asset('js/app.js')}}"></script>
 
@@ -39,6 +41,7 @@
       </div>
     </header>
     <div class="bg-white">
+      {{-- <livewire:shop-livewire/> --}}
       @yield('content')
     </div>
     <div class="">
@@ -46,27 +49,8 @@
     </div>
     @yield('extra-js')
   </div>
-
-  {{-- <div>
-        @yield('placanje')
-     </div>
-     <div>
-      @yield('porucivanje')
-     </div>
-     <div>
-      @yield('privatnost')
-     </div>
-     <div>
-      @yield('reklamacije')
-     </div>
-    
-
-    {{-- <div>
-        @include('neki')
-    </div> --}}
-  {{-- <div >
-        @include('footer1')
-    </div> --}}
+  
+    <livewire:scripts>
     <script>
       document.getElementById('nav-toggle').onclick = function(){
         document.getElementById('nav-content').classList.toggle('hidden');
