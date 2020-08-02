@@ -28,23 +28,15 @@ class ShopLivewire extends Component
         $categoryIds = [];
             if($this->requestedCategories){
                 $categories = (Category::whereIn('id', $this->requestedCategories))->get();
-                foreach ($categories as $category) {
-                    array_push($categoryIds, $category->descendants()->pluck('id'));  
-                    array_push($categoryIds, $category->getKey());                   
-
-                    // $this->categoryIds[] = $category->getKey();
+                foreach ($categories as $category) {                    
+                    $categoryIds[] = $category->getKey();                   
+                    $categoryIds[] = $category->descendants()->pluck('id');
                 }   
-            
-                    // $category = Category::find($this->requestedCategories);
-                    // $categoryIds = $category->descendants()->pluck('id');
-                    // $categoryIds[] = $category->getKey();
-                // dd(Arr::flatten($this->categoryIds));
-            $products = Product::whereIn('category_id', Arr::flatten($categoryIds));
+                $categoryIds = array_unique(Arr::flatten($categoryIds));
+                  
+            $products = Product::whereIn('category_id', $categoryIds);
             // $categoryName=optional($categories->where('id', $this->requestedCategory)->first())->name;
         }else{
-            // $products=Product::where('featured',true);
-           
-            // $categories=Category::all();
             $categoryName='Svi proizvodi';
             $products = DB::table('products');
         }
