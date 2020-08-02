@@ -32,30 +32,30 @@
             @endif
         </div>
 
-    <div class="product-section container">
+    <div class="product-section container grid-cols-1 md:grid-cols-2 p-4 md:p-4">
         <div>
             <div class="product-section-image">
                 {{-- <img src="{{asset('storage/'.$product->image)}}" alt="product"> --}}
                 <img src="{{productImage($product->image)}}" alt="product" style="height:340px;" class="active" id="currentImage"> 
             </div>
          
-            <div class="product-section-images">
+            <div class="product-section-images ">
                  <div class="product-section-thumbnail selected" >
-                    <img src="{{productImage($product->image)}}" alt="product" style="height:50px;"> 
+                    <img src="{{productImage($product->image)}}" alt="product" style="height:50px;" class="mx-auto"> 
                 </div>
 
                 @if ($product->images)
                     @foreach (json_decode($product->images,true)  as $image)  
                      <div class="product-section-thumbnail" >
-                        <img src="{{productImage($image)}}" alt="product" style="height:50px;"> 
+                        <img src="{{productImage($image)}}" alt="product" style="height:50px;" class="mx-auto"> 
                      </div>
                     @endforeach
                 @endif            
             </div>
         </div>
 
-        <div class="product-section-information">
-            <div class="product-section-subtitle">{{$product->details}}</div>
+        <div class="product-section-information -mt-16 lg:mt-12">
+            <div class="product-section-subtitle ">{{$product->details}}</div>
             {{-- <div>{!!$stock!!}</div> --}}
             <div>{{$product->quantity}}</div>
             <div class="product-section-price">{{$product->presentPrice()}}</div>
@@ -71,7 +71,7 @@
                  <input type="hidden" name="name" value="{{$product->name}}">
                 <input type="hidden" name="price" value="{{$product->price}}">
                 
-                <button type="submit" class="button button-plain transition duration-500 ease-in-out border border-gray-300 rounded-md bg-gray-500 hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110 ...">Add to cart</button>
+                <button type="submit" class="button button-plain transition duration-500 ease-in-out border border-gray-300 rounded-md bg-gray-500 hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110 ...">Dodaj u korpu</button>
 
              </form>
             @endif
