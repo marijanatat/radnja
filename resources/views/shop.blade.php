@@ -56,7 +56,7 @@
         <div class="products-header">
             <h1 class="stylish-heading font-bold text-2xl pt-2">{{$categoryName}}</h1>
             <div>
-                <strong style="font: bold;font-size:20px;margin-righ:2px">Price :</strong>
+                <strong style="font: bold;font-size:20px;margin-righ:2px">Cena :</strong>
                 <a href="{{route('shop.index',['category'=>$category->category,'sort'=>'low_high'])}}"
                     style="font-size:15px">Low to high |</a>
                 <a href="{{route('shop.index',['category'=>$category->category,'sort'=>'high_low'])}}"
@@ -68,15 +68,15 @@
 
             @forelse ($products as $product)
             <div class="product">
-                {{-- <a href="{{route('shop.show',$product->slug)}}"><img src="{{productImage($product->image)}}" style="height:140px;"
-                        alt="product"></a> --}}
+                <a href="{{route('shop.show',$product->slug)}}"><img src="{{productImage($product->image)}}" 
+                        alt="product"></a>
                 <a href="{{route('shop.show',$product->slug)}}">
                     <div class="product-name">{{$product->name}}</div>
                 </a>
                 <div class="product-price">{{presentPrice($product->price)}}</div>
             </div>
             @empty
-            <div style="text-align:left; color:gray">No items in this category</div>
+            <div style="text-align:left; color:gray">U ovoj kategoriji nema artikala. <br>Pogledajte naše druge proizvode!</div>
             @endforelse
 
          

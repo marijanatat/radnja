@@ -11,10 +11,10 @@
     @component('components.breadcrumbs')
         <a href="#">Home</a>
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
-        <span>Shopping Cart</span>
+        <span>Kupovina</span>
     @endcomponent
 
-    <div class="cart-section container">
+    <div class="cart-section container ml-16">
         <div>
             @if (session()->has('success_message'))
                 <div class="alert alert-success">
@@ -34,7 +34,7 @@
 
             @if (Cart::count() > 0)
                 
-            <h2>{{ Cart::count() }} item(s) in Shopping Cart</h2>
+            <h2 class="text-sm md:text-md mt-2">{{ Cart::count() }} proizvod(a) u korpi</h2>
 
             <div class="cart-table">
                 
@@ -45,7 +45,7 @@
                         <a href="{{route('shop.show', $item->model->slug)}}"><img src="{{ productImage($item->model->image) }}" alt="item" class="cart-table-img"></a>
                         <div class="cart-item-details">
                             <div class="cart-table-item"><a href="{{route('shop.show', $item->model->slug)}}">{{ $item->model->name }}</a></div>
-                            <div class="cart-table-description">{{ $item->model->details }}</div>
+                            {{-- <div class="cart-table-description">{{ $item->model->details }}</div> --}}
                         </div>
                     </div>
                     <div class="cart-table-row-right">
@@ -53,11 +53,11 @@
                             <form action="{{route('cart.destroy', $item->rowId)}}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="cart-options">Remove</button>
+                                <button type="submit" class="cart-options">Izbriši</button>
                             </form>
                             <form action="{{route('cart.switchToSaveForLater', $item->rowId)}}" method="POST">
                                 @csrf
-                                <button type="submit" class="cart-options">Save for Later</button>
+                                <button type="submit" class="cart-options">Sačuvaj za kasnije</button>
                             </form>
                         </div>
                         <div>
@@ -77,16 +77,17 @@
 
             </div> <!-- end cart-table -->
 
-            <div class="cart-totals">
+            <div class="cart-totals mt-16 ">
                 <div class="cart-totals-left">
-                    Shipping is free because we’re awesome like that.
+                  Za iznose narudžbine preko 3000 RSD - <span class="text-red-500 font-bold italic">BESPLATNA DOSTAVA !</span>
+
                 </div>
 
                 <div class="cart-totals-right">
                     <div>
                         Subtotal <br>
                         PDV&nbsp;(20%) <br>
-                        <span class="cart-totals-total">Total</span>
+                        <span class="cart-totals-total">Ukupno</span>
                     </div>
                     <div class="cart-totals-subtotal">
                         {{ Cart::subtotal() }} RSD <br>
@@ -96,23 +97,26 @@
                 </div>
             </div> <!-- end cart-totals -->
 
-            <div class="cart-buttons">
-                <a href="{{ route('shop.index') }}" class="button">Continue Shopping</a>
-                <a href="{{ route('checkout.index') }}" class="button-primary">Proceed to Checkout</a>
+            <div class="cart-buttons ">
+                <a href="{{ route('shop.index') }}" class="button rounded-md font-semibold">Nastavi kupovinu</a>
+                <a href="{{ route('checkout.index') }}" class="button-primary rounded-lg">
+                    
+                Završite kupovinu
+                </a>
             </div>
 
             @else
 
-                <h3>No items in Cart!</h3>
+                <h3 class="ml-16">No items in Cart!</h3>
                 <div class="spacer"></div>
-                <a href="{{ route('shop.index') }}" class="button">Continue Shopping</a>
+                <a href="{{ route('shop.index') }}" class="button p-2 ml-16">Nastavi kupovinu</a>
                 <div class="spacer"></div>
             @endif
 
             
             @if (Cart::instance('saveForLater')->count() > 0)
                 
-            <h2>{{ Cart::instance('saveForLater')->count() }} item(s) Saved For Later</h2>
+            <h2>{{ Cart::instance('saveForLater')->count() }} proizvod(a) sačuvanih za kasnije</h2>
 
             <div class="saved-for-later cart-table">
                 @foreach (Cart::instance('saveForLater')->content() as $item)
@@ -130,11 +134,11 @@
                             <form action="{{route('saveForLater.destroy', $item->rowId)}}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="cart-options">Remove</button>
+                                <button type="submit" class="cart-options">Izbriši</button>
                             </form>
                             <form action="{{route('saveForLater.switchToCart', $item->rowId)}}" method="POST">
                                 @csrf
-                                <button type="submit" class="cart-options">Move to Cart</button>
+                                <button type="submit" class="cart-options">Ubaci u korpu</button>
                             </form>
                         </div>
                         {{-- <div>
@@ -155,7 +159,7 @@
 
             @else 
 
-                <h3>You have no items Saved for Later.</h3>
+                <h3 class="px-16 py-4 italic">Nemate sačuvanih proizvoda.</h3>
 
             @endif
 

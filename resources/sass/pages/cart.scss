@@ -104,7 +104,10 @@
         padding: 20px;
         display: flex;
         justify-content: space-between;
-        background: $light-gray-background;
+        background: lighten($color: gray, $amount: 40%);
+      
+    
+       
 
         .cart-totals-left {
             width: 50%;
@@ -128,6 +131,7 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 40px;
+        padding: 10px;
     }
 }
 

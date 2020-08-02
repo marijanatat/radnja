@@ -5,5 +5,5 @@
         
         <img class="w-8 h-8 " src="https://img.icons8.com/color/48/000000/search.png"/> 
     </div>
-    <input type="text" name="query" id="query" value="{{ request()->input('query') }}" class="search-box" placeholder="Search for product" required>
+    <input type="text" name="query" id="query" value="{{ request()->input('query') }}" class="search-box text-xs md:text-lg w-28" placeholder="Search for product" required>
 </form>
