@@ -5,7 +5,7 @@
         @foreach ($categories as $category)
             <div x-data="{open: false}">
                     <div class="flex-col">
-                        <div class="duration-500 transform hover:translate-x-2" @click="open=!open">
+                        <div class="duration-500 transform hover:translate-x-1" @click="open=!open">
                             {{-- <input class="w-4" type="checkbox" id="{{$category->id}}" value="{{$category->id}}" wire:model="requestedCategories"> --}}
                             <span class="font-bold text-sm text-gray-700 cursor-pointer">{{$category->name}}
                             <i x-show="!open" class="fa fa-angle-double-right text-gray-700 cursor-pointer" aria-hidden="true"></i>
@@ -13,7 +13,13 @@
                             </span>
                         </div>
                     </div>
-                            <div x-show.transition="open" x-cloak>
+                            <div x-show="open" x-cloak
+                            x-transition:enter="transition-transform transition-opacity ease-out duration-300"
+                            x-transition:enter-start="opacity-0 transform -translate-y-3"
+                            x-transition:enter-end="opacity-100 transform translate-y-0"
+                            x-transition:leave="transition ease-in duration-300"
+                            x-transition:leave-end="opacity-0 transform -translate-y-3"    
+                            >
                                     
                                 @foreach ($category->children as $children)
 

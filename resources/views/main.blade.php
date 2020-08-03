@@ -36,7 +36,7 @@
     <header class="with-background">
       <div class="top-nav flex items-center">
         <div class="top-nav-left">
-          <nav class="navbar flex items-center bg-transparent justify-between flex-wrap  p-1  w-full  pin-t fixed z-10 top-0 mt-0 ">
+          <nav class="navbar flex items-center bg-transparent justify-between flex-wrap w-full pin-t fixed z-10 top-0 mt-0 ">
             @include('nav')
         </nav>
 
