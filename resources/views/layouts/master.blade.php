@@ -26,6 +26,12 @@
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 <script src="{{asset('js/app.js')}}"></script>
 
+<style>
+  [x-cloak]{
+    display: none;
+  }
+</style>
+
 </head>
 
 <body>
@@ -41,8 +47,8 @@
       </div>
     </header>
     <div class="bg-white">
-      {{-- <livewire:shop-livewire/> --}}
       @yield('content')
+      {{-- <livewire:shop-livewire/> --}}
     </div>
     <div class="">
       @include('footer')
