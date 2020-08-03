@@ -7,34 +7,33 @@
                     <div class="flex-col">
                         <div class="duration-500 transform hover:translate-x-2" @click="open=!open">
                             {{-- <input class="w-4" type="checkbox" id="{{$category->id}}" value="{{$category->id}}" wire:model="requestedCategories"> --}}
-                            <span >{{$category->name}}</span>
-                            <template x-if="!open">
-                                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                            </template>
-                            <template x-if="open">
-                                <i class="fa fa-angle-double-down" aria-hidden="true"></i>
-                            </template>
+                            <span class="font-bold text-sm text-gray-700 cursor-pointer">{{$category->name}}
+                            <i x-show="!open" class="fa fa-angle-double-right text-gray-700 cursor-pointer" aria-hidden="true"></i>
+                            <i x-show="open" class="fa fa-angle-double-down text-gray-700 cursor-pointer" aria-hidden="true"></i>
+                            </span>
                         </div>
                     </div>
-                            <div x-show="open" x-cloak>
-                                    @foreach ($category->children as $children)
+                            <div x-show.transition="open" x-cloak>
+                                    
+                                @foreach ($category->children as $children)
+
+                                    <div class="flex-col">
+                                        <div class="pl-6">
+                                            <span class="uppercase italic text-sm font-bold text-gray-700">{{$children->name}}</span>
+                                        </div>
+                                    </div>
+                                        @foreach ($children->children as $ch)
+
                                         <div class="flex-col">
-                                            <label class="hover:bg-gray-500 pl-6">
-                                                <input class="w-4" type="checkbox" id="{{$children->id}}" value="{{$children->id}}" wire:model="requestedCategories">
-                                                <span>{{$children->name}}</span>
+                                            <label class="hover:bg-gray-300 pl-12 text-sm text-gray-700">
+                                                <input class="w-4 pt-5" type="checkbox" id="{{$ch->id}}" value="{{$ch->id}}" wire:model="requestedCategories">
+                                                <span>{{$ch->name}}</span>
                                             </label>
                                         </div>
-                                        <div >
-                                            @foreach ($children->children as $ch)
-                                            <div class="flex-col">
-                                                <label class="hover:bg-gray-500 pl-12">
-                                                    <input class="w-4" type="checkbox" id="{{$ch->id}}" value="{{$ch->id}}" wire:model="requestedCategories">
-                                                    <span>{{$ch->name}}</span>
-                                                </label>
-                                            </div>
-                                            @endforeach
-                                        </div>
+
+                                        @endforeach
                                     @endforeach
+                                    
                             </div>
                         </div>
                         @endforeach
