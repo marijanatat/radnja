@@ -23,7 +23,13 @@
 
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 <script src="{{asset('js/app.js')}}"></script>
+@livewireStyles
 
+<style>
+  input:checked + svg {
+  	display: block;
+  }
+</style>
 </head>
 
 <body>
@@ -72,6 +78,8 @@
         document.getElementById('nav-content').classList.toggle('hidden');
       }
   </script> 
+
+@livewireScripts
 </body>
 
 </html>
