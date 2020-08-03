@@ -26,7 +26,7 @@
     
    
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    
+    @livewireStyles
     <style>
         .completed{
             text-decoration: line-through;
@@ -61,7 +61,12 @@
  
 }
 
-    </style>
+  input:checked + svg {
+  	display: block;
+  }
+
+
+</style>
 
 </head>
 <body>
@@ -75,6 +80,6 @@
 
     </div>
 
-   
+    @livewireScripts
 </body>
 </html>

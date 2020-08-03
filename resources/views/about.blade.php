@@ -13,6 +13,8 @@
 
  
 <div class="container">
+   
+
     <div class="mb-2 text-gray-700">
         <h2 style="font-size:24px " class="text-gray-700 font-semibold mt-2 tracking-widest">Naša priča</h2>
         <div class="spacer"></div>

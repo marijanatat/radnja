@@ -34,10 +34,6 @@ class ShopController extends Controller
         }
 
 
-        if($request->has('genre')) {
-            return Product::where('genre',$request->genre)->get();
-           
-        }
 
         if($request->has('size')) {
             return Product::where('size',$request->size)->get();
