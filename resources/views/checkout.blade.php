@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Checkout')
+
 
 @section('extra-css')
 
@@ -28,14 +28,14 @@
     </div>
     @endif
 
-    <h1 class="checkout-heading stylish-heading">Checkout</h1>
+  
     <div class="checkout-section">
         <div>
             <form action="{{route('checkout.store')}}" method="POST">
                 @csrf
-                <h2>Billing Details</h2>
+                <h2 class="font-bold text-gray-600 text-xl">Adresa isporuke</h2>
 
-                <div class="form-group">
+                <div class="form-group my-1">
                     <label for="email">Email Address</label>
                     @if (auth()->user())
                     <input type="email" class="form-control" id="email" name="email" value="{{ auth()->user()->email }}"
@@ -45,30 +45,30 @@
                         requried>
                     @endif
                 </div>
-                <div class="form-group">
+                <div class="form-group my-1">
                     <label for="name">Name</label>
                     <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" requried>
                 </div>
-                <div class="form-group">
+                <div class="form-group my-1">
                     <label for="address">Address</label>
                     <input type="text" class="form-control" id="address" name="address" value="{{ old('address') }}"
                         requried>
                 </div>
 
-                <div class="half-form">
-                    <div class="form-group">
+                <div class="half-form my-1 ">
+                    <div class="form-group my-1">
                         <label for="city">City</label>
                         <input type="text" class="form-control" id="city" name="city" value="{{ old('city') }}"
                             requried>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group my-1">
                         <label for="state">State</label>
                         <input type="text" class="form-control" id="province" name="state"
                             value="{{ old('state') }}" requried>
                     </div>
                 </div> <!-- end half-form -->
 
-                <div class="half-form">
+                <div class="half-form my-1">
                     <div class="form-group">
                         <label for="postalcode">Postal Code</label>
                         <input type="text" class="form-control" id="postalcode" name="postalcode"
@@ -83,9 +83,9 @@
 
                 <div class="spacer"></div>
 
-                <div class="spacer"></div>
+               
 
-                <button type="submit" class="button-primary full-width">Complete Order</button>
+                <button type="submit" class="button-primary full-width ">Naruči</button>
 
 
             </form>
@@ -94,7 +94,7 @@
 
 
         <div class="checkout-table-container">
-            <h2>Your Order</h2>
+            <h2 class="font-bold text-gray-600 text-xl">Vaša narudžbenica</h2>
 
             <div class="checkout-table">
                 @foreach (Cart::content() as $item)
@@ -123,7 +123,7 @@
                     Subtotal <br>
                     {{-- Discount (10OFF - 10%) <br> --}}
                     PDV <br>
-                    <span class="checkout-totals-total">Total</span>
+                    <span class="checkout-totals-total">Ukupno</span>
 
                 </div>
 

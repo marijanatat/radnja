@@ -30,18 +30,17 @@
 });
   </script>
   <style>
-    .grow{
+    .kupovina{
     
   animation-duration: 4s;
   animation-name: slidein;
   animation-iteration-count: infinite;
   text-shadow: 2px 2px rgb(20, 104, 107);
-    }
-
+}
   @keyframes slidein {
   from {
     margin-left: 100%;
-    width: 300%; 
+    width: 100%; 
   }
 
   to {
@@ -50,6 +49,9 @@
   }
 
     }
+  
+
+  
  /* .grow:hover
 {
         -webkit-transform: scale(1.3);
@@ -61,7 +63,7 @@
 
 <body>
   <div id="app">
-    <header class="with-background">
+    <header class="with-background" >
       <div class="top-nav flex items-center">
         <div class="top-nav-left">
           <nav class="navbar flex items-center bg-transparent justify-between flex-wrap w-full pin-t fixed z-10 top-0 mt-0 ">
@@ -86,12 +88,13 @@
             <div id="rotate-words">
               <h2 class=" animate-pulse italic text-4xl  font-bold text-gray-500 tracking-widest">Za porodicu <span>sa stilom.</span></h2> 
               <br>
-              <p  class="font-sans italic text-3xl  font-bold tracking-wide pl-8" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Proverite naš kvalitet !</p>
+              <p  class=" italic text-3xl font-mono  font-bold tracking-wide pl-8" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Proverite naš kvalitet !</p>
             </div>
 
-              <div class="hidden md:block w3-animate-fading mb-6 text-2xl text-gray-800 font-semibold ml-2">Pronađite nas na društvenim
-                                       mrežama :</div>
-              <div class="hero-buttons text-gray-800 items-center flex ml-40 ">
+              <div class=" md:block w3-animate-fading mb-6 text-2xl text-gray-800 font-semibold font-mono ml-4 italic">
+                Pratite nas na društvenim mrežama.
+                </div>
+              <div class="hero-buttons text-gray-800 items-center flex ml-16 md:ml-40 ">
                 <div id="social">
                   <a href=""><i class="fa fa-facebook-official" aria-hidden="true" 
                     ></i></a>
@@ -122,7 +125,7 @@
         <p class="section-description text-center " style="font-size:30px ">Naši proizvodi su isključivo domaće
           proizvodnje od najkvalitetnijeg 100% pamuka</p>
 
-        <div class="">
+        <div class="mx-2">
           @include('kategorije')
         </div>
       
@@ -133,12 +136,12 @@
         </div>
         
         <!-- div-->
-        <div class="w-full h-full bg-gray-600 bg-opacity-25 shadow-md mb-8 p-24 text-center  ">
-          <div class="grow">
+        <div class="w-full h-full bg-gray-600 bg-opacity-25 shadow-md mb-8 p-24 text-center ">
+           <div class="kupovina">
             <h1 class="text-3xl font-bold text-gray-700 p-4 max-h-64" >
               KUPUJTE IZ UDOBNOSTI SVOJE FOTELJE
             </h1>
-          </div>
+          </div> 
           <hr class="max-h-64 bg-gray-800 h-2 border-dashed " >
           <div>
             <h2 class="text-white font-5xl uppercase p-4 font-bold mt-16 transition ease-in duration-700" style="text-shadow: 2px 2px rgb(112, 112, 112);"> Ovo je samo deo našeg asortimana</h2>
@@ -158,7 +161,7 @@
           </div>
         </div>  --}}
         
-        <div class="products text-center">
+        <div class="products text-center mx-2 grid grid-cols-2 md:grid-cols-4 mt-2 " style="">
           @foreach ($products as $product)
           <div class="product">
             <a href="{{route('shop.show',$product->slug)}}"><img class="mx-auto" src="{{productImage($product->image)}}"
@@ -173,8 +176,8 @@
             
           </div> <!-- end products -->
           
-          <div class="text-center button-container text-base xl:text-lg">
-            <a href="{{route('shop.index')}}" class="example_e button hover:bg-rgb(20, 104, 107)">View more products</a>
+          <div class="text-center button-container text-sm xl:text-lg mt-2 md:mt-16 mb-2 p-1 md:mb-4 md:p-4">
+            <a href="{{route('shop.index')}}" class="example_e button hover:bg-rgb(20, 104, 107)" >View more products</a>
           </div>
           
         </div> 
@@ -182,16 +185,16 @@
     </div> <!-- end featured-section -->
     
 
-    <div class="module">
-      <h2 class="stripe-4 text-transparent">O</h2>
+     <div class="module">
+    
       @include('partials.subscribe')
-    </div>
+    </div> 
 
     {{--      
           <blog-posts></blog-posts> --}}
     {{--         
             @include('partials.footer') --}}
-    <div class="w-full shadow-md">
+    <div class="w-full shadow-md my-1">
       @include('footer')
     </div>
   </div>

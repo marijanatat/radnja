@@ -1,4 +1,4 @@
-<div class="antialiased sans-serif bg-gray-100 flex w-full items-center min-h-screen">
+<div class="sans-serif bg-gray-100 flex w-full items-center min-h-screen">
     <div class="max-w-6xl mx-auto pt-4 pb-8 px-4 overflow-hidden w-full">
       <div x-data="{ loading: false, showAlertMessage: false, showSuccessMessage: false, name: '', email: '', errors: [] }"
         x-cloak>
@@ -147,7 +147,7 @@
                 </div>
   
                 <button type="submit" 
-                  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg w-full"
+                  class="bg-blue- hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg w-full"
                   x-bind:disabled="loading == true">
                   <template x-if="loading == false">
                     <div>Subscribe Now!</div>
