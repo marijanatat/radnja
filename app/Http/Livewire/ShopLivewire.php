@@ -47,7 +47,7 @@ class ShopLivewire extends Component
         } elseif($this->sort==='high_low') {
             $products=$products->orderBy('price','desc')->paginate(9);
         }else{
-            $products=$products->get();
+            $products=$products->paginate(9);
         }
 
         return view('livewire.shop-livewire', [

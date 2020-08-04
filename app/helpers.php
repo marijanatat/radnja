@@ -4,7 +4,7 @@ use Carbon\Carbon;
 
 function presentPrice($price)
 {
-    return number_format( $price).' DIN';
+    return number_format($price, 2, ',', '.') . ' RSD';
 }
 
 function productImage($path)
