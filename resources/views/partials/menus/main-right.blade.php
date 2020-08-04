@@ -1,16 +1,16 @@
-<ul class="flex space-x-6 mr-6 uppercase tracking-normal">
+<ul class="flex space-x-6 mr-6 uppercase tracking-normal text-gray-200">
     @guest
-    <li><a href="{{route('register')}}">Sign up </a></li>
-    <li><a href="{{route('login')}}">Log in </a></li>
+    <li><a href="{{route('register')}}" class="hover:text-teal-300">Sign up </a></li>
+    <li><a href="{{route('login')}}" class="hover:text-teal-300">Log in </a></li>
 
     @else
 
 
     <li>
-        <a href="{{ route('users.edit') }}" class="ml-8">My Account</a>
+        <a href="{{ route('users.edit') }}" class="ml-8 hover:text-teal-300">My Account</a>
     </li>
     <li>
-        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+        <a class="dropdown-item  hover:text-teal-300" href="{{ route('logout') }}" onclick="event.preventDefault();
                   document.getElementById('logout-form').submit();">
             {{ __('Logout') }}
         </a>
@@ -21,9 +21,9 @@
     </form>
 
     @endguest
-    <li><a href="{{route('cart.index')}}">Cart
+    <li class="relative"><a href="{{route('cart.index')}}"><i class="fa fa-shopping-cart text-xl mr-2 hover:text-teal-300" aria-hidden="true"></i>
             @if (Cart::instance('default')->count()>0)
-            <span class="cart-count"><span>{{Cart::instance('default')->count()}}</span>
+            <span class="bg-yellow-400 px-1 leading-tight rounded-full text-teal-800 text-sm absolute" style="left: 14px; top: -8px;"><span>{{Cart::instance('default')->count()}}</span>
                 @endif
         </a></li>
     {{-- @foreach($items as $menu_item)

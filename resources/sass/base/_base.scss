@@ -10,13 +10,13 @@ a {
     text-decoration: none;
     color: $text-color;
 
-    &:visited {
-        color: $text-color;
-    }
+    // &:visited {
+    //     color: $text-color;
+    // }
 
-    &:hover {
-        color: lighten($text-color, 40%);
-    }
+    // &:hover {
+    //     color: lighten($text-color, 40%);
+    // }
 
 }
 

@@ -32,14 +32,14 @@ header.with-background {
       // text-transform: uppercase;
       // justify-content: space-between;
       // width: 40%;
-      color: $white;
+      // color: $white;
 
       a {
         // color: $white;
-        color:$white;
-        &:hover {
-          color: darken($white, 10%);
-        }
+        // color:$white;
+        // &:hover {
+        //   color: darken($white, 10%);
+        // }
       }
 
     }
@@ -107,10 +107,10 @@ header {
       }
 
       a {
-        color: $white;
-        &:hover {
-          color: darken($white, 10%);
-        }
+        // color: $white;
+        // &:hover {
+        //   color: darken($white, 10%);
+        // }
       }
 
       .cart-count {
