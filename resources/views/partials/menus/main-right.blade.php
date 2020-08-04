@@ -1,4 +1,4 @@
-<ul class="flex space-x-6 mr-6 uppercase tracking-normal text-gray-200">
+<ul class="md:flex flex-no-wrap space-x-6 mr-6 uppercase tracking-normal text-gray-200 items-center">
     @guest
     <li><a href="{{route('register')}}" class="hover:text-teal-300">Sign up </a></li>
     <li><a href="{{route('login')}}" class="hover:text-teal-300">Log in </a></li>
