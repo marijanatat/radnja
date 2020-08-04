@@ -4,6 +4,8 @@ namespace App\Http\Livewire;
 
 use App\Category;
 use App\Product;
+use App\ProductSize;
+use App\Size;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
@@ -12,33 +14,32 @@ use Livewire\Component;
 class ShopLivewire extends Component
 {
     public $requestedCategories = [];
-    // public $categoryIds = [];    
+    public $requestedSizes = [];    
     public $sort;
-    public $page;
+    public $sizes = [];
+    public $sizesAll = [];
    
 
     public function mount()
     {
-
+        $this->sizes=Size::all()->take(5);
+        $this->sizesAll = Size::all()->skip(5);
     }
 
     public function render()
     {
-        $categories = Category::get();
-        $categoryIds = [];
-            if($this->requestedCategories){
-                $categories = (Category::whereIn('id', $this->requestedCategories))->get();
-                foreach ($categories as $category) {                    
-                    $categoryIds[] = $category->getKey();                   
-                    $categoryIds[] = $category->descendants()->pluck('id');
-                }   
-                $categoryIds = array_unique(Arr::flatten($categoryIds));
-                  
-            $products = Product::whereIn('category_id', $categoryIds);
-            // $categoryName=optional($categories->where('id', $this->requestedCategory)->first())->name;
+        // $categoryIds = [];
+        // $productIds = [];
+
+        if($this->requestedCategories){
+            $products = $this->filterProductsByCategories();
         }else{
-            $categoryName='Svi proizvodi';
+            // $categoryName='Svi proizvodi';
             $products = DB::table('products');
+        }
+
+        if($this->requestedSizes){
+            $products = $this->filterBySize();
         }
 
         if($this->sort==='low_high') {
@@ -52,7 +53,30 @@ class ShopLivewire extends Component
 
         return view('livewire.shop-livewire', [
             'products' => $products,
-            'categoryIds' => $categoryIds 
+            // 'categoryIds' => $categoryIds 
         ]);
+    }
+
+    private function filterProductsByCategories()
+    {
+        $categories = (Category::whereIn('id', $this->requestedCategories))->get();
+            foreach ($categories as $category) {                    
+                $categoryIds[] = $category->getKey();                   
+                $categoryIds[] = $category->descendants()->pluck('id');
+            }   
+            $categoryIds = array_unique(Arr::flatten($categoryIds));
+                
+        return Product::whereIn('category_id', $categoryIds);
+        // $categoryName=optional($categories->where('id', $this->requestedCategory)->first())->name;
+    }
+
+    private function filterBySize()
+    {
+        $productIds = [];
+        $productsSizes=(ProductSize::whereIn('size_id',$this->requestedSizes))->get();
+        foreach($productsSizes as $ps){
+            $productIds[]=$ps->product_id;
+           }
+        return Product::whereIn('id',$productIds);
     }
 }
