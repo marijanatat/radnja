@@ -21,6 +21,8 @@
 
 @yield('extra-css')
 
+<livewire:styles>
+
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 <script src="{{asset('js/app.js')}}"></script>
 @livewireStyles
@@ -29,7 +31,11 @@
   input:checked + svg {
   	display: block;
   }
+  [x-cloak]{
+    display: none;
+  }
 </style>
+
 </head>
 
 <body>
@@ -38,7 +44,7 @@
       <div class="top-nav flex items-center">
         <div class="top-nav-left">
           <nav style="background-color: rgb(20, 104, 107)"
-                class="flex items-center justify-between flex-wrap p-1 w-full pin-t fixed z-10 top-0 mt-0">
+                class="flex items-center justify-between flex-wrap w-full pin-t fixed z-10 top-0 mt-0">
               @include('nav')
           </nav>
         </div>
@@ -46,33 +52,15 @@
     </header>
     <div class="bg-white">
       @yield('content')
+      {{-- <livewire:shop-livewire/> --}}
     </div>
     <div class="">
       @include('footer')
     </div>
     @yield('extra-js')
   </div>
-
-  {{-- <div>
-        @yield('placanje')
-     </div>
-     <div>
-      @yield('porucivanje')
-     </div>
-     <div>
-      @yield('privatnost')
-     </div>
-     <div>
-      @yield('reklamacije')
-     </div>
-    
-
-    {{-- <div>
-        @include('neki')
-    </div> --}}
-  {{-- <div >
-        @include('footer1')
-    </div> --}}
+  
+    <livewire:scripts>
     <script>
       document.getElementById('nav-toggle').onclick = function(){
         document.getElementById('nav-content').classList.toggle('hidden');
