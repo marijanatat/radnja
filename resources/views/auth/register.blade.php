@@ -27,7 +27,7 @@
 
                 <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="Email" required autofocus>
                 <input type="password" id="password" name="password"  placeholder="Password" required>
-                <input type="password" id="password-confirm" name="password-confirm"  placeholder="Confirm Password" required>
+                <input type="password" id="password-confirm" name="password_confirmation"  placeholder="Confirm Password" required>
 
                 <div class="login-container">
                     <button type="submit" class="auth-button">Registracija</button>
