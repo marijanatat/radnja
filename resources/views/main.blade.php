@@ -29,6 +29,34 @@
   });
 });
   </script>
+  <style>
+    .grow{
+    
+  animation-duration: 4s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  text-shadow: 2px 2px rgb(20, 104, 107);
+    }
+
+  @keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+
+    }
+ /* .grow:hover
+{
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+} */
+  </style>
 </head>
 
 <body>
@@ -58,7 +86,7 @@
             <div id="rotate-words">
               <h2 class=" animate-pulse italic text-4xl  font-bold text-gray-500 tracking-widest">Za porodicu <span>sa stilom.</span></h2> 
               <br>
-              <p  class="font-sans italic text-3xl  font-bold tracking-wide pl-8">Proverite naš kvalitet !</p>
+              <p  class="font-sans italic text-3xl  font-bold tracking-wide pl-8" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Proverite naš kvalitet !</p>
             </div>
 
               <div class="hidden md:block w3-animate-fading mb-6 text-2xl text-gray-800 font-semibold ml-2">Pronađite nas na društvenim
@@ -105,8 +133,16 @@
         </div>
         
         <!-- div-->
-        <div class="w-full h-64 bg-gray-300 shadow-md mb-8 p-20 text-center">
-          <h2 class="text-blue-800 font-3xl uppercase p-8 ">Ovo je samo deo našeg asortimana</h2>
+        <div class="w-full h-full bg-gray-600 bg-opacity-25 shadow-md mb-8 p-24 text-center  ">
+          <div class="grow">
+            <h1 class="text-3xl font-bold text-gray-700 p-4 max-h-64" >
+              KUPUJTE IZ UDOBNOSTI SVOJE FOTELJE
+            </h1>
+          </div>
+          <hr class="max-h-64 bg-gray-800 h-2 border-dashed " >
+          <div>
+            <h2 class="text-white font-5xl uppercase p-4 font-bold mt-16 transition ease-in duration-700" style="text-shadow: 2px 2px rgb(112, 112, 112);"> Ovo je samo deo našeg asortimana</h2>
+          </div>
           {{-- <a href="#" class="button">Featured</a>
           <a href="#" class="button">On Sale</a>  --}}
         </div>
@@ -148,7 +184,7 @@
 
     <div class="module">
       <h2 class="stripe-4 text-transparent">O</h2>
-
+      @include('partials.subscribe')
     </div>
 
     {{--      
