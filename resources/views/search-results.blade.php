@@ -1,7 +1,7 @@
 
 
 
-@extends('layout')
+@extends('layouts.master')
 
 @section('title', 'Search Result')
 
@@ -55,7 +55,7 @@
                             <tr>
                                 <th><a href="{{ route('shop.show', $product->slug) }}">{{ $product->name }}</a></th>
                                 <td>{{ $product->details }}</td>
-                                <td>{{ str_limit($product->description, 80) }}</td>
+                                <td>{{ Str::limit($product->description, 80) }}</td>
                                 <td>{{ $product->presentPrice() }}</td>
                             </tr>
                         @endforeach

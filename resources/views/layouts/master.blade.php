@@ -35,7 +35,23 @@
     display: none;
   }
 
- 
+  #proizvodi{
+    animation-duration: 1.5s;
+  animation-name: slidein;
+  
+  }
+  @keyframes slidein {
+  from {
+    margin-top: 200%;
+    width: 100%; 
+  }
+
+  to {
+    margin-top: 0%;
+    width: 100%;
+  }
+
+    }
 
 
 </style>
