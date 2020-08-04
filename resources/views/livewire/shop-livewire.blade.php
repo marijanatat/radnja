@@ -91,11 +91,11 @@
                 </div>
                 @endforeach
             </div> --}}
-            <div class="w-3/4 md:grid md:grid-cols-3 md:min-h-0 md:min-w-0 row-gap-12 text-center mx-auto">
+            <div class="w-3/4 md:grid md:grid-cols-3 md:min-h-0 md:min-w-0 row-gap-12 col-gap-8 text-center mx-auto pl-10">
 
                 @forelse ($products as $product)
                 <div class="">
-                    <a href="{{route('shop.show',$product->slug)}}"><img class="pl-10" src="{{productImage($product->image)}}"
+                    <a href="{{route('shop.show',$product->slug)}}"><img class="h-32 md:h-auto" src="{{productImage($product->image)}}"
                             alt="product"></a>
                     <a href="{{route('shop.show',$product->slug)}}">
                         <div class="">{{$product->name}}</div>
