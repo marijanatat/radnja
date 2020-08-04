@@ -53,7 +53,7 @@
               <a href="/"><img src="{{asset('./img/baby.svg')}}" alt="kolica za bebe" style=""
                   class="w-16 h-16 bg-transparent  hover:text-red-800 py-2 px-2 rounded-md"> </a>
   
-            <div class="flex-1 font-bold text-lg xl:text-2xl text-white px-2 lg:px-4 uppercase py-2 hover:text-gray-400">
+            <div class="flex-1 font-bold text-lg xl:text-2xl text-white px-2 lg:px-4 uppercase py-2 hover:text-gray-400" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
               Mob-ing
             </div>
           </div>
