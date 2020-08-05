@@ -84,7 +84,7 @@
    
      
        @foreach ($categories as $category)
- 
+   
        {{-- <li class="dropdown mr-6 -ml-4 -mt-8 ">  --}}
          <li class="upm mr-6 pb-4" x-data="{ open: false }">
         <button  @click="open = !open">
