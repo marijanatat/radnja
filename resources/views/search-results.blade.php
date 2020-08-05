@@ -1,12 +1,9 @@
-
-
-
 @extends('layouts.master')
 
 @section('title', 'Search Result')
 
 @section('extra-css')
-{{-- <link rel="stylesheet" href="{{ asset('css/algolia.css') }}"> --}}
+<link rel="stylesheet" href="{{ asset('css/algolia.css') }}">
 @endsection
 
 @section('content')
