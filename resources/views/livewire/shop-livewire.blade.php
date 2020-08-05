@@ -165,7 +165,7 @@
                 </div>
                 @endforeach
             </div> --}}
-            <div class="w-3/4 md:grid md:grid-cols-3 md:min-h-0 md:min-w-0 row-gap-12 col-gap-8 text-center mx-auto pl-10" >
+            <div id="proizvodi" class="w-3/4 md:grid md:grid-cols-3 md:min-h-0 md:min-w-0 row-gap-12 col-gap-8 text-center mx-auto pl-10" >
 
                 @forelse ($products as $product)
                 <div class="" id="">

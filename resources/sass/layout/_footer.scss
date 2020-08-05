@@ -1,12 +1,13 @@
 footer {
     background:   #0a8f88;;
     color: $white;
-    padding: 40px 0;
+    padding: 5px 5px;
   }
 
   .footer-content {
     display: flex;
     justify-content: space-between;
+    
    
 
     .heart {
@@ -15,9 +16,9 @@ footer {
 
     ul {
       display: flex;
-      width: 30%;
+      width: 70%;
       justify-content: space-between;
-      margin-left: 2px;;
+      margin-left: 2px;
     }
 
     a {

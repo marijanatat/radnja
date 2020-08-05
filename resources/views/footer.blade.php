@@ -5,7 +5,7 @@
 
     <div class="w-full p-8"  style="background-color: rgb(20, 104, 107);padding-left:40px">
         <div class="sm:flex mb-0">
-      <div class="sm:w-1/3 h-auto mt-4 sm:mt-12 md:mt-8">
+      <div class="sm:w-1/3 h-auto ml-20 md:ml-8 mt-4 sm:mt-12 md:mt-8">
           <ul class="list-reset leading-normal">
               <div class="flex items-center ">
                   <a href=""><li class="hover:text-gray-500"><img  src="{{asset('./img/baby.svg')}}" alt="kolica za bebe" style="" class="w-12 h-12 bg-transparent p-2 rounded-md hover:bg-gray-500">  </li></a>
@@ -18,7 +18,7 @@
             
           </ul>
       </div>
-      <div class="sm:w-1/3 h-auto ">
+      <div class="sm:w-1/3 h-auto ml-20 md:ml-8">
         
         
           <ul class="list-reset leading-normal mt-4 sm:mt-12 md:mt-8">
@@ -32,7 +32,7 @@
           </ul>
     
       </div>
-      <div class="sm:w-1/3 h-auto sm:mt-0 mt-8">
+      <div class=" sm:w-1/3 h-auto sm:mt-0 mt-8 ml-20 md:ml-8">
         <div class="">
             <p class=" text-white text-base xl:text- hover:text-gray-500 p-2">Ovde nas možete pronaći:</p>
             <iframe  class="mapa w-64 h-56 md:w-96 md:h-64 pb-2" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1398.1260028649447!2d19.257321988241856!3d45.50500542734718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssr!2srs!4v1594243180190!5m2!1ssr!2srs"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>

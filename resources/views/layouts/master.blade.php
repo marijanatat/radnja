@@ -37,22 +37,29 @@
 
   #proizvodi{
     animation-duration: 1.5s;
-  animation-name: slidein;
+  animation-name: slidein  ;
   
   }
   @keyframes slidein {
-  from {
+      /* 0%{
+      transform: scaleY(1);
+    }
+    100%{
+      transform: scaleY(0)
+    }   */
+    from {
     margin-top: 200%;
     width: 100%; 
-  }
+  } 
 
   to {
     margin-top: 0%;
     width: 100%;
-  }
+  }  
 
     }
 
+    
 
 </style>
 
