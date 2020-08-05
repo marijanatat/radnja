@@ -67,7 +67,8 @@
           <button>
             <a 
               class="dropbtn inline-block px-2 lg:px-4 bg-transparent uppercase text-white  text-md  lg:text-base no-underline hover:text-gray-200 hover:no-underline py-2 "
-              href="{{route('shop.index', ['category' => $category->id])}}">{{$category->name}}</a>
+              href="{{route('shop.index', ['category' => $category->id])}}">{{$category->name}} 
+            </a>
           </button>
   
           <div class="dropdown-content">
