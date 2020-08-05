@@ -33,9 +33,9 @@ class ShopLivewire extends Component
     public function mount()
     {
         if(request()->category){
+
             $this->requestedCategories[] = request()->category;
         }
-          
         // $this->categoryName = optional(Category::where('id', request()->category)->first())->name;
         $this->sizes=Size::all()->take(5);
         $this->sizesAll = Size::all()->skip(5);

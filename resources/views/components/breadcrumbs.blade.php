@@ -5,7 +5,8 @@
             {{ $slot }}
         </div>
         <div>
-            @include('partials.search')
+            {{-- @include('partials.search') --}}
+            <livewire:search-dropdown>
         </div>
     </div>
 </div> <!-- end breadcrumbs -->
