@@ -46,6 +46,11 @@ class ShopLivewire extends Component
         $this->resetPage();
     }
 
+    public function resetCategories()
+    {
+        $this->requestedCategories = [];    
+    } 
+
     public function render()
     {
         if($this->requestedCategories){
@@ -88,9 +93,9 @@ class ShopLivewire extends Component
 
     public function filtriraj($id)
     {
-        // $this->requestedCategories = []; 
+        // $this->resetCategories(); 
         // $this->requestedCategories[] = $id;
-        // $this->render();
+        // $this->render();        
     }
 
     private function filterProductsByCategories()

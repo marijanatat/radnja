@@ -59,6 +59,9 @@
                 <div class="flex-1 overflow-y-scroll">
                     <h3 class="uppercase">Kategorije</h3>
                     <hr class="mb-3">
+                    <button class="text-left font-bold text-sm text-gray-700 cursor-pointer focus:outline-none" wire:click="resetCategories">Sve kategorije
+                        <i class="fa fa-angle-double-right text-gray-700 cursor-pointer" aria-hidden="true"></i>
+                    </button>  
                 @foreach ($categories as $category)
                     <div x-data="{open: false}">
                             <div class="">
@@ -77,7 +80,7 @@
                                     x-transition:leave="transition ease-in duration-300"
                                     x-transition:leave-end="opacity-0 transform -translate-y-3"    
                                     >
-                                            
+                                          
                                         @foreach ($category->children as $children)
         
                                             <div class="flex-col">
@@ -177,8 +180,14 @@
                     <div>{{presentPrice($product->price)}}</div>
                 </div>
                 @empty
-                <div style="text-align:left; color:gray">No items in this category</div>
-                @endforelse
+                <div class="flex flex-col  text-gray-700">
+                    <div class="text-left">Trenutno nema proizvoda ove kategorije na stanju. Molimo vas, navratite kasnije.</div>
+                    <div class="spacer"></div>
+                    <button class="text-left font-bold text-sm text-gray-700 cursor-pointer focus:outline-none" wire:click="resetCategories">Svi proizvodi
+                        <i class="fa fa-angle-double-right text-gray-700 cursor-pointer" aria-hidden="true"></i>
+                    </button>
+                   
+                </div> @endforelse
     
              
             </div> <!-- end products -->
