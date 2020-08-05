@@ -1,14 +1,14 @@
 html {
-    box-sizing: border-box;
+    // box-sizing: border-box;
 }
 
 *, *:before, *:after {
-    box-sizing: inherit;
+    // box-sizing: inherit;
 }
 
 a {
-    text-decoration: none;
-    color: $text-color;
+    // text-decoration: none;
+    // color: $text-color;
 
     // &:visited {
     //     color: $text-color;
@@ -21,19 +21,19 @@ a {
 }
 
 .logo a {
-    color: $white;
+    // color: $white;
     // margin-left: 2px;
 }
 
 h1 {
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
 }
 
 h2 {
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
 }
 
 img {
-     max-width: 100%;
+    //  max-width: 100%;
 //    margin-right: 4px;
 }

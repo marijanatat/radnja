@@ -32,7 +32,7 @@ Route::group(['prefix' => 'admin'], function () {
 
 
 Route::get('/', 'ProductController@index')->name('home');
-Route::get('/shop','ShopController@index')->name('shop.index');
+// Route::get('/shop','ShopController@index')->name('shop.index');
 Route::get('/shop/{product}','ShopController@show')->name('shop.show');
 Route::get('/cart','CartController@index')->name('cart.index');
 Route::post('/cart','CartController@store')->name('cart.store');
@@ -81,5 +81,5 @@ Route::view('/about','about')->name('about');
  Route::livewire('/size', 'size')
     ->layout('layouts.master');
   
-Route::livewire('/shop-livewire', 'shop-livewire')
+Route::livewire('/shop', 'shop-livewire')->name('shop.index')
     ->layout('layouts.master');
