@@ -25,56 +25,13 @@
             </div>
         @endif
         </div>
-
-        <div class="container flex justify-between">
-            <div class="bg-gray-300 border-solid border-1 border-gray-600 w-20 h-full rounded-t-lg">
-    
-                <div class="flex flex-col  items-start  ml-4 justify-center " >
-                    @foreach ($sizes as $size)
-                    <div class="flex flex-col w-12 max-h-full">
-                        <label class="inline-flex items-center  text-sm">
-                            <input type="checkbox" class="form-checkbox h-3 w-3 text-gray-600 text-sm " id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">
-                            <li class="list-none ml-2">{{$size->value}}</li>
-                        </label>
-                    </div>
-                    @endforeach
-                </div>
-                    <div x-data="{ open: false }" class="flex flex-col  items-start  ml-4 justify-center ">
-                        @foreach ($sizesAll as $size)
-                        <div class="flex flex-col w-12 max-h-full" x-show="open">
-                            <label class="inline-flex items-center  text-sm">
-                                <input type="checkbox" class="form-checkbox h-3 w-3 text-gray-600 text-sm " id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">
-                                <li class="list-none ml-2">{{$size->value}}</li>
-                            </label>
-                        </div>
-                        @endforeach
+        <div class="container flex justify-end text-sm pt-8 pb-2">
             
-                        <button type="" @click="open = !open"  type="button" 
-                                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded "  x-html="open ? `<i class='fa fa-angle-double-down'></i>` :`<i class='fa fa-angle-double-up'></i>`"> </button>
+            {{-- <h1 class="stylish-heading font-bold text-2xl pt-2 mr-auto" wire:model="categoryName">{{$categoryName}}</h1> --}}
             
-                        {{-- <button type="" @click="open = !open"  type="button" 
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded " x-text="open ? 'Prikazi manje':'Prikazi vise'" x-html="open ? '<i class='fa fa-angle-double-down'></i>':'<i class='fa fa-angle-double-up'></i>'"> </button> --}}  
-                    </div>  
-            
-            </div>
-    
-    <br>
-            <div class="slidecontainer" style="width: 350px;">
-                <label for="slider">Cena:</label>
-                <div>Opseg od {{presentPrice($min)}} do {{presentPrice($max)}}</div>
-                <div data-role="main" class="ui-content">
-                      <div data-role="rangeslider">
-                        <label for="price-min">Minimalna cena:</label>
-                        <input type="range" name="price-min" id="price-min" wire:model="min" min="0" max="5000"><br>
-                        <label for="price-max">Maksimalna cena:</label>
-                        <input type="range" name="price-max" id="price-max" wire:model="max" min="0" max="5000">
-                      </div>
-                  </div>
-              </div>
-    <br>
-            <div>
-                <label for="sortiranje">Sortiraj:</label>
-                <select wire:model="sort" name="sortiranje">
+            <div class="mr-6">
+                <label for="sortiranje" class="font-bold">Sortiraj:</label>
+                <select wire:model.debounce.0ms="sort" name="sortiranje">
                     <option value="popular">Najpopularnije</option>  
                     <option value="low_high">Po ceni rastuće</option>
                     <option value="high_low">Po ceni opadajuće</option>
@@ -83,22 +40,34 @@
                     <option value="newest">Najnovije</option>
                 </select>
             </div>
+            <div>
+                <label for="prikazi" class="font-bold">Prikaži po strani:</label>
+                <select name="prikazi" wire:model.debounce0ms="productsPerPage">
+                    <option value="12">12</option>
+                    <option value="24">24</option>
+                    <option value="36">36</option>
+                    <option value="48">48</option>
+                </select>
+            </div>
         </div>
 
-    <div class="flex p-16">
+        <hr class="mb-3">
+
+    <div class="flex px-16 pb-16">
         <div class="flex h-screen w-64">
             <div class="w-1/4 flex-1 flex overflow-hidden">
                 <div class="flex-1 overflow-y-scroll">
-                    <h3 class="uppercase pb-4">Kategorije</h3>
+                    <h3 class="uppercase">Kategorije</h3>
+                    <hr class="mb-3">
                 @foreach ($categories as $category)
                     <div x-data="{open: false}">
                             <div class="">
                                 <div class="duration-500 transform hover:translate-x-1" @click="open=!open">
                                     {{-- <input class="w-4" type="checkbox" id="{{$category->id}}" value="{{$category->id}}" wire:model="requestedCategories"> --}}
-                                    <span class="font-bold text-sm text-gray-700 cursor-pointer">{{$category->name}}
+                                    <button class="font-bold text-sm text-gray-700 cursor-pointer focus:outline-none" wire:click="filtriraj({{$category->id}})">{{$category->name}}
                                     <i x-show="!open" class="fa fa-angle-double-right text-gray-700 cursor-pointer" aria-hidden="true"></i>
                                     <i x-show="open" class="fa fa-angle-double-down text-gray-700 cursor-pointer" aria-hidden="true"></i>
-                                    </span>
+                                    </button>
                                 </div>
                             </div>
                                     <div x-show="open" x-cloak
@@ -131,7 +100,54 @@
                                     </div>
                                 </div>
                                 @endforeach
-                            </div>
+
+                                <h3 class="mt-10 uppercase">Veličine</h3>
+                                <hr>
+                                <div class="bg-gray-300 border-solid border-1 border-gray-600 w-20 h-auto rounded-t-lg mt-4">
+                                    <div class="flex flex-col  items-start  ml-4 justify-center " >
+                                        @foreach ($sizes as $size)
+                                        <div class="flex flex-col w-12 max-h-full">
+                                            <label class="inline-flex items-center  text-sm">
+                                                <input type="checkbox" class="form-checkbox h-3 w-3 text-gray-600 text-sm " id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">
+                                                <li class="list-none ml-2">{{$size->value}}</li>
+                                            </label>
+                                        </div>
+                                        @endforeach
+                                    </div>
+                        
+                                    <div x-data="{ open: false }" class="flex flex-col items-start ml-4 justify-center">
+                                        @foreach ($sizesAll as $size)
+                                        
+                                        <div class="flex flex-col w-12 max-h-full" x-show="open">
+                                            <label class="inline-flex items-center  text-sm">
+                                                <input type="checkbox" class="form-checkbox h-3 w-3 text-gray-600 text-sm " id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">
+                                                <li class="list-none ml-2">{{$size->value}}</li>
+                                            </label>
+                                        </div>
+                                        
+                                        @endforeach
+                                            
+                                        <button type="" @click="open = !open"  type="button" 
+                                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded "  x-html="open ? `<i class='fa fa-angle-double-up'></i>` :`<i class='fa fa-angle-double-down'></i>`"> </button>
+                                        
+                                     </div>  
+                                </div>
+
+                                <h3 class="uppercase mt-10">Cena:</h3>
+                                <hr class="mb-3">
+                                <div class="slidecontainer w-auto text-sm">
+                                    <div class="mb-3">Opseg od {{presentPrice($min)}} do {{presentPrice($max)}}</div>
+                                    <div data-role="main" class="ui-content">
+                                        <div data-role="rangeslider">
+                                            <label for="price-min">Minimalna cena:</label>
+                                            <input type="range" name="price-min" id="price-min" wire:model.debounce.0ms="min" min="0" max="5000"><br>
+                                            <label for="price-max">Maksimalna cena:</label>
+                                            <input type="range" name="price-max" id="price-max" wire:model.debounce.0ms="max" min="0" max="5000">
+                                        </div>
+                                    </div>
+                                </div>
+
+                </div>
             </div>
         </div>
             
@@ -166,5 +182,9 @@
     
              
             </div> <!-- end products -->
-    </div>
+        </div>
+                        <div class="spacer container flex justify-end">
+                            {{$products->links('pagination.livewire-tailwind')}}
+                            {{-- {{ $products->appends(request()->input())->links() }} --}}
+                        </div>
 </div>

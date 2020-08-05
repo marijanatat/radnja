@@ -10,21 +10,37 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class ShopLivewire extends Component
 {
+    use WithPagination;
+
     public $requestedCategories = [];
     public $requestedSizes = [];    
     public $sort;
     public $sizes = [];
     public $sizesAll = [];
     public $min = 1;
-    public $max = 5000;   
+    public $max = 5000; 
+    public $productsPerPage = 12;
+    // public $categoryName;  
+
+    protected $updatesQueryString = [
+        'category'
+    ];
 
     public function mount()
     {
+        $this->requestedCategories[] = request()->category;
+        // $this->categoryName = optional(Category::where('id', request()->category)->first())->name;
         $this->sizes=Size::all()->take(5);
         $this->sizesAll = Size::all()->skip(5);
+    }
+
+    public function updatingProductsPerPage()
+    {
+        $this->resetPage();
     }
 
     public function render()
@@ -43,28 +59,35 @@ class ShopLivewire extends Component
         }
 
         if($this->sort==='low_high') {
-            $products=$products->orderBy('price')->paginate(9);
+            $products=$products->orderBy('price')->paginate($this->productsPerPage);
 
         }elseif($this->sort==='high_low') {
-            $products=$products->orderBy('price','desc')->paginate(9);
+            $products=$products->orderBy('price','desc')->paginate($this->productsPerPage);
             
         }elseif($this->sort==='a_to_z') {
-            $products=$products->orderBy('name','asc')->paginate(9);
+            $products=$products->orderBy('name','asc')->paginate($this->productsPerPage);
             
         }elseif($this->sort==='z_to_a') {
-            $products=$products->orderBy('name','desc')->paginate(9);
+            $products=$products->orderBy('name','desc')->paginate($this->productsPerPage);
             
         }elseif($this->sort==='newest') {
-            $products=$products->orderBy('created_at','desc')->paginate(9);
+            $products=$products->orderBy('created_at','desc')->paginate($this->productsPerPage);
             
         }else{
-            $products=$products->inRandomOrder()->paginate(9);
+            $products=$products->inRandomOrder()->paginate($this->productsPerPage);
         }
 
         return view('livewire.shop-livewire', [
             'products' => $products,
             // 'categoryIds' => $categoryIds 
         ]);
+    }
+
+    public function filtriraj($id)
+    {
+        // $this->requestedCategories = []; 
+        // $this->requestedCategories[] = $id;
+        // $this->render();
     }
 
     private function filterProductsByCategories()
