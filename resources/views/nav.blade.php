@@ -97,7 +97,7 @@
           @foreach ($category->children as $child)
 
             <div class="flex  md:ml-64 my-4 tracking-tight ">
-              <div>
+              <div class="f">
             {{-- <div class="" style="margin-top:-10;margin-left: 200px;margin-right:-100px;background-color: transparent; z-index:10 ;" > --}}
               @if (!$child->isLeaf())
               <div class="uppercase"  >
