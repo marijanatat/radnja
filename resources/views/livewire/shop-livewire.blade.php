@@ -1,7 +1,3 @@
-@section('extra-css')
-    <link rel="stylesheet" href="{{asset('css/algolia.css')}}">
-@endsection
-
 <div class="">
 
     <div class="">
@@ -192,9 +188,3 @@
                             {{-- {{ $products->appends(request()->input())->links() }} --}}
                         </div>
 </div>
-
-@section('extra-js')
-    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@3/dist/algoliasearchLite.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
-    <script src="{{asset('js/algolia.js')}}"></script>
-@endsection
