@@ -202,7 +202,7 @@
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
+@media only screen and (min-width : 768px) {
     .products-section {
         grid-template-columns: 1fr;
 
@@ -241,7 +241,10 @@
   }
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {
+@media only screen and (min-width : 480px) {
+    header .with-background{
+        background-position: center center;
+    }
     .products-section {
         grid-template-columns: 1fr;
 

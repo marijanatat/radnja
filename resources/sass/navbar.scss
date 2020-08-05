@@ -12,15 +12,14 @@
     // /* padding: 14px 16px; */
     // text-decoration: none;
 
-
   }
 
 
   /* The dropdown container */
-  .dropdown {
+  .dropdown1 {
 
-    /* float: left; */
-    // overflow: hidden;
+     float: left; 
+     overflow: hidden;
     
   }
 
@@ -36,6 +35,25 @@
     width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    // transition: 0.5s;
+    // transform:translateY(40px);
+
+  }
+
+  .upm-content1 {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: none;
+  
+   
+    position: absolute;
+    left: 200px;
+    
+    height: auto;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+ 
 
   }
 
@@ -84,9 +102,37 @@
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {
     display: flex;
-  }
+    position: absolute;
+    left: 130px;
+    right: 0;
+  
+    background-color:white;
+    color: white;
+    // transform:translateY(0px);
+    }
 
   .dropbtn {
+    // color: white;
+    padding: 30px;
+    font-size: 16px;
+    border: none;
+    
+  }
+
+  .upm:hover .upm-content1 {
+   
+    // display: block;
+    // min-width: 250px;
+    // position: absolute;
+    // padding: 25px 30px;
+  
+    
+    // float: right; 
+    //  overflow: hidden;
+
+    }
+
+  .upmbtn {
     // color: white;
     padding: 30px;
     font-size: 16px;
@@ -212,3 +258,4 @@
     transition: 0.1s ease-in;
     color: rgb(119, 237, 241);
   }
+  
