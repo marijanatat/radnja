@@ -85,13 +85,13 @@
         <div class="hero container ">
           <div class="hero-copy ">
             
-            <div id="rotate-words">
-              <h2 class=" animate-pulse italic text-4xl  font-bold text-gray-500 tracking-widest">Za porodicu <span>sa stilom.</span></h2> 
+             <div id="rotate-words">
+              <h2 class="animate-pulse italic text-4xl  font-bold text-gray-500 tracking-widest">Za porodicu <span>sa stilom.</span></h2> 
               <br>
               <p  class=" italic text-3xl font-mono  font-bold tracking-wide pl-8" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Proverite naš kvalitet !</p>
-            </div>
+            </div> 
 
-              <div class=" md:block w3-animate-fading mb-6 text-2xl text-gray-800 font-semibold font-mono ml-4 italic">
+              <div class=" md:block w3-animate-fading mb-6 text-2xl text-white lg:text-gray-800 font-semibold font-mono ml-4 italic">
                 Pratite nas na društvenim mrežama.
                 </div>
               <div class="hero-buttons text-gray-800 items-center flex ml-16 md:ml-40 ">
@@ -203,6 +203,7 @@
 
     document.getElementById('nav-toggle').onclick = function(){
       document.getElementById('nav-content').classList.toggle('hidden');
+      document.getElementById('nav-content1').classList.toggle('hidden');
     }
 
     // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size

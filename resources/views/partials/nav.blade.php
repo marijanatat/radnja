@@ -46,7 +46,7 @@
   <!--dodatak-->
 
   <!--dodatak-->
-  <div class="hidden lg:flex w-full" id="nav-content">
+  <div class=" lg:flex w-full" id="nav-content">
       <ul class="list-reset items-center w-full">
         
           <div class="logo flex items-center ">

@@ -147,7 +147,7 @@
                 </div>
   
                 <button type="submit" 
-                  class="bg-blue- hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg w-full"
+                  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg w-full"
                   x-bind:disabled="loading == true">
                   <template x-if="loading == false">
                     <div>Subscribe Now!</div>
