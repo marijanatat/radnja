@@ -59,7 +59,7 @@
         </div>
 
         <div class="product-section-information -mt-16 lg:mt-12">
-            <div class="product-section-subtitle ">{{$product->details}}</div>
+            <div class="product-section-subtitle text-red-800 ">{{$product->details}}</div>
             {{-- <div>{!!$stock!!}</div> --}}
             <div>{{$product->quantity}}</div>
             <div class="product-section-price">{{$product->presentPrice()}}</div>
@@ -72,7 +72,7 @@
             <form action="{{route('cart.store')}}" method="POST">
                 {{csrf_field()}}
                 <input type="hidden" name="id" value="{{$product->id}}">
-                 <input type="hidden" name="name" value="{{$product->name}}">
+                 <input type="hidden" name="name" class="text-red-500" value="{{$product->name}}">
                 <input type="hidden" name="price" value="{{$product->price}}">
                 
                 <button type="submit" class="button button-plain transition duration-500 ease-in-out border border-gray-300 rounded-md bg-gray-500 hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110 ...">Dodaj u korpu</button>
