@@ -25,47 +25,64 @@
             </div>
         @endif
         </div>
-        <div class="bg-gray-300 border-solid border-1 border-gray-600 w-20 h-full rounded-t-lg">
 
-            <div class="flex flex-col  items-start  ml-4 justify-center " >
-                @foreach ($sizes as $size)
-                <div class="flex flex-col w-12 max-h-full">
-                    <label class="inline-flex items-center  text-sm">
-                        <input type="checkbox" class="form-checkbox h-3 w-3 text-gray-600 text-sm " id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">
-                        <li class="list-none ml-2">{{$size->value}}</li>
-                    </label>
-                </div>
-                @endforeach
-            </div>
-                <div x-data="{ open: false }" class="flex flex-col  items-start  ml-4 justify-center ">
-                    @foreach ($sizesAll as $size)
-                    <div class="flex flex-col w-12 max-h-full" x-show="open">
+        <div class="container flex justify-between">
+            <div class="bg-gray-300 border-solid border-1 border-gray-600 w-20 h-full rounded-t-lg">
+    
+                <div class="flex flex-col  items-start  ml-4 justify-center " >
+                    @foreach ($sizes as $size)
+                    <div class="flex flex-col w-12 max-h-full">
                         <label class="inline-flex items-center  text-sm">
                             <input type="checkbox" class="form-checkbox h-3 w-3 text-gray-600 text-sm " id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">
                             <li class="list-none ml-2">{{$size->value}}</li>
                         </label>
                     </div>
                     @endforeach
-        
-                    <button type="" @click="open = !open"  type="button" 
-                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded "  x-html="open ? `<i class='fa fa-angle-double-down'></i>` :`<i class='fa fa-angle-double-up'></i>`"> </button>
-        
-                    {{-- <button type="" @click="open = !open"  type="button" 
-                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded " x-text="open ? 'Prikazi manje':'Prikazi vise'" x-html="open ? '<i class='fa fa-angle-double-down'></i>':'<i class='fa fa-angle-double-up'></i>'"> </button> --}}  
-                </div>  
-        
-           
-            {{-- <div>
-                @foreach ($products as $product)
-               
-                    <div class="container list-none">
-                        <li>{{$product->name}}</li>
-                    </div>
-                @endforeach
-            </div> --}}
-        
-        
-           
+                </div>
+                    <div x-data="{ open: false }" class="flex flex-col  items-start  ml-4 justify-center ">
+                        @foreach ($sizesAll as $size)
+                        <div class="flex flex-col w-12 max-h-full" x-show="open">
+                            <label class="inline-flex items-center  text-sm">
+                                <input type="checkbox" class="form-checkbox h-3 w-3 text-gray-600 text-sm " id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">
+                                <li class="list-none ml-2">{{$size->value}}</li>
+                            </label>
+                        </div>
+                        @endforeach
+            
+                        <button type="" @click="open = !open"  type="button" 
+                                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded "  x-html="open ? `<i class='fa fa-angle-double-down'></i>` :`<i class='fa fa-angle-double-up'></i>`"> </button>
+            
+                        {{-- <button type="" @click="open = !open"  type="button" 
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded " x-text="open ? 'Prikazi manje':'Prikazi vise'" x-html="open ? '<i class='fa fa-angle-double-down'></i>':'<i class='fa fa-angle-double-up'></i>'"> </button> --}}  
+                    </div>  
+            
+            </div>
+    
+    <br>
+            <div class="slidecontainer" style="width: 350px;">
+                <label for="slider">Cena:</label>
+                <div>Opseg od {{presentPrice($min)}} do {{presentPrice($max)}}</div>
+                <div data-role="main" class="ui-content">
+                      <div data-role="rangeslider">
+                        <label for="price-min">Minimalna cena:</label>
+                        <input type="range" name="price-min" id="price-min" wire:model="min" min="0" max="5000"><br>
+                        <label for="price-max">Maksimalna cena:</label>
+                        <input type="range" name="price-max" id="price-max" wire:model="max" min="0" max="5000">
+                      </div>
+                  </div>
+              </div>
+    <br>
+            <div>
+                <label for="sortiranje">Sortiraj:</label>
+                <select wire:model="sort" name="sortiranje">
+                    <option value="popular">Najpopularnije</option>  
+                    <option value="low_high">Po ceni rastuće</option>
+                    <option value="high_low">Po ceni opadajuće</option>
+                    <option value="a_to_z">Po nazivu (A-Š)</option>
+                    <option value="z_to_a">Po nazivu (Š-A)</option>
+                    <option value="newest">Najnovije</option>
+                </select>
+            </div>
         </div>
 
     <div class="flex p-16">

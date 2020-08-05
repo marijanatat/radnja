@@ -18,7 +18,8 @@ class ShopLivewire extends Component
     public $sort;
     public $sizes = [];
     public $sizesAll = [];
-   
+    public $min = 1;
+    public $max = 5000;   
 
     public function mount()
     {
@@ -28,15 +29,14 @@ class ShopLivewire extends Component
 
     public function render()
     {
-        // $categoryIds = [];
-        // $productIds = [];
-
         if($this->requestedCategories){
             $products = $this->filterProductsByCategories();
         }else{
             // $categoryName='Svi proizvodi';
             $products = DB::table('products');
         }
+
+        $products = $this->filterByPriceRange($products);
 
         if($this->requestedSizes){
             $products = $this->filterBySize();
@@ -45,10 +45,20 @@ class ShopLivewire extends Component
         if($this->sort==='low_high') {
             $products=$products->orderBy('price')->paginate(9);
 
-        } elseif($this->sort==='high_low') {
+        }elseif($this->sort==='high_low') {
             $products=$products->orderBy('price','desc')->paginate(9);
+            
+        }elseif($this->sort==='a_to_z') {
+            $products=$products->orderBy('name','asc')->paginate(9);
+            
+        }elseif($this->sort==='z_to_a') {
+            $products=$products->orderBy('name','desc')->paginate(9);
+            
+        }elseif($this->sort==='newest') {
+            $products=$products->orderBy('created_at','desc')->paginate(9);
+            
         }else{
-            $products=$products->paginate(9);
+            $products=$products->inRandomOrder()->paginate(9);
         }
 
         return view('livewire.shop-livewire', [
@@ -78,5 +88,10 @@ class ShopLivewire extends Component
             $productIds[]=$ps->product_id;
            }
         return Product::whereIn('id',$productIds);
+    }
+
+    private function filterByPriceRange($products)
+    {
+        return $products->whereBetween('price', [$this->min, $this->max]);  
     }
 }
