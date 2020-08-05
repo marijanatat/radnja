@@ -62,6 +62,7 @@
                     <button class="text-left font-bold text-sm text-gray-700 cursor-pointer focus:outline-none" wire:click="resetCategories">Sve kategorije
                         <i class="fa fa-angle-double-right text-gray-700 cursor-pointer" aria-hidden="true"></i>
                     </button>  
+                    <hr class="bg-boja h-1 w-24 mb-3">
                 @foreach ($categories as $category)
                     <div x-data="{open: false}">
                             <div class="">
@@ -104,48 +105,70 @@
                                 </div>
                                 @endforeach
 
-                                <h3 class="mt-10 uppercase">Veličine</h3>
-                                <hr>
-                                <div class="bg-gray-300 border-solid border-1 border-gray-600 w-20 h-auto rounded-t-lg mt-4">
-                                    <div class="flex flex-col  items-start  ml-4 justify-center " >
-                                        @foreach ($sizes as $size)
-                                        <div class="flex flex-col w-12 max-h-full">
-                                            <label class="inline-flex items-center  text-sm">
-                                                <input type="checkbox" class="form-checkbox h-3 w-3 text-gray-600 text-sm " id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">
-                                                <li class="list-none ml-2">{{$size->value}}</li>
-                                            </label>
-                                        </div>
-                                        @endforeach
-                                    </div>
-                        
-                                    <div x-data="{ open: false }" class="flex flex-col items-start ml-4 justify-center">
-                                        @foreach ($sizesAll as $size)
-                                        
-                                        <div class="flex flex-col w-12 max-h-full" x-show="open">
-                                            <label class="inline-flex items-center  text-sm">
-                                                <input type="checkbox" class="form-checkbox h-3 w-3 text-gray-600 text-sm " id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">
-                                                <li class="list-none ml-2">{{$size->value}}</li>
-                                            </label>
-                                        </div>
-                                        
-                                        @endforeach
+                            <div  x-data="{otvori:true}" >
+                                    <div class="flex items-center mt-10 justify-between mr-4">
+                                        <h3 class=" uppercase">Veličine</h3>
+                                        <div @click="otvori=!otvori">
+                                            <i x-show="otvori" class='fa fa-angle-double-down'></i>
+                                            <i x-show="!otvori" class='fa fa-angle-double-up'></i>
                                             
-                                        <button type="" @click="open = !open"  type="button" 
-                                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded "  x-html="open ? `<i class='fa fa-angle-double-up'></i>` :`<i class='fa fa-angle-double-down'></i>`"> </button>
+                                        </div>
+                                    </div>
+                                    
+                                    <hr class="bg-boja h-1 w-24">
+                                    <div class="bg-gray-300 border-solid border-1 border-gray-600 w-20 h-auto rounded-t-lg mt-4" x-show="otvori" 
+                                    x-transition:enter="transition-transform transition-opacity ease-out duration-300"
+                                    x-transition:enter-start="opacity-0 transform -translate-y-2"
+                                    x-transition:enter-end="opacity-100 transform translate-y-0"
+                                    x-transition:leave="transition ease-in duration-300"
+                                    x-transition:leave-end="opacity-0 transform -translate-y-3">
+                                        <div class="flex flex-col  items-start  ml-4 justify-center " >
+                                            @foreach ($sizes as $size)
+                                            <div class="flex flex-col w-12 max-h-full" >
+                                                <label class="inline-flex items-center  text-sm">
+                                                    <input type="checkbox" class="form-checkbox h-3 w-3 text-gray-600 text-sm " id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">
+                                                    <li class="list-none ml-2">{{$size->value}}</li>
+                                                </label>
+                                            </div>
+                                            @endforeach
+                                        </div>
+                                    
+                                     
+                        
+                                        <div x-data="{ open: false }" class="flex flex-col justify-center items-center  bg-gray-300 w-20 h-auto rounded-b-lg">
+                                            @foreach ($sizesAll as $size)
                                         
+                                        <div class="flex flex-col w-12 max-h-full" x-show="open"
+                                        x-transition:enter="transition ease-out duration-400" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-400" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90"
+                                      >
+                                            <label class="inline-flex items-center  text-sm">
+                                                <input type="checkbox" class="form-checkbox h-3 w-3 text-gray-600 text-sm " id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">
+                                                <li class="list-none ml-2">{{$size->value}}</li>
+                                            </label>
+                                        </div>
+                                        
+                                        @endforeach
+                                        
+                                        <button type=""  @click="open = !open" type="button" 
+                                        class="bg-boja hover:bg-orange-900  border-none text-white font-bold  px-4  rounded "  x-html="open ? `<i class='fa fa-angle-double-up'></i>` :`<i class='fa fa-angle-double-down'></i>`">
+                                        </button>
+                                        </div>
+                                    
                                      </div>  
-                                </div>
+                                </div>  
+
+
 
                                 <h3 class="uppercase mt-10">Cena:</h3>
-                                <hr class="mb-3">
+                                <hr class="bg-boja h-1 w-24 mb-3">
                                 <div class="slidecontainer w-auto text-sm">
                                     <div class="mb-3">Opseg od {{presentPrice($min)}} do {{presentPrice($max)}}</div>
                                     <div data-role="main" class="ui-content">
                                         <div data-role="rangeslider">
                                             <label for="price-min">Minimalna cena:</label>
-                                            <input type="range" name="price-min" id="price-min" wire:model.debounce.0ms="min" min="0" max="5000"><br>
+                                            <input type="range"  name="price-min" id="price-min" wire:model.debounce.0ms="min" min="0" max="5000"><br>
                                             <label for="price-max">Maksimalna cena:</label>
-                                            <input type="range" name="price-max" id="price-max" wire:model.debounce.0ms="max" min="0" max="5000">
+                                            <input type="range"   name="price-max" id="price-max" wire:model.debounce.0ms="max" min="0" max="5000">
                                         </div>
                                     </div>
                                 </div>
