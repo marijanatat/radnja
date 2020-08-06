@@ -4,9 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
+use TCG\Voyager\Traits\Resizable;
 
 class Product extends Model
 {  
+    use Resizable;
+
     protected $guarded=[];
 
     public function manufacturer()

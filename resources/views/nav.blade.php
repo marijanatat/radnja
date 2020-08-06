@@ -37,7 +37,7 @@
           <div class="dropdown-content">
             @foreach ($category->children as $child)
 
-              <div class="flex  md:ml-64 my-4 tracking-tight">
+              <div class="flex md:ml-64 my-4 tracking-tight">
                 <div>
               {{-- <div class="" style="margin-top:-10;margin-left: 200px;margin-right:-100px;background-color: transparent; z-index:10 ;" > --}}
                 @if (!$child->isLeaf())
@@ -64,7 +64,11 @@
         </li>
         @endforeach
     
-            <div class="text-base pb-1  font-bold ml-auto">
+            {{-- <div class="text-base pb-1  font-bold ml-auto">
+              @include('partials.menus.main-right')
+            </div> --}}
+
+            <div class="inline-flex items-center ml-auto space-x-6 mr-6 uppercase tracking-tight text-base text-gray-200">
               @include('partials.menus.main-right')
             </div>
      
@@ -72,7 +76,7 @@
   </div> 
 
    <!--dodatak-->
-   <div class="w-full hidden flex-grow justify-start  lg:items-end  lg:w-auto  bg-white  -ml-10 -mt-1  pt-6 pb-16 lg:pt-0 z-1 " id="nav-content1" >
+   {{-- <div class="w-full hidden flex-grow justify-start  lg:items-end  lg:w-auto  bg-white  -ml-10 -mt-1  pt-6 pb-16 lg:pt-0 z-1 " id="nav-content1" >
      <ul class="flex-col md:flex-row list-reset  justify-start lg:items-center w-2/3 md:w-full pb-16">
       
         <div class="flex items-center -ml-4  md:ml-16">
@@ -86,10 +90,10 @@
        @foreach ($categories as $category)
    
        {{-- <li class="dropdown mr-6 -ml-4 -mt-8 ">  --}}
-         <li class="upm mr-6 pb-4" x-data="{ open: false }">
+         {{-- <li class="mr-6 pb-4" x-data="{ open: false }">
         <button  @click="open = !open">
           <a 
-            class="upmbt inline-block text-gray-200 px-2 lg:px-4  uppercase text-md lg:text-base no-underline hover:text-teal-300 py-5"
+            class=" inline-block text-gray-200 px-2 lg:px-4  uppercase text-md lg:text-base no-underline hover:text-teal-300 py-5"
             href="{{route('shop.index', ['category' => $category->id])}}">{{$category->name}}</a>
         </button>
 
@@ -97,9 +101,9 @@
           @foreach ($category->children as $child)
 
             <div class="flex  md:ml-64 my-4 tracking-tight ">
-              <div class="f">
+              <div class="f"> --}}
             {{-- <div class="" style="margin-top:-10;margin-left: 200px;margin-right:-100px;background-color: transparent; z-index:10 ;" > --}}
-              @if (!$child->isLeaf())
+              {{-- @if (!$child->isLeaf())
               <div class="uppercase"  >
                 <button >
                   <a href="{{route('shop.index', ['category' => $child->id])}}" class="text-gray-700 hover:text-teal-300">{{$child->name}}</a>
@@ -131,6 +135,7 @@
    
   </ul>
 </div> 
+</div>  --}}
 
 
  
