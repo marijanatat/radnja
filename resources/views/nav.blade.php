@@ -64,8 +64,12 @@
         </li>
         @endforeach
     
-            <div class="text-base pb-1  font-bold ml-auto">
+            {{-- <div class="text-base pb-1  font-bold ml-auto">
               @include('partials.menus.main-right')
+            </div> --}}
+
+            <div class="inline-flex items-center ml-auto space-x-6 mr-6 uppercase tracking-tight text-base text-gray-200">
+              @include('partials.menus.main-right-copy')
             </div>
      
     </ul>
@@ -86,10 +90,10 @@
        @foreach ($categories as $category)
    
        {{-- <li class="dropdown mr-6 -ml-4 -mt-8 ">  --}}
-         <li class="upm mr-6 pb-4" x-data="{ open: false }">
+         <li class="mr-6 pb-4" x-data="{ open: false }">
         <button  @click="open = !open">
           <a 
-            class="upmbt inline-block text-gray-200 px-2 lg:px-4  uppercase text-md lg:text-base no-underline hover:text-teal-300 py-5"
+            class=" inline-block text-gray-200 px-2 lg:px-4  uppercase text-md lg:text-base no-underline hover:text-teal-300 py-5"
             href="{{route('shop.index', ['category' => $category->id])}}">{{$category->name}}</a>
         </button>
 
