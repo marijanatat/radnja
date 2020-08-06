@@ -19,7 +19,12 @@ class Category extends Model
     public function getFullNameAttribute() 
     {
         if($this->parent_id){
-            return $this->name . " " .(Category::where('id', $this->parent_id)->get()->pluck('name'));
+            $parent = Category::where('id', $this->parent_id)->first();            
+            if($parent->parent_id){
+                $grandparent = Category::where('id', $parent->parent_id)->first();
+                return $grandparent->name . "\\" . $parent->name . "\\" . $this->name;
+            }
+            return $parent->name . "\\" . $this->name;
         }
 
         return $this->name;
