@@ -4,6 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
+use App\Color;
+use App\Size;
+
 
 class Product extends Model
 {  
@@ -47,5 +50,14 @@ class Product extends Model
     public function scopeFilter($query, QueryFilter $filters)
     {
        return $filters->apply($query);
+    }
+
+    public function colors()
+    {
+        return $this->belongsToMany(Color::class,'product_colors');
+    }
+    public function sizes()
+    {
+        return $this->belongsToMany(Size::class,'product_sizes');
     }
 }

@@ -1,10 +1,11 @@
 .breadcrumbs {
     background:white ;
-    border-bottom: 1px solid $separator-color;
-    padding: 20px 0;
+    // border-bottom: 1px solid $separator-color;
+    padding: 8px 0;
+      font-size: 12px;
 
     .breadcrumb-separator {
-        font-size: 14px;
+        font-size: 10px;
         color: lighten($text-color, 20%);
     }
 

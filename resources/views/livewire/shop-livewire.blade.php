@@ -58,11 +58,10 @@
             <div class="w-1/4 flex-1 flex overflow-hidden">
                 <div class="flex-1 overflow-y-scroll">
                     <h3 class="uppercase">Kategorije</h3>
-                    <hr class="mb-3">
+                    <hr class="bg-boja h-1 w-24 mb-3">
                     <button class="text-left font-bold text-sm text-gray-700 cursor-pointer focus:outline-none" wire:click="resetCategories">Sve kategorije
                         <i class="fa fa-angle-double-right text-gray-700 cursor-pointer" aria-hidden="true"></i>
-                    </button>  
-                    <hr class="bg-boja h-1 w-24 mb-3">
+                    </button>   
                 @foreach ($categories as $category)
                     <div x-data="{open: false}">
                             <div class="">
@@ -109,8 +108,8 @@
                                     <div class="flex items-center mt-10 justify-between mr-4">
                                         <h3 class=" uppercase">Veličine</h3>
                                         <div @click="otvori=!otvori">
-                                            <i x-show="otvori" class='fa fa-angle-double-down'></i>
-                                            <i x-show="!otvori" class='fa fa-angle-double-up'></i>
+                                            <i x-show="otvori" class='fa fa-angle-double-up'></i>
+                                            <i x-show="!otvori" class='fa fa-angle-double-down'></i>
                                             
                                         </div>
                                     </div>
@@ -158,20 +157,33 @@
                                 </div>  
 
 
-
-                                <h3 class="uppercase mt-10">Cena:</h3>
+                            <div x-data="{otvori:true}">
+                               <div class="flex items-center  justify-between mr-4 mt-10">
+                                 <h3 class="uppercase ">Cena:</h3>
+                                    <div @click="otvori=!otvori">
+                                        <i x-show="otvori" class='fa fa-angle-double-up'></i>
+                                        <i x-show="!otvori" class='fa fa-angle-double-down'></i> 
+                                    </div>
+                               </div>
                                 <hr class="bg-boja h-1 w-24 mb-3">
-                                <div class="slidecontainer w-auto text-sm">
-                                    <div class="mb-3">Opseg od {{presentPrice($min)}} do {{presentPrice($max)}}</div>
-                                    <div data-role="main" class="ui-content">
-                                        <div data-role="rangeslider">
-                                            <label for="price-min">Minimalna cena:</label>
-                                            <input type="range"  name="price-min" id="price-min" wire:model.debounce.0ms="min" min="0" max="5000"><br>
-                                            <label for="price-max">Maksimalna cena:</label>
-                                            <input type="range"   name="price-max" id="price-max" wire:model.debounce.0ms="max" min="0" max="5000">
+                               
+                                    <div class="slidecontainer w-auto text-sm" x-show="otvori" 
+                                    x-transition:enter="transition-transform transition-opacity ease-out duration-300"
+                                    x-transition:enter-start="opacity-0 transform -translate-y-2"
+                                    x-transition:enter-end="opacity-100 transform translate-y-0"
+                                    x-transition:leave="transition ease-in duration-300"
+                                    x-transition:leave-end="opacity-0 transform -translate-y-3">
+                                        <div class="mb-3" x-show="open">Opseg od {{presentPrice($min)}} do {{presentPrice($max)}}</div>
+                                        <div data-role="main" class="ui-content">
+                                            <div data-role="rangeslider">
+                                                <label for="price-min">Minimalna cena:</label>
+                                                <input type="range"  name="price-min" id="price-min" wire:model.debounce.0ms="min" min="0" max="5000"><br>
+                                                <label for="price-max">Maksimalna cena:</label>
+                                                <input type="range"   name="price-max" id="price-max" wire:model.debounce.0ms="max" min="0" max="5000">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                            </div>
 
                 </div>
             </div>
