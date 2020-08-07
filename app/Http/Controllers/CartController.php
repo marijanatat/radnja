@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Color;
 use App\Product;
 use Illuminate\Http\Request;
 use Gloudemans\Shoppingcart\Facades\Cart;
@@ -49,6 +50,7 @@ class CartController extends Controller
         if($duplicates->isNotEmpty()){
             return redirect(route('cart.index'))->with('success_message','Item is already in your Cart.');
         }
+        
         Cart::add($request->id, $request->name, 1, $request->price)
         // Cart::add($request->id, $request->name, $request->quantity,$request->size,$request->color, $request->price)
         

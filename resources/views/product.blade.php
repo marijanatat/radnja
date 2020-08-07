@@ -3,7 +3,87 @@
 {{-- @section('title', $product->name) --}}
 
 @section('extra-css')
-    <link rel="stylesheet" href="{{asset('css/algolia.css')}}">
+    <style>
+
+    .radio-label {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;    
+    }
+
+    .radio-label input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    .radio-custom {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        border: 1px solid grey;
+    }
+
+    .radio-label:hover input ~ .radio-custom{
+        background-color: red;
+    }
+
+    .radio-label input:checked ~ .radio-custom{
+        border: 2px solid rgb(159, 219, 103);
+    }
+
+    .radio-custom:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    .radio-label input:checked ~ .radio-custom:after {
+        /* display: block; */
+    }
+
+    .radio-label .radio-custom:after {
+        top: 9px;
+        left: 9px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+    }
+
+    .radio-custom .tooltiptext {
+        bottom:30px;
+        left: -45px;
+        visibility: hidden;
+        background-color: #2f312f;
+        color: orange;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+        width: 80px;
+        height: 40px;
+        text-align: center;
+        padding: 5px 0;
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+    }
+
+    .radio-custom:hover .tooltiptext {
+        visibility: visible;
+    }
+
+    </style>
 @endsection
 
 @section('content')
@@ -75,9 +155,15 @@
 
              <div class="flex items-start ">
                 @foreach ($product->colors as $color)
-                    <div class="flex flex-col justify-content-start mr-4">
-                        <span class="font-mono text-xs">{{$color->name}}</span>             
-                        <button class=" h-8" id="{{$color->id}}">{{$color->value}}</button> 
+                    <div class="flex flex-col justify-center mr-4">
+                        
+                        <span class="font-mono text-xs">{{$color->name}}</span>    
+                        <label for="{{$color->id}}" class="radio-label">
+                        <input type="radio" id="{{$color->id}}" name="color" value="{{$color->id}}">
+                        <span class="radio-custom" style="background-color: {{$color->value}}">
+                            <span class="tooltiptext text-sm font-semibold pt-2">{{$color->name}}</span>
+                        </span>
+                    </label>
                   </div>
                 @endforeach 
              </div> 
