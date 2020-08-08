@@ -43,6 +43,18 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'quantity' => 'required|numeric|between:1,10',
+            'size' => 'required',
+            'color' => 'required',
+           
+        ]);
+
+        if ($validator->fails()) {
+            session()->flash('errors', collect(['Quantity must be between 1 and 10.'],['Color is required.'],['Size is required.']));
+        //  return response()->json(['success' => false], 400);
+            return back()->withErrors($validator)->withInput();
+        }
 
         $duplicates=Cart::search(function ($cartItem, $rowId) use ($request) {
             return $cartItem->id === $request->id;
@@ -92,8 +104,10 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
+        
         $validator = Validator::make($request->all(), [
-            'quantity' => 'required|numeric|between:1,10'
+            'quantity' => 'required|numeric|between:1,10',
+           
         ]);
 
         if ($validator->fails()) {
