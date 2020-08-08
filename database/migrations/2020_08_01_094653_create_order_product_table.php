@@ -24,6 +24,8 @@ class CreateOrderProductTable extends Migration
                 ->onUpdate('cascade')->onDelete('set null');
             
             $table->unsignedInteger('quantity');
+            $table->string('size');
+            $table->string('color');
             $table->timestamps();
 
         });

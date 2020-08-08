@@ -105,6 +105,8 @@
                         <div class="checkout-item-details">
                             <div class="checkout-table-item">{{ $item->model->name }}</div>
                             <div class="checkout-table-description">{{ $item->model->details }}</div>
+                            <div class="checkout-table-description">{{ $item->options['size'] }}</div>
+                            <div class="checkout-table-description">{{ $item->options['color'] }}</div>
                             <div class="checkout-table-price">{{ $item->model->presentPrice() }}</div>
                         </div>
                     </div> <!-- end checkout-table -->

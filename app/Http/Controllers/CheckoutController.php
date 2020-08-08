@@ -94,6 +94,8 @@ class CheckoutController extends Controller
                 'order_id' => $order->id,
                 'product_id' => $item->model->id,
                 'quantity' => $item->qty,
+                'size' => $item->options['size'],
+                'color' => $item->options['color'],
             ]);
         }
 
