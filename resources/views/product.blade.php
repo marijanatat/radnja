@@ -105,7 +105,7 @@
             </div>
             @endif
     
-            @if(count($errors) > 0)
+            {{-- @if(count($errors) > 0)
             <div class="alert alert-danger">
                 <ul>
                     @foreach ($errors->all() as $error)
@@ -113,7 +113,7 @@
                     @endforeach
                 </ul>
             </div>
-            @endif
+            @endif --}}
         </div>
 
     <div class="product-section container grid-cols-1 md:grid-cols-2 p-4 md:p-4 mt-4">
@@ -150,61 +150,67 @@
             {{-- <div>{{$product->quantity}}</div> --}}
             <div class="product-section-price text-base text-red-800"><span class="text-sm text-gray-800">Cena:</span>  {{$product->presentPrice()}}</div>
 
-            <hr class="bg-gray-500 border-dashed mb-2">
-            <h3 class="text-gray-800 uppercase text-sm font-semibold">Izaberite boju</h3>
-
-             <div class="flex items-start ">
-                @foreach ($product->colors as $color)
-                    <div class="flex flex-col justify-center mr-4">
-                        
-                        <span class="font-mono text-xs">{{$color->name}}</span>    
-                        <label for="{{$color->id}}" class="radio-label">
-                        <input type="radio" id="{{$color->id}}" name="color" value="{{$color->id}}">
-                        <span class="radio-custom" style="background-color: {{$color->value}}">
-                            <span class="tooltiptext text-sm font-semibold pt-2">{{$color->name}}</span>
-                        </span>
-                    </label>
-                  </div>
-                @endforeach 
-             </div> 
-  
-             <hr class="bg-gray-500 border-dashed mt-4 mb-2">
-            <h3 class="text-gray-800 uppercase text-sm font-semibold">Izaberite veličinu</h3>
-
-             <div class="flex items-start ">
-                @foreach ($product->sizes as $size)
-                    <div class="flex flex-col justify-content-start mr-4">
-                        {{-- <span>{{$size->name}}</span>              --}}
-                        <button class=" h-8 w-8 mb-8 rounded-full bg-gray-400 hover:bg-gray-900 hover:text-white " id="{{$size->id}}">{{$size->value}}</button> 
-                  </div>
-                @endforeach 
-             </div> 
-
-             <h3 class="text-gray-800 uppercase text-sm font-semibold">Količina</h3>
-             <div class="flex items-start mb-4">
-                 <div class="bg-white p-1 mr-1 hover:bg-gray-300" style="border: solid 1px gray"><i class="fa fa-minus" aria-hidden="true"></i></div>
-                 <div class="bg-white px-2 py-1 mr-1 w-8 text-center" style="border: solid 1px gray">1</div>
-                 <div class="bg-white p-1 mr-1 hover:bg-gray-300" style="border: solid 1px gray"><i class="fa fa-plus" aria-hidden="true" ></i></div>
-             </div>
+         
          
             {{-- <p class="text-xs text-gray-800">
                 {!!$product->description!!}
             </p> --}}
     
-            @if ($product->quantity>0)
+            {{-- @if ($product->quantity>0) --}}
             <form action="{{route('cart.store')}}" method="POST">
                 {{csrf_field()}}
                 <input type="hidden" name="id" value="{{$product->id}}">
                  <input type="hidden" name="name"  value="{{$product->name}}">
                 <input type="hidden" name="price" value="{{$product->price}}">
-                {{-- <input type="hidden" name="size" value="{{$size->value}}">
-                <input type="hidden" name="color" value="{{$color->name}}">
-                <input type="hidden" name="quantity" value="{{$quantity}}">
-                 --}}
+                <hr class="bg-gray-500 border-dashed mb-2">
+                <h3 class="text-gray-800 uppercase text-sm font-semibold">Izaberite boju</h3>
+    
+                 <div class="relative flex items-start ">
+                    @foreach ($product->colors as $color)
+                        <div class="flex flex-col justify-center mr-4">
+                            
+                            <span class="font-mono text-xs">{{$color->name}}</span>    
+                            <label for="{{$color->id}}" class="radio-label">
+                            <input type="radio" id="{{$color->id}}" name="color" value="{{$color->id}}">
+                            <span class="radio-custom" style="background-color: {{$color->value}}">
+                                <span class="tooltiptext text-sm font-semibold pt-2">{{$color->name}}</span>
+                            </span>
+                        </label>
+                      </div>
+                    @endforeach 
+                    @error('color')
+                    <div class="absolute right-0  text-red-500 text-sm ">{{ $message }}</div>
+                    @enderror
+                 </div> 
+              
+      
+                 <hr class="bg-gray-500 border-dashed mt-4 mb-2">
+                <h3 class="text-gray-800 uppercase text-sm font-semibold">Izaberite veličinu</h3>
+    
+                 <div class="relative flex items-start ">
+                    @foreach ($product->sizes as $size)
+                        <div class="flex flex-col justify-content-start mr-4">
+                            {{-- <span>{{$size->name}}</span>              --}}
+                            <button type="button" name="size" class=" h-8 w-8 mb-8 rounded-full bg-gray-400 hover:bg-gray-900 hover:text-white " id="{{$size->id}}">{{$size->value}}</button> 
+                      </div>
+                    @endforeach 
+
+                    @error('size')
+                    <div class="absolute right-0 text-red-500 text-sm ">{{ $message }}</div>
+                    @enderror
+                 </div> 
+    
+                 <h3 class="text-gray-800 uppercase text-sm font-semibold">Količina</h3>
+                 <div class="flex items-start mb-4" x-data="counter()">
+                     <button type="button" class="bg-white p-1 mr-1 hover:bg-gray-300" style="border: solid 1px gray" x-on:click="decrement()"><i class="fa fa-minus" aria-hidden="true"  ></i></button>
+                     <input class="bg-white px-2 py-1 mr-1 w-8 text-center" style="border: solid 1px gray;" name="quantity" x-bind:value="count"/>     
+                     <button type="button" class="bg-white p-1 mr-1 hover:bg-gray-300" style="border: solid 1px gray" x-on:click="increment()"><i class="fa fa-plus" aria-hidden="true"  ></i></button>
+                 </div>
+
                 <button type="submit" class="text-md text-white px-2 py-1 button button-plain transition duration-500 ease-in-out border border-gray-300 shadow-md rounded-md bg-boja hover:bg-bojasvetla transform hover:-translate-y-1 hover:scale-110 ...">Dodaj u korpu</button>
 
              </form>
-            @endif
+           
 
           
        
@@ -217,10 +223,6 @@
     
     
 @section('extra-js')
-
-    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@3/dist/algoliasearchLite.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
-    <script src="{{asset('js/algolia.js')}}"></script>
 
  <script>
     (function(){
@@ -237,6 +239,23 @@
             this.classList.add('selected');
         }
     })();
+
+    function counter() {        
+        return {
+          count: 1,
+            increment() {
+            this.count++;            
+          },
+        
+          decrement() {
+            if(this.count>1){
+            this.count--;           
+            };
+          
+          }
+
+        };
+      };
 </script>
 @endsection
 
