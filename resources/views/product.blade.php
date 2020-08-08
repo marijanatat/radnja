@@ -219,7 +219,7 @@
                         <div class="flex flex-col justify-center mr-4">
                             
                             <label for="{{$color->id}}" class="color-label">
-                                <input type="radio" id="{{$color->id}}" name="color" value="{{$color->id}}">
+                                <input type="radio" id="{{$color->id}}" name="color" value="{{$color->name}}">
                                 <span class="color-custom" style="background-color: {{$color->value}}">
                                     <span class="tooltiptext text-sm font-semibold pt-2">{{$color->name}}</span>
                                 </span>
@@ -238,7 +238,7 @@
                 <div class="flex relative items-start mb-6">
                     @foreach ($product->sizes as $size)                      
                       <label for="{{$size->value}}" class="velicina-label">
-                        <input type="radio" id="{{$size->value}}" name="size" value="{{$size->id}}">
+                        <input type="radio" id="{{$size->value}}" name="size" value="{{$size->value}}">
                         <span class="velicina-custom text-base bg-gray-400 hover:bg-gray-900 hover:text-white">{{$size->value}}</span>
                     </label>
                     @endforeach 
@@ -257,10 +257,6 @@
                 <button type="submit" class="text-md text-white px-2 py-1 button button-plain transition duration-500 ease-in-out border border-gray-300 shadow-md rounded-md bg-boja hover:bg-bojasvetla transform hover:-translate-y-1 hover:scale-110 ...">Dodaj u korpu</button>
 
              </form>
-           
-
-          
-       
         </div>
     </div> <!-- end product-section -->
 
