@@ -5,7 +5,7 @@
 @section('extra-css')
     <style>
 
-    .radio-label {
+    .color-label {
         display: block;
         position: relative;
         padding-left: 35px;
@@ -18,7 +18,7 @@
         user-select: none;    
     }
 
-    .radio-label input {
+    .color-label input {
         position: absolute;
         opacity: 0;
         cursor: pointer;
@@ -26,7 +26,7 @@
         width: 0;
     }
 
-    .radio-custom {
+    .color-custom {
         position: absolute;
         top: 0;
         left: 0;
@@ -36,25 +36,25 @@
         border: 1px solid grey;
     }
 
-    .radio-label:hover input ~ .radio-custom{
+    .color-label:hover input ~ .color-custom{
         background-color: red;
     }
 
-    .radio-label input:checked ~ .radio-custom{
+    .color-label input:checked ~ .color-custom{
         border: 2px solid rgb(159, 219, 103);
     }
 
-    .radio-custom:after {
+    .color-custom:after {
         content: "";
         position: absolute;
         display: none;
     }
 
-    .radio-label input:checked ~ .radio-custom:after {
+    /* .color-label input:checked ~ .color-custom:after {
         /* display: block; */
-    }
+    } */
 
-    .radio-label .radio-custom:after {
+    .color-label .color-custom:after {
         top: 9px;
         left: 9px;
         width: 8px;
@@ -63,7 +63,7 @@
         background: white;
     }
 
-    .radio-custom .tooltiptext {
+    .color-custom .tooltiptext {
         bottom:30px;
         left: -45px;
         visibility: hidden;
@@ -79,9 +79,65 @@
         z-index: 1;
     }
 
-    .radio-custom:hover .tooltiptext {
+    .color-custom:hover .tooltiptext {
         visibility: visible;
     }
+
+    .velicina-label {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;    
+    }
+
+    .velicina-label input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    .velicina-custom {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-left: 6px;
+        padding-top: 2.5px; 
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+    }
+
+    .velicina-label:hover input ~ .velicina-custom{
+        /* background-color: greenyellow; */
+    }
+
+    .velicina-label input:checked ~ .velicina-custom{
+        background-color: #1a202c;
+        color: white;        
+    }
+
+    /* .velicina-custom:after {
+        content: "";
+        position: absolute;
+        display: none;
+    } */
+
+    /* .velicina-label .velicina-custom:after {
+        top: 9px;
+        left: 9px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+    } */
 
     </style>
 @endsection
@@ -149,14 +205,7 @@
             {{-- <div>{!!$stock!!}</div> --}}
             {{-- <div>{{$product->quantity}}</div> --}}
             <div class="product-section-price text-base text-red-800"><span class="text-sm text-gray-800">Cena:</span>  {{$product->presentPrice()}}</div>
-
-         
-         
-            {{-- <p class="text-xs text-gray-800">
-                {!!$product->description!!}
-            </p> --}}
-    
-            {{-- @if ($product->quantity>0) --}}
+          
             <form action="{{route('cart.store')}}" method="POST">
                 {{csrf_field()}}
                 <input type="hidden" name="id" value="{{$product->id}}">
@@ -187,14 +236,13 @@
                  <hr class="bg-gray-500 border-dashed mt-4 mb-2">
                 <h3 class="text-gray-800 uppercase text-sm font-semibold">Izaberite veličinu</h3>
     
-                 <div class="relative flex items-start ">
-                    @foreach ($product->sizes as $size)
-                        <div class="flex flex-col justify-content-start mr-4">
-                            {{-- <span>{{$size->name}}</span>              --}}
-                            <button type="button" name="size" class=" h-8 w-8 mb-8 rounded-full bg-gray-400 hover:bg-gray-900 hover:text-white " id="{{$size->id}}">{{$size->value}}</button> 
-                      </div>
+                <div class="flex items-start mb-6">
+                    @foreach ($product->sizes as $size)                      
+                      <label for="{{$size->value}}" class="velicina-label">
+                        <input type="radio" id="{{$size->value}}" name="size" value="{{$size->id}}">
+                        <span class="velicina-custom text-base bg-gray-400 hover:bg-gray-900 hover:text-white">{{$size->value}}</span>
+                    </label>
                     @endforeach 
-
                     @error('size')
                     <div class="absolute right-0 text-red-500 text-sm ">{{ $message }}</div>
                     @enderror
