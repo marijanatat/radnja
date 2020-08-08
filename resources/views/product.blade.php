@@ -218,17 +218,16 @@
                     @foreach ($product->colors as $color)
                         <div class="flex flex-col justify-center mr-4">
                             
-                            <span class="font-mono text-xs">{{$color->name}}</span>    
-                            <label for="{{$color->id}}" class="radio-label">
-                            <input type="radio" id="{{$color->id}}" name="color" value="{{$color->id}}">
-                            <span class="radio-custom" style="background-color: {{$color->value}}">
-                                <span class="tooltiptext text-sm font-semibold pt-2">{{$color->name}}</span>
-                            </span>
-                        </label>
+                            <label for="{{$color->id}}" class="color-label">
+                                <input type="radio" id="{{$color->id}}" name="color" value="{{$color->id}}">
+                                <span class="color-custom" style="background-color: {{$color->value}}">
+                                    <span class="tooltiptext text-sm font-semibold pt-2">{{$color->name}}</span>
+                                </span>
+                            </label>
                       </div>
                     @endforeach 
                     @error('color')
-                    <div class="absolute right-0  text-red-500 text-sm ">{{ $message }}</div>
+                    <div class="absolute right-0 text-red-500 text-sm ">{{ $message }}</div>
                     @enderror
                  </div> 
               
@@ -236,7 +235,7 @@
                  <hr class="bg-gray-500 border-dashed mt-4 mb-2">
                 <h3 class="text-gray-800 uppercase text-sm font-semibold">Izaberite veličinu</h3>
     
-                <div class="flex items-start mb-6">
+                <div class="flex relative items-start mb-6">
                     @foreach ($product->sizes as $size)                      
                       <label for="{{$size->value}}" class="velicina-label">
                         <input type="radio" id="{{$size->value}}" name="size" value="{{$size->id}}">
