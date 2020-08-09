@@ -8,10 +8,10 @@ tracking-normal text-gray-700 md:text-gray-200 md:items-center md:space-y-0 spac
 
 
     <li>
-        <a href="{{ route('users.edit') }}" class="ml-8 hover:bg-gray-300 md:hover:text-teal-300 py-3 md:py-0">My Account</a>
+        <a href="{{ route('users.edit') }}" class="ml-8 hover:text-teal-300 py-3 md:py-0">My Account</a>
     </li>
     <li>
-        <a class="dropdown-item  hover:text-teal-300" href="{{ route('logout') }}" onclick="event.preventDefault();
+        <a class="hover:text-teal-300" href="{{ route('logout') }}" onclick="event.preventDefault();
                   document.getElementById('logout-form').submit();">
             {{ __('Logout') }}
         </a>
