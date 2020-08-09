@@ -55,11 +55,11 @@
 
     <div class="flex px-16 pb-16">
         <div class="flex h-screen w-64">
-            <div class="w-1/4 flex-1 flex overflow-hidden">
-                <div class="flex-1 overflow-y-scroll">
+            <div class="w-1/4 flex-1 flex overflow-hidden bg-gray-100 p-3">
+                <div class="flex-1 scrollbar">
                     <h3 class="uppercase">Kategorije</h3>
                     <hr class="bg-boja h-1 w-24 mb-3">
-                    <button class="text-left font-bold text-sm text-gray-700 cursor-pointer focus:outline-none" wire:click="resetCategories">Sve kategorije
+                    <button class="text-left font-bold text-sm text-gray-700 cursor-pointer focus:outline-none duration-500 transform hover:translate-x-1" wire:click="resetCategories">Sve kategorije
                         <i class="fa fa-angle-double-right text-gray-700 cursor-pointer" aria-hidden="true"></i>
                     </button>   
                 @foreach ($categories as $category)

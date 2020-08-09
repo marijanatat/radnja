@@ -6,11 +6,11 @@
     @else
 
 
-    <li>
-        <a href="{{ route('users.edit') }}" class="ml-8 hover:bg-gray-300 md:hover:text-teal-300 py-3 md:py-0">My Account</a>
+    <li class="py-2 hover:bg-gray-300">
+        <a href="{{ route('users.edit') }}" class="py-2 hover:bg-gray-300">My Account</a>
     </li>
-    <li>
-        <a class="dropdown-item  hover:text-teal-300" href="{{ route('logout') }}" onclick="event.preventDefault();
+    <li class="py-2 hover:bg-gray-300">
+        <a href="{{ route('logout') }}" onclick="event.preventDefault();
                   document.getElementById('logout-form').submit();">
             {{ __('Logout') }}
         </a>
