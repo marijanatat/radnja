@@ -208,8 +208,13 @@
 
     document.getElementById('nav-toggle').onclick = function(){
       document.getElementById('nav-content').classList.toggle('hidden');
-      document.getElementById('nav-content1').classList.toggle('hidden');
     }
+    
+    document.getElementsByTagName('body hmtl').onclick = function(){      
+      document.getElementById('nav-content').classList.add('hidden');
+    }
+
+    
 
     // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
           // window.onscroll = function() {scrollFunction()};

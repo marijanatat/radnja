@@ -1,13 +1,14 @@
-<ul class="md:flex flex-no-wrap space-x-6 mr-6 uppercase tracking-normal text-gray-200 items-center">
+<ul class="flex-col md:flex-row md:flex-no-wrap md:space-x-6 md:mr-6 uppercase 
+tracking-normal text-gray-700 md:text-gray-200 md:items-center md:space-y-0 space-y-3">
     @guest
-    <li><a href="{{route('register')}}" class="hover:text-teal-300">Sign up </a></li>
-    <li><a href="{{route('login')}}" class="hover:text-teal-300">Log in </a></li>
+    <li class="py-3 md:py-0 md:hover:text-teal-300"><a href="{{route('register')}}">Sign up </a></li>
+    <li><a href="{{route('login')}}" class="md:hover:text-teal-300 py-3 md:py-0">Log in </a></li>
 
     @else
 
 
     <li>
-        <a href="{{ route('users.edit') }}" class="ml-8 hover:text-teal-300">My Account</a>
+        <a href="{{ route('users.edit') }}" class="ml-8 hover:bg-gray-300 md:hover:text-teal-300 py-3 md:py-0">My Account</a>
     </li>
     <li>
         <a class="dropdown-item  hover:text-teal-300" href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -21,7 +22,7 @@
     </form>
 
     @endguest
-    <li class="relative"><a href="{{route('cart.index')}}">
+    <li class="relative hidden md:block"><a href="{{route('cart.index')}}">
         {{-- <i class="fa fa-shopping-cart text-xl mr-2 hover:text-teal-300" aria-hidden="true"></i> --}}
         <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 446.853 446.853" style="enable-background:new 0 0 446.853 446.853;" xml:space="preserve">
             <g >

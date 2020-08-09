@@ -15,6 +15,8 @@ Hvala Vam što kupujete kod nas.
 @foreach ($order->products as $product)
 Naziv: {{ $product->name }} <br>
 Cena: {{ presentPrice($product->price) }} <br>
+Veličina: {{ $product->pivot->size }} <br>
+Boja: {{ $product->pivot->color }} <br>
 Količina: {{ $product->pivot->quantity }} <br>    
 @endforeach
 
