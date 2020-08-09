@@ -205,9 +205,16 @@
       document.getElementById('nav-content').classList.toggle('hidden');
     }
     
-    document.getElementsByTagName('body hmtl').onclick = function(){      
-      document.getElementById('nav-content').classList.add('hidden');
-    }
+    var specifiedElement = document.getElementById('nav-toggle');
+    var specifiedElement1 = document.getElementById('nav-content');
+    //I'm using "click" but it works with any event
+    document.addEventListener('click', function(event) {
+      var isClickInside = specifiedElement.contains(event.target);
+      var isClickInside1 = specifiedElement1.contains(event.target);
+      if (!isClickInside && !isClickInside1) {
+        document.getElementById('nav-content').classList.add('hidden');
+      }
+    });
 
     
 
