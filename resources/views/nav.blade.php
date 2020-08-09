@@ -1,8 +1,8 @@
 
  
 
-    <div class="block md:hidden py-2 px-3" >
-    <button id="nav-toggle"  
+    <div class="block md:hidden py-2 px-3"  >
+    <button  id="nav-toggle"  
       class="flex  items-center outline-none px-3 py-2 rounded text-gray-300 font-bold border border-gray-300 hover:text-gray-500 hover:border-gray-500 ">
       <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
         <title>Menu</title>

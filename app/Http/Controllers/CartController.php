@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Color;
 use App\Product;
+use App\ProductColor;
+use App\ProductSize;
 use Illuminate\Http\Request;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Validator;
@@ -63,12 +65,13 @@ class CartController extends Controller
             return redirect(route('cart.index'))->with('success_message','Item is already in your Cart.');
         }
         
-        Cart::add($request->id, $request->name, 1, $request->price)
-        // Cart::add($request->id, $request->name, $request->quantity,$request->size,$request->color, $request->price)
+        // Cart::add($request->id, $request->name, 1, $request->price)
+         Cart::add($request->id, $request->name,$request->quantity,$request->price)
         
             ->associate('App\Product');
-
+        
             return redirect(route('cart.index'))->with('success_message','Item is added to your cart');
+
     }
 
     

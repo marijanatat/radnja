@@ -67,8 +67,9 @@
         bottom:30px;
         left: -45px;
         visibility: hidden;
-        background-color: #2f312f;
-        color: orange;
+        background-color:rgb(158, 198, 214);
+        color: white;
+        font-style: italic;
         clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
         width: 80px;
         height: 40px;
@@ -219,16 +220,18 @@
                         <div class="flex flex-col justify-center mr-4">
                             
                             <label for="{{$color->id}}" class="color-label">
-                                <input type="radio" id="{{$color->id}}" name="color" value="{{$color->id}}">
+                                <input type="radio" id="{{$color->id}}" name="color" value="{{$color->name}}">
                                 <span class="color-custom" style="background-color: {{$color->value}}">
                                     <span class="tooltiptext text-sm font-semibold pt-2">{{$color->name}}</span>
                                 </span>
                             </label>
                       </div>
                     @endforeach 
+       
                     @error('color')
                     <div class="absolute right-0 text-red-500 text-sm ">{{ $message }}</div>
                     @enderror
+              
                  </div> 
               
       
@@ -238,13 +241,15 @@
                 <div class="flex relative items-start mb-6">
                     @foreach ($product->sizes as $size)                      
                       <label for="{{$size->value}}" class="velicina-label">
-                        <input type="radio" id="{{$size->value}}" name="size" value="{{$size->id}}">
+                        <input type="radio" id="{{$size->value}}" name="size" value="{{$size->value}}">
                         <span class="velicina-custom text-base bg-gray-400 hover:bg-gray-900 hover:text-white">{{$size->value}}</span>
                     </label>
                     @endforeach 
-                    @error('size')
-                    <div class="absolute right-0 text-red-500 text-sm ">{{ $message }}</div>
-                    @enderror
+               
+                        @error('size')
+                        <div class="absolute right-0 text-red-500 text-sm ">{{ $message }}</div>
+                        @enderror
+                  
                  </div> 
     
                  <h3 class="text-gray-800 uppercase text-sm font-semibold">Količina</h3>
