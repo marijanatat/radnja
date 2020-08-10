@@ -120,7 +120,7 @@
     <div class="featured-section" style="background-color: white">
 
       <div class="container">
-        <h1 class="text-center">Shop</h1>
+        {{-- <h1 class="text-center">Shop</h1> --}}
 
         <p class="section-description text-center " style="font-size:30px ">Naši proizvodi su isključivo domaće
           proizvodnje od najkvalitetnijeg 100% pamuka</p>

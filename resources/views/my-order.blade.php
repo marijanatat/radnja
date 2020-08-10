@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'My Order')
+{{-- @section('title', 'My Order') --}}
 
 
 @section('content')
@@ -30,39 +30,39 @@
     </div>
 
     <div class="products-section my-orders container">
-        <div class="sidebar">
+        <div class="sidebar -mt-16">
 
-            <ul>
+            <ul class="text-base md:text-xl text-gray-700">
               <li><a href="{{ route('users.edit') }}">My Profile</a></li>
               <li class="active"><a href="{{ route('orders.index') }}">My Orders</a></li>
             </ul>
         </div> <!-- end sidebar -->
-        <div class="my-profile">
-            <div class="products-header">
-                <h1 class="stylish-heading">Order ID: {{ $order->id }}</h1>
+        <div class="my-profile mt-4 md:-mt-8">
+            <div class="products-header -mt-16 ml-4">
+                <h1 class="mb-2 font-bold text-boja text-xl">Order ID: {{ $order->id }}</h1>
             </div>
 
-            <div>
+            <div class="-mt-8 md:mt-4 mx-4">
                 <div class="order-container">
                     <div class="order-header">
                         <div class="order-header-items">
                             <div>
-                                <div class="uppercase font-bold">Order Placed</div>
-                                <div>{{ presentDate($order->created_at) }}</div>
+                                <div class="uppercase font-bold text-gray-800">Order Placed</div>
+                                <div class="text-base md:uppercase f text-gray-800">{{ presentDate($order->created_at) }}</div>
                             </div>
                             <div>
-                                <div class="uppercase font-bold">Order ID</div>
-                                <div>{{ $order->id }}</div>
+                                <div class="uppercase font-bold text-gray-800">Order ID</div>
+                                <div class="text-base   text-gray-800">{{ $order->id }}</div>
                             </div><div>
-                                <div class="uppercase font-bold">Total</div>
-                                <div>{{ presentPrice($order->billing_total) }}</div>
+                                <div class="uppercase font-bold text-gray-800">Total</div>
+                                <div class="text-base text-gray-800">{{ presentPrice($order->billing_total) }}</div>
                             </div>
                         </div>
-                        <div>
+                        {{-- <div>
                             <div class="order-header-items">
                                 <div><a href="#">Invoice</a></div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="order-products">
                         <table class="table" style="width:50%">
@@ -79,14 +79,7 @@
                                     <td>City</td>
                                     <td>{{ $order->billing_city }}</td>
                                 </tr>
-                                <tr>
-                                    <td>Subtotal</td>
-                                    <td>{{ presentPrice($order->billing_subtotal) }}</td>
-                                </tr>
-                                <tr>
-                                    <td>Tax</td>
-                                    <td>{{ presentPrice($order->billing_tax) }}</td>
-                                </tr>
+                               
                                 <tr>
                                     <td>Total</td>
                                     <td>{{ presentPrice($order->billing_total) }}</td>
@@ -97,7 +90,7 @@
                     </div>
                 </div> <!-- end order-container -->
 
-                <div class="order-container">
+                <div class="order-container -mt-4">
                     <div class="order-header">
                         <div class="order-header-items">
                             <div>
@@ -109,7 +102,7 @@
                     <div class="order-products">
                         @foreach ($products as $product)
                             <div class="order-product-item">
-                                <div><img src="{{ asset($product->image) }}" alt="Product Image"></div>
+                                <div><img src="{{ productImage($product->image) }}" alt="Product Image"></div>
                                 <div>
                                     <div>
                                         <a href="{{ route('shop.show', $product->slug) }}">{{ $product->name }}</a>

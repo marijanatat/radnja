@@ -102,11 +102,7 @@ class ShopLivewire extends Component
             $this->products=$this->products->orderBy('created_at','desc')->paginate($this->productsPerPage);
             
         }else{
-<<<<<<< HEAD
             $this->products=$this->products->paginate($this->productsPerPage);
-=======
-            $products=$products->paginate($this->productsPerPage);
->>>>>>> subota
         }
 
         return view('livewire.shop-livewire', [
@@ -136,7 +132,6 @@ class ShopLivewire extends Component
             $categoryIds = array_unique(Arr::flatten($categoryIds));
                 
         return Product::whereIn('category_id', $categoryIds);
-        // $categoryName=optional($categories->where('id', $this->requestedCategory)->first())->name;
     }
 
     private function filterBySize($products)
