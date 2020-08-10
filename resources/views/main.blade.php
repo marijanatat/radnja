@@ -22,12 +22,22 @@
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
   <script src="{{asset('js/app.js')}}"></script>
   <script>
-    $(function () {
-  $(document).scroll(function () {
-    var $nav = $(".navbar");    
-    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-  });
-});
+    // $(function () {
+    //   $(document).scroll(function () {
+    //     var $nav = $(".navbar");    
+    //     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    //   });
+    // });
+
+    window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-65px";
+  }
+}
   </script>
   <style>
     .kupovina{
@@ -66,7 +76,7 @@
     <header class="with-background" >
       <div class="top-nav flex items-center">
         <div class="top-nav-left">
-          <nav class="navbar flex items-center bg-transparent justify-between flex-wrap w-full pin-t fixed z-10 top-0 mt-0 ">
+          <nav class="navbar flex items-center bg-boja justify-between flex-wrap w-full pin-t fixed z-10 mt-0" id="navbar">
             @include('nav')
         </nav>
 

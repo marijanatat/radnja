@@ -70,8 +70,7 @@
     <header>
       <div class="top-nav flex items-center">
         <div class="top-nav-left">
-          <nav style="background-color: rgb(20, 104, 107)"
-                class="flex items-center justify-between flex-wrap w-full pin-t fixed z-10 top-0 mt-0">
+          <nav class="flex items-center justify-between flex-wrap w-full pin-t fixed z-10 top-0 mt-0 bg-boja">
               @include('nav')
           </nav>
         </div>

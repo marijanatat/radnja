@@ -1,4 +1,4 @@
-<ul class="flex-col uppercase tracking-normal text-gray-700">
+<ul class="flex-col uppercase tracking-normal text-gray-700 text-lg">
     @guest
     <li class="py-2 hover:bg-gray-300"><a href="{{route('register')}}">Sign up </a></li>
     <li class="py-2 hover:bg-gray-300"><a href="{{route('login')}}">Log in </a></li>

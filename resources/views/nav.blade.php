@@ -26,7 +26,7 @@
   <!--dodatak-->
 
   <!--dodatak-->
-   <div class="w-full hidden flex-grow md:justify-start md:flex md:items-end md:w-auto bg-gray-100 md:bg-transparent pb-6 md:pb-0 md:-mt-1 pt-4 md:pt-1  " id="nav-content" >
+   <div class="w-full hidden flex-grow md:justify-start md:flex md:items-end md:w-auto bg-gray-100 md:bg-transparent pb-6 md:pb-0 md:-mt-1 pt-4 md:pt-1 shadow-lg md:shadow-none" id="nav-content" >
       <ul class="flex-col md:flex-row list-reset md:justify-start md:items-center w-3/4 md:w-full ">
         
           <div class="flex items-center -ml-4  md:ml-16">
@@ -56,7 +56,7 @@
                 {{-- <div class="" style="margin-top:-10;margin-left: 200px;margin-right:-100px;background-color: transparent; z-index:10 ;" > --}}
                   @if (!$child->isLeaf())
                   <div class="uppercase"  >
-                    <a href="{{route('shop.index', ['category' => $child->id])}}" class="text-gray-700 hover:text-teal-300">{{$child->name}}</a>
+                    <a href="{{route('shop.index', ['category' => $child->id])}}" class="text-lg text-gray-700 hover:text-teal-300">{{$child->name}}</a>
                   </div>
                     @foreach ($child->children as $ch)
     

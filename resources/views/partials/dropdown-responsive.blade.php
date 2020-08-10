@@ -1,4 +1,4 @@
-<div class="text-gray-700 md:hidden mb-2 h-auto" >
+<div class="text-gray-700 md:hidden mb-2 h-auto text-lg overflow-hidden" >
   @foreach ($categories as $category)
       <div x-data="{open: false}">
               <div class="">
@@ -18,10 +18,10 @@
                       x-transition:leave-end="opacity-0 transform -translate-y-3"    
                       >
                             
-                          <div class=" mt-4">
+                          <div class="mt-4">
                             @foreach ($category->children as $children)
 
-                                <div class="flex-col">
+                                <div class="flex-col my-2">
                                     <div class="">
                                         <span class="uppercase italic">{{$children->name}}</span>
                                     </div>
