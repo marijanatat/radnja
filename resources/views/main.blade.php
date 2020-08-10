@@ -120,7 +120,7 @@
     <div class="featured-section" style="background-color: white">
 
       <div class="container">
-        <h1 class="text-center">Shop</h1>
+        {{-- <h1 class="text-center">Shop</h1> --}}
 
         <p class="section-description text-center " style="font-size:30px ">Naši proizvodi su isključivo domaće
           proizvodnje od najkvalitetnijeg 100% pamuka</p>
@@ -128,38 +128,44 @@
         <div class="mx-2">
           @include('kategorije')
         </div>
-      
-        
+
         <div class="bg-color-white rounded-md border-gray-400  border-transparent opacity-25">
           <hr class="zig-zag">
           <hr>
         </div>
+
+        @include('carousel')
+      </div>  
+        <div class="module">
+          <br>
+      
+        
+        {{-- <div class="bg-color-white rounded-md border-gray-400  border-transparent opacity-25">
+          <hr class="zig-zag">
+          <hr>
+        </div> --}}
         
         <!-- div-->
-        <div class="w-full h-full bg-gray-600 bg-opacity-25 shadow-md mb-8 p-24 text-center ">
-           <div class="kupovina">
-            <h1 class="text-3xl font-bold text-gray-700 p-4 max-h-64" >
-              KUPUJTE IZ UDOBNOSTI SVOJE FOTELJE
+        {{-- <div class="w-full h-full  bg-opacity-25 shadow-md mb-8 p-24 text-center "> --}}
+           <div class="kupovina mt-20 mb-20">
+            <h1 class="text-3xl font-bold text-gray-700 p-4 max-h-12" >
+              Ovo je samo deo našeg asortimana
             </h1>
+            <br>
           </div> 
-          <hr class="max-h-64 bg-gray-800 h-2 border-dashed " >
+          {{-- <hr class="max-h-64 bg-gray-800 h-2 border-dashed " >
           <div>
             <h2 class="text-white font-5xl uppercase p-4 font-bold mt-16 transition ease-in duration-700" style="text-shadow: 2px 2px rgb(112, 112, 112);"> Ovo je samo deo našeg asortimana</h2>
-          </div>
-          {{-- <a href="#" class="button">Featured</a>
-          <a href="#" class="button">On Sale</a>  --}}
-        </div>
+          </div> --}}
+          
+        {{-- </div> --}}
         
         <!-- end div-->
-        
-        {{-- <div class="tabs">
-          <div class="tab">
-            Featured
-          </div>
-          <div class="tab">
-            On Sale
-          </div>
-        </div>  --}}
+        {{-- <div class="bg-color-white rounded-md border-gray-400  border-transparent opacity-25">
+          <hr class="zig-zag">
+          <hr>
+        </div>
+        --}}
         
         <div class="products text-center mx-2 grid grid-cols-2 md:grid-cols-4 mt-2 " style="">
           @foreach ($products as $product)
@@ -184,11 +190,10 @@
 
     </div> <!-- end featured-section -->
     
-
-     <div class="module">
+    {{-- <div class="module">
     
       @include('partials.subscribe')
-    </div> 
+    </div>   --}}
 
     {{--      
           <blog-posts></blog-posts> --}}

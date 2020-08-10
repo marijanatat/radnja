@@ -30,24 +30,31 @@
 
             @if (Cart::count() > 0)
                 
-            <h2 class="text-sm md:text-md mt-2">{{ Cart::count() }} proizvod(a) u korpi</h2>
+            <h2 class="text-sm md:text-md -mt-2">{{ Cart::count() }} proizvod(a) u korpi</h2>
 
             <div class="cart-table">
                 
                 @foreach (Cart::content() as $item)
 
                 <div class="cart-table-row">
-                    <div class="cart-table-row-left">
-                        <a href="{{route('shop.show', $item->model->slug)}}"><img src="{{ productImage($item->model->image) }}" alt="item" class="cart-table-img"></a>
-                        <div class="cart-item-details">
-                            <div class="cart-table-item"><a href="{{route('shop.show', $item->model->slug)}}">{{ $item->model->name }}</a></div>
-                            <div>Veličina: {{$item->options['size']}}</div>
-                            <div>Boja: {{$item->options['color']}}</div>
-                            {{-- <div class="cart-table-description">{{ $item->model->details }}</div> --}}
+                    <div class="cart-table-row-left ">
+                        <div class="flex justify-start items-center text-sm md:text-lg text-gray-600 space-x-3">
+                            <div class="flex">
+                                <a href="{{route('shop.show', $item->model->slug)}}"><img src="{{ productImage($item->model->image) }}" alt="item" class="cart-table-img" ></a>
+                            </div>
+                            <div class="flex ">
+                                <div class="cart-item-details">
+                                    <div class="cart-table-item"><a href="{{route('shop.show', $item->model->slug)}}">{{ $item->model->name }}</a></div>
+                                    <div class="hidden md:block"><span class="hidden md:block">Veličina:{{$item->options['size']}},</span><span class="hidden md:block">Boja: {{$item->options['color']}}</span> </div>
+                                    <div><span class="block md:hidden">{{$item->options['size']}},{{$item->options['color']}}</div>
+                                    {{-- <div><span class="hidden md:block">Boja:</span> {{$item->options['color']}}</div> --}}
+                                    {{-- <div class="cart-table-description">{{ $item->model->details }}</div> --}}
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="cart-table-row-right">
-                        <div class="cart-table-actions">
+                        <div class="cart-table-actions ">
                             <form action="{{route('cart.destroy', $item->rowId)}}" method="POST">
                                 @csrf
                                 @method('DELETE')
@@ -58,14 +65,14 @@
                                 <button type="submit" class="cart-options">Sačuvaj za kasnije</button>
                             </form>
                         </div>
-                        <div>
+                        <div class="mr-2">
                             <select class="quantity" data-id="{{ $item->rowId }}" data-productQuantity="{{$item->model->quantity}}">
                                 @for($i = 1; $i < 5 + 1; $i++)
                                     <option {{ $item->qty == $i ? 'selected' : ''}}>{{ $i }}</option>
                                 @endfor    
                             </select>
                         </div>
-                        <div>{{ presentPrice($item->subtotal) }}</div>
+                        <div class="text-sm md:text-lg">{{ presentPrice($item->subtotal) }}</div>
                     </div>
                 </div> <!-- end cart-table-row -->
 
@@ -75,29 +82,28 @@
 
             </div> <!-- end cart-table -->
 
-            <div class="cart-totals mt-16 ">
+            <div class="cart-totals px-8 py-4 ">
                 <div class="cart-totals-left">
                   Za iznose narudžbine preko 3000 RSD - <span class="text-red-500 font-bold italic">BESPLATNA DOSTAVA !</span>
 
                 </div>
 
-                <div class="cart-totals-right">
-                    <div>
-                        Subtotal <br>
-                        PDV&nbsp;(20%) <br>
-                        <span class="cart-totals-total">Ukupno</span>
+                <div class="text-sm md:text-lg">
+                    <div >
+                        {{-- Subtotal <br>
+                        PDV&nbsp;(20%) <br> --}}
+                        <span class="cart-totals-total text-sm md:text-lg">Ukupno:</span>
                     </div>
-                    <div class="cart-totals-subtotal">
-                        {{ Cart::subtotal() }} RSD <br>
-                        {{ Cart::tax() }} RSD <br>
-                        <span class="cart-totals-total">{{ Cart::total() }}&nbsp; RSD</span>
+                    <div class="flex md:flex-col  font-semibold font-base ">
+                        <span class=" mr-2 text-base font-semibold  md:text-lg ">{{ Cart::total() }} RSD </span>
+                        <span class=" text-base font-semibold  md:text-lg "> + dostava</span>
                     </div>
                 </div>
             </div> <!-- end cart-totals -->
 
             <div class="cart-buttons ">
-                <a href="{{ route('shop.index') }}" class="button rounded-md font-semibold">Nastavi kupovinu</a>
-                <a href="{{ route('checkout.index') }}" class="button-primary rounded-lg">
+                <a href="{{ route('shop.index') }}" class="button rounded-md font-semibold ">Nastavi kupovinu</a>
+                <a href="{{ route('checkout.index') }}" class="button-primary rounded-lg mt-4 md:mt-0">
                     
                 Završite kupovinu
                 </a>
@@ -157,7 +163,7 @@
 
             @else 
 
-                <h3 class="px-16 py-4 italic">Nemate sačuvanih proizvoda.</h3>
+                <h3 class="px-16 py-4 mt-2 italic">Nemate sačuvanih proizvoda.</h3>
 
             @endif
 

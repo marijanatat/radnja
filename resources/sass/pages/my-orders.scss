@@ -1,6 +1,7 @@
 .my-orders {
     .order-container {
       margin-bottom: 64px;
+      
     }
     .order-header {
       background: #F6F6F6;
@@ -33,6 +34,7 @@
       img {
         max-width: 140px;
         margin-right: 24px;
+        max-height: 140px;
       }
     }
   }

@@ -132,7 +132,6 @@ class ShopLivewire extends Component
             $categoryIds = array_unique(Arr::flatten($categoryIds));
                 
         return Product::whereIn('category_id', $categoryIds);
-        // $categoryName=optional($categories->where('id', $this->requestedCategory)->first())->name;
     }
 
     private function filterBySize($products)

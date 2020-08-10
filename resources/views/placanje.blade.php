@@ -30,7 +30,7 @@
                 
                     <li style="flex justify-content-between items-center">
                       <h2 class="items-center text-base" style=""><span style="" class="font-black p-2 text-md"> <i class="fa fa-circle mr-2 text-xs"  aria-hidden="true"></i>Plaćanje pouzećem</span></h2>
-                        <p class=""><span style=""><br>Prilikom preuzmanja pošiljke koju ste prethodno poručili putem našeg sajta www.blahblah.rs,plaćanje porudžbine se vrši isključivo u gotovini u dinarskoj valuti,kuriru naše partnerske kurirske službe AKS Express Kurir-Gavrila Principa bb,15000 Šabac,PIB 103575976,MB-17575708 koji Vam donosi pošiljku. <br><br>Ukoliko prilikom preuzimanja pošiljke uočite neke nelogičnosti vezano za iznos plaćanja,molimo kontaktirajte našu Online službu na telefon 063/555-555 ILI 065/347 80 22 ili pošaljite e-mail na info......@gmail.com sa navedenim nejasnoćama. <br><br></span></p>
+                        <p class=""><span style=""><br>Prilikom preuzmanja pošiljke koju ste prethodno poručili putem našeg sajta www.mobing.rs,plaćanje porudžbine se vrši isključivo u gotovini u dinarskoj valuti,kuriru naše partnerske kurirske službe koji Vam donosi pošiljku. <br><br>Ukoliko prilikom preuzimanja pošiljke uočite neke nelogičnosti vezano za iznos plaćanja,molimo kontaktirajte nas na telefon 063/555-555 ILI 065/347 80 22 ili pošaljite e-mail na info......@gmail.com sa navedenim nejasnoćama. <br><br></span></p>
                     </li>
                 
         

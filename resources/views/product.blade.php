@@ -67,8 +67,9 @@
         bottom:30px;
         left: -45px;
         visibility: hidden;
-        background-color: #2f312f;
-        color: orange;
+        background-color:rgb(158, 198, 214);
+        color: white;
+        font-style: italic;
         clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
         width: 80px;
         height: 40px;
@@ -199,7 +200,7 @@
             </p> 
         </div>
 
-        <div class="product-section-information -mt-16 lg:mt-1">
+        <div class="product-section-information -mt-16 lg:mt-1 ml-8 md:ml-4">
             <div class="product-section-subtitle text-gray-800 font-semibold ">{{$product->name}}</div>
             <hr class="bg-gray-500 border-dashed mt-4 mb-2">
             {{-- <div>{!!$stock!!}</div> --}}
@@ -226,9 +227,11 @@
                             </label>
                       </div>
                     @endforeach 
+       
                     @error('color')
                     <div class="absolute right-0 text-red-500 text-sm ">{{ $message }}</div>
                     @enderror
+              
                  </div> 
               
       
@@ -242,9 +245,11 @@
                         <span class="velicina-custom text-base bg-gray-400 hover:bg-gray-900 hover:text-white">{{$size->value}}</span>
                     </label>
                     @endforeach 
-                    @error('size')
-                    <div class="absolute right-0 text-red-500 text-sm ">{{ $message }}</div>
-                    @enderror
+               
+                        @error('size')
+                        <div class="absolute right-0 text-red-500 text-sm ">{{ $message }}</div>
+                        @enderror
+                  
                  </div> 
     
                  <h3 class="text-gray-800 uppercase text-sm font-semibold">Količina</h3>

@@ -14,7 +14,8 @@ class Product extends Model
     use Resizable;
 
     protected $guarded=[];
-
+    protected $with=['colors','sizes'];
+    
     public function manufacturer()
     {
         return $this->belongsTo(Manufacturer::class);
