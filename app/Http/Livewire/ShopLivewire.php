@@ -24,19 +24,28 @@ class ShopLivewire extends Component
     public $min = 1;
     public $max = 5000; 
     public $productsPerPage = 12;
-    // public $categoryName;  
+    protected $search;
 
+    protected $listeners = ['searched'];
+
+    public function searched($search)
+    {
+        $this->search = $search;
+    }
+    
     protected $updatesQueryString = [
-        'category'
+        'category',
+        'search'
     ];
 
     public function mount()
     {
         if(request()->category){
-
             $this->requestedCategories[] = request()->category;
         }
-        // $this->categoryName = optional(Category::where('id', request()->category)->first())->name;
+        if(request()->search){
+            $this->search = request()->search;
+        }
         $this->sizes=Size::all()->take(5);
         $this->sizesAll = Size::all()->skip(5);
     }
@@ -56,7 +65,6 @@ class ShopLivewire extends Component
         if($this->requestedCategories){
             $products = $this->filterProductsByCategories();
         }else{
-            // $categoryName='Svi proizvodi';
             $products = DB::table('products');
         }
 
@@ -64,6 +72,12 @@ class ShopLivewire extends Component
 
         if($this->requestedSizes){
             $products = $this->filterBySize($products);
+        }
+
+        if($this->search){
+            $products = $products->where('name','like',"%$this->search%")
+            ->orWhere('description','like',"%$this->search%")
+            ->orWhere('details','like',"%$this->search%");
         }
 
         if($this->sort==='low_high') {
@@ -87,15 +101,7 @@ class ShopLivewire extends Component
 
         return view('livewire.shop-livewire', [
             'products' => $products,
-            // 'categoryIds' => $categoryIds 
         ]);
-    }
-
-    public function filtriraj($id)
-    {
-        // $this->resetCategories(); 
-        // $this->requestedCategories[] = $id;
-        // $this->render();        
     }
 
     private function filterProductsByCategories()
@@ -108,7 +114,6 @@ class ShopLivewire extends Component
             $categoryIds = array_unique(Arr::flatten($categoryIds));
                 
         return Product::whereIn('category_id', $categoryIds);
-        // $categoryName=optional($categories->where('id', $this->requestedCategory)->first())->name;
     }
 
     private function filterBySize($products)
