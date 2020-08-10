@@ -1,7 +1,7 @@
 .breadcrumbs {
     background:white ;
     // border-bottom: 1px solid $separator-color;
-    padding: 8px 0;
+    padding: 20px 0;
       font-size: 12px;
 
     .breadcrumb-separator {
@@ -16,6 +16,13 @@
 
         .search-box{
             padding:5px 5px;
+        }
+    
+    }
+
+    @media only screen and (max-width : 768px) {
+        .breadcrumbs-container {
+            justify-content: center;
         }
     
     }

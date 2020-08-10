@@ -200,7 +200,7 @@
             </p> 
         </div>
 
-        <div class="product-section-information -mt-16 lg:mt-1">
+        <div class="product-section-information -mt-16 lg:mt-1 ml-8 md:ml-4">
             <div class="product-section-subtitle text-gray-800 font-semibold ">{{$product->name}}</div>
             <hr class="bg-gray-500 border-dashed mt-4 mb-2">
             {{-- <div>{!!$stock!!}</div> --}}

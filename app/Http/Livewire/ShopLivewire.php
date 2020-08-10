@@ -63,7 +63,7 @@ class ShopLivewire extends Component
         $products = $this->filterByPriceRange($products);
 
         if($this->requestedSizes){
-            $products = $this->filterBySize();
+            $products = $this->filterBySize($products);
         }
 
         if($this->sort==='low_high') {
@@ -82,7 +82,7 @@ class ShopLivewire extends Component
             $products=$products->orderBy('created_at','desc')->paginate($this->productsPerPage);
             
         }else{
-            $products=$products->inRandomOrder()->paginate($this->productsPerPage);
+            $products=$products->paginate($this->productsPerPage);
         }
 
         return view('livewire.shop-livewire', [
@@ -111,14 +111,14 @@ class ShopLivewire extends Component
         // $categoryName=optional($categories->where('id', $this->requestedCategory)->first())->name;
     }
 
-    private function filterBySize()
+    private function filterBySize($products)
     {
         $productIds = [];
         $productsSizes=(ProductSize::whereIn('size_id',$this->requestedSizes))->get();
         foreach($productsSizes as $ps){
             $productIds[]=$ps->product_id;
            }
-        return Product::whereIn('id',$productIds);
+        return $products->whereIn('id',$productIds);
     }
 
     private function filterByPriceRange($products)

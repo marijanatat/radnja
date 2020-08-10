@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'My profile')
+{{-- @section('title', 'My profile') --}}
 
 
 @section('content')
@@ -29,46 +29,46 @@
     @endif
     </div>
 
-<div class="products-section container">
+<div class="products-section container mb-8 md:mb-16">
     <div class="sidebar">
-        <ul>
+        <ul class="-mt-16">
             <li class="active"><a href="{{ route('users.edit') }}">My profile</a> </li>
             <li class="active"><a href="{{route('orders.index')}}">My orders</a></li>
             
         </ul>
     </div> <!-- end sidebar -->
     <div>
-        <div class="products-header">
-            <h1 class="stylish-heading">My profile</h1>
-        </div>
+     
+            <h1 class="-mt-16 mb-4 font-semibold text-gray-600">My profile</h1>
+        
 
         <div >
             
 
-            <form action="{{ route('users.update') }}" method="POST">
+            <form action="{{ route('users.update') }}" method="POST" >
                 {{ csrf_field() }}
                 @method('PATCH')
-                <div class="form-control">
-                    <input id="name" type="text" name="name" value="{{ old('name', $user->name) }}" placeholder="Name" required>
+                <div class="form-control ">
+                    <input  class="px-2 text-gray-700 " id="name" type="text" name="name" value="{{ old('name', $user->name) }}" placeholder="Name" required>
                 </div>
                 <div class="form-control">
-                    <input id="email" type="email" name="email" value="{{ old('email', $user->email) }}" placeholder="Email" required>
+                    <input class="px-2 text-gray-700 " id="email" type="email" name="email" value="{{ old('email', $user->email) }}" placeholder="Email" required>
                 </div>
                 <div class="form-control">
-                    <input id="password" type="password" name="password" placeholder="Password">
-                    <div>Leave password blank to keep current password</div>
+                    <input class="px-2 text-gray-700 " id="password" type="password" name="password" placeholder="Password">
+                    <div class="px-2 -mb-4 mt-1 italic font-sm text-sm text-red-600 ">Leave password blank to keep current password</div>
                 </div>
-                <div class="form-control">
-                    <input id="password-confirm" type="password" name="password_confirmation" placeholder="Confirm Password">
+                <div class="form-control mt-1">
+                    <input class="px-2 text-gray-700 " id="password-confirm" type="password" name="password_confirmation" placeholder="Confirm Password">
                 </div>
                 <div>
-                    <button type="submit" class="my-profile-button">Update Profile</button>
+                    <button type="submit" class="my-profile-button py-2">Update Profile</button>
                 </div>
             </form>
         </div>
 
         </div> <!-- end products -->
-        <div class="spacer">
+        <div class="md:spacer">
 
           
         </div>
