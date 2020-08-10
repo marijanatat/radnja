@@ -24,19 +24,32 @@ class ShopLivewire extends Component
     public $min = 1;
     public $max = 5000; 
     public $productsPerPage = 12;
-    // public $categoryName;  
+    public $search;
+    protected $products;
 
+    protected $listeners = ['searched'];
+
+    public function searched($search)
+    {
+        $this->search = $search;
+        $this->min = 1;
+        $this->max = 5000;
+        $this->requestedSizes = [];
+    }
+    
     protected $updatesQueryString = [
-        'category'
+        'category',
+        'search' => ['except' => '']
     ];
 
     public function mount()
     {
         if(request()->category){
-
             $this->requestedCategories[] = request()->category;
         }
-        // $this->categoryName = optional(Category::where('id', request()->category)->first())->name;
+        if(request()->search){
+            $this->search = request()->search;
+        }
         $this->sizes=Size::all()->take(5);
         $this->sizesAll = Size::all()->skip(5);
     }
@@ -46,56 +59,67 @@ class ShopLivewire extends Component
         $this->resetPage();
     }
 
-    public function resetCategories()
+    public function resetQueries()
     {
-        $this->requestedCategories = [];    
+        $this->requestedCategories = [];
+        $this->search = '';    
+        $this->min = 1;
+        $this->max = 5000;
+        $this->requestedSizes = [];
     } 
 
     public function render()
     {
         if($this->requestedCategories){
-            $products = $this->filterProductsByCategories();
+            $this->products = $this->filterProductsByCategories();
         }else{
-            // $categoryName='Svi proizvodi';
-            $products = DB::table('products');
+            $this->products=DB::table('products');
         }
 
-        $products = $this->filterByPriceRange($products);
+        $this->products = $this->filterByPriceRange($this->products);
 
         if($this->requestedSizes){
-            $products = $this->filterBySize($products);
+            $this->products = $this->filterBySize($this->products);
+        }
+        
+        if(!empty($this->search)){
+            $this->products = $this->filtrirajPoSearchu($this->products);
         }
 
         if($this->sort==='low_high') {
-            $products=$products->orderBy('price')->paginate($this->productsPerPage);
+            $this->products=$this->products->orderBy('price')->paginate($this->productsPerPage);
 
         }elseif($this->sort==='high_low') {
-            $products=$products->orderBy('price','desc')->paginate($this->productsPerPage);
+            $this->products=$this->products->orderBy('price','desc')->paginate($this->productsPerPage);
             
         }elseif($this->sort==='a_to_z') {
-            $products=$products->orderBy('name','asc')->paginate($this->productsPerPage);
+            $this->products=$this->products->orderBy('name','asc')->paginate($this->productsPerPage);
             
         }elseif($this->sort==='z_to_a') {
-            $products=$products->orderBy('name','desc')->paginate($this->productsPerPage);
+            $this->products=$this->products->orderBy('name','desc')->paginate($this->productsPerPage);
             
         }elseif($this->sort==='newest') {
-            $products=$products->orderBy('created_at','desc')->paginate($this->productsPerPage);
+            $this->products=$this->products->orderBy('created_at','desc')->paginate($this->productsPerPage);
             
         }else{
-            $products=$products->paginate($this->productsPerPage);
+            $this->products=$this->products->paginate($this->productsPerPage);
         }
 
         return view('livewire.shop-livewire', [
-            'products' => $products,
-            // 'categoryIds' => $categoryIds 
+            'products' => $this->products,
         ]);
     }
 
-    public function filtriraj($id)
+    public function filtrirajPoSearchu($products)
     {
-        // $this->resetCategories(); 
-        // $this->requestedCategories[] = $id;
-        // $this->render();        
+        $searched_products = $products->where('name','like',"%$this->search%")
+                ->orWhere('description','like',"%$this->search%")
+                ->orWhere('details','like',"%$this->search%");
+        $byPrice = $this->filterByPriceRange($searched_products);
+        if($this->requestedSizes){
+            $serached_products = $this->filterBySize($byPrice);
+        }     
+        return $searched_products;
     }
 
     private function filterProductsByCategories()

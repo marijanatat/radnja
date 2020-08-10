@@ -83,3 +83,4 @@ Route::view('/about','about')->name('about');
   
 Route::livewire('/shop', 'shop-livewire')->name('shop.index')
     ->layout('layouts.master');
+    
