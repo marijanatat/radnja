@@ -59,7 +59,7 @@
                 <div class="flex-1 scrollbar">
                     <h3 class="uppercase">Kategorije</h3>
                     <hr class="bg-boja h-1 w-24 mb-3">
-                    <button class="text-left font-bold text-sm text-gray-700 cursor-pointer focus:outline-none duration-500 transform hover:translate-x-1" wire:click="resetCategories">Sve kategorije
+                    <button class="text-left font-bold text-sm text-gray-700 cursor-pointer focus:outline-none duration-500 transform hover:translate-x-1" wire:click="resetQueries">Sve kategorije
                         <i class="fa fa-angle-double-right text-gray-700 cursor-pointer" aria-hidden="true"></i>
                     </button>   
                 @foreach ($categories as $category)
@@ -67,7 +67,7 @@
                             <div class="">
                                 <div class="duration-500 transform hover:translate-x-1" @click="open=!open">
                                     {{-- <input class="w-4" type="checkbox" id="{{$category->id}}" value="{{$category->id}}" wire:model="requestedCategories"> --}}
-                                    <button class="font-bold text-sm text-gray-700 cursor-pointer focus:outline-none" wire:click="filtriraj({{$category->id}})">{{$category->name}}
+                                    <button class="font-bold text-sm text-gray-700 cursor-pointer focus:outline-none">{{$category->name}}
                                     <i x-show="!open" class="fa fa-angle-double-right text-gray-700 cursor-pointer" aria-hidden="true"></i>
                                     <i x-show="open" class="fa fa-angle-double-down text-gray-700 cursor-pointer" aria-hidden="true"></i>
                                     </button>
@@ -177,9 +177,9 @@
                                         <div data-role="main" class="ui-content">
                                             <div data-role="rangeslider">
                                                 <label for="price-min">Minimalna cena:</label>
-                                                <input type="range"  name="price-min" id="price-min" wire:model.debounce.0ms="min" min="0" max="5000"><br>
+                                                <input type="range"  name="price-min" id="price-min" wire:model.debounce.0ms="min" min="1" max="5000"><br>
                                                 <label for="price-max">Maksimalna cena:</label>
-                                                <input type="range"   name="price-max" id="price-max" wire:model.debounce.0ms="max" min="0" max="5000">
+                                                <input type="range"   name="price-max" id="price-max" wire:model.debounce.0ms="max" min="1" max="5000">
                                             </div>
                                         </div>
                                     </div>
