@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Color;
 use App\Product;
+use App\ProductColor;
+use App\ProductSize;
 use Illuminate\Http\Request;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Validator;

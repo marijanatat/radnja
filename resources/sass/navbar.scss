@@ -185,13 +185,13 @@
 
   .zig-zag {
     border: none;
-    width: 50%;
+    width: 25%;
     margin: auto;
     margin-top: 5%;
     margin-bottom: 5%;
-    height: 20px;
+    height: 5px;
     background: linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -20px 0, linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -20px 0, linear-gradient(315deg, #ECEDDC 25%, transparent 25%), linear-gradient(45deg, #ECEDDC 25%, transparent 25%);
-    background-size: 40px 40px;
+    background-size: 10px 10px;
     background-color: #3c434e;
   }
 
