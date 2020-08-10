@@ -54,9 +54,9 @@
         <hr class="mb-3">
 
     <div class="flex px-16 pb-16">
-        <div class="flex h-screen w-64">
+        <div class="flex h-screen">
             <div class="w-1/4 flex-1 flex overflow-hidden bg-gray-100 p-3">
-                <div class="flex-1 scrollbar">
+                <div class="scrollbar">
                     <h3 class="uppercase">Kategorije</h3>
                     <hr class="bg-boja h-1 w-24 mb-3">
                     <button class="text-left font-bold text-sm text-gray-700 cursor-pointer focus:outline-none duration-500 transform hover:translate-x-1" wire:click="resetQueries">Sve kategorije
@@ -203,26 +203,28 @@
                 </div>
                 @endforeach
             </div> --}}
-            <div id="proizvodi" class="w-3/4 md:grid md:grid-cols-3 md:min-h-0 md:min-w-0 row-gap-12 col-gap-8 text-center mx-auto pl-10" >
+            <div id="proizvodi" class="w-3/4 " >
 
-                @forelse ($products as $product)
-                <div class="" id="">
-                    <a href="{{route('shop.show',$product->slug)}}"><img class="h-32 md:h-auto" src="{{productImage($product->image)}}"
-                            alt="product"></a>
-                    <a href="{{route('shop.show',$product->slug)}}">
-                        <div class="">{{$product->name}}</div>
-                    </a>
-                    <div>{{presentPrice($product->price)}}</div>
+                <div class="md:grid md:grid-cols-3 md:min-h-0 md:min-w-0 row-gap-12 col-gap-8 text-center mx-auto pl-10">
+                    @forelse ($products as $product)
+                    <div class="flex flex-col justify-center items-center space-y-2" style="max-height:400px;">
+                        <a href="{{route('shop.show',$product->slug)}}"><img class="h-32 md:h-64 object-cover" src="{{productImage($product->image)}}"
+                                alt="product"></a>
+                        <a href="{{route('shop.show',$product->slug)}}">
+                            <div class="">{{$product->name}}</div>
+                        </a>
+                        <div>{{presentPrice($product->price)}}</div>
+                    </div>
+                    @empty
+                    <div class="flex flex-col  text-gray-700">
+                        <div class="text-left">Za izabrane kriterijume proizvodi nisu pronađeni!</div>
+                        <div class="spacer"></div>
+                        <button class="text-left font-bold text-sm text-gray-700 cursor-pointer focus:outline-none" wire:click="resetQueries">Svi proizvodi
+                            <i class="fa fa-angle-double-right text-gray-700 cursor-pointer" aria-hidden="true"></i>
+                        </button>
+                       
+                    </div> @endforelse
                 </div>
-                @empty
-                <div class="flex flex-col  text-gray-700">
-                    <div class="text-left">Trenutno nema proizvoda ove kategorije na stanju. Molimo vas, navratite kasnije.</div>
-                    <div class="spacer"></div>
-                    <button class="text-left font-bold text-sm text-gray-700 cursor-pointer focus:outline-none" wire:click="resetCategories">Svi proizvodi
-                        <i class="fa fa-angle-double-right text-gray-700 cursor-pointer" aria-hidden="true"></i>
-                    </button>
-                   
-                </div> @endforelse
     
              
             </div> <!-- end products -->
