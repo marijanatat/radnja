@@ -1,3 +1,23 @@
+.kupovina{
+    
+  animation-duration: 10s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  text-shadow: 2px 2px rgb(20, 104, 107);
+  @keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 100%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+
+    }
+}
+
 #social {
     color: white;
     height: 60px;
