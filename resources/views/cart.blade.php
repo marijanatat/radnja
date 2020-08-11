@@ -30,7 +30,7 @@
 
             @if (Cart::count() > 0)
                 
-            <h2 class="text-sm md:text-md -mt-2">{{ Cart::count() }} proizvod(a) u korpi</h2>
+            <h2 class="text-sm md:text-md -mt-2 ">{{ Cart::count() }} proizvod(a) u korpi</h2>
 
             <div class="cart-table">
                 
@@ -82,7 +82,9 @@
 
             </div> <!-- end cart-table -->
 
-            <div class="cart-totals px-8 py-4 ">
+            <div class="cart-totals px-8 py-4 " data-aos="fade-right"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine">
                 <div class="cart-totals-left">
                   Za iznose narudžbine preko 3000 RSD - <span class="text-red-500 font-bold italic">BESPLATNA DOSTAVA !</span>
 
@@ -101,9 +103,9 @@
                 </div>
             </div> <!-- end cart-totals -->
 
-            <div class="cart-buttons ">
-                <a href="{{ route('shop.index') }}" class="button rounded-md font-semibold ">Nastavi kupovinu</a>
-                <a href="{{ route('checkout.index') }}" class="button-primary rounded-lg mt-4 md:mt-0">
+            <div class="cart-buttons "  >
+                <a href="{{ route('shop.index') }}" class="button rounded-md font-semibold shadow-md "  >Nastavi kupovinu</a>
+                <a href="{{ route('checkout.index') }}" class="button-primary rounded-lg mt-4 md:mt-0 font-semibold ">
                     
                 Završite kupovinu
                 </a>
@@ -111,7 +113,7 @@
 
             @else
 
-                <h3 class="ml-16">No items in Cart!</h3>
+                <h3 class="ml-16 text-bojasvetla">Nemate proizvode u korpi!</h3>
                 <div class="spacer"></div>
                 <a href="{{ route('shop.index') }}" class="button p-2 ml-16">Nastavi kupovinu</a>
                 <div class="spacer"></div>
