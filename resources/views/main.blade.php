@@ -71,26 +71,14 @@
   </style>
 </head>
 
-<body>
+<body class="">
   <div id="app">
-    <header class="with-background" >
-      <div class="top-nav">
-        <div class="top-nav-left">
-          <nav class="navbar flex items-center bg-boja justify-between flex-wrap w-full pin-t fixed z-10 mt-0" id="navbar">
+    <header class="with-background">
+      <div class="top-nav">        
+          <nav class="flex items-center bg-boja justify-between flex-wrap w-full pin-t fixed z-10 mt-0" id="navbar">
             @include('nav')
         </nav>
-
-
-
-
-          {{-- {{menu('main','partials.menus.main')}} --}}
-        </div>
-
-        {{-- <div class="top-nav-right">
-                      @include('partials.menus.main-right') 
-                    </div>
-                </div> <!-- end top-nav --> --}}
-
+      </div>
 
         <div class="hero container ">
           <div class="hero-copy ">

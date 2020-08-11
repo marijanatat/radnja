@@ -202,20 +202,20 @@
 
         <div class="product-section-information -mt-16 lg:mt-1 ml-8 md:ml-4">
             <div class="product-section-subtitle text-gray-800 font-semibold ">{{$product->name}}</div>
-            <hr class="bg-gray-500 border-dashed mt-4 mb-2">
+            <hr class="bg-gray-500 border-dashed mt-3 mb-2">
             {{-- <div>{!!$stock!!}</div> --}}
             {{-- <div>{{$product->quantity}}</div> --}}
-            <div class="product-section-price text-base text-red-800"><span class="text-sm text-gray-800">Cena:</span>  {{$product->presentPrice()}}</div>
+            <div class="product-section-price text-base text-red-800 mb-2"><span class="text-sm text-gray-800">Cena:</span>  {{$product->presentPrice()}}</div>
           
             <form action="{{route('cart.store')}}" method="POST">
-                {{csrf_field()}}
+                @csrf
                 <input type="hidden" name="id" value="{{$product->id}}">
                  <input type="hidden" name="name"  value="{{$product->name}}">
                 <input type="hidden" name="price" value="{{$product->price}}">
                 <hr class="bg-gray-500 border-dashed mb-2">
-                <h3 class="text-gray-800 uppercase text-sm font-semibold">Izaberite boju</h3>
+                <h3 class="text-gray-800 uppercase text-sm font-semibold mb-1">Izaberite boju</h3>
     
-                 <div class="relative flex items-start ">
+                 <div class="relative flex items-start pb-2">
                     @foreach ($product->colors as $color)
                         <div class="flex flex-col justify-center mr-4">
                             
@@ -236,9 +236,9 @@
               
       
                  <hr class="bg-gray-500 border-dashed mt-4 mb-2">
-                <h3 class="text-gray-800 uppercase text-sm font-semibold">Izaberite veličinu</h3>
+                <h3 class="text-gray-800 uppercase text-sm font-semibold mb-1">Izaberite veličinu</h3>
     
-                <div class="flex relative items-start mb-6">
+                <div class="flex relative items-start mb-8">
                     @foreach ($product->sizes as $size)                      
                       <label for="{{$size->value}}" class="velicina-label">
                         <input type="radio" id="{{$size->value}}" name="size" value="{{$size->value}}">

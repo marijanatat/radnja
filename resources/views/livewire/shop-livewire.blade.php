@@ -25,13 +25,13 @@
             </div>
         @endif
         </div>
-        <div class="container flex justify-end text-sm pt-8 pb-2">
+        <div class="container flex justify-center md:justify-end text-sm pt-8 pb-2">
             
             {{-- <h1 class="stylish-heading font-bold text-2xl pt-2 mr-auto" wire:model="categoryName">{{$categoryName}}</h1> --}}
             
             <div class="mr-6">
                 <label for="sortiranje" class="font-bold">Sortiraj:</label>
-                <select wire:model.debounce.0ms="sort" name="sortiranje">
+                <select wire:model.debounce.0ms="sort" name="sortiranje" class="border border-gray-700 p-1">
                     <option value="popular">Najpopularnije</option>  
                     <option value="low_high">Po ceni rastuće</option>
                     <option value="high_low">Po ceni opadajuće</option>
@@ -42,7 +42,7 @@
             </div>
             <div>
                 <label for="prikazi" class="font-bold">Prikaži po strani:</label>
-                <select name="prikazi" wire:model.debounce0ms="productsPerPage">
+                <select name="prikazi" wire:model.debounce0ms="productsPerPage" class="border border-gray-700 p-1">
                     <option value="12">12</option>
                     <option value="24">24</option>
                     <option value="36">36</option>
@@ -54,8 +54,8 @@
         <hr class="mb-3">
 
     <div class="flex px-16 pb-16">
-        <div class="flex h-auto w-64">
-            <div class="w-1/4 flex-1 flex overflow-hidden bg-gray-100 p-3">
+        <div class="hidden md:flex h-auto w-1/5">
+            <div class="w-1/4 flex-1 flex p-3">
                 <div class="w-full">
                     <h3 class="uppercase text-lg">Kategorije</h3>
                     <hr class="bg-boja h-1 w-32 mb-3">
@@ -203,9 +203,9 @@
                 </div>
                 @endforeach
             </div> --}}
-            <div id="proizvodi" class="w-3/4 " >
+            <div class="w-4/5" >
 
-                <div class="md:grid md:grid-cols-3 md:min-h-0 md:min-w-0 row-gap-12 col-gap-8 text-center mx-auto pl-10">
+                <div id="proizvodi" class="grid grid-cols-1 md:grid-cols-3 md:min-h-0 md:min-w-0 md:row-gap-12 text-center w-full pt-4">
                     @forelse ($products as $product)
                     <div class="flex flex-col justify-center items-center space-y-2" style="max-height:400px;">
                         <a href="{{route('shop.show',$product->slug)}}"><img class="h-32 md:h-64 object-cover" src="{{productImage($product->image)}}"

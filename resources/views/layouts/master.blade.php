@@ -68,12 +68,10 @@
 <body>
   <div id="app">
     <header>
-      <div class="top-nav flex items-center">
-        <div class="top-nav-left">
+      <div class="top-nav">
           <nav class="flex items-center justify-between flex-wrap w-full pin-t fixed z-10 top-0 mt-0 bg-boja">
               @include('nav')
           </nav>
-        </div>
       </div>
     </header>
     <div class="bg-white">

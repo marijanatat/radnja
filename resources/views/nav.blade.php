@@ -26,7 +26,7 @@
   <!--dodatak-->
 
   <!--dodatak-->
-   <div class="hidden md:flex flex-grow md:justify-start md:items-end md:w-auto bg-gray-100 md:bg-transparent pb-6 md:pb-0 md:-mt-1 pt-4 md:pt-1 shadow-lg md:shadow-none" id="nav-content" >
+   <div class="w-full hidden flex-grow md:justify-start md:flex md:items-end md:w-auto bg-gray-100 md:bg-transparent pb-6 md:pb-0 md:-mt-1 pt-4 md:pt-1 shadow-lg md:shadow-none" id="nav-content" >
       <ul class="flex-col md:flex-row list-reset md:justify-start md:items-center w-full ">
         
           <div class="flex items-center -ml-4  md:ml-16">
