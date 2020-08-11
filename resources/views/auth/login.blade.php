@@ -29,15 +29,15 @@
                 <input type="password" id="password" name="password" value="{{ old('password') }}" placeholder="Password" required>
 
                 <div class="login-container text-gray-700">
-                    <button type="submit" class="auth-button">Prijava</button>
-                    <label>
-                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }} > Zapamti me
+                    <button type="submit" class="button-primary rounded-md">Prijava</button>
+                    <label class="text-bojasvetla"> 
+                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}  > Zapamti me
                     </label>
                 </div>
 
                 <div class="spacer"></div>
 
-                <a href="{{ route('password.request') }}" class="italic" >
+                <a href="{{ route('password.request') }}" class="italic text-bojasvetla" >
                     Zaboravili ste Password?
                 </a>
 
@@ -52,14 +52,14 @@
             <p><strong>Save time now.</strong></p> --}}
             <p>Ukoliko ne želite da se registrujete vašu kupovinu možete nastaviti kao gost.</p>
             <div class="spacer"></div>
-            <a href="{{ route('guestCheckout.index') }}" class="auth-button-hollow text-sm font-semibold rounded-md bg-gray-400 p-3 hover:bg-green-800 hover:text-white" >Nastavi kao gost</a>
+            <a href="{{ route('guestCheckout.index') }}" class="auth-button-hollow text-sm font-semibold rounded-md bg-gray-400 p-3 hover:bg-bojasvetla hover:text-white" >Nastavi kao gost</a>
             <div class="spacer hidden lg:block"></div>
             &nbsp;
             <div class="spacer hidden lg:block "></div>
             {{-- <p><strong>Save time later.</strong></p> --}}
             <p class="mt-4 lg:mt-0">Imate opciju i da kreirate svoj nalog</p>
             <div class="spacer"></div>
-            <a href="{{ route('register') }}" class="auth-button-hollow rounded-md text-sm font-semibold bg-gray-400 p-3 hover:bg-orange-800 hover:text-white">Napravi nalog</a>
+            <a href="{{ route('register') }}" class="auth-button-hollow rounded-md text-sm font-semibold bg-gray-400 p-3 hover:bg-bojasvetla hover:text-white">Napravi nalog</a>
  
         </div>
     </div>

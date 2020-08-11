@@ -30,10 +30,10 @@
                 <input type="password" id="password-confirm" name="password_confirmation"  placeholder="Confirm Password" required>
 
                 <div class="login-container">
-                    <button type="submit" class="auth-button">Registracija</button>
+                    <button type="submit" class="button-primary rounded-md">Registracija</button>
                     <div class="already-have-container ml-4">
                         <p class="mb-2 text-gray-700 italic lg:-ml-8"><strong>Već imate nalog?</strong></p>
-                        <a href="{{ route('login') }}" class="font-md font-semibold ">Login</a>
+                        <a href="{{ route('login') }}" class=" font-md font-semibold "><span class="text-bojasvetla">Login</span></a>
                     </div>
                 </div>
 
