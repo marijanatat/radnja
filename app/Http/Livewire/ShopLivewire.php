@@ -22,7 +22,7 @@ class ShopLivewire extends Component
     public $sizes = [];
     public $sizesAll = [];
     public $min = 1;
-    public $max = 5000; 
+    public $max = 10000; 
     public $productsPerPage = 12;
     public $search;
     protected $products;
@@ -52,6 +52,14 @@ class ShopLivewire extends Component
         }
         $this->sizes=Size::all()->take(5);
         $this->sizesAll = Size::all()->skip(5);
+    }
+
+    public function updated($field)
+    {
+        $this->validateOnly($field, [
+            'min' => 'integer',
+            'max' => 'integer'
+        ]);
     }
 
     public function updatingProductsPerPage()

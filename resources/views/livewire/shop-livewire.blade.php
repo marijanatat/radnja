@@ -53,7 +53,7 @@
 
         <hr class="mb-3">
 
-    <div class="flex px-16 pb-16">
+    <div class="flex px-20 pb-16">
         <div class="hidden md:flex h-auto w-1/5">
             <div class="w-1/4 flex-1 flex p-3">
                 <div class="w-full">
@@ -173,15 +173,29 @@
                                     x-transition:enter-end="opacity-100 transform translate-y-0"
                                     x-transition:leave="transition ease-in duration-300"
                                     x-transition:leave-end="opacity-0 transform -translate-y-3">
-                                        <div class="mb-3" x-show="open">Opseg od {{presentPrice($min)}} do {{presentPrice($max)}}</div>
-                                        <div data-role="main" class="ui-content">
+                                        <div class="mb-3" x-show="open">Opseg od <span class="font-semibold">{{presentPrice($min)}}</span> 
+                                            do <span class="font-semibold">{{presentPrice($max)}}</span></div>
+                                        
+                                        <div class="price-slider mt-6">
+                                                <span>Od:
+                                                  <input name="min" type="number" wire:model.debounce.100ms="min" min="0" max="10000" class="mr-3"/>
+                                                  Do:                                            
+                                                  <input name="max" type="number" wire:model.debounce.100ms="max" min="0" max="10000"/>
+                                              </span>   
+                                          <input wire:model.debounce.0ms="min" min="0" max="10000" step="100" type="range"/>
+                                          <input wire:model.debounce.0ms="max" min="0" max="10000" step="100" type="range"/>
+                                          <svg width="100%" height="24">
+                                            <line x1="4" y1="0" x2="300" y2="0" stroke="#212121" stroke-width="12" stroke-dasharray="1 28"></line>
+                                          </svg>
+                                        </div>
+                                        {{-- <div data-role="main" class="ui-content">
                                             <div data-role="rangeslider">
                                                 <label for="price-min">Minimalna cena:</label>
                                                 <input type="range"  name="price-min" id="price-min" wire:model.debounce.0ms="min" min="1" max="5000"><br>
                                                 <label for="price-max">Maksimalna cena:</label>
                                                 <input type="range"   name="price-max" id="price-max" wire:model.debounce.0ms="max" min="1" max="5000">
                                             </div>
-                                        </div>
+                                        </div> --}}
                                     </div>
                             </div>
 
