@@ -178,12 +178,13 @@
                                         
                                         <div class="price-slider mt-6">
                                                 <span>Od:
-                                                  <input name="min" type="number" wire:model.debounce.100ms="min" min="0" max="10000" class="mr-3"/>
-                                                  Do:                                            
-                                                  <input name="max" type="number" wire:model.debounce.100ms="max" min="0" max="10000"/>
-                                              </span>   
-                                          <input wire:model.debounce.0ms="min" min="0" max="10000" step="100" type="range"/>
-                                          <input wire:model.debounce.0ms="max" min="0" max="10000" step="100" type="range"/>
+                                                      <input name="min" type="number" wire:model.debounce.200ms="min" class="mr-3 ml-1"/>
+                                                      Do:                                            
+                                                      <input name="max" type="number" wire:model.debounce.200ms="max" class="ml-1"/>
+                                                </span>
+                                                 
+                                          <input wire:model.debounce.0ms="min" min="1" max="10000" type="range"/>
+                                          <input wire:model.debounce.0ms="max" min="1" max="10000" type="range"/>
                                           <svg width="100%" height="24">
                                             <line x1="4" y1="0" x2="300" y2="0" stroke="#212121" stroke-width="12" stroke-dasharray="1 28"></line>
                                           </svg>
@@ -255,5 +256,6 @@
     document.getElementById('otvori').onclick = function(){
       document.getElementById('all-sizes').classList.toggle('hidden');
     }
+    
   </script>
 @endsection

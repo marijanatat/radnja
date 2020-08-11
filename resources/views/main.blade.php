@@ -86,7 +86,7 @@
              <div id="rotate-words">
               <h2 class="animate-pulse italic text-4xl  font-bold text-gray-500 tracking-widest">Za porodicu <span>sa stilom.</span></h2> 
               <br>
-              <p  class=" italic text-3xl font-mono  font-bold tracking-wide pl-8" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Proverite naš kvalitet !</p>
+              <p  class=" italic text-3xl font-mono  font-bold tracking-wide pl-8" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Proverite naš kvalitet!</p>
             </div> 
 
               <div class=" md:block w3-animate-fading mb-6 text-2xl text-white lg:text-gray-800 font-semibold font-mono ml-4 italic">
@@ -164,16 +164,17 @@
           <hr>
         </div>
         --}}
+      </div> 
         
-        <div class="products text-center mx-2 grid grid-cols-2 md:grid-cols-4 mt-2 " style="">
+        <div class="container text-center px-4 grid grid-cols-1 md:grid-cols-4 mt-2">
           @foreach ($products as $product)
-          <div class="product">
-            <a href="{{route('shop.show',$product->slug)}}"><img class="mx-auto" src="{{productImage($product->image)}}"
-              style="height:140px;" alt="product"></a>
+          <div class="p-4">
+            <a href="{{route('shop.show',$product->slug)}}"><img class="mx-auto object-cover" src="{{productImage($product->image)}}"
+              alt="product"></a>
               <a href="{{route('shop.show',$product->slug)}}">
-                <div class="product-name">{{$product->name}}</div>
+                <div class="">{{$product->name}}</div>
               </a>
-              <div class="product-price">{{$product->presentPrice()}}</div>
+              <div class="">{{$product->presentPrice()}}</div>
             </div>
             @endforeach
             
@@ -184,7 +185,6 @@
             <a href="{{route('shop.index')}}" class="example_e button hover:bg-rgb(20, 104, 107)" >View more products</a>
           </div>
           
-        </div> 
 
     </div> <!-- end featured-section -->
     
