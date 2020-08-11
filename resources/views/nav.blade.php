@@ -9,8 +9,8 @@
         <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />  
       </svg>
     </button>
-    <div class="font-bold text-gray-200"><a href="/">Mob-ing</a></div>
-    <div class="relative md:hidden"><a href="{{route('cart.index')}}">
+    <div class="font-bold text-lg text-gray-200"><a href="/">Mob-ing</a></div>
+    <div class="relative md:hidden mr-3"><a href="{{route('cart.index')}}">
       {{-- <i class="fa fa-shopping-cart text-xl mr-2 hover:text-teal-300" aria-hidden="true"></i> --}}
       <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 446.853 446.853" style="enable-background:new 0 0 446.853 446.853;" xml:space="preserve">
           <g >
@@ -27,7 +27,7 @@
 
   <!--dodatak-->
    <div class="w-full hidden flex-grow md:justify-start md:flex md:items-end md:w-auto bg-gray-100 md:bg-transparent pb-6 md:pb-0 md:-mt-1 pt-4 md:pt-1 shadow-lg md:shadow-none" id="nav-content" >
-      <ul class="flex-col md:flex-row list-reset md:justify-start md:items-center w-3/4 md:w-full ">
+      <ul class="flex-col md:flex-row list-reset md:justify-start md:items-center w-full ">
         
           <div class="flex items-center -ml-4  md:ml-16">
               <a href="/"><img src="{{asset('./img/baby.svg')}}" alt="kolica za bebe" style=""
@@ -52,7 +52,7 @@
               @foreach ($category->children as $child)
   
                 <div class="flex md:ml-64 my-4 tracking-tight">
-                  <div>
+                  <div class="space-y-1">
                 {{-- <div class="" style="margin-top:-10;margin-left: 200px;margin-right:-100px;background-color: transparent; z-index:10 ;" > --}}
                   @if (!$child->isLeaf())
                   <div class="uppercase"  >

@@ -31,15 +31,15 @@
     //   });
     // });
 
-    window.onscroll = function() {scrollFunction()};
+    // window.onscroll = function() {scrollFunction()};
 
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("navbar").style.top = "0";
-      } else {
-        document.getElementById("navbar").style.top = "-65px";
-      }
-    }
+    // function scrollFunction() {
+    //   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    //     document.getElementById("navbar").style.top = "0";
+    //   } else {
+    //     document.getElementById("navbar").style.top = "-65px";
+    //   }
+    // }
   </script>
   <style>
     .kupovina{
@@ -162,26 +162,14 @@
   </style>
 </head>
 
-<body>
+<body class="">
   <div id="app">
-    <header class="with-background" >
-      <div class="top-nav flex items-center">
-        <div class="top-nav-left">
-          <nav class="navbar flex items-center bg-boja justify-between flex-wrap w-full pin-t fixed z-10 mt-0" id="navbar">
+    <header class="with-background">
+      <div class="top-nav">        
+          <nav class="flex items-center bg-boja justify-between flex-wrap w-full pin-t fixed z-10 mt-0" id="navbar">
             @include('nav')
         </nav>
-
-
-
-
-          {{-- {{menu('main','partials.menus.main')}} --}}
-        </div>
-
-        {{-- <div class="top-nav-right">
-                      @include('partials.menus.main-right') 
-                    </div>
-                </div> <!-- end top-nav --> --}}
-
+      </div>
 
         <div class="hero container ">
           <div class="hero-copy ">
@@ -189,7 +177,7 @@
              <div id="rotate-words">
               <h2 class="animate-pulse italic text-4xl  font-bold text-gray-500 tracking-widest">Za porodicu <span>sa stilom.</span></h2> 
               <br>
-              <p  class=" italic text-3xl font-mono  font-bold tracking-wide pl-8" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Proverite naš kvalitet !</p>
+              <p  class=" italic text-3xl font-mono  font-bold tracking-wide pl-8" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Proverite naš kvalitet!</p>
             </div> 
 
               <div class=" md:block w3-animate-fading mb-6 text-2xl text-white lg:text-gray-800 font-semibold font-mono ml-4 italic">
@@ -267,17 +255,26 @@
           <hr>
         </div>
         --}}
+      </div> 
         
+<<<<<<< HEAD
+        <div class="container text-center px-4 grid grid-cols-1 md:grid-cols-4 mt-2">
+          @foreach ($products as $product)
+          <div class="p-4">
+            <a href="{{route('shop.show',$product->slug)}}"><img class="mx-auto object-cover" src="{{productImage($product->image)}}"
+              alt="product"></a>
+=======
         <div class="products text-center mx-2 grid grid-cols-2 md:grid-cols-4 mt-2" data-aos="fade-up"
         data-aos-duration="3000" >
           @foreach ($products as $product)
           <div class="product" >
             <a href="{{route('shop.show',$product->slug)}}"><img class="mx-auto" src="{{productImage($product->image)}}"
               style="height:140px;" alt="product"></a>
+>>>>>>> 14d951f1a240dac3cb70d0d522917b62f05ca58b
               <a href="{{route('shop.show',$product->slug)}}">
-                <div class="product-name">{{$product->name}}</div>
+                <div class="">{{$product->name}}</div>
               </a>
-              <div class="product-price">{{$product->presentPrice()}}</div>
+              <div class="">{{$product->presentPrice()}}</div>
             </div>
             @endforeach
             
@@ -288,7 +285,6 @@
             <a href="{{route('shop.index')}}" class="example_e bg-gray-900 hover:bg-rgb(20, 104, 107) " >View more products</a>
           </div>
           
-        </div> 
 
     </div> <!-- end featured-section -->
     
