@@ -29,15 +29,15 @@
     //   });
     // });
 
-    window.onscroll = function() {scrollFunction()};
+    // window.onscroll = function() {scrollFunction()};
 
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("navbar").style.top = "0";
-      } else {
-        document.getElementById("navbar").style.top = "-65px";
-      }
-    }
+    // function scrollFunction() {
+    //   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    //     document.getElementById("navbar").style.top = "0";
+    //   } else {
+    //     document.getElementById("navbar").style.top = "-65px";
+    //   }
+    // }
   </script>
   <style>
     .kupovina{
@@ -74,7 +74,7 @@
 <body>
   <div id="app">
     <header class="with-background" >
-      <div class="top-nav flex items-center">
+      <div class="top-nav">
         <div class="top-nav-left">
           <nav class="navbar flex items-center bg-boja justify-between flex-wrap w-full pin-t fixed z-10 mt-0" id="navbar">
             @include('nav')

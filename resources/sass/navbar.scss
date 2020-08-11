@@ -14,12 +14,6 @@
 
   }
 
-  .navbar {
-    top: -65px;
-    position: fixed;
-    transition: top 0.3s;
-  }
-
   /* The dropdown container */
   .dropdown1 {
 
@@ -40,7 +34,7 @@
     width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    // transition: 0.5s;
+    
     // transform:translateY(40px);
 
   }
@@ -123,7 +117,7 @@
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {
     display: flex;
-    position: absolute;
+    position: absolute;    
     // left: 130px;
     right: 0;
   
