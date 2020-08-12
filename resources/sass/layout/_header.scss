@@ -5,11 +5,12 @@ header.with-background {
        background: url('./img/alvin-mahmudov-vKuEhorbvYI-unsplash-1.jpg');
        // background: url('./img/ramin-talebi-u_b0jWnkgM0-unsplash-1.jpg');
      
-       background-position: center center;
+      background-position: center center;
       background-size: cover;
+      background-position-y: top;
       border-bottom-left-radius: 50% 20%;
       border-bottom-right-radius: 50% 20%;
-       height: 700px;
+      height: 750px;
  
 // z-index: -2;
       // background: url('./img/ramin-talebi-u_b0jWnkgM0-unsplash-1.jpg');
@@ -30,22 +31,7 @@ header.with-background {
     
     }
 
-    ul {
-      // display: flex;
-      // text-transform: uppercase;
-      // justify-content: space-between;
-      // width: 40%;
-      // color: $white;
-
-      a {
-        // color: $white;
-        // color:$white;
-        // &:hover {
-        //   color: darken($white, 10%);
-        // }
-      }
-
-    }
+    
   }
 
   .hero {

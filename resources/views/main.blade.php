@@ -31,36 +31,18 @@
     //   });
     // });
 
-    window.onscroll = function() {scrollFunction()};
+    // window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-65px";
-  }
-}
+    // function scrollFunction() {
+    //   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    //     document.getElementById("navbar").style.top = "0";
+    //   } else {
+    //     document.getElementById("navbar").style.top = "-65px";
+    //   }
+    // }
   </script>
   <style>
-    .kupovina{
-    
-  animation-duration: 10s;
-  animation-name: slidein;
-  animation-iteration-count: infinite;
-  text-shadow: 2px 2px rgb(20, 104, 107);
-}
-  @keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 100%; 
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-
-    }
+   
     .back-to-top {
   position: fixed;
   display: none;
@@ -162,26 +144,14 @@ function scrollFunction() {
   </style>
 </head>
 
-<body>
+<body class="">
   <div id="app">
-    <header class="with-background" >
-      <div class="top-nav flex items-center">
-        <div class="top-nav-left">
-          <nav class="navbar flex items-center bg-boja justify-between flex-wrap w-full pin-t fixed z-10 mt-0" id="navbar">
+    <header class="with-background">
+      <div class="top-nav">        
+          <nav class="flex items-center bg-boja justify-between flex-wrap w-full pin-t fixed z-10 mt-0" id="navbar">
             @include('nav')
         </nav>
-
-
-
-
-          {{-- {{menu('main','partials.menus.main')}} --}}
-        </div>
-
-        {{-- <div class="top-nav-right">
-                      @include('partials.menus.main-right') 
-                    </div>
-                </div> <!-- end top-nav --> --}}
-
+      </div>
 
         <div class="hero container ">
           <div class="hero-copy ">
@@ -189,10 +159,10 @@ function scrollFunction() {
              <div id="rotate-words">
               <h2 class="animate-pulse italic text-4xl  font-bold text-gray-500 tracking-widest">Za porodicu <span>sa stilom.</span></h2> 
               <br>
-              <p  class=" italic text-3xl font-mono  font-bold tracking-wide pl-8" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Proverite naš kvalitet !</p>
+              <p  class=" italic text-3xl font-mono  font-bold tracking-wide pl-8" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Proverite naš kvalitet!</p>
             </div> 
 
-              <div class=" md:block w3-animate-fading mb-6 text-2xl text-white lg:text-gray-800 font-semibold font-mono ml-4 italic">
+              <div class="md:block w3-animate-fading mb-6 text-2xl text-white lg:text-gray-800 font-semibold font-mono ml-4 italic">
                 Pratite nas na društvenim mrežama.
                 </div>
               <div class="hero-buttons text-gray-800 items-center flex ml-16 md:ml-40 ">
@@ -267,6 +237,7 @@ function scrollFunction() {
           <hr>
         </div>
         --}}
+      </div> 
         
         <div class="products text-center mx-2 grid grid-cols-2 md:grid-cols-4 mt-2" data-aos="fade-up"
         data-aos-duration="3000" >
@@ -275,9 +246,9 @@ function scrollFunction() {
             <a href="{{route('shop.show',$product->slug)}}"><img class="mx-auto" src="{{productImage($product->image)}}"
               style="height:140px;" alt="product"></a>
               <a href="{{route('shop.show',$product->slug)}}">
-                <div class="product-name">{{$product->name}}</div>
+                <div class="">{{$product->name}}</div>
               </a>
-              <div class="product-price">{{$product->presentPrice()}}</div>
+              <div class="">{{$product->presentPrice()}}</div>
             </div>
             @endforeach
             
@@ -288,7 +259,6 @@ function scrollFunction() {
             <a href="{{route('shop.index')}}" class="example_e bg-gray-900 hover:bg-rgb(20, 104, 107) " >View more products</a>
           </div>
           
-        </div> 
 
     </div> <!-- end featured-section -->
     

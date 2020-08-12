@@ -22,7 +22,7 @@ class ShopLivewire extends Component
     public $sizes = [];
     public $sizesAll = [];
     public $min = 1;
-    public $max = 5000; 
+    public $max = 10000; 
     public $productsPerPage = 12;
     public $search;
     protected $products;
@@ -54,6 +54,8 @@ class ShopLivewire extends Component
         $this->sizesAll = Size::all()->skip(5);
     }
 
+   
+
     public function updatingProductsPerPage()
     {
         $this->resetPage();
@@ -66,7 +68,23 @@ class ShopLivewire extends Component
         $this->min = 1;
         $this->max = 5000;
         $this->requestedSizes = [];
-    } 
+    }
+    
+    // public function updated($field)
+    // {
+    //     $this->validateOnly($field, [
+    //         'min' => 'numeric',
+    //         'max' => 'numeric   '
+    //     ]);
+    // }
+
+    // public function setPriceRange()
+    // {
+    //     $this->validate([
+    //         'min' => 'required|numeric',
+    //         'max' => 'required|numeric',
+    //     ]);
+    // }
 
     public function render()
     {
