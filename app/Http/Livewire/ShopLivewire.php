@@ -53,9 +53,7 @@ class ShopLivewire extends Component
         $this->sizes=Size::all()->take(5);
         $this->sizesAll = Size::all()->skip(5);
     }
-
-   
-
+    
     public function updatingProductsPerPage()
     {
         $this->resetPage();

@@ -54,7 +54,7 @@
         <hr class="mb-3">
 
     <div class="flex px-20 pb-16">
-        <div class="hidden md:flex h-auto w-1/5">
+        <div class="hidden md:flex min-h-auto w-1/5">
             <div class="w-1/4 flex-1 flex p-3">
                 <div class="w-full">
                     <h3 class="uppercase text-lg">Kategorije</h3>
@@ -64,13 +64,15 @@
                     </button>   
                 @foreach ($categories as $category)
                     <div x-data="{open: false}">
-                            <div class="">
+                            <div class="flex items-center justify-between">
                                 <div class="duration-500 transform hover:translate-x-1" @click="open=!open">
                                     {{-- <input class="w-4" type="checkbox" id="{{$category->id}}" value="{{$category->id}}" wire:model="requestedCategories"> --}}
                                     <button class="font-bold text-sm text-gray-700 cursor-pointer focus:outline-none">{{$category->name}}
-                                    <i x-show="!open" class="fa fa-angle-double-down text-gray-700 cursor-pointer" aria-hidden="true"></i>
-                                    <i x-show="open" class="fa fa-angle-double-up text-gray-700 cursor-pointer" aria-hidden="true"></i>
                                     </button>
+                                </div>
+                                <div @click="open=!open">
+                                    <i x-show="!open" class="fa fa-angle-double-down text-gray-700 cursor-pointer pr-24" aria-hidden="true"></i>
+                                    <i x-show="open" class="fa fa-angle-double-up text-gray-700 cursor-pointer pr-24" aria-hidden="true"></i>
                                 </div>
                             </div>
                                     <div x-show="open" x-cloak
@@ -225,7 +227,7 @@
                 </div>
                 @endforeach
             </div> --}}
-            <div class="w-4/5 mx-auto">
+            <div class="w-4/5 mx-auto min-h-screen">
 
                 <div id="proizvodi" class="grid grid-cols-1 md:grid-cols-3 md:min-h-0 md:min-w-0 md:row-gap-12 text-center w-full pt-4">
                     @forelse ($products as $product)
