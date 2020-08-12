@@ -19,10 +19,10 @@
                 </ul>
             </div>
             @endif
-            <h2 class="text-gray-700 text-lg md:text-xl font-semibold">Prijava</h2>
+            <h2 class="text-gray-700 text-lg md:text-xl font-semibold" data-aos="zoom-in">Prijava</h2>
             <div class="spacer"></div>
 
-            <form action="{{ route('login') }}" method="POST">
+            <form action="{{ route('login') }}" method="POST" data-aos="zoom-in">
                 {{ csrf_field() }}
 
                 <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="Email" required autofocus>
@@ -46,7 +46,7 @@
 
        
 
-         <div class="auth-right  -ml-20 mr-2 md:mx-12 -mt-16 md:mt-4 mb-4 md:mb-8 border-none md:border:block" style="border-left: 1px solid $separator-color;" > 
+         <div class="auth-right  -ml-20 mr-2 md:mx-12 -mt-16 md:mt-4 mb-4 md:mb-8 border-none md:border:block" style="border-left: 1px solid $separator-color;" data-aos="fade-left"> 
             {{-- <h2>New Customer</h2>
             <div class="spacer"></div>
             <p><strong>Save time now.</strong></p> --}}

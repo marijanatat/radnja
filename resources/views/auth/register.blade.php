@@ -18,10 +18,10 @@
                 </ul>
             </div>
             @endif
-            <h2 class="text-gray-700 text-lg md:text-xl font-semibold">Registracija</h2>
+            <h2 class="text-gray-700 text-lg md:text-xl font-semibold" data-aos="zoom-in">Registracija</h2>
             <div class="spacer"></div>
 
-            <form action="{{ route('register') }}" method="POST">
+            <form action="{{ route('register') }}" method="POST" data-aos="zoom-in">
                 {{ csrf_field() }}
                 <input type="text" id="name" name="name" value="{{ old('name') }}" placeholder="Name" required autofocus>
 
@@ -42,7 +42,7 @@
             </form>
         </div>
 
-        <div class="auth-right hidden md:block">
+        <div class="auth-right hidden md:block" data-aos="fade-left">
             <img src="{{asset('./img/andrej-lisakov-Yy4sN6QzboU-unsplash.jpg')}}" alt="slika ofingeri" class="w-2/3 h-2/3  object-center my-16 mx-16" >
             {{-- <h2>Benefits</h2>
             <div class="spacer"></div>
