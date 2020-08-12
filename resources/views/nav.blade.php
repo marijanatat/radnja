@@ -26,8 +26,8 @@
   <!--dodatak-->
 
   <!--dodatak-->
-   <div class="w-full hidden flex-grow md:justify-start md:flex md:items-end md:w-auto bg-gray-100 md:bg-transparent pb-6 md:pb-0 md:-mt-1 pt-4 md:pt-1 shadow-lg md:shadow-none" id="nav-content" >
-      <ul class="flex-col md:flex-row list-reset md:justify-start md:items-center w-full ">
+   <div class="w-full hidden tranzicija flex-grow md:justify-start md:flex md:items-end md:w-auto bg-gray-100 md:bg-transparent pb-6 md:pb-0 md:-mt-1 pt-4 md:pt-1 shadow-lg md:shadow-none" id="nav-content" >
+      <ul class="flex-col md:flex-row list-reset md:justify-start md:items-center w-4/5 md:w-full">
         
           <div class="flex items-center -ml-4  md:ml-16">
               <a href="/"><img src="{{asset('./img/baby.svg')}}" alt="kolica za bebe" style=""

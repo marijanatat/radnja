@@ -42,7 +42,6 @@
     // }
   </script>
   <style>
-   
     .back-to-top {
   position: fixed;
   display: none;
@@ -145,6 +144,7 @@
 </head>
 
 <body class="">
+  <div id="preloader"></div>
   <div id="app">
     <header class="with-background">
       <div class="top-nav">        
@@ -279,7 +279,6 @@
     </div>
   </div>
 
-  <div id="preloader"></div>
 
   <script>
 

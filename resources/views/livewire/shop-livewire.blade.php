@@ -60,7 +60,7 @@
                     <h3 class="uppercase text-lg">Kategorije</h3>
                     <hr class="bg-boja h-1 w-32 mb-3">
                     <button class="text-left font-bold text-sm text-gray-700 cursor-pointer focus:outline-none duration-500 transform hover:translate-x-1" wire:click="resetQueries">Sve kategorije
-                        <i class="fa fa-angle-double-right text-gray-700 cursor-pointer" aria-hidden="true"></i>
+                        {{-- <i class="fa fa-angle-double-right text-gray-700 cursor-pointer" aria-hidden="true"></i> --}}
                     </button>   
                 @foreach ($categories as $category)
                     <div x-data="{open: false}">
@@ -68,8 +68,8 @@
                                 <div class="duration-500 transform hover:translate-x-1" @click="open=!open">
                                     {{-- <input class="w-4" type="checkbox" id="{{$category->id}}" value="{{$category->id}}" wire:model="requestedCategories"> --}}
                                     <button class="font-bold text-sm text-gray-700 cursor-pointer focus:outline-none">{{$category->name}}
-                                    <i x-show="!open" class="fa fa-angle-double-right text-gray-700 cursor-pointer" aria-hidden="true"></i>
-                                    <i x-show="open" class="fa fa-angle-double-down text-gray-700 cursor-pointer" aria-hidden="true"></i>
+                                    <i x-show="!open" class="fa fa-angle-double-down text-gray-700 cursor-pointer" aria-hidden="true"></i>
+                                    <i x-show="open" class="fa fa-angle-double-up text-gray-700 cursor-pointer" aria-hidden="true"></i>
                                     </button>
                                 </div>
                             </div>
@@ -107,7 +107,7 @@
                                 <div class="flex flex-1 items-center mt-10 justify-between mr-4">
                                     <h3 class="uppercase text-lg">Veličine</h3>
                                     <div x-data="{otvori:true}" >
-                                        <div @click="otvori=!otvori" id="otvori">
+                                        <div @click="otvori=!otvori" id="otvori" class="cursor-pointer">
                                             <i x-show="otvori" class='fa fa-angle-double-up'></i>
                                             <i x-show="!otvori" class='fa fa-angle-double-down'></i>
                                             
@@ -117,11 +117,12 @@
                                     
                                     <hr class="bg-boja h-1 w-32">
                                     <div id="all-sizes" class="w-32 h-auto rounded-lg mt-4"
-                                    x-transition:enter="transition-transform transition-opacity ease-out duration-300"
+                                    {{-- x-transition:enter="transition-transform transition-opacity ease-out duration-300"
                                     x-transition:enter-start="opacity-0 transform -translate-y-2"
                                     x-transition:enter-end="opacity-100 transform translate-y-0"
                                     x-transition:leave="transition ease-in duration-300"
-                                    x-transition:leave-end="opacity-0 transform -translate-y-3">
+                                    x-transition:leave-end="opacity-0 transform -translate-y-3" --}}
+                                    >
                                         <div class="flex flex-col  items-start  ml-4 justify-center " >
                                             @foreach ($sizes as $size)
                                             <div class="flex flex-col w-12 max-h-full" >
@@ -137,10 +138,16 @@
                         
                                         <div x-data="{ open: false }" class="flex flex-col justify-center w-32 h-auto rounded-b-lg">
                                             @foreach ($sizesAll as $size)
-                                        
-                                        <div class="flex flex-col max-h-full pl-4" x-show="open"
-                                        x-transition:enter="transition ease-out duration-400" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-400" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90"
-                                      >
+                                            
+                                            <div class="flex flex-col max-h-full pl-4" x-show="open" x-cloak
+                                                    
+                                                x-transition:enter="transition ease-out duration-400" 
+                                                x-transition:enter-start="opacity-0 transform scale-90" 
+                                                x-transition:enter-end="opacity-100 transform scale-100" 
+                                                x-transition:leave="transition ease-in duration-400" 
+                                                x-transition:leave-start="opacity-100 transform scale-100" 
+                                                x-transition:leave-end="opacity-0 transform scale-90"
+                                            >
                                             <label class="inline-flex items-center text-sm">
                                                 <input type="checkbox" class="form-checkbox h-3 w-3 text-gray-600 text-sm " id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">
                                                 <li class="list-none ml-2">{{$size->value}}</li>
@@ -160,7 +167,7 @@
                             <div x-data="{otvori:true}">
                                <div class="flex items-center  justify-between mr-4 mt-10">
                                  <h3 class="uppercase text-lg">Cena:</h3>
-                                    <div @click="otvori=!otvori" >
+                                    <div @click="otvori=!otvori" class="cursor-pointer">
                                         <i x-show="otvori" class='fa fa-angle-double-up'></i>
                                         <i x-show="!otvori" class='fa fa-angle-double-down'></i> 
                                     </div>
@@ -218,12 +225,12 @@
                 </div>
                 @endforeach
             </div> --}}
-            <div class="w-4/5" >
+            <div class="w-4/5 mx-auto">
 
                 <div id="proizvodi" class="grid grid-cols-1 md:grid-cols-3 md:min-h-0 md:min-w-0 md:row-gap-12 text-center w-full pt-4">
                     @forelse ($products as $product)
                     <div class="flex flex-col justify-center items-center space-y-2" style="max-height:400px;">
-                        <a href="{{route('shop.show',$product->slug)}}"><img class="h-32 md:h-64 object-cover" src="{{productImage($product->image)}}"
+                        <a href="{{route('shop.show',$product->slug)}}"><img class="h-64 object-cover" src="{{productImage($product->image)}}"
                                 alt="product"></a>
                         <a href="{{route('shop.show',$product->slug)}}">
                             <div class="">{{$product->name}}</div>
