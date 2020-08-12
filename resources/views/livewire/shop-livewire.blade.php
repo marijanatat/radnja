@@ -121,7 +121,7 @@
                                     x-transition:enter-end="opacity-100 transform translate-y-0"
                                     x-transition:leave="transition ease-in duration-300"
                                     x-transition:leave-end="opacity-0 transform -translate-y-3">
-                                        <div class="flex flex-col  items-start  ml-4 justify-center " >
+                                        <div class="flex flex-col  items-start  ml-4 justify-center ">
                                             @foreach ($sizes as $size)
                                             <div class="flex flex-col w-12 max-h-full" >
                                                 <label class="inline-flex items-center  text-sm">
@@ -134,11 +134,11 @@
                                     
                                      
                         
-                                        <div x-data="{ open: false }" class="flex flex-col justify-center items-center  bg-gray-300 w-20 h-auto rounded-b-lg">
+                                        <div x-data="{ open: false }" class="flex flex-col justify-center items-center  bg-gray-300 w-20 h-auto rounded-b-lg" 
+                                       >
                                             @foreach ($sizesAll as $size)
                                         
-                                        <div class="flex flex-col w-12 max-h-full" x-show="open"
-                                        x-transition:enter="transition ease-out duration-400" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-400" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90"
+                                        <div class="flex flex-col w-12 max-h-full" x-show="open" 
                                       >
                                             <label class="inline-flex items-center  text-sm">
                                                 <input type="checkbox" class="form-checkbox h-3 w-3 text-gray-600 text-sm " id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">

@@ -13,13 +13,15 @@
     <div class="cart-section container ml-16">
         <div>
             @if (session()->has('success_message'))
-                <div class="alert alert-success">
+                <div class="alert alert-success" 
+                data-aos="fade-right"
+             >
                     {{ session()->get('success_message') }}
                 </div>
             @endif
 
             @if (count($errors) > 0)
-                <div class="alert alert-danger">
+                <div class="alert alert-danger" data-aos="fade-right">
                     <ul>
                         @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>
@@ -115,14 +117,14 @@
 
                 <h3 class="ml-16 text-bojasvetla">Nemate proizvode u korpi!</h3>
                 <div class="spacer"></div>
-                <a href="{{ route('shop.index') }}" class="button p-2 ml-16">Nastavi kupovinu</a>
+                <a href="{{ route('shop.index') }}" class="button-primary rounded-md p-2 ml-16">Nastavi kupovinu</a>
                 <div class="spacer"></div>
             @endif
 
             
             @if (Cart::instance('saveForLater')->count() > 0)
                 
-            <h2>{{ Cart::instance('saveForLater')->count() }} proizvod(a) sačuvanih za kasnije</h2>
+            <h2 class="text-bojasvetla">{{ Cart::instance('saveForLater')->count() }} proizvod(a) sačuvanih za kasnije</h2>
 
             <div class="saved-for-later cart-table">
                 @foreach (Cart::instance('saveForLater')->content() as $item)
@@ -165,7 +167,7 @@
 
             @else 
 
-                <h3 class="px-16 py-4 mt-2 italic">Nemate sačuvanih proizvoda.</h3>
+                <h3 class="px-16 py-4 mt-2 italic text-bojasvetla">Nemate sačuvanih proizvoda.</h3>
 
             @endif
 
