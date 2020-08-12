@@ -9,6 +9,7 @@
             .carousel-open:checked + .carousel-item {
                 position: static;
                 opacity: 100;
+              
             }
             .carousel-item {
                 -webkit-transition: opacity 0.6s ease-out;
@@ -54,6 +55,8 @@
             height: 250px; 
             padding-top: 50px;
             }
+            
+
         </style>
 
 </head>
