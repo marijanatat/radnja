@@ -175,7 +175,9 @@
 
     </div> <!-- end cart-section -->
 
-    @include('partials.might-like')
+    <div data-aos="fade-right">
+        @include('partials.might-like')
+    </div>
 
 
 @endsection

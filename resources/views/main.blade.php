@@ -145,6 +145,8 @@
 </head>
 
 <body class="">
+  <div id="preloader"></div>
+
   <div id="app">
     <header class="with-background">
       <div class="top-nav">        
@@ -279,8 +281,7 @@
     </div>
   </div>
 
-  <div id="preloader"></div>
-
+ 
   <script>
 
     document.getElementById('nav-toggle').onclick = function(){

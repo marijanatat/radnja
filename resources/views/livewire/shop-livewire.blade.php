@@ -115,46 +115,46 @@
                                     </div>
                                 </div>  
                                     
-                                    <hr class="bg-boja h-1 w-32">
-                                    <div id="all-sizes" class="w-32 h-auto rounded-lg mt-4"
-                                    x-transition:enter="transition-transform transition-opacity ease-out duration-300"
-                                    x-transition:enter-start="opacity-0 transform -translate-y-2"
-                                    x-transition:enter-end="opacity-100 transform translate-y-0"
-                                    x-transition:leave="transition ease-in duration-300"
-                                    x-transition:leave-end="opacity-0 transform -translate-y-3">
-                                        <div class="flex flex-col  items-start  ml-4 justify-center ">
-                                            @foreach ($sizes as $size)
-                                            <div class="flex flex-col w-12 max-h-full" >
-                                                <label class="inline-flex items-center  text-sm">
-                                                    <input type="checkbox" class="form-checkbox h-3 w-3 text-gray-600 text-sm " id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">
-                                                    <li class="list-none ml-2">{{$size->value}}</li>
-                                                </label>
-                                            </div>
-                                            @endforeach
-                                        </div>
-                                    
-                                     
-                        
-                                        <div x-data="{ open: false }" class="flex flex-col justify-center items-center  bg-gray-300 w-20 h-auto rounded-b-lg" 
-                                       >
-                                            @foreach ($sizesAll as $size)
-                                        
-                                        <div class="flex flex-col w-12 max-h-full" x-show="open" 
-                                      >
-                                            <label class="inline-flex items-center text-sm">
+                                <hr class="bg-boja h-1 w-32">
+                                <div id="all-sizes" class="w-32 h-auto rounded-lg mt-4"
+                                x-transition:enter="transition-transform transition-opacity ease-out duration-300"
+                                x-transition:enter-start="opacity-0 transform -translate-y-2"
+                                x-transition:enter-end="opacity-100 transform translate-y-0"
+                                x-transition:leave="transition ease-in duration-300"
+                                x-transition:leave-end="opacity-0 transform -translate-y-3">
+                                    <div class="flex flex-col  items-start  ml-4 justify-center " >
+                                        @foreach ($sizes as $size)
+                                        <div class="flex flex-col w-12 max-h-full" >
+                                            <label class="inline-flex items-center  text-sm">
                                                 <input type="checkbox" class="form-checkbox h-3 w-3 text-gray-600 text-sm " id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">
                                                 <li class="list-none ml-2">{{$size->value}}</li>
                                             </label>
                                         </div>
-                                        
                                         @endforeach
-                                        
-                                        <button @click="open = !open" type="button" 
-                                        class="bg-boja hover:bg-orange-900 text-white mt-2 rounded"  x-html="open ? `Prikaži manje` :`Prikaži više`">
-                                        </button>
-                                        </div>
+                                    </div>
+                                
+                                 
+                    
+                                    <div x-data="{ open: false }" class="flex flex-col justify-center w-32 h-auto rounded-b-lg">
+                                        @foreach ($sizesAll as $size)
                                     
-                                     </div>  
+                                    <div class="flex flex-col max-h-full pl-4" x-show="open"  
+                                    x-transition:enter="transition ease-out duration-400" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-400" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90"
+                                  >
+                                        <label class="inline-flex items-center text-sm">
+                                            <input type="checkbox" class="form-checkbox h-3 w-3 text-gray-600 text-sm " id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">
+                                            <li class="list-none ml-2">{{$size->value}}</li>
+                                        </label>
+                                    </div>
+                                    
+                                    @endforeach
+                                    
+                                    <button @click="open = !open" type="button" 
+                                    class="bg-boja hover:bg-orange-900 text-white mt-2 rounded"  x-html="open ? `Prikaži manje` :`Prikaži više`">
+                                    </button>
+                                    </div>
+                                
+                                 </div>  
 
 
                             <div x-data="{otvori:true}">
