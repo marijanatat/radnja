@@ -122,7 +122,7 @@
                                     x-transition:enter-end="opacity-100 transform translate-y-0"
                                     x-transition:leave="transition ease-in duration-300"
                                     x-transition:leave-end="opacity-0 transform -translate-y-3">
-                                        <div class="flex flex-col  items-start  ml-4 justify-center " >
+                                        <div class="flex flex-col  items-start  ml-4 justify-center ">
                                             @foreach ($sizes as $size)
                                             <div class="flex flex-col w-12 max-h-full" >
                                                 <label class="inline-flex items-center  text-sm">

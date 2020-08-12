@@ -178,7 +178,7 @@
   
     <div class=" ">
         <div class="checkout-section grid-cols-1 md:grid-cols-2">
-            <div class="mx-4 my-4 md:ml-1 -mt-4 md:mt-4">
+            <div class="mx-4 my-4 md:ml-1 -mt-4 md:mt-4" data-aos="zoom-in">
                 <form action="{{route('checkout.store')}}" method="POST">
                     @csrf
                     <h2 class="font-bold text-gray-600 text-xl -mt-4">Adresa isporuke</h2>
@@ -239,8 +239,8 @@
     
     
     
-            <div class="">
-                <div class="checkout-table-container">
+            <div class=""> 
+                <div class="checkout-table-container" data-aos="fade-left">
                     <h2 class="font-bold text-gray-600 text-xl mx-4">Vaša narudžbenica</h2>
         
                     <div class="checkout-table">
