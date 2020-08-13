@@ -145,10 +145,6 @@
 
 <body class="">
   <div id="preloader"></div>
-<<<<<<< HEAD
-
-=======
->>>>>>> Grana
   <div id="app">
     <header class="with-background">
       <div class="top-nav">        
