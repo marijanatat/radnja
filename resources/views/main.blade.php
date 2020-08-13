@@ -335,18 +335,9 @@
           //     document.getElementById("logo").style.fontSize = "35px";
           //   }
           // }
+          AOS.init();
 
         </script>
- <script>
-    
-    AOS.init();
-  </script>
-  
- 
- 
-
-
-
 </body>
 
 </html>
