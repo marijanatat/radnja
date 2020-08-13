@@ -15,7 +15,8 @@
         @keydown.escape.window = "isVisible = false"
         @keydown="isVisible = true"
         @keydown.shift.tab="isVisible = false"
-        wire:keydown.enter="searchProducts"
+        @keydown.enter="isVisible = false"        
+        wire:keydown.enter="searchProducts"        
         >
     <div class="absolute top-0 flex items-center h-full ml-2">
         <svg class="fill-current text-gray-400 w-4" viewBox="0 0 24 24">
