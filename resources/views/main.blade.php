@@ -274,7 +274,7 @@
 
             <a href="#" class="back-to-top"><i class="fa fa-arrow-up" aria-hidden="true"  ></i></a>
            
-    <div class="w-full shadow-md my-1">
+    <div class="">
       @include('footer')
     </div>
   </div>

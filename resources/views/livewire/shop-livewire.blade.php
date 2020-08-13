@@ -54,7 +54,7 @@
         <hr class="mb-3">
 
     <div class="flex px-20 pb-16">
-        <div class="hidden md:flex min-h-auto w-1/5">
+        <div class="hidden md:flex min-h-auto md:w-72 lg:w-1/5">
             <div class="w-1/4 flex-1 flex p-3">
                 <div class="w-full">
                     <h3 class="uppercase text-lg">Kategorije</h3>
@@ -179,18 +179,21 @@
                                         <div class="mb-3" x-show="open">Opseg od <span class="font-semibold">{{presentPrice($min)}}</span> 
                                             do <span class="font-semibold">{{presentPrice($max)}}</span></div>
                                         
-                                        <div class="price-slider mt-6">
-                                                <span>Od:
-                                                      <input name="min" type="number" wire:model.debounce.200ms="min" class="mr-3 ml-1"/>
-                                                      Do:                                            
-                                                      <input name="max" type="number" wire:model.debounce.200ms="max" class="ml-1"/>
-                                                </span>
-                                                 
-                                          <input wire:model.debounce.0ms="min" min="1" max="10000" type="range"/>
-                                          <input wire:model.debounce.0ms="max" min="1" max="10000" type="range"/>
-                                          <svg width="100%" height="24">
-                                            <line x1="4" y1="0" x2="300" y2="0" stroke="#212121" stroke-width="12" stroke-dasharray="1 28"></line>
-                                          </svg>
+                                            <div class="price-slider lg:mt-6 space-y-3">
+                                                <div class="flex justify-around">
+                                                    <div class="w-2/5">
+                                                        Od: <input name="min" type="number" wire:model.debounce.200ms="min" class=""/>
+                                                    </div>
+                                                    <div class="w-2/5">
+                                                        Do:                                            
+                                                        <input name="max" type="number" wire:model.debounce.200ms="max" class=""/>
+                                                    </div>
+                                                </div>
+                                                <input wire:model.debounce.0ms="min" min="1" max="10000" type="range"/>
+                                                <input wire:model.debounce.0ms="max" min="1" max="10000" type="range"/>
+                                                <svg width="100%" height="24">
+                                                    <line x1="4" y1="0" x2="300" y2="0" stroke="#212121" stroke-width="12" stroke-dasharray="1 28"></line>
+                                                </svg>
                                         </div>
                                         {{-- <div data-role="main" class="ui-content">
                                             <div data-role="rangeslider">
@@ -223,15 +226,15 @@
             </div> --}}
             <div class="w-4/5 mx-auto min-h-screen">
 
-                <div id="proizvodi" class="grid grid-cols-1 md:grid-cols-3 md:min-h-0 md:min-w-0 md:row-gap-12 text-center w-full pt-4">
+                <div id="proizvodi" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:min-h-0 lg:min-w-0 lg:row-gap-12 text-center lg:w-full pt-4">
                     @forelse ($products as $product)
                     <div class="flex flex-col justify-center items-center space-y-2" style="max-height:400px;">
-                        <a href="{{route('shop.show',$product->slug)}}"><img class="h-64 object-cover" src="{{productImage($product->image)}}"
+                        <a href="{{route('shop.show',$product->slug)}}"><img class="h-44 md:h-40 lg:h-44 xl:h-64 object-cover" src="{{productImage($product->image)}}"
                                 alt="product"></a>
                         <a href="{{route('shop.show',$product->slug)}}">
                             <div class="">{{$product->name}}</div>
                         </a>
-                        <div>{{presentPrice($product->price)}}</div>
+                        <div class="pb-8 md:pb-0">{{presentPrice($product->price)}}</div>
                     </div>
                     @empty
                     <div class="flex flex-col  text-gray-700">
