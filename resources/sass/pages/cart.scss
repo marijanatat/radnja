@@ -70,7 +70,7 @@
             padding: 0;
 
             &:hover {
-                color: lighten($text-color, 30%);
+                color: lighten($cart-delete, 10%);
             }
         }
     }

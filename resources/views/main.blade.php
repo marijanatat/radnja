@@ -145,10 +145,6 @@
 
 <body class="">
   <div id="preloader"></div>
-<<<<<<< HEAD
-
-=======
->>>>>>> Grana
   <div id="app">
     <header class="with-background">
       <div class="top-nav">        
@@ -339,18 +335,9 @@
           //     document.getElementById("logo").style.fontSize = "35px";
           //   }
           // }
+          AOS.init();
 
         </script>
- <script>
-    
-    AOS.init();
-  </script>
-  
- 
- 
-
-
-
 </body>
 
 </html>
