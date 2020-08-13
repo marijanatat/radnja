@@ -68,7 +68,7 @@
                             </form>
                         </div>
                         <div class="mr-2">
-                            <select class="quantity" data-id="{{ $item->rowId }}" data-productQuantity="{{$item->model->quantity}}">
+                            <select class="quantity border border-1 border-gray-600" data-id="{{ $item->rowId }}" data-productQuantity="{{$item->model->quantity}}">
                                 @for($i = 1; $i < 5 + 1; $i++)
                                     <option {{ $item->qty == $i ? 'selected' : ''}}>{{ $i }}</option>
                                 @endfor    
