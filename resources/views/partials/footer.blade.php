@@ -6,19 +6,32 @@
                     class="fa fa-github hover:text-gray-900"></i> bane</a>
         </div>
 
-        <span class="md:ml-auto md:mr-10 mt-4 md:mt-0">Follow Us:</span>
-        <div class="">
-            <ul class="space-x-8">
-                <li class=""><a href="#"><i class="fa fa-globe hover:text-gray-900"></i></a></li>
+        <span class="md:ml-auto md:mr-10 mt-4 md:mt-0 mb-1 md:mb-0">Follow Us:</span>
+        <div class="space-x-8">
+            {{-- <ul class=""> --}}
+                {{-- <li class=""> --}}
+                    <a href="#">
+                        <i class="fa fa-globe hover:text-gray-900"></i>
+                    </a>
+                {{-- </li> --}}
 
-                <li class=""><a href="https://github.com/marijanatat" class=""><i
-                            class="fa fa-github hover:text-gray-900 "></i></a></li>
-                <li class=""><a href="https://github.com/BranimirRadosavljevic"><i
-                            class="fa fa-github hover:text-gray-900"></i></a></li>
-                <li class=""><a href="https://facebook.com/marijanatatalovic"><i
-                            class="fa fa-facebook hover:text-gray-900"></i></a></li>
+                {{-- <li class=""> --}}
+                    <a href="https://github.com/marijanatat" class="">
+                        <i class="fa fa-github hover:text-gray-900 "></i>
+                    </a>
+                {{-- </li>
+                <li class=""> --}}
+                    <a href="https://github.com/BranimirRadosavljevic">
+                        <i class="fa fa-github hover:text-gray-900"></i>
+                    </a>
+                {{-- </li>
+                <li class=""> --}}
+                    <a href="https://facebook.com/marijanatatalovic">
+                        <i class="fa fa-facebook hover:text-gray-900"></i>
+                    </a>
+                {{-- </li> --}}
 
-            </ul>
+            {{-- </ul> --}}
         </div>
 
     </div> <!-- end footer-content -->
