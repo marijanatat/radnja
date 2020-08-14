@@ -118,13 +118,11 @@
         document.getElementById('nav-content').classList.add('hidden');
       }
     });
+    
+    AOS.init();
   </script> 
 
 @livewireScripts
 </body>
-<script>
-    
-    AOS.init();
-  </script>
 
 </html>

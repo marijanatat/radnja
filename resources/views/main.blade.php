@@ -44,7 +44,6 @@
     // }
   </script>
   <style>
-   
     .back-to-top {
   position: fixed;
   display: none;
@@ -148,7 +147,6 @@
 
 <body class="">
   <div id="preloader"></div>
-
   <div id="app">
     <header class="with-background">
       <div class="top-nav">        
@@ -279,12 +277,11 @@
 
             <a href="#" class="back-to-top"><i class="fa fa-arrow-up" aria-hidden="true"  ></i></a>
            
-    <div class="w-full shadow-md my-1">
+    <div class="">
       @include('footer')
     </div>
   </div>
 
- 
   <script>
 
     document.getElementById('nav-toggle').onclick = function(){
@@ -314,7 +311,7 @@
     $('html, body').animate({
       scrollTop: 0
     }, 1500, 'easeInOutExpo');
-    return false;
+    return true;
   });
 
   $(window).on('load', function() {
@@ -341,18 +338,9 @@
           //     document.getElementById("logo").style.fontSize = "35px";
           //   }
           // }
+          AOS.init();
 
         </script>
- <script>
-    
-    AOS.init();
-  </script>
-  
- 
- 
-
-
-
 </body>
 
 </html>

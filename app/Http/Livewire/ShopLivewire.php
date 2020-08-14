@@ -45,7 +45,7 @@ class ShopLivewire extends Component
     public function mount()
     {
         if(request()->category){
-            $this->requestedCategories[] = request()->category;
+            $this->products = $this->filterProductsByCategories(request()->category);
         }
         if(request()->search){
             $this->search = request()->search;
@@ -53,9 +53,7 @@ class ShopLivewire extends Component
         $this->sizes=Size::all()->take(5);
         $this->sizesAll = Size::all()->skip(5);
     }
-
-   
-
+    
     public function updatingProductsPerPage()
     {
         $this->resetPage();
@@ -66,25 +64,9 @@ class ShopLivewire extends Component
         $this->requestedCategories = [];
         $this->search = '';    
         $this->min = 1;
-        $this->max = 5000;
+        $this->max = 10000;
         $this->requestedSizes = [];
     }
-    
-    // public function updated($field)
-    // {
-    //     $this->validateOnly($field, [
-    //         'min' => 'numeric',
-    //         'max' => 'numeric   '
-    //     ]);
-    // }
-
-    // public function setPriceRange()
-    // {
-    //     $this->validate([
-    //         'min' => 'required|numeric',
-    //         'max' => 'required|numeric',
-    //     ]);
-    // }
 
     public function render()
     {
@@ -140,15 +122,19 @@ class ShopLivewire extends Component
         return $searched_products;
     }
 
-    private function filterProductsByCategories()
+    private function filterProductsByCategories($request = null)
     {
+        if($request){
+            $categoryIds[] = $request;
+            $categoryIds[] = Category::find($request)->descendants()->pluck('id');
+        } else {
         $categories = (Category::whereIn('id', $this->requestedCategories))->get();
             foreach ($categories as $category) {                    
                 $categoryIds[] = $category->getKey();                   
                 $categoryIds[] = $category->descendants()->pluck('id');
             }   
             $categoryIds = array_unique(Arr::flatten($categoryIds));
-                
+        }        
         return Product::whereIn('category_id', $categoryIds);
     }
 
