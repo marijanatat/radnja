@@ -45,7 +45,7 @@ class ShopLivewire extends Component
     public function mount()
     {
         if(request()->category){
-            $this->requestedCategories[] = request()->category;
+            $this->products = $this->filterProductsByCategories(request()->category);
         }
         if(request()->search){
             $this->search = request()->search;
@@ -122,15 +122,19 @@ class ShopLivewire extends Component
         return $searched_products;
     }
 
-    private function filterProductsByCategories()
+    private function filterProductsByCategories($request = null)
     {
+        if($request){
+            $categoryIds[] = $request;
+            $categoryIds[] = Category::find($request)->descendants()->pluck('id');
+        } else {
         $categories = (Category::whereIn('id', $this->requestedCategories))->get();
             foreach ($categories as $category) {                    
                 $categoryIds[] = $category->getKey();                   
                 $categoryIds[] = $category->descendants()->pluck('id');
             }   
             $categoryIds = array_unique(Arr::flatten($categoryIds));
-                
+        }        
         return Product::whereIn('category_id', $categoryIds);
     }
 
