@@ -92,9 +92,10 @@
                                             </div>
                                                 @foreach ($children->children as $ch)
         
-                                                <div class="flex-col">
-                                                    <label class="hover:bg-gray-300 pl-12 text-sm text-gray-700">
+                                                <div class="flex-col control-group">
+                                                    <label class="hover:bg-gray-300 pl-8 text-sm text-gray-700 control control-checkbox">
                                                         <input class="w-4 pt-5" type="checkbox" id="{{$ch->id}}" value="{{$ch->id}}" wire:model="requestedCategories">
+                                                        <div class="control_indicator"></div>
                                                         <span>{{$ch->name}}</span>
                                                     </label>
                                                 </div>
@@ -124,11 +125,12 @@
                                     x-transition:enter-end="opacity-100 transform translate-y-0"
                                     x-transition:leave="transition ease-in duration-300"
                                     x-transition:leave-end="opacity-0 transform -translate-y-3">
-                                        <div class="flex flex-col  items-start  ml-4 justify-center " >
+                                        <div class="flex flex-col  items-start justify-center " >
                                             @foreach ($sizes as $size)
-                                            <div class="flex flex-col w-12 max-h-full" >
-                                                <label class="inline-flex items-center  text-sm">
-                                                    <input type="checkbox" class="form-checkbox h-3 w-3 text-gray-600 text-sm " id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">
+                                            <div class="flex flex-col w-12 max-h-full control-group">
+                                                <label class="inline-flex items-center text-sm control control-checkbox">
+                                                    <input type="checkbox" class="" id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">
+                                                    <div class="control_indicator"></div>
                                                     <li class="list-none ml-2">{{$size->value}}</li>
                                                 </label>
                                             </div>
@@ -140,11 +142,12 @@
                                         <div x-data="{ open: false }" class="flex flex-col justify-center w-32 h-auto rounded-b-lg">
                                             @foreach ($sizesAll as $size)
                                         
-                                        <div class="flex flex-col max-h-full pl-4" x-show="open"
+                                        <div class="flex flex-col max-h-full control-group" x-show="open"
                                         x-transition:enter="transition ease-out duration-400" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-400" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90"
                                       >
-                                            <label class="inline-flex items-center text-sm">
-                                                <input type="checkbox" class="form-checkbox h-3 w-3 text-gray-600 text-sm " id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">
+                                            <label class="inline-flex items-center text-sm control control-checkbox">
+                                                <input type="checkbox" class="" id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">
+                                                <div class="control_indicator"></div>
                                                 <li class="list-none ml-2">{{$size->value}}</li>
                                             </label>
                                         </div>
