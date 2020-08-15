@@ -11,6 +11,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat%7CRoboto:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
 
   <!-- Styles -->
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -206,8 +207,27 @@
           <hr class="zig-zag">
           <hr>
         </div>
+{{-- 
+        <div class="glide">
+          <div data-glide-el="track" class="glide__track">
+            <ul class="glide__slides">
+              <li class="glide__slide"> <a href="{{route('shop.index')}}">
+                
+                  <div class="relative block h-full w-full  text-white text-5xl text-center" style="height:50vh;"> 
+                  <a href="{{route('shop.index')}}">
+                               <img class=" w-full h-full" src="{{asset('./img/alvin-mahmudov-vKuEhorbvYI-unsplash-1.jpg')}}"  style="background-position: center center">
+                               <div class="centered top-5 text-5xl  font-bold font-red-500"><span>Novi online</span> <br>  shop</div> 
+                           </a> 
+                  </div>
+      
+             </li>
+              <li class="glide__slide">     <a href="{{route('shop.index')}}"><div class="block h-full w-full bg-white text-boja text-2xl md:text-5xl text-center"><h2 class="mx-auto pt-12 text-wrap w-1/2 text-center " ><span class="font-bold ">Besplatna dostava</span> <br> za porudžbine preko 3000 din</h2></div></a></li>
+              <li class="glide__slide"></li>
+            </ul>
+          </div>
+        </div> --}}
 
-        @include('carousel')
+          @include('carousel') 
       </div>  
         <div class="module">
           <br>
@@ -220,9 +240,11 @@
         
         <!-- div-->
         {{-- <div class="w-full h-full  bg-opacity-25 shadow-md mb-8 p-24 text-center "> --}}
-           <div class="kupovina mt-20 mb-20">
-            <h1 class="text-5xl font-bold text-gray-600 p-4 max-h-12" style="font-family: 'Gochi Hand'" >
-              Ovo je samo deo našeg asortimana
+           <div class=" kupovina mt-20 mb-20 text-center">
+            <h1 class="text-5xl font-bold text-gray-600 p-4 max-h-12" style="font-family: 'Gochi Hand'" data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine" >
+              Ovo je samo deo našeg asortimana !!!
             </h1>
             <br>
           </div> 
