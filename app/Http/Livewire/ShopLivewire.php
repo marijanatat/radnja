@@ -44,9 +44,9 @@ class ShopLivewire extends Component
 
     public function mount()
     {
-        if(request()->category){
-            $this->products = $this->filterProductsByCategories(request()->category);
-        }
+        // if(request()->category){
+        //     $this->products = $this->filterProductsByCategories(request()->category);
+        // }
         if(request()->search){
             $this->search = request()->search;
         }
@@ -72,7 +72,9 @@ class ShopLivewire extends Component
     {
         if($this->requestedCategories){
             $this->products = $this->filterProductsByCategories();
-        }else{
+        }else if(request()->category){
+            $this->products = $this->filterProductsByCategories(request()->category);
+        } else {
             $this->products=DB::table('products');
         }
 
@@ -126,7 +128,13 @@ class ShopLivewire extends Component
     {
         if($request){
             $categoryIds[] = $request;
-            $categoryIds[] = Category::find($request)->descendants()->pluck('id');
+            $category = Category::find($request);
+            if(!$category->isLeaf())
+            {
+                $categoryIds[] = $category->getKey();
+                $categoryIds[] = $category->descendants()->pluck('id');
+                $categoryIds = array_unique(Arr::flatten($categoryIds));
+            }
         } else {
         $categories = (Category::whereIn('id', $this->requestedCategories))->get();
             foreach ($categories as $category) {                    
@@ -134,7 +142,7 @@ class ShopLivewire extends Component
                 $categoryIds[] = $category->descendants()->pluck('id');
             }   
             $categoryIds = array_unique(Arr::flatten($categoryIds));
-        }        
+        }
         return Product::whereIn('category_id', $categoryIds);
     }
 
