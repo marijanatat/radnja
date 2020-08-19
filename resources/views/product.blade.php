@@ -109,8 +109,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        padding-left: 6px;
-        padding-top: 2.5px; 
+        padding-left: 6.5px;
+        padding-top: 3px; 
         height: 30px;
         width: 30px;
         border-radius: 50%;

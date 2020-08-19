@@ -74,7 +74,7 @@
                                 @endfor    
                             </select>
                         </div>
-                        <div class="text-sm md:text-lg">{{ presentPrice($item->subtotal) }}</div>
+                        <div class="text-sm md:text-lg">{{ presentPrice($item->total) }}</div>
                     </div>
                 </div> <!-- end cart-table-row -->
 

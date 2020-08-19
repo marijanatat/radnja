@@ -15,12 +15,17 @@ class ColorTableSeeder extends Seeder
     {
         $now = Carbon::now()->toDateTimeString();
         Color::insert([
-            ['name'=>'red','value' => '#FF0000', 'created_at' => $now, 'updated_at' => $now],
-            ['name'=>'white','value' => '#ffffff', 'created_at' => $now, 'updated_at' => $now],
-            ['name'=>'lightblue','value' => '#ADD8E6', 'created_at' => $now, 'updated_at' => $now],
-            ['name'=>'blue','value' => '#0000FF', 'created_at' => $now, 'updated_at' => $now],
-            ['name'=>'pink','value' => 'CCFFCC', 'created_at' => $now, 'updated_at' => $now],
-            ['name'=>'rose','value' => '#ffcccc', 'created_at' => $now, 'updated_at' => $now],
+            ['name'=>'bela','value' => 'white', 'created_at' => $now, 'updated_at' => $now],
+            ['name'=>'žuta','value' => 'yellow', 'created_at' => $now, 'updated_at' => $now],
+            ['name'=>'narandžasta','value' => 'orange', 'created_at' => $now, 'updated_at' => $now],
+            ['name'=>'pink','value' => 'pink', 'created_at' => $now, 'updated_at' => $now],
+            ['name'=>'crvena','value' => 'red', 'created_at' => $now, 'updated_at' => $now],
+            ['name'=>'ljubičasta','value' => 'violet', 'created_at' => $now, 'updated_at' => $now],
+            ['name'=>'svetlo-plava','value' => 'lightblue', 'created_at' => $now, 'updated_at' => $now],
+            ['name'=>'plava','value' => 'blue', 'created_at' => $now, 'updated_at' => $now],
+            ['name'=>'zelena','value' => 'green', 'created_at' => $now, 'updated_at' => $now],
+            ['name'=>'braon','value' => 'brown', 'created_at' => $now, 'updated_at' => $now],
+            ['name'=>'crna','value' => 'black', 'created_at' => $now, 'updated_at' => $now],
         
 
         ]);
