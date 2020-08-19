@@ -20,6 +20,7 @@ class ManufacturerTableSeeder extends Seeder
             ['name' => 'Models kids', 'slug' => 'model-kids', 'city'=>'pancevo','created_at' => $now, 'updated_at' => $now],
             ['name' => 'Panter', 'slug' => 'panter', 'city'=>'Beograd', 'created_at' => $now, 'updated_at' => $now],
             ['name' => 'Radović', 'slug' => 'radovic','city'=>'Arilje',  'created_at' => $now, 'updated_at' => $now],
+            ['name' => 'Kid Star', 'slug' => 'kid-star','city'=>'Niš',  'created_at' => $now, 'updated_at' => $now],
            
         ]);
     }

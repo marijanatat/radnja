@@ -259,43 +259,203 @@ class PermissionsTableSeeder extends Seeder
             ),
             30 => 
             array (
-                'id' => 31,
-                'key' => 'browse_categories',
-                'table_name' => 'categories',
-                'created_at' => '2020-08-06 14:52:10',
-                'updated_at' => '2020-08-06 14:52:10',
+                'id' => 41,
+                'key' => 'browse_orders',
+                'table_name' => 'orders',
+                'created_at' => '2020-08-19 10:18:52',
+                'updated_at' => '2020-08-19 10:18:52',
             ),
             31 => 
             array (
-                'id' => 32,
-                'key' => 'read_categories',
-                'table_name' => 'categories',
-                'created_at' => '2020-08-06 14:52:10',
-                'updated_at' => '2020-08-06 14:52:10',
+                'id' => 42,
+                'key' => 'read_orders',
+                'table_name' => 'orders',
+                'created_at' => '2020-08-19 10:18:52',
+                'updated_at' => '2020-08-19 10:18:52',
             ),
             32 => 
             array (
-                'id' => 33,
-                'key' => 'edit_categories',
-                'table_name' => 'categories',
-                'created_at' => '2020-08-06 14:52:10',
-                'updated_at' => '2020-08-06 14:52:10',
+                'id' => 43,
+                'key' => 'edit_orders',
+                'table_name' => 'orders',
+                'created_at' => '2020-08-19 10:18:52',
+                'updated_at' => '2020-08-19 10:18:52',
             ),
             33 => 
             array (
-                'id' => 34,
-                'key' => 'add_categories',
-                'table_name' => 'categories',
-                'created_at' => '2020-08-06 14:52:10',
-                'updated_at' => '2020-08-06 14:52:10',
+                'id' => 44,
+                'key' => 'add_orders',
+                'table_name' => 'orders',
+                'created_at' => '2020-08-19 10:18:52',
+                'updated_at' => '2020-08-19 10:18:52',
             ),
             34 => 
             array (
-                'id' => 35,
+                'id' => 45,
+                'key' => 'delete_orders',
+                'table_name' => 'orders',
+                'created_at' => '2020-08-19 10:18:52',
+                'updated_at' => '2020-08-19 10:18:52',
+            ),
+            35 => 
+            array (
+                'id' => 51,
+                'key' => 'browse_order_product',
+                'table_name' => 'order_product',
+                'created_at' => '2020-08-19 10:34:04',
+                'updated_at' => '2020-08-19 10:34:04',
+            ),
+            36 => 
+            array (
+                'id' => 52,
+                'key' => 'read_order_product',
+                'table_name' => 'order_product',
+                'created_at' => '2020-08-19 10:34:04',
+                'updated_at' => '2020-08-19 10:34:04',
+            ),
+            37 => 
+            array (
+                'id' => 53,
+                'key' => 'edit_order_product',
+                'table_name' => 'order_product',
+                'created_at' => '2020-08-19 10:34:04',
+                'updated_at' => '2020-08-19 10:34:04',
+            ),
+            38 => 
+            array (
+                'id' => 54,
+                'key' => 'add_order_product',
+                'table_name' => 'order_product',
+                'created_at' => '2020-08-19 10:34:04',
+                'updated_at' => '2020-08-19 10:34:04',
+            ),
+            39 => 
+            array (
+                'id' => 55,
+                'key' => 'delete_order_product',
+                'table_name' => 'order_product',
+                'created_at' => '2020-08-19 10:34:04',
+                'updated_at' => '2020-08-19 10:34:04',
+            ),
+            40 => 
+            array (
+                'id' => 56,
+                'key' => 'browse_sizes',
+                'table_name' => 'sizes',
+                'created_at' => '2020-08-19 10:49:18',
+                'updated_at' => '2020-08-19 10:49:18',
+            ),
+            41 => 
+            array (
+                'id' => 57,
+                'key' => 'read_sizes',
+                'table_name' => 'sizes',
+                'created_at' => '2020-08-19 10:49:18',
+                'updated_at' => '2020-08-19 10:49:18',
+            ),
+            42 => 
+            array (
+                'id' => 58,
+                'key' => 'edit_sizes',
+                'table_name' => 'sizes',
+                'created_at' => '2020-08-19 10:49:18',
+                'updated_at' => '2020-08-19 10:49:18',
+            ),
+            43 => 
+            array (
+                'id' => 59,
+                'key' => 'add_sizes',
+                'table_name' => 'sizes',
+                'created_at' => '2020-08-19 10:49:18',
+                'updated_at' => '2020-08-19 10:49:18',
+            ),
+            44 => 
+            array (
+                'id' => 60,
+                'key' => 'delete_sizes',
+                'table_name' => 'sizes',
+                'created_at' => '2020-08-19 10:49:18',
+                'updated_at' => '2020-08-19 10:49:18',
+            ),
+            45 => 
+            array (
+                'id' => 61,
+                'key' => 'browse_colors',
+                'table_name' => 'colors',
+                'created_at' => '2020-08-19 10:50:22',
+                'updated_at' => '2020-08-19 10:50:22',
+            ),
+            46 => 
+            array (
+                'id' => 62,
+                'key' => 'read_colors',
+                'table_name' => 'colors',
+                'created_at' => '2020-08-19 10:50:22',
+                'updated_at' => '2020-08-19 10:50:22',
+            ),
+            47 => 
+            array (
+                'id' => 63,
+                'key' => 'edit_colors',
+                'table_name' => 'colors',
+                'created_at' => '2020-08-19 10:50:22',
+                'updated_at' => '2020-08-19 10:50:22',
+            ),
+            48 => 
+            array (
+                'id' => 64,
+                'key' => 'add_colors',
+                'table_name' => 'colors',
+                'created_at' => '2020-08-19 10:50:22',
+                'updated_at' => '2020-08-19 10:50:22',
+            ),
+            49 => 
+            array (
+                'id' => 65,
+                'key' => 'delete_colors',
+                'table_name' => 'colors',
+                'created_at' => '2020-08-19 10:50:22',
+                'updated_at' => '2020-08-19 10:50:22',
+            ),
+            50 => 
+            array (
+                'id' => 66,
+                'key' => 'browse_categories',
+                'table_name' => 'categories',
+                'created_at' => '2020-08-19 10:53:57',
+                'updated_at' => '2020-08-19 10:53:57',
+            ),
+            51 => 
+            array (
+                'id' => 67,
+                'key' => 'read_categories',
+                'table_name' => 'categories',
+                'created_at' => '2020-08-19 10:53:57',
+                'updated_at' => '2020-08-19 10:53:57',
+            ),
+            52 => 
+            array (
+                'id' => 68,
+                'key' => 'edit_categories',
+                'table_name' => 'categories',
+                'created_at' => '2020-08-19 10:53:57',
+                'updated_at' => '2020-08-19 10:53:57',
+            ),
+            53 => 
+            array (
+                'id' => 69,
+                'key' => 'add_categories',
+                'table_name' => 'categories',
+                'created_at' => '2020-08-19 10:53:57',
+                'updated_at' => '2020-08-19 10:53:57',
+            ),
+            54 => 
+            array (
+                'id' => 70,
                 'key' => 'delete_categories',
                 'table_name' => 'categories',
-                'created_at' => '2020-08-06 14:52:10',
-                'updated_at' => '2020-08-06 14:52:10',
+                'created_at' => '2020-08-19 10:53:57',
+                'updated_at' => '2020-08-19 10:53:57',
             ),
         ));
         
