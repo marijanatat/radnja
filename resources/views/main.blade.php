@@ -265,7 +265,7 @@
         <div class="products container mx-auto text-center grid grid-cols-2 md:grid-cols-4 mt-2" data-aos="fade-up"
         data-aos-duration="3000" >
           @foreach ($products as $product)
-          <div class="product" >
+          <div class="product pt-12 pb-6" >
             <a href="{{route('shop.show',$product->slug)}}"><img class="mx-auto" src="{{productImage($product->image)}}"
               style="height:140px;" alt="product"></a>
               <a href="{{route('shop.show',$product->slug)}}">
