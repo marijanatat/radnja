@@ -47,7 +47,7 @@
                             <div class="flex ">
                                 <div class="cart-item-details">
                                     <div class="cart-table-item"><a href="{{route('shop.show', $item->model->slug)}}">{{ $item->model->name }}</a></div>
-                                    <div class="hidden md:block"><span class="hidden md:block">Veličina:{{$item->options['size']}},</span><span class="hidden md:block">Boja: {{$item->options['color']}}</span> </div>
+                                    <div class="hidden md:block"><span class="hidden md:block">Veličina: {{$item->options['size']}},</span><span class="hidden md:block">Boja: {{$item->options['color']}}</span> </div>
                                     <div><span class="block md:hidden">{{$item->options['size']}},{{$item->options['color']}}</div>
                                     {{-- <div><span class="hidden md:block">Boja:</span> {{$item->options['color']}}</div> --}}
                                     {{-- <div class="cart-table-description">{{ $item->model->details }}</div> --}}

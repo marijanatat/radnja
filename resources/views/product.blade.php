@@ -215,46 +215,72 @@
                  <input type="hidden" name="name"  value="{{$product->name}}">
                 <input type="hidden" name="price" value="{{$product->price}}">
                 <hr class="bg-gray-500 border-dashed mb-2">
-                <h3 class="text-gray-800 uppercase text-sm font-semibold mb-1">Izaberite boju</h3>
+                <h3 class="text-gray-800 uppercase text-sm font-semibold mb-1">Raspoložive boje</h3>
     
                  <div class="relative flex items-start pb-2">
-                    @foreach ($product->colors as $color)
-                        <div class="flex flex-col justify-center mr-4">
+                     
+                     @if ($product->colors->count() > 1)
+                     @foreach ($product->colors as $color)
+                     <div class="flex flex-col justify-center mr-4">
+                         
+                         <label for="{{$color->id}}" class="color-label">
+                            <input type="radio" id="{{$color->id}}" name="color" value="{{$color->name}}">
+                            <span class="color-custom" style="background-color: {{$color->value}}">
+                                <span class="tooltiptext text-sm font-semibold pt-2">{{$color->name}}</span>
+                            </span>
                             
-                            <label for="{{$color->id}}" class="color-label">
-                                <input type="radio" id="{{$color->id}}" name="color" value="{{$color->name}}">
-                                <span class="color-custom" style="background-color: {{$color->value}}">
-                                    <span class="tooltiptext text-sm font-semibold pt-2">{{$color->name}}</span>
-                                </span>
-                            </label>
-                      </div>
+                        </label>
+                    </div>
                     @endforeach 
-       
+                    
                     @error('color')
                     <div class="absolute right-0 text-red-500 text-sm ">{{ $message }}</div>
                     @enderror
-              
+                    
+                    @else
+                        <label for="{{$product->colors->first()->id}}" class="color-label">
+                            <input type="hidden" id="{{$product->colors->first()->id}}" name="color" value="{{$product->colors->first()->name}}">
+                            <span class="color-custom" style="background-color: {{$product->colors->first()->value}}">
+                                <span class="tooltiptext text-sm font-semibold pt-2">{{$product->colors->first()->name}}</span>
+                            </span>
+                            
+                        </label>
+                    @endif
                  </div> 
               
       
                  <hr class="bg-gray-500 border-dashed mt-4 mb-2">
-                <h3 class="text-gray-800 uppercase text-sm font-semibold mb-1">Izaberite veličinu</h3>
-    
-                <div class="flex relative items-start mb-8">
-                    @foreach ($product->sizes as $size)                      
-                      <label for="{{$size->value}}" class="velicina-label">
+                 @if ($product->sizes->count() > 0)
+                     
+                 <h3 class="text-gray-800 uppercase text-sm font-semibold mb-1">Raspoložive veličine</h3>
+                
+                 
+                 <div class="flex relative items-start mb-8">
+                    @if ($product->sizes->count() > 1)
+                     @foreach ($product->sizes as $size)                      
+                     <label for="{{$size->value}}" class="velicina-label">
                         <input type="radio" id="{{$size->value}}" name="size" value="{{$size->value}}">
                         <span class="velicina-custom text-base bg-gray-400 hover:bg-gray-900 hover:text-white">{{$size->value}}</span>
                     </label>
                     @endforeach 
-               
-                        @error('size')
-                        <div class="absolute right-0 text-red-500 text-sm ">{{ $message }}</div>
-                        @enderror
-                  
-                 </div> 
-    
-                 <h3 class="text-gray-800 uppercase text-sm font-semibold">Količina</h3>
+                    
+                    @error('size')
+                    <div class="absolute right-0 text-red-500 text-sm ">{{ $message }}</div>
+                    @enderror
+
+                @else    
+                    <label for="{{$product->sizes->first()->value}}" class="velicina-label">
+                        <input type="hidden" id="{{$product->sizes->first()->value}}" name="size" value="{{$product->sizes->first()->value}}">
+                        <span class="velicina-custom text-base bg-gray-400 hover:bg-gray-900 hover:text-white">{{$product->sizes->first()->value}}</span>
+                    </label>
+                 @endif
+                    
+                </div> 
+                @else 
+                <input type="hidden" id="" name="size" value="-">
+                @endif
+                
+                <h3 class="text-gray-800 uppercase text-sm font-semibold">Količina</h3>
                  <div class="flex items-start mb-4" x-data="counter()">
                      <button type="button" class="bg-white p-1 mr-1 hover:bg-gray-300" style="border: solid 1px gray" x-on:click="decrement()"><i class="fa fa-minus" aria-hidden="true"  ></i></button>
                      <input class="bg-white px-2 py-1 mr-1 w-8 text-center" style="border: solid 1px gray;" name="quantity" x-bind:value="count"/>     
