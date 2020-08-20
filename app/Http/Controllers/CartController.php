@@ -45,18 +45,28 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), [
+    //     $validator = Validator::make($request->all(), [
+    //         'quantity' => 'required|numeric|between:1,10',
+    //         'size' => 'required',
+    //         'color' => 'required',
+           
+    //     ]);
+
+    //     if ($validator->fails()) {
+    //         session()->flash('errors', collect(['Količina mora biti između 1 i 10.'],['Boja je obavezna.'],['Size is required.']));
+    //     //  return response()->json(['success' => false], 400);
+    //         return back()->withErrors($validator)->withInput();
+    //     }
+
+        $request->validate([
             'quantity' => 'required|numeric|between:1,10',
             'size' => 'required',
             'color' => 'required',
-           
+        ],
+        [
+            'size.required' => 'Morate izabrati veličinu!',
+            'color.required' => 'Morate izabrati boju!'
         ]);
-
-        if ($validator->fails()) {
-            session()->flash('errors', collect(['Quantity must be between 1 and 10.'],['Color is required.'],['Size is required.']));
-        //  return response()->json(['success' => false], 400);
-            return back()->withErrors($validator)->withInput();
-        }
 
         $duplicates=Cart::search(function ($cartItem, $rowId) use ($request) {
             return $cartItem->id === $request->id;
