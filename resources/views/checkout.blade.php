@@ -252,7 +252,7 @@
                                 <div class="checkout-item-details">
                                     <div class="checkout-table-item text-base text-gray-600">{{ $item->model->name }}</div>
                                    
-                                    <div class="checkout-table-description text-base text-gray-600">{{ $item->options['size'] }},{{ $item->options['color'] }}</div>
+                                    <div class="checkout-table-description text-base text-gray-600">Veličina: {{ $item->options['size'] }}; Boja: {{ $item->options['color'] }}</div>
                                    
                                     <div class="checkout-table-price text-base text-gray-600">{{ $item->model->presentPrice() }}</div>
                                 </div>
