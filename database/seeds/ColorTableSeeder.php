@@ -20,6 +20,7 @@ class ColorTableSeeder extends Seeder
             ['name'=>'narandžasta','value' => 'orange', 'created_at' => $now, 'updated_at' => $now],
             ['name'=>'svetlo-roze','value' => 'pink', 'created_at' => $now, 'updated_at' => $now],
             ['name'=>'roze','value' => 'hotpink', 'created_at' => $now, 'updated_at' => $now],
+            ['name'=>'tamno-roze','value' => 'deeppink', 'created_at' => $now, 'updated_at' => $now],
             ['name'=>'crvena','value' => 'red', 'created_at' => $now, 'updated_at' => $now],
             ['name'=>'bordo','value' => 'maroon', 'created_at' => $now, 'updated_at' => $now],
             ['name'=>'ljubičasta','value' => 'darkviolet', 'created_at' => $now, 'updated_at' => $now],
