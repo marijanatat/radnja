@@ -229,7 +229,7 @@
           @include('carousel') 
       </div>  
         <div class="module">
-          <br>
+        <br>
       
         
         {{-- <div class="bg-color-white rounded-md border-gray-400  border-transparent opacity-25">

@@ -17,6 +17,7 @@ class ShopLivewire extends Component
     use WithPagination;
 
     public $requestedCategories = [];
+    public $categoryQuery;
     public $requestedSizes = [];    
     public $sort;
     public $sizes = [];
@@ -47,6 +48,8 @@ class ShopLivewire extends Component
         // if(request()->category){
         //     $this->products = $this->filterProductsByCategories(request()->category);
         // }
+        $this->categoryQuery = request()->category;    
+
         if(request()->search){
             $this->search = request()->search;
         }
@@ -66,14 +69,15 @@ class ShopLivewire extends Component
         $this->min = 1;
         $this->max = 10000;
         $this->requestedSizes = [];
+        $this->categoryQuery = '';
     }
 
     public function render()
     {
         if($this->requestedCategories){
             $this->products = $this->filterProductsByCategories();
-        }else if(request()->category){
-            $this->products = $this->filterProductsByCategories(request()->category);
+        }else if($this->categoryQuery){
+            $this->products = $this->filterProductsByCategories($this->categoryQuery);
         } else {
             $this->products=DB::table('products');
         }

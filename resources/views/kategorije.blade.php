@@ -39,8 +39,9 @@
               <a href="{{route('shop.index',['category' => 74])}}">
                 <div class="img-wrapper">
                 <img class="inner-img object-cover w-full h-80" src="{{asset('./img/zene-moda.jpg')}}" alt="slika dete">
-              </div></a>
-               <figcaption class="absolute bg-gray-100  text-center text-xl md:ml-8 lg:ml-20 xs:text-3xl  md:bg-opacity-0 md:text-2xl md:font-semibold md:text-white px-12 xl:text-5xl leading-tight xl:p-10  "> <a href="{{route('shop.index',['category' => 66])}}" style="color:inherit;text-shadow: 1px 2px rgb(112, 112, 112);">ŽENE</a></figcaption>
+              </div>
+              <figcaption class="absolute bg-gray-100  text-center text-xl md:ml-8 lg:ml-20 xs:text-3xl  md:bg-opacity-0 md:text-2xl md:font-semibold md:text-white px-12 xl:text-5xl leading-tight xl:p-10  "> <a href="{{route('shop.index',['category' => 66])}}" style="color:inherit;text-shadow: 1px 2px rgb(112, 112, 112);">ŽENE</a></figcaption>
+            </a>
           <figure>
     </div>
 
