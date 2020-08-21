@@ -4,11 +4,16 @@
 
 @section('content')
 
-    @component('components.breadcrumbs')
-        <a href="#">Home</a>
-        <i class="fa fa-chevron-right breadcrumb-separator"></i>
-        <span>Kupovina</span>
-    @endcomponent
+<div class="breadcrumbs text-boja font-bold text-sm">
+    <div class="breadcrumbs-container container">
+        <div>
+            <a href="#">Home</a>
+            <i class="fa fa-chevron-right breadcrumb-separator"></i>
+            <span>Kupovina</span>
+        </div>
+    </div>
+</div> <!-- end breadcrumbs -->
+    
 
     <div class="cart-section container ml-16">
         <div>

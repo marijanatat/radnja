@@ -122,18 +122,18 @@ class CartController extends Controller
         ]);
 
         if ($validator->fails()) {
-            session()->flash('errors', collect(['Quantity must be between 1 and 10.']));
+            session()->flash('errors', collect(['Količina mora biti između 1 i 10.']));
             return response()->json(['success' => false], 400);
         }
 
         if ($request->quantity > $request->productQuantity) {
-            session()->flash('errors', collect(['We currently do not have enough items in stock.']));
+            session()->flash('errors', collect(['Trenutno nemamo traženu količinu proizvoda na lageru.']));
             return response()->json(['success' => false], 400);
         }
 
 
         Cart::update($id,$request->quantity);
-        session()->flash('success_message', 'Quantity was updated successfully!');
+        session()->flash('success_message', 'Količina je uspešno promenjena!');
         return response()->json(['success'=>true]);
 
     }

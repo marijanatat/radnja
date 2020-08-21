@@ -5,6 +5,7 @@ use Carbon\Carbon;
 function presentPrice($price)
 {
     if(is_numeric($price)){
+        $price = round($price);
         return number_format($price, 2, ',', '.') . ' RSD';
     }
 }
