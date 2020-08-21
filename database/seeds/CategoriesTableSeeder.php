@@ -27,6 +27,7 @@ class CategoriesTableSeeder extends Seeder
                                     ['name' => 'Bebi kompletici','slug'=>'bebi-kompletići'],
                                     ['name' => 'Benkice','slug'=>'benkice'],
                                     ['name' => 'Helanke','slug'=>'helanke'],
+                                    ['name' => 'Haljinice','slug'=>'haljinice'],
                                    
                             ],
                         ],
@@ -38,6 +39,8 @@ class CategoriesTableSeeder extends Seeder
                                     ['name' => 'Zeke','slug'=>'zeke'],
                                     ['name' => 'Bebi setovi','slug'=>'bebi-setovi'],
                                     ['name' => 'Bebi kompletici','slug'=>'bebi-kompletići'],
+                                    ['name' => 'Duksevi','slug'=>'duksevi'],
+                                    ['name' => 'Tregerice','slug'=>'tregierice'],
                                    
                             ],
                         ],
@@ -70,6 +73,7 @@ class CategoriesTableSeeder extends Seeder
                             'children' => [
                                     ['name' => 'Majice',  'slug'=>'majice'],
                                     ['name' => 'Duksevi','slug'=>'duksevi'],
+                                    ['name' => 'Džemperi','slug'=>'džemperi'],
                                     ['name' => 'Trenerke kompleti','slug'=>'trenerke-kompleti'],
                                     ['name' => 'Donji deo trenerke','slug'=>'donji-deo-trenerke'],
                                     ['name' => 'Pantalone','slug'=>'pantalone'],
@@ -87,6 +91,7 @@ class CategoriesTableSeeder extends Seeder
                                     ['name' => 'Potkošulja','slug'=>'potkošulja'],
                                     ['name' => 'Čarape','slug'=>'čarape'],
                                     ['name' => 'Pidžama','slug'=>'pidžama'],
+                                    ['name' => 'Bade manitili','slug'=>'bade-mantili'],
                                    
                             ],
                         ],
@@ -108,9 +113,12 @@ class CategoriesTableSeeder extends Seeder
                                         ['name' => 'Haljine','slug'=>'haljine'],
                                         ['name' => 'Suknje','slug'=>'suknje'],
                                         ['name' => 'Helanke','slug'=>'helanke'],
+                                        ['name' => 'Pantalone','slug'=>'pantalone'],
                                         ['name' => 'Trenerke','slug'=>'trenerke'],
                                         ['name' => 'Jakne','slug'=>'jakne'],
                                         ['name' => 'Džemperi','slug'=>'džemperi'],
+                                        ['name' => 'Duksevi','slug'=>'duksevi'],
+                                        
                                        
                                 ],
                             ],
@@ -124,7 +132,7 @@ class CategoriesTableSeeder extends Seeder
                                         ['name' => 'Spavaćica','slug'=>'spavaćica'],
                                         ['name' => 'Potkošulja','slug'=>'potkošulja'],
                                         ['name' => 'Čarape','slug'=>'čarape'],
-                                       
+                                        ['name' => 'Bade manitili','slug'=>'bade-mantili'],
                                 ],
                             ],
                         ],

@@ -17,6 +17,7 @@ class ShopLivewire extends Component
     use WithPagination;
 
     public $requestedCategories = [];
+    public $categoryQuery;
     public $requestedSizes = [];    
     public $sort;
     public $sizes = [];
@@ -44,18 +45,18 @@ class ShopLivewire extends Component
 
     public function mount()
     {
-        if(request()->category){
-            $this->requestedCategories[] = request()->category;
-        }
+        // if(request()->category){
+        //     $this->products = $this->filterProductsByCategories(request()->category);
+        // }
+        $this->categoryQuery = request()->category;    
+
         if(request()->search){
             $this->search = request()->search;
         }
         $this->sizes=Size::all()->take(5);
         $this->sizesAll = Size::all()->skip(5);
     }
-
-   
-
+    
     public function updatingProductsPerPage()
     {
         $this->resetPage();
@@ -66,31 +67,18 @@ class ShopLivewire extends Component
         $this->requestedCategories = [];
         $this->search = '';    
         $this->min = 1;
-        $this->max = 5000;
+        $this->max = 10000;
         $this->requestedSizes = [];
+        $this->categoryQuery = '';
     }
-    
-    // public function updated($field)
-    // {
-    //     $this->validateOnly($field, [
-    //         'min' => 'numeric',
-    //         'max' => 'numeric   '
-    //     ]);
-    // }
-
-    // public function setPriceRange()
-    // {
-    //     $this->validate([
-    //         'min' => 'required|numeric',
-    //         'max' => 'required|numeric',
-    //     ]);
-    // }
 
     public function render()
     {
         if($this->requestedCategories){
             $this->products = $this->filterProductsByCategories();
-        }else{
+        }else if($this->categoryQuery){
+            $this->products = $this->filterProductsByCategories($this->categoryQuery);
+        } else {
             $this->products=DB::table('products');
         }
 
@@ -140,15 +128,25 @@ class ShopLivewire extends Component
         return $searched_products;
     }
 
-    private function filterProductsByCategories()
+    private function filterProductsByCategories($request = null)
     {
+        if($request){
+            $categoryIds[] = $request;
+            $category = Category::find($request);
+            if(!$category->isLeaf())
+            {
+                $categoryIds[] = $category->getKey();
+                $categoryIds[] = $category->descendants()->pluck('id');
+                $categoryIds = array_unique(Arr::flatten($categoryIds));
+            }
+        } else {
         $categories = (Category::whereIn('id', $this->requestedCategories))->get();
             foreach ($categories as $category) {                    
                 $categoryIds[] = $category->getKey();                   
                 $categoryIds[] = $category->descendants()->pluck('id');
             }   
             $categoryIds = array_unique(Arr::flatten($categoryIds));
-                
+        }
         return Product::whereIn('category_id', $categoryIds);
     }
 

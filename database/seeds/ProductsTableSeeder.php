@@ -1,102 +1,360 @@
 <?php
 
-use App\Product;
 use Illuminate\Database\Seeder;
 
 class ProductsTableSeeder extends Seeder
 {
+
     /**
-     * Run the database seeds.
+     * Auto generated seed file
      *
      * @return void
      */
     public function run()
     {
-        // majica
-        for ($i=1; $i <= 5; $i++) {
-            Product::create([
-                'name' => 'Majica '.$i,
-                'slug' => 'majica-'.$i,
-                'details' => ' majica kratkih rukava',
-                'price' => rand(150, 1500),
-               
-                'description' =>'Lorem '. $i . ' ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-                 'quantity'=>'5',
-                 'category_id'=>'25',
-                 'manufacturer_id'=>'1',
-                
-                'image' => 'products/dummy/majica-'.$i.'.jpg',
-                'images' => '["products\/dummy\/majica-2.jpg","products\/dummy\/majica-3.jpg","products\/dummy\/majica-4.jpg"]',
-            ]);
-        }
+        
 
-        for ($i=1; $i <= 5; $i++) {
-            Product::create([
-                'name' => 'Pantalone '.$i,
-                'slug' => 'pantalone-'.$i,
-                'details' => ' pantalone ',
-                'price' => rand(150, 1500),
-              
-                'description' =>'Lorem '. $i . ' ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-                 'quantity'=>'5',
-                 'category_id'=>'29',
-                 'manufacturer_id'=>'2',
-                
-                'image' => 'products/dummy/pantalone-'.$i.'.jpg',
-                'images' => '["products\/dummy\/pantalone-2.jpg","products\/dummy\/pantalone-3.jpg","products\/dummy\/pantalone-4.jpg"]',
-            ]);
-        }
-
-        for ($i=1; $i <= 5; $i++) {
-            Product::create([
-                'name' => 'Duks '.$i,
-                'slug' => 'duks-'.$i,
-                'details' => ' duks dugih rukava',
-                'price' => rand(150, 1500),
-              
-                'description' =>'Lorem '. $i . ' ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-                 'quantity'=>'5',
-                 'category_id'=>'26',
-                 'manufacturer_id'=>'2',
-                
-                'image' => 'products/dummy/duks-'.$i.'.jpg',
-                'images' => '["products\/dummy\/duks-2.jpg","products\/dummy\/duks-3.jpg","products\/dummy\/duks-4.jpg"]',
-            ]);
-        }
-
-        for ($i=1; $i <= 5; $i++) {
-            Product::create([
-                'name' => 'Haljina '.$i,
-                'slug' => 'haljina-'.$i,
-                'details' => 'haljina',
-                'price' => rand(150, 1500),
-              
-                'description' =>'Lorem '. $i . ' ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-                 'quantity'=>'2',
-                 'category_id'=>'41',
-                 'manufacturer_id'=>'2',
-                
-                'image' => 'products/dummy/haljina-'.$i.'.jpg',
-                'images' => '["products\/dummy\/haljina-2.jpg","products\/dummy\/haljina-3.jpg","products\/dummy\/haljina-4.jpg"]',
-            ]);
-        }
-
-        for ($i=1; $i <= 5; $i++) {
-            Product::create([
-                'name' => 'Bebi dol '.$i,
-                'slug' => 'bebi-dol-'.$i,
-                'details' => 'letnja pidzama',
-                'price' => rand(600, 1500),
-                'description' =>'Lorem '. $i . ' ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
-                 'quantity'=>'3',
-                 'category_id'=>'49',
-                 'manufacturer_id'=>'2',
-                
-                'image' => 'products/dummy/bebi_dol-'.$i.'.jpg',
-                'images' => '["products\/dummy\/bebi_dol-2.jpg","products\/dummy\/bebi_dol-3.jpg","products\/dummy\/bebi_dol-4.jpg"]',
-            ]);
-        }
-        // Make Laptop 1 a Desktop as well. Just to test multiple categories
+        \DB::table('products')->delete();
+        
+        \DB::table('products')->insert(array (
+            0 => 
+            array (
+                'id' => 27,
+                'name' => 'Ženska haljina Sloga MB',
+                'slug' => 'zenska-haljina-sloga-mb',
+                'details' => NULL,
+                'price' => 1450,
+                'description' => NULL,
+                'quantity' => 3,
+                'category_id' => 81,
+                'manufacturer_id' => 6,
+                'image' => 'products\\August2020\\7dxvV6LbV9rF13OMd6YL.jpg',
+                'images' => '["products\\\\August2020\\\\VIi2utj4bVPCTgM35gYX.jpg","products\\\\August2020\\\\yXv3V0jYrttkLSwKWslv.jpg"]',
+                'created_at' => '2020-08-20 11:34:58',
+                'updated_at' => '2020-08-20 14:22:41',
+            ),
+            1 => 
+            array (
+                'id' => 28,
+                'name' => 'Cool Boy duks',
+                'slug' => 'cool-boy-duks',
+                'details' => NULL,
+                'price' => 750,
+                'description' => NULL,
+                'quantity' => 5,
+                'category_id' => 15,
+                'manufacturer_id' => 5,
+                'image' => 'products\\August2020\\vb3cJVoxzQstYSH0j02d.jpg',
+                'images' => '["products\\\\August2020\\\\8zFLJ5rmamZzJLFuPzUl.jpg","products\\\\August2020\\\\JEJcQGfrA9c6MUguIdeR.jpg","products\\\\August2020\\\\AyLTS2eRyl1x75tzId5l.jpg"]',
+                'created_at' => '2020-08-20 11:47:23',
+                'updated_at' => '2020-08-20 14:23:27',
+            ),
+            2 => 
+            array (
+                'id' => 29,
+                'name' => 'Duks za devojčice Kid Star',
+                'slug' => 'duks-za-devojcice-kid-star',
+                'details' => NULL,
+                'price' => 890,
+                'description' => NULL,
+                'quantity' => 2,
+                'category_id' => 53,
+                'manufacturer_id' => 5,
+                'image' => 'products\\August2020\\BcqHY9wUCtnZLMxfXzPX.jpg',
+                'images' => NULL,
+                'created_at' => '2020-08-20 11:50:58',
+                'updated_at' => '2020-08-20 14:23:01',
+            ),
+            3 => 
+            array (
+                'id' => 30,
+                'name' => 'Duks Urban Style',
+                'slug' => 'duks-urban-style',
+                'details' => NULL,
+                'price' => 1390,
+                'description' => NULL,
+                'quantity' => 3,
+                'category_id' => 29,
+                'manufacturer_id' => 5,
+                'image' => 'products\\August2020\\5B9WsQYj9L5IFhqg0JPz.jpg',
+                'images' => '["products\\\\August2020\\\\ETBMIXWALoaT0HadriLU.jpg","products\\\\August2020\\\\kT6ZuFqfJrmlL7E24n2H.jpg"]',
+                'created_at' => '2020-08-20 11:54:01',
+                'updated_at' => '2020-08-20 14:21:17',
+            ),
+            4 => 
+            array (
+                'id' => 31,
+                'name' => 'Majica "Made with love"',
+                'slug' => 'majica-made-with-love',
+                'details' => NULL,
+                'price' => 1390,
+                'description' => NULL,
+                'quantity' => 3,
+                'category_id' => 45,
+                'manufacturer_id' => 5,
+                'image' => 'products\\August2020\\LxvzFxdiJc9iXbaX5Iy7.jpg',
+                'images' => NULL,
+                'created_at' => '2020-08-20 12:00:12',
+                'updated_at' => '2020-08-20 14:22:11',
+            ),
+            5 => 
+            array (
+                'id' => 32,
+                'name' => 'Duks "1976"',
+                'slug' => 'duks-1976',
+                'details' => NULL,
+                'price' => 990,
+                'description' => NULL,
+                'quantity' => 4,
+                'category_id' => 29,
+                'manufacturer_id' => 5,
+                'image' => 'products\\August2020\\e5WHX4FaKq3bEkdtRm9p.jpg',
+                'images' => '["products\\\\August2020\\\\LOs0CJq5t00hZ4ioSTkz.jpg","products\\\\August2020\\\\bp70VkmhHjNuhJe4C1wR.jpg"]',
+                'created_at' => '2020-08-20 12:02:13',
+                'updated_at' => '2020-08-20 14:20:48',
+            ),
+            6 => 
+            array (
+                'id' => 34,
+                'name' => 'Duks za devojčice "Simplify"',
+                'slug' => 'duks-za-devojcice-simplify',
+                'details' => NULL,
+                'price' => 1190,
+                'description' => NULL,
+                'quantity' => 1,
+                'category_id' => 53,
+                'manufacturer_id' => 5,
+                'image' => 'products\\August2020\\aAqKMQosVw5k8evypBJt.jpg',
+                'images' => NULL,
+                'created_at' => '2020-08-20 12:04:48',
+                'updated_at' => '2020-08-20 14:20:26',
+            ),
+            7 => 
+            array (
+                'id' => 35,
+                'name' => 'Haljinica za bebe "Love"',
+                'slug' => 'haljinica-za-bebe-love',
+                'details' => NULL,
+                'price' => 1050,
+                'description' => NULL,
+                'quantity' => 3,
+                'category_id' => 9,
+                'manufacturer_id' => 5,
+                'image' => 'products\\August2020\\rQYPDsdkUvNPMtONsNiG.jpg',
+                'images' => '["products\\\\August2020\\\\JQOSKuOwk4b9UGWMcHtp.jpg","products\\\\August2020\\\\XCehS96Ek8lIFDD46Lus.jpg"]',
+                'created_at' => '2020-08-20 12:08:27',
+                'updated_at' => '2020-08-20 12:12:03',
+            ),
+            8 => 
+            array (
+                'id' => 36,
+                'name' => 'Zeka za devojčice "Jednorog"',
+                'slug' => 'zeka-za-devojcice-jednorog',
+                'details' => NULL,
+                'price' => 570,
+                'description' => NULL,
+                'quantity' => 7,
+                'category_id' => 4,
+                'manufacturer_id' => 2,
+                'image' => 'products\\August2020\\dVF0l1an2qsVm65nFpYz.jpg',
+                'images' => '["products\\\\August2020\\\\5oZFLQYhOBO5OIfVkV3c.jpg","products\\\\August2020\\\\ZC3qW7hyYmGNIVL5ZF2p.jpg","products\\\\August2020\\\\KpwMxETM7Z8mWLeyGUOG.jpg","products\\\\August2020\\\\iw6Ji8hvKzdijDMT6MZF.jpg"]',
+                'created_at' => '2020-08-20 12:17:40',
+                'updated_at' => '2020-08-20 12:17:40',
+            ),
+            9 => 
+            array (
+                'id' => 37,
+                'name' => 'Zeka za devojčice "Ooh Daris"',
+                'slug' => 'zeka-za-devojcice-ooh-daris',
+                'details' => NULL,
+                'price' => 530,
+                'description' => NULL,
+                'quantity' => 7,
+                'category_id' => 4,
+                'manufacturer_id' => 2,
+                'image' => 'products\\August2020\\XBm4aH0PIURu2dyCcygh.jpg',
+                'images' => '["products\\\\August2020\\\\G7i80RuxesMgI9E2mreP.jpg","products\\\\August2020\\\\lj5Q1WBX9yatclhp8fKQ.jpg","products\\\\August2020\\\\bZsT365iZCTXPf8BYrxk.jpg"]',
+                'created_at' => '2020-08-20 12:21:22',
+                'updated_at' => '2020-08-20 12:21:22',
+            ),
+            10 => 
+            array (
+                'id' => 38,
+                'name' => 'Džemper za dečake "Bambino"',
+                'slug' => 'dzemper-za-decake-bambino',
+                'details' => NULL,
+                'price' => 1190,
+                'description' => NULL,
+                'quantity' => 5,
+                'category_id' => 30,
+                'manufacturer_id' => 1,
+                'image' => 'products\\August2020\\UzBRtY9vAH9rT7wK0RXc.jpg',
+                'images' => '["products\\\\August2020\\\\709bFpjxTVY9YLzcZJFM.jpg","products\\\\August2020\\\\p0T5Mq9KchJ2J4RIvjtA.jpg","products\\\\August2020\\\\7ab5YJrIZdJN3Ng81VqD.jpg"]',
+                'created_at' => '2020-08-20 12:25:59',
+                'updated_at' => '2020-08-20 14:19:48',
+            ),
+            11 => 
+            array (
+                'id' => 39,
+                'name' => 'Trenerka za devojčice "Inpsiration"',
+                'slug' => 'trenerka-za-devojcice-inpsiration',
+                'details' => NULL,
+                'price' => 2190,
+                'description' => NULL,
+                'quantity' => 3,
+                'category_id' => 50,
+                'manufacturer_id' => 5,
+                'image' => 'products\\August2020\\ZjeQwrgK4EoB0aOHOoLi.jpg',
+                'images' => '["products\\\\August2020\\\\RP0G4OYUPjd4rIANGd2v.jpg","products\\\\August2020\\\\UrVT2E331IpUHUmkHZSD.jpg"]',
+                'created_at' => '2020-08-20 13:29:24',
+                'updated_at' => '2020-08-20 14:19:29',
+            ),
+            12 => 
+            array (
+                'id' => 40,
+                'name' => 'Tregerice za bebe Bambino',
+                'slug' => 'tregerice-za-bebe-bambino',
+                'details' => NULL,
+                'price' => 1700,
+                'description' => NULL,
+                'quantity' => 3,
+                'category_id' => 16,
+                'manufacturer_id' => 1,
+                'image' => 'products\\August2020\\C0WFsmcxdwjCBHONlXVV.jpg',
+                'images' => '["products\\\\August2020\\\\J15P8frKOYwfRAzSljVq.jpg","products\\\\August2020\\\\W8qy0Ugi3GDwZQlsGSz3.jpg"]',
+                'created_at' => '2020-08-20 13:38:35',
+                'updated_at' => '2020-08-20 13:39:12',
+            ),
+            13 => 
+            array (
+                'id' => 41,
+                'name' => 'Posteljina za bebe Hajdi',
+                'slug' => 'posteljina-za-bebe-hajdi',
+                'details' => NULL,
+                'price' => 4200,
+                'description' => NULL,
+                'quantity' => 1,
+                'category_id' => 92,
+                'manufacturer_id' => 7,
+                'image' => 'products\\August2020\\sMLBfPwzQ5R8D0S4OApu.jpg',
+                'images' => NULL,
+                'created_at' => '2020-08-20 13:41:23',
+                'updated_at' => '2020-08-20 14:19:10',
+            ),
+            14 => 
+            array (
+                'id' => 42,
+                'name' => 'Farmerice za devojčice Bambino',
+                'slug' => 'farmerice-za-devojcice-bambino',
+                'details' => NULL,
+                'price' => 1800,
+                'description' => NULL,
+                'quantity' => 1,
+                'category_id' => 49,
+                'manufacturer_id' => 1,
+                'image' => 'products\\August2020\\QtYwCJ1BYMtZ2hen71Cj.jpg',
+                'images' => NULL,
+                'created_at' => '2020-08-20 13:44:47',
+                'updated_at' => '2020-08-20 14:18:47',
+            ),
+            15 => 
+            array (
+                'id' => 43,
+                'name' => 'Farmerke za dečake Bambino',
+                'slug' => 'farmerke-za-decake-bambino',
+                'details' => NULL,
+                'price' => 1700,
+                'description' => NULL,
+                'quantity' => 1,
+                'category_id' => 33,
+                'manufacturer_id' => 1,
+                'image' => 'products\\August2020\\i3k1daZ5axfmnSZK00V3.jpg',
+                'images' => NULL,
+                'created_at' => '2020-08-20 13:46:18',
+                'updated_at' => '2020-08-20 13:46:18',
+            ),
+            16 => 
+            array (
+                'id' => 44,
+                'name' => 'Ćebe za bebe "Meda" - Radović',
+                'slug' => 'cebe-za-bebe-meda-radovic',
+                'details' => NULL,
+                'price' => 1200,
+                'description' => NULL,
+                'quantity' => 1,
+                'category_id' => 92,
+                'manufacturer_id' => 4,
+                'image' => 'products\\August2020\\yWuqiHOgvkc9xNUkh2lk.jpg',
+                'images' => NULL,
+                'created_at' => '2020-08-20 13:48:11',
+                'updated_at' => '2020-08-20 14:18:21',
+            ),
+            17 => 
+            array (
+                'id' => 45,
+                'name' => 'Ćebe za bebe "Baby bunny" - Radović',
+                'slug' => 'cebe-za-bebe-baby-bunny-radovic',
+                'details' => NULL,
+                'price' => 1300,
+                'description' => NULL,
+                'quantity' => 2,
+                'category_id' => 92,
+                'manufacturer_id' => 4,
+                'image' => 'products\\August2020\\3BuSpfLG9JgKeR6vwiUy.jpg',
+                'images' => NULL,
+                'created_at' => '2020-08-20 13:50:07',
+                'updated_at' => '2020-08-20 14:18:04',
+            ),
+            18 => 
+            array (
+                'id' => 46,
+                'name' => 'Ćebe za bebe "Slonče" Hajdi',
+                'slug' => 'cebe-za-bebe-slonce-hajdi',
+                'details' => NULL,
+                'price' => 1060,
+                'description' => NULL,
+                'quantity' => 1,
+                'category_id' => 92,
+                'manufacturer_id' => 7,
+                'image' => 'products\\August2020\\3ZDk0JITJ76YRf9IOiRL.jpg',
+                'images' => NULL,
+                'created_at' => '2020-08-20 13:52:03',
+                'updated_at' => '2020-08-20 14:17:49',
+            ),
+            19 => 
+            array (
+                'id' => 47,
+                'name' => 'Bade mantil za devojčice Hajdi',
+                'slug' => 'bade-mantil-za-devojcice-hajdi',
+                'details' => NULL,
+                'price' => 1550,
+                'description' => NULL,
+                'quantity' => 2,
+                'category_id' => 61,
+                'manufacturer_id' => 7,
+                'image' => 'products\\August2020\\YDlQXX29lusSRieQCweF.jpg',
+                'images' => NULL,
+                'created_at' => '2020-08-20 13:55:07',
+                'updated_at' => '2020-08-20 13:58:16',
+            ),
+            20 => 
+            array (
+                'id' => 48,
+                'name' => 'Bade mantil za dečake Hajdi',
+                'slug' => 'bade-mantil-za-decake-hajdi',
+                'details' => NULL,
+                'price' => 1550,
+                'description' => NULL,
+                'quantity' => 3,
+                'category_id' => 42,
+                'manufacturer_id' => 7,
+                'image' => 'products\\August2020\\jVHaBUmVOiNa3TQ0LBhQ.jpg',
+                'images' => '["products\\\\August2020\\\\CjC8XpC7vSWC0amcE4bl.jpg","products\\\\August2020\\\\RxwppNAmsprYPrBlcW0w.jpg"]',
+                'created_at' => '2020-08-20 13:59:56',
+                'updated_at' => '2020-08-20 13:59:56',
+            ),
+        ));
+        
         
     }
 }

@@ -39,8 +39,10 @@ class SaveForLaterController extends Controller
             return redirect()->route('cart.index')->with('success_message', 'Item is already in your Cart!');
         }
 
-        Cart::instance('default')->add($item->id, $item->name, 1, $item->price)
-            ->associate('App\Product');
+        Cart::instance('default')->add(['id' => $item->id, 'name' => $item->name, 
+                        'qty' => $item->qty, 'price' => $item->price, 
+                        'weight' => 0, 'options' => ['size' => $item->options['size'], 'color' => $item->options['color']]])
+        ->associate('App\Product');
 
         return redirect()->route('cart.index')->with('success_message', 'Item has been moved to Cart!');
     }

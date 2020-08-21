@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('slug')->unique();
             $table->string('details')->nullable();
             $table->integer('price');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->integer('quantity');
             $table->foreignId('category_id')->constrained();
             $table->foreignId('manufacturer_id')->constrained();  

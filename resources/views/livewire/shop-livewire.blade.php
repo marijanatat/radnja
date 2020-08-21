@@ -54,23 +54,25 @@
         <hr class="mb-3">
 
     <div class="flex px-20 pb-16">
-        <div class="hidden md:flex h-auto w-1/5">
+        <div class="hidden md:flex min-h-auto md:w-72 lg:w-1/5">
             <div class="w-1/4 flex-1 flex p-3">
                 <div class="w-full">
                     <h3 class="uppercase text-lg">Kategorije</h3>
                     <hr class="bg-boja h-1 w-32 mb-3">
                     <button class="text-left font-bold text-sm text-gray-700 cursor-pointer focus:outline-none duration-500 transform hover:translate-x-1" wire:click="resetQueries">Sve kategorije
-                        <i class="fa fa-angle-double-right text-gray-700 cursor-pointer" aria-hidden="true"></i>
+                        {{-- <i class="fa fa-angle-double-right text-gray-700 cursor-pointer" aria-hidden="true"></i> --}}
                     </button>   
                 @foreach ($categories as $category)
                     <div x-data="{open: false}">
-                            <div class="">
+                            <div class="flex items-center justify-between">
                                 <div class="duration-500 transform hover:translate-x-1" @click="open=!open">
                                     {{-- <input class="w-4" type="checkbox" id="{{$category->id}}" value="{{$category->id}}" wire:model="requestedCategories"> --}}
                                     <button class="font-bold text-sm text-gray-700 cursor-pointer focus:outline-none">{{$category->name}}
-                                    <i x-show="!open" class="fa fa-angle-double-right text-gray-700 cursor-pointer" aria-hidden="true"></i>
-                                    <i x-show="open" class="fa fa-angle-double-down text-gray-700 cursor-pointer" aria-hidden="true"></i>
                                     </button>
+                                </div>
+                                <div @click="open=!open">
+                                    <i x-show="!open" class="fa fa-angle-double-down text-gray-700 cursor-pointer pr-24" aria-hidden="true"></i>
+                                    <i x-show="open" class="fa fa-angle-double-up text-gray-700 cursor-pointer pr-24" aria-hidden="true"></i>
                                 </div>
                             </div>
                                     <div x-show="open" x-cloak
@@ -90,9 +92,10 @@
                                             </div>
                                                 @foreach ($children->children as $ch)
         
-                                                <div class="flex-col">
-                                                    <label class="hover:bg-gray-300 pl-12 text-sm text-gray-700">
+                                                <div class="flex-col control-group">
+                                                    <label class="hover:bg-gray-300 pl-8 text-sm text-gray-700 control control-checkbox">
                                                         <input class="w-4 pt-5" type="checkbox" id="{{$ch->id}}" value="{{$ch->id}}" wire:model="requestedCategories">
+                                                        <div class="control_indicator"></div>
                                                         <span>{{$ch->name}}</span>
                                                     </label>
                                                 </div>
@@ -122,11 +125,12 @@
                                     x-transition:enter-end="opacity-100 transform translate-y-0"
                                     x-transition:leave="transition ease-in duration-300"
                                     x-transition:leave-end="opacity-0 transform -translate-y-3">
-                                        <div class="flex flex-col  items-start  ml-4 justify-center ">
+                                        <div class="flex flex-col  items-start justify-center " >
                                             @foreach ($sizes as $size)
-                                            <div class="flex flex-col w-12 max-h-full" >
-                                                <label class="inline-flex items-center  text-sm">
-                                                    <input type="checkbox" class="form-checkbox h-3 w-3 text-gray-600 text-sm " id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">
+                                            <div class="flex flex-col w-12 max-h-full control-group">
+                                                <label class="inline-flex items-center text-sm control control-checkbox">
+                                                    <input type="checkbox" class="" id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">
+                                                    <div class="control_indicator"></div>
                                                     <li class="list-none ml-2">{{$size->value}}</li>
                                                 </label>
                                             </div>
@@ -138,11 +142,12 @@
                                         <div x-data="{ open: false }" class="flex flex-col justify-center w-32 h-auto rounded-b-lg">
                                             @foreach ($sizesAll as $size)
                                         
-                                        <div class="flex flex-col max-h-full pl-4" x-show="open"
+                                        <div class="flex flex-col max-h-full control-group" x-show="open"
                                         x-transition:enter="transition ease-out duration-400" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-400" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90"
                                       >
-                                            <label class="inline-flex items-center text-sm">
-                                                <input type="checkbox" class="form-checkbox h-3 w-3 text-gray-600 text-sm " id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">
+                                            <label class="inline-flex items-center text-sm control control-checkbox">
+                                                <input type="checkbox" class="" id="{{$size->id}}" value="{{$size->id}}" wire:model="requestedSizes">
+                                                <div class="control_indicator"></div>
                                                 <li class="list-none ml-2">{{$size->value}}</li>
                                             </label>
                                         </div>
@@ -157,10 +162,11 @@
                                      </div>  
 
 
+
                             <div x-data="{otvori:true}">
                                <div class="flex items-center  justify-between mr-4 mt-10">
                                  <h3 class="uppercase text-lg">Cena:</h3>
-                                    <div @click="otvori=!otvori" >
+                                    <div @click="otvori=!otvori" class="cursor-pointer">
                                         <i x-show="otvori" class='fa fa-angle-double-up'></i>
                                         <i x-show="!otvori" class='fa fa-angle-double-down'></i> 
                                     </div>
@@ -176,18 +182,21 @@
                                         <div class="mb-3" x-show="open">Opseg od <span class="font-semibold">{{presentPrice($min)}}</span> 
                                             do <span class="font-semibold">{{presentPrice($max)}}</span></div>
                                         
-                                        <div class="price-slider mt-6">
-                                                <span>Od:
-                                                      <input name="min" type="number" wire:model.debounce.200ms="min" class="mr-3 ml-1"/>
-                                                      Do:                                            
-                                                      <input name="max" type="number" wire:model.debounce.200ms="max" class="ml-1"/>
-                                                </span>
-                                                 
-                                          <input wire:model.debounce.0ms="min" min="1" max="10000" type="range"/>
-                                          <input wire:model.debounce.0ms="max" min="1" max="10000" type="range"/>
-                                          <svg width="100%" height="24">
-                                            <line x1="4" y1="0" x2="300" y2="0" stroke="#212121" stroke-width="12" stroke-dasharray="1 28"></line>
-                                          </svg>
+                                            <div class="price-slider lg:mt-6 space-y-3">
+                                                <div class="flex justify-around">
+                                                    <div class="w-2/5">
+                                                        Od: <input name="min" type="number" wire:model.debounce.200ms="min" class=""/>
+                                                    </div>
+                                                    <div class="w-2/5">
+                                                        Do:                                            
+                                                        <input name="max" type="number" wire:model.debounce.200ms="max" class=""/>
+                                                    </div>
+                                                </div>
+                                                <input wire:model.debounce.0ms="min" min="1" max="10000" type="range"/>
+                                                <input wire:model.debounce.0ms="max" min="1" max="10000" type="range"/>
+                                                <svg width="100%" height="24">
+                                                    <line x1="4" y1="0" x2="300" y2="0" stroke="#212121" stroke-width="12" stroke-dasharray="1 28"></line>
+                                                </svg>
                                         </div>
                                         {{-- <div data-role="main" class="ui-content">
                                             <div data-role="rangeslider">
@@ -218,17 +227,17 @@
                 </div>
                 @endforeach
             </div> --}}
-            <div class="w-4/5" >
+            <div class="w-4/5 mx-auto min-h-screen">
 
-                <div id="proizvodi" class="grid grid-cols-1 md:grid-cols-3 md:min-h-0 md:min-w-0 md:row-gap-12 text-center w-full pt-4">
+                <div id="proizvodi" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:min-h-0 lg:min-w-0 lg:row-gap-12 text-center lg:w-full pt-4">
                     @forelse ($products as $product)
                     <div class="flex flex-col justify-center items-center space-y-2" style="max-height:400px;">
-                        <a href="{{route('shop.show',$product->slug)}}"><img class="h-32 md:h-64 object-cover" src="{{productImage($product->image)}}"
+                        <a href="{{route('shop.show',$product->slug)}}"><img class="h-44 w-44 md:h-40 md:w-40 lg:h-44 lg:w-44 xl:h-64 xl:w-64 object-cover" src="{{productImage($product->image)}}"
                                 alt="product"></a>
                         <a href="{{route('shop.show',$product->slug)}}">
                             <div class="">{{$product->name}}</div>
                         </a>
-                        <div>{{presentPrice($product->price)}}</div>
+                        <div class="pb-8 md:pb-0">{{presentPrice($product->price)}}</div>
                     </div>
                     @empty
                     <div class="flex flex-col  text-gray-700">
