@@ -1,8 +1,8 @@
 <ul class="flex-col md:flex-row md:flex-no-wrap md:space-x-6 md:mr-6 uppercase 
 tracking-normal text-gray-700 md:text-gray-200 md:items-center md:space-y-0 space-y-3">
     @guest
-    <li class="py-3 md:py-0 md:hover:text-teal-300"><a href="{{route('register')}}">Sign up </a></li>
-    <li><a href="{{route('login')}}" class="md:hover:text-teal-300 py-3 md:py-0">Log in </a></li>
+    <li class="py-3 md:py-0 md:hover:text-teal-300"><a href="{{route('register')}}">Registrujte se </a></li>
+    <li><a href="{{route('login')}}" class="md:hover:text-teal-300 py-3 md:py-0">Prijavite se </a></li>
 
     @else
 

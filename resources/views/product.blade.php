@@ -2,149 +2,6 @@
 
 {{-- @section('title', $product->name) --}}
 
-@section('extra-css')
-    <style>
-
-    .color-label {
-        display: block;
-        position: relative;
-        padding-left: 35px;
-        margin-bottom: 12px;
-        cursor: pointer;
-        font-size: 22px;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;    
-    }
-
-    .color-label input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 0;
-        width: 0;
-    }
-
-    .color-custom {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 25px;
-        width: 25px;
-        border-radius: 50%;
-        border: 1px solid grey;
-    }
-
-    .color-label:hover input ~ .color-custom{
-        background-color: red;
-    }
-
-    .color-label input:checked ~ .color-custom{
-        border: 2px solid rgb(159, 219, 103);
-    }
-
-    .color-custom:after {
-        content: "";
-        position: absolute;
-        display: none;
-    }
-
-    /* .color-label input:checked ~ .color-custom:after {
-        /* display: block; */
-    } */
-
-    .color-label .color-custom:after {
-        top: 9px;
-        left: 9px;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: white;
-    }
-
-    .color-custom .tooltiptext {
-        bottom:30px;
-        left: -45px;
-        visibility: hidden;
-        background-color:rgb(158, 198, 214);
-        color: white;
-        font-style: italic;
-        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
-        width: 80px;
-        height: 40px;
-        text-align: center;
-        padding: 5px 0;
-        /* Position the tooltip */
-        position: absolute;
-        z-index: 1;
-    }
-
-    .color-custom:hover .tooltiptext {
-        visibility: visible;
-    }
-
-    .velicina-label {
-        display: block;
-        position: relative;
-        padding-left: 35px;
-        margin-bottom: 12px;
-        cursor: pointer;
-        font-size: 22px;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;    
-    }
-
-    .velicina-label input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 0;
-        width: 0;
-    }
-
-    .velicina-custom {
-        position: absolute;
-        top: 0;
-        left: 0;
-        text-align: center;
-        /* padding-left: 11px; */
-        padding-top: 3px;  
-
-        height: 30px;
-        width: 30px;
-        border-radius: 50%;
-    }
-
-    .velicina-label:hover input ~ .velicina-custom{
-        /* background-color: greenyellow; */
-    }
-
-    .velicina-label input:checked ~ .velicina-custom{
-        background-color: #1a202c;
-        color: white;        
-    }
-
-    /* .velicina-custom:after {
-        content: "";
-        position: absolute;
-        display: none;
-    } */
-
-    /* .velicina-label .velicina-custom:after {
-        top: 9px;
-        left: 9px;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: white;
-    } */
-
-    </style>
-@endsection
-
 @section('content')
 
     <div class="text-gray-700 hover:text-green-900">
@@ -224,7 +81,7 @@
                      <div class="flex flex-col justify-center mr-4">
                          
                          <label for="{{$color->id}}" class="color-label">
-                            <input type="radio" id="{{$color->id}}" name="color" value="{{$color->name}}">
+                            <input type="radio" id="{{$color->id}}" name="color" value="{{$color->name}}" {{(old('color') == $color->name) ? 'checked' : ''}}>
                             <span class="color-custom" style="background-color: {{$color->value}}">
                                 <span class="tooltiptext text-sm font-semibold pt-2">{{$color->name}}</span>
                             </span>
@@ -259,7 +116,7 @@
                     @if ($product->sizes->count() > 1)
                      @foreach ($product->sizes as $size)                      
                      <label for="{{$size->value}}" class="velicina-label">
-                        <input type="radio" id="{{$size->value}}" name="size" value="{{$size->value}}">
+                        <input type="radio" id="{{$size->value}}" name="size" value="{{$size->value}}" {{(old('size') == $size->value) ? 'checked' : ''}}>
                         <span class="velicina-custom text-base bg-gray-400 hover:bg-gray-900 hover:text-white">{{$size->value}}</span>
                     </label>
                     @endforeach 
