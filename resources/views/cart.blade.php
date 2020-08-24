@@ -110,7 +110,9 @@
                     </div>
                     <div class="flex md:flex-col  font-semibold font-base ">
                         <span class=" mr-2 text-base font-semibold  md:text-lg">{{ Cart::total() }} RSD </span>
-                        <span class=" text-base font-semibold  md:text-lg"> + dostava</span>
+                        @if (Cart::totalFloat() < 3001)
+                            <span class=" text-base font-semibold  md:text-lg"> + dostava</span>
+                        @endif
                     </div>
                 </div>
             </div> <!-- end cart-totals -->
