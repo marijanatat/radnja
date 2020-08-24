@@ -1,8 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Naručivanje')
-    
-@endsection
+@section('title', 'Naručivanje')    
 
 @section('extra-css')
 
