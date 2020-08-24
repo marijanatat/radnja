@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-{{-- @section('title', $product->name) --}}
+@section('title', $product->name)
 
 @section('content')
 

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Thank You')
+@section('title', 'Hvala Vam')
 
 @section('extra-css')
 

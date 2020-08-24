@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Shopping Cart')
+@section('title', 'Korpa')
 
 @section('content')
 

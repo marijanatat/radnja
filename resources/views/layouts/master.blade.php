@@ -6,31 +6,29 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Mob-ing web shop</title>
+
+<title>Mob-ing web shop | @yield('title', '')</title>
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Montserrat%7CRoboto:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
-  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-  
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <!-- Styles -->
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
 <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<livewire:styles>
 
 @yield('extra-css')
 
-<livewire:styles>
-
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="{{asset('js/app.js')}}"></script>
-@livewireStyles
 
 <style>
   input:checked + svg {
@@ -63,7 +61,7 @@
   }  
 
     }
-    /*--------------------------------------------------------------
+/*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
@@ -123,7 +121,6 @@
     AOS.init();
   </script> 
 
-@livewireScripts
 </body>
 
 </html>

@@ -280,7 +280,7 @@
           
           <div class="text-center button-container text-sm xl:text-lg mt-2 md:mt-16 mb-2 p-1 md:mb-4 md:p-4">
             <a href="{{route('shop.index')}}" class="example_e bg-boja hover:bg-rgb(20, 104, 107) " style="font-family: 'Gochi Hand'" data-aos="fade-up"
-            data-aos-duration="2000">View more products</a>
+            data-aos-duration="2000">Pogledajte sve proizvode</a>
           </div>
           
 

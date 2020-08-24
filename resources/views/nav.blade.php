@@ -30,8 +30,8 @@
       <ul class="flex-col md:flex-row list-reset md:justify-start md:items-center w-4/5 md:w-full">
         
           <div class="flex items-center -ml-4  md:ml-16">
-              <a href="/"><img src="{{asset('./img/baby.svg')}}" alt="kolica za bebe" style=""
-                  class="hidden md:block w-4 h-4 md:h-12 md:w-12 bg-transparent  rounded-md"> </a>
+              <a href="/"><img src="{{asset('./img/baby.svg')}}" alt="kolica za bebe"
+                  class="hidden md:block w-4 h-4 md:h-12 md:w-12 bg-transparent rounded-md"> </a>
                   <a href="/"><div class="font-bold text-lg xl:text-xl text-white px-2 lg:pr-4 uppercase py-2 hidden md:block">Mob-ing</div></a> 
           </div>
           

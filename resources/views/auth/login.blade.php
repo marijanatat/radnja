@@ -1,7 +1,7 @@
 @extends('layouts.master') 
 
-
-
+@section('title', 'Prijavite se')
+    
 @section('content')
 <div class="container">
     <div class="auth-pages mx-12 md:mx-32 my-1 md:my-16 grid-cols-1 lg:grid-cols-2">
