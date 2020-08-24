@@ -30,7 +30,6 @@ class CheckoutRequest extends FormRequest
             'name' => 'required',
             'address' => 'required',
             'city' => 'required',
-            'state' => 'required',
             'postalcode' => 'required',
             'phone' => 'required',
         ];
@@ -39,7 +38,16 @@ class CheckoutRequest extends FormRequest
     public function messages()
     {
         return [
-            'email.unique' => 'You already have an account with this email address. Please <a href="/login">login</a> to continue.'
+            'email.unique' => 'Već imate registrovan nalog sa ovom email adresom. Molimo Vas <a href="/login">prijavite se</a> da bi nastavili proces narudžbe.',
+            'email.required' => 'Email adresa je obavezna!',
+            'email.email' => 'Morate uneti validnu email adresu!',
+            'name.required' => 'Ime i prezime su obavezni!',
+            'address.required' => 'Adresa je obavezna!',
+            'city.required' => 'Mesto je obavezno!',
+            'postalcode.required' => 'Poštanski broj je obavezan!',
+            'phone.required' => 'Kontakt telefon je obavezan!',
+
+
         ];
     }
 }

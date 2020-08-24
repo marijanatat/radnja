@@ -109,16 +109,15 @@
                         <span class="cart-totals-total text-sm md:text-lg">Ukupno:</span>
                     </div>
                     <div class="flex md:flex-col  font-semibold font-base ">
-                        <span class=" mr-2 text-base font-semibold  md:text-lg ">{{ Cart::total() }} RSD </span>
-                        <span class=" text-base font-semibold  md:text-lg "> + dostava</span>
+                        <span class=" mr-2 text-base font-semibold  md:text-lg">{{ Cart::total() }} RSD </span>
+                        <span class=" text-base font-semibold  md:text-lg"> + dostava</span>
                     </div>
                 </div>
             </div> <!-- end cart-totals -->
 
-            <div class="cart-buttons "  >
-                <a href="{{ route('shop.index') }}" class="button rounded-md font-semibold shadow-md "  >Nastavi kupovinu</a>
-                <a href="{{ route('checkout.index') }}" class="button-primary rounded-lg mt-4 md:mt-0 font-semibold ">
-                    
+            <div class="cart-buttons">
+                <a href="{{ route('shop.index') }}" class="button rounded-md font-semibold shadow-md">Nastavi kupovinu</a>
+                <a href="{{ route('checkout.index') }}" class="button-primary rounded-md mt-4 md:mt-0 font-semibold shadow-md">                    
                 Završite kupovinu
                 </a>
             </div>
@@ -218,6 +217,8 @@
                 });
             });
         })(); 
+
+        
     </script>
 @endsection
 

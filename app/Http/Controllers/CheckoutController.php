@@ -39,7 +39,7 @@ class CheckoutController extends Controller
     public function store(CheckoutRequest $request)
     {
         if ($this->productsAreNoLongerAvailable()) {
-            return back()->withErrors('Item is no longer available');
+            return back()->withErrors('Proizvod više nije dopstupan!');
         }
         $contents = Cart::content()->map(function ($item) {
             return $item->model->slug . ', ' . $item->qty;
@@ -53,10 +53,10 @@ class CheckoutController extends Controller
 
             Cart::instance('default')->destroy();
 
-            return redirect()->route('confirmation.index')->with('success_message', 'Thank you! Your order has been accepted!');
+            return redirect()->route('confirmation.index')->with('success_message', 'Hvala Vam! Vaša naružba je primljena');
         } catch (Exception $e) {
-            $this->addToOrdersTable($request, 'Something went wrong! Your order has not been accepted!');
-            return back()->withErrors('Error! ' . 'Your order has not been accepted.');
+            $this->addToOrdersTable($request, 'Došlo je do greške! Vaša narudžba nije primljena!');
+            return back()->withErrors('Greška! ' . 'Vaša narudžba nije prihvaćena.');
         }
     }
     protected function productsAreNoLongerAvailable()
@@ -73,7 +73,7 @@ class CheckoutController extends Controller
 
     protected function addToOrdersTable($request, $error)
     {
-
+        
         // Insert into orders table
         $order = Order::create([
             'user_id' => auth()->user() ? auth()->user()->id : null,

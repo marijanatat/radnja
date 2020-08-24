@@ -37,20 +37,20 @@
                     <div class="form-group ">
                         <label for="email" class="text-sm md:text-base">E-mail adresa</label>
                         @if (auth()->user())
-                        <input type="email" class="" id="email" name="email" value="{{ auth()->user()->email }}"
+                        <input type="email" id="email" name="email" value="{{ auth()->user()->email }}"
                             readonly>
                         @else
-                        <input type="email" class="" id="email" name="email" value="{{ old('email') }}"
-                            requried>
+                        <input type="email" id="email" name="email" value="{{ old('email') }}"
+                            required>
                         @endif
                     </div>
                     <div class="form-group p-1 -mt-4">
                         <label for="name" class="text-sm md:text-base">Ime i prezime</label>
-                        <input class="" type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" requried>
+                        <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" requried>
                     </div>
-                    <div class="form-group  p-1 -mt-4">
+                    <div class="form-group p-1 -mt-4">
                         <label for="address">Ulica i broj</label>
-                        <input type="text" class="" id="address" name="address" value="{{ old('address') }}"
+                        <input type="text" id="address" name="address" value="{{ old('address') }}"
                             requried>
                     </div>
     
@@ -60,10 +60,10 @@
                             <input type="text" class="form-control" id="city" name="city" value="{{ old('city') }}"
                                 requried>
                         </div>
-                        <div class="form-group ">
+                        <div class="form-group">
                             <label for="state" class="text-sm md:text-base">Država</label>
                             <input type="text" class="form-control" id="province" name="state"
-                                value="{{ old('state') }}" requried>
+                                value="{{ old('state') }}">
                         </div>
                     </div> <!-- end half-form -->
     
@@ -140,4 +140,23 @@
     </div>
     </div>
 
+@endsection
+
+@section('extra-js')
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var elements = document.getElementsByTagName("input");
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].oninvalid = function(e) {
+                    e.target.setCustomValidity("");
+                    if (!e.target.validity.valid) {
+                        e.target.setCustomValidity("Ovo polje je obavezno!");
+                    }
+                };
+                elements[i].oninput = function(e) {
+                    e.target.setCustomValidity("");
+                };
+            }
+        })
+    </script>
 @endsection

@@ -17,7 +17,7 @@ class SaveForLaterController extends Controller
     {
         Cart::instance('saveForLater')->remove($id);
 
-        return back()->with('success_message', 'Item has been removed!');
+        return back()->with('success_message', 'Proizvod je uklonjen!');
     }
 
      /**
@@ -36,7 +36,7 @@ class SaveForLaterController extends Controller
         });
 
         if ($duplicates->isNotEmpty()) {
-            return redirect()->route('cart.index')->with('success_message', 'Item is already in your Cart!');
+            return redirect()->route('cart.index')->with('success_message', 'Proizvod se već nalazi u Vašoj korpi!');
         }
 
         Cart::instance('default')->add(['id' => $item->id, 'name' => $item->name, 
@@ -44,6 +44,6 @@ class SaveForLaterController extends Controller
                         'weight' => 0, 'options' => ['size' => $item->options['size'], 'color' => $item->options['color']]])
         ->associate('App\Product');
 
-        return redirect()->route('cart.index')->with('success_message', 'Item has been moved to Cart!');
+        return redirect()->route('cart.index')->with('success_message', 'Proizvod je premešten u korpu!');
     }
 }

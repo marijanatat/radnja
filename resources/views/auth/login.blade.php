@@ -26,7 +26,7 @@
                 {{ csrf_field() }}
 
                 <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="Email" required autofocus>
-                <input type="password" id="password" name="password" value="{{ old('password') }}" placeholder="Password" required>
+                <input type="password" id="password" name="password" value="{{ old('password') }}" placeholder="Lozinka" required>
 
                 <div class="login-container text-gray-700">
                     <button type="submit" class="button-primary rounded-md">Prijava</button>
@@ -38,7 +38,7 @@
                 <div class="spacer"></div>
 
                 <a href="{{ route('password.request') }}" class="italic text-bojasvetla" >
-                    Zaboravili ste Password?
+                    Zaboravili ste lozinku?
                 </a>
 
             </form>

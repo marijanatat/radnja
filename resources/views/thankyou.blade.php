@@ -12,10 +12,10 @@
 
    <div class="thank-you-section h-screen">
        <h1 class="text-lg font-semibold -mt-20 text-gray-800" data-aos="flip-left">Hvala Vam za <br>Vašu porudžbinu!</h1>
-       <p>Dobićete mail o rezervaciji.</p>
+       <p>Uskoro ćete dobiti mejl o rezervaciji.</p>
        <div class="spacer"></div>
        <div>
-           <a href="{{ url('/') }}" class="button rounded-md text-boja font-semibold">Home Page</a>
+           <a href="{{ url('/') }}" class="button rounded-md text-boja font-semibold">Početna strana</a>
        </div>
    </div>
 

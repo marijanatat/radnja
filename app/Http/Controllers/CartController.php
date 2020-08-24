@@ -72,14 +72,14 @@ class CartController extends Controller
             return $cartItem->id === $request->id;
         });
         if($duplicates->isNotEmpty()){
-            return redirect(route('cart.index'))->with('success_message','Item is already in your Cart.');
+            return redirect(route('cart.index'))->with('success_message','Proizvod je već u Vašoj korpi.');
         }
         
         Cart::add(['id' => $request->id, 'name' => $request->name, 'qty' => $request->quantity, 'price' => $request->price, 'weight' => 0, 'options' => ['size' => $request->size, 'color' => $request->color ]])
                 
             ->associate('App\Product');               
 
-        return redirect(route('cart.index'))->with('success_message','Item is added to your cart');
+        return redirect(route('cart.index'))->with('success_message','Proizvod je dodat u korpu');
     }
 
     
@@ -147,7 +147,7 @@ class CartController extends Controller
     public function destroy($id)
     {
         Cart::remove($id);
-        return back()->with('success_message','Item has been removed from Cart');
+        return back()->with('success_message','Proizvod je uklonjen iz korpe!');
     }
 
     public function switchToSaveForLater($id)
@@ -160,7 +160,7 @@ class CartController extends Controller
         });
 
         if ($duplicates->isNotEmpty()) {
-            return redirect()->route('cart.index')->with('success_message', 'Item is already Saved For Later!');
+            return redirect()->route('cart.index')->with('success_message', 'Ovaj proizvod ste već sačuvali za kasnije!');
         }
 
         Cart::instance('saveForLater')->add(['id' => $item->id, 'name' => $item->name, 
@@ -168,6 +168,6 @@ class CartController extends Controller
                        'weight' => 0, 'options' => ['size' => $item->options['size'], 'color' => $item->options['color']]])
         ->associate('App\Product');
 
-        return redirect()->route('cart.index')->with('success_message', 'Item has been Saved For Later!');
+        return redirect()->route('cart.index')->with('success_message', 'Proizvod je sačuvan za kasnije!');
     }
 }
