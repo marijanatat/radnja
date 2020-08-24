@@ -269,7 +269,7 @@
             <a href="{{route('shop.show',$product->slug)}}"><img class="mx-auto" src="{{productImage($product->image)}}"
               style="height:140px;" alt="product"></a>
               <a href="{{route('shop.show',$product->slug)}}">
-                <div class="">{{$product->name}}</div>
+                <div class="mt-2">{{$product->name}}</div>
               </a>
               <div class="">{{$product->presentPrice()}}</div>
             </div>
