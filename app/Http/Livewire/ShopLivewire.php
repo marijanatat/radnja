@@ -89,7 +89,7 @@ class ShopLivewire extends Component
         }
         
         if(!empty($this->search)){
-            $this->products = $this->filtrirajPoSearchu($this->products);
+            $this->products = $this->filterBySearch($this->products);
         }
 
         if($this->sort==='low_high') {
@@ -116,7 +116,7 @@ class ShopLivewire extends Component
         ]);
     }
 
-    public function filtrirajPoSearchu($products)
+    public function filterBySearch($products)
     {
         $searched_products = $products->where('name','like',"%$this->search%")
                 ->orWhere('description','like',"%$this->search%")
@@ -131,8 +131,8 @@ class ShopLivewire extends Component
     private function filterProductsByCategories($request = null)
     {
         if($request){
-            $categoryIds[] = $request;
-            $category = Category::find($request);
+            $category = Category::where('slug', '=', $request)->first();
+            $categoryIds[] = $category->id;
             if(!$category->isLeaf())
             {
                 $categoryIds[] = $category->getKey();
@@ -140,7 +140,7 @@ class ShopLivewire extends Component
                 $categoryIds = array_unique(Arr::flatten($categoryIds));
             }
         } else {
-        $categories = (Category::whereIn('id', $this->requestedCategories))->get();
+        $categories = (Category::whereIn('slug', $this->requestedCategories))->get();
             foreach ($categories as $category) {                    
                 $categoryIds[] = $category->getKey();                   
                 $categoryIds[] = $category->descendants()->pluck('id');

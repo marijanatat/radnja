@@ -97,7 +97,7 @@
 
                             <div class="flex-col control-group">
                                 <label class="hover:bg-gray-300 pl-8 text-sm text-gray-700 control control-checkbox">
-                                    <input class="w-4 pt-5" type="checkbox" id="{{$ch->id}}" value="{{$ch->id}}"
+                                    <input class="w-4 pt-5" type="checkbox" id="{{$ch->id}}" value="{{$ch->slug}}"
                                         wire:model="requestedCategories">
                                     <div class="control_indicator"></div>
                                     <span>{{$ch->name}}</span>

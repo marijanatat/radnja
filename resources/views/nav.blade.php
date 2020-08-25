@@ -45,7 +45,7 @@
             <button>
               <a 
                 class="dropbtn inline-block text-gray-200 md:px-2 lg:px-4 bg-transparent uppercase text-md lg:text-base no-underline hover:text-teal-300 py-3 md:py-5"
-                href="{{route('shop.index', ['category' => $category->id])}}">{{$category->name}}</a>
+                href="{{route('shop.index', ['category' => $category->slug])}}">{{$category->name}}</a>
             </button>
     
             <div class="dropdown-content">
@@ -56,12 +56,12 @@
                 {{-- <div class="" style="margin-top:-10;margin-left: 200px;margin-right:-100px;background-color: transparent; z-index:10 ;" > --}}
                   @if (!$child->isLeaf())
                   <div class="uppercase"  >
-                    <a href="{{route('shop.index', ['category' => $child->id])}}" class="text-lg text-gray-700 hover:text-teal-300">{{$child->name}}</a>
+                    <a href="{{route('shop.index', ['category' => $child->slug])}}" class="text-lg text-gray-700 hover:text-teal-300">{{$child->name}}</a>
                   </div>
                     @foreach ($child->children as $ch)
     
                     <div class="flex-col">
-                      <a href="{{route('shop.index', ['category' => $ch->id])}}" class="text-gray-700 text-sm hover:text-teal-300">{{$ch->name}}</a>
+                      <a href="{{route('shop.index', ['category' => $ch->slug])}}" class="text-gray-700 text-sm hover:text-teal-300">{{$ch->name}}</a>
                     </div>
                     @endforeach
                     @else
