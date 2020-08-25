@@ -716,10 +716,10 @@ class ProductsTableSeeder extends Seeder
                 'quantity' => 2,
                 'category_id' => 95,
                 'manufacturer_id' => 1,
-                'image' => 'products\\August2020\\BYPVD40h8H6JrDNXRY5w.jpg',
+                'image' => 'products\\August2020\\kr2FmU7e9LrdEIvttiGz.jpg',
                 'images' => NULL,
                 'created_at' => '2020-08-25 20:33:22',
-                'updated_at' => '2020-08-25 20:33:22',
+                'updated_at' => '2020-08-25 22:03:41',
             ),
             44 => 
             array (
