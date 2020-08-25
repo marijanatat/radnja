@@ -1,5 +1,17 @@
 @section('title', 'Proizvodi')
 
+@section('extra-css')
+    <style>
+        img {
+            -webkit-filter: brightness(100%);
+        }
+
+        img:hover {
+            -webkit-filter: brightness(80%);    
+        }
+    </style>
+@endsection
+
 <div>
 
     <div>

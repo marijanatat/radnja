@@ -57,10 +57,10 @@
             O proizvodu :
              </p> 
               <p class="text-md text-gray-800 mt-4">
-                {{$product->manufacturer->name}}
+                Proizvođač: {{$product->manufacturer->name}}
             </p> 
             <p class="text-md text-gray-800 mt-4">
-                100% pamuk
+                Sirovinski sastav: 100% pamuk
             </p> 
         </div>
 
