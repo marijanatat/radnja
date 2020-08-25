@@ -142,35 +142,38 @@
                             @endforeach
                         </div>
 
-
-
+                        
+                        
+                        
                         <div x-data="{ open: false }" class="flex flex-col justify-center w-32 h-auto rounded-b-lg">
-                            @foreach ($sizesAll as $size)
-
-                            <div class="flex flex-col max-h-full control-group" x-show="open"
+                        @foreach ($sizesAll as $size)
+                            <div x-cloak>
+                                
+                                <div class="flex flex-col max-h-full control-group" x-show="open"
                                 x-transition:enter="transition ease-out duration-400"
                                 x-transition:enter-start="opacity-0 transform scale-90"
-                                x-transition:enter-end="opacity-100 transform scale-100"
-                                x-transition:leave="transition ease-in duration-400"
-                                x-transition:leave-start="opacity-100 transform scale-100"
-                                x-transition:leave-end="opacity-0 transform scale-90">
-                                <label class="inline-flex items-center text-sm control control-checkbox">
-                                    <input type="checkbox" class="" id="{{$size->id}}" value="{{$size->id}}"
-                                        wire:model="requestedSizes">
-                                    <div class="control_indicator"></div>
-                                    <li class="list-none ml-2">{{$size->value}}</li>
-                                </label>
+                                    x-transition:enter-end="opacity-100 transform scale-100"
+                                    x-transition:leave="transition ease-in duration-400"
+                                    x-transition:leave-start="opacity-100 transform scale-100"
+                                    x-transition:leave-end="opacity-0 transform scale-90">
+                                    <label class="inline-flex items-center text-sm control control-checkbox">
+                                        <input type="checkbox" class="" id="{{$size->id}}" value="{{$size->id}}"
+                                            wire:model="requestedSizes">
+                                            <div class="control_indicator"></div>
+                                            <li class="list-none ml-2">{{$size->value}}</li>
+                                    </label>
+                                </div>
                             </div>
-
+                            
                             @endforeach
-
                             <button @click="open = !open" type="button"
-                                class="bg-boja hover:bg-orange-900 text-white mt-2 rounded"
-                                x-html="open ? `Prikaži manje` :`Prikaži više`">
-                            </button>
-                        </div>
-
+                            class="bg-boja hover:bg-orange-900 text-white mt-2 rounded"
+                            x-html="open ? `Prikaži manje` :`Prikaži više`">
+                        </button>
                     </div>
+                </div>
+
+
 
 
 
