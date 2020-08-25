@@ -697,6 +697,134 @@ class ProductSizesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
+            85 => 
+            array (
+                'id' => 111,
+                'product_id' => 65,
+                'size_id' => 5,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            86 => 
+            array (
+                'id' => 112,
+                'product_id' => 66,
+                'size_id' => 2,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            87 => 
+            array (
+                'id' => 113,
+                'product_id' => 67,
+                'size_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            88 => 
+            array (
+                'id' => 114,
+                'product_id' => 68,
+                'size_id' => 1,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            89 => 
+            array (
+                'id' => 115,
+                'product_id' => 68,
+                'size_id' => 3,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            90 => 
+            array (
+                'id' => 116,
+                'product_id' => 68,
+                'size_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            91 => 
+            array (
+                'id' => 117,
+                'product_id' => 69,
+                'size_id' => 1,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            92 => 
+            array (
+                'id' => 118,
+                'product_id' => 69,
+                'size_id' => 3,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            93 => 
+            array (
+                'id' => 119,
+                'product_id' => 69,
+                'size_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            94 => 
+            array (
+                'id' => 120,
+                'product_id' => 68,
+                'size_id' => 2,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            95 => 
+            array (
+                'id' => 121,
+                'product_id' => 70,
+                'size_id' => 2,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            96 => 
+            array (
+                'id' => 122,
+                'product_id' => 70,
+                'size_id' => 3,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            97 => 
+            array (
+                'id' => 123,
+                'product_id' => 70,
+                'size_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            98 => 
+            array (
+                'id' => 124,
+                'product_id' => 71,
+                'size_id' => 3,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            99 => 
+            array (
+                'id' => 125,
+                'product_id' => 71,
+                'size_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            100 => 
+            array (
+                'id' => 126,
+                'product_id' => 72,
+                'size_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
         ));
         
         

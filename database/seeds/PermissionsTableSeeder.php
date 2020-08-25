@@ -457,6 +457,46 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-08-19 10:53:57',
                 'updated_at' => '2020-08-19 10:53:57',
             ),
+            55 => 
+            array (
+                'id' => 71,
+                'key' => 'browse_manufacturers',
+                'table_name' => 'manufacturers',
+                'created_at' => '2020-08-25 20:39:59',
+                'updated_at' => '2020-08-25 20:39:59',
+            ),
+            56 => 
+            array (
+                'id' => 72,
+                'key' => 'read_manufacturers',
+                'table_name' => 'manufacturers',
+                'created_at' => '2020-08-25 20:39:59',
+                'updated_at' => '2020-08-25 20:39:59',
+            ),
+            57 => 
+            array (
+                'id' => 73,
+                'key' => 'edit_manufacturers',
+                'table_name' => 'manufacturers',
+                'created_at' => '2020-08-25 20:39:59',
+                'updated_at' => '2020-08-25 20:39:59',
+            ),
+            58 => 
+            array (
+                'id' => 74,
+                'key' => 'add_manufacturers',
+                'table_name' => 'manufacturers',
+                'created_at' => '2020-08-25 20:39:59',
+                'updated_at' => '2020-08-25 20:39:59',
+            ),
+            59 => 
+            array (
+                'id' => 75,
+                'key' => 'delete_manufacturers',
+                'table_name' => 'manufacturers',
+                'created_at' => '2020-08-25 20:39:59',
+                'updated_at' => '2020-08-25 20:39:59',
+            ),
         ));
         
         

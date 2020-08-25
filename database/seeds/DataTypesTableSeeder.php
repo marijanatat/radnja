@@ -87,7 +87,7 @@ class DataTypesTableSeeder extends Seeder
                 'server_side' => 1,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2020-08-06 12:39:26',
-                'updated_at' => '2020-08-25 09:48:30',
+                'updated_at' => '2020-08-25 19:01:51',
             ),
             4 => 
             array (
@@ -178,6 +178,24 @@ class DataTypesTableSeeder extends Seeder
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2020-08-19 10:53:57',
                 'updated_at' => '2020-08-25 09:43:08',
+            ),
+            9 => 
+            array (
+                'id' => 13,
+                'name' => 'manufacturers',
+                'slug' => 'manufacturers',
+                'display_name_singular' => 'Manufacturer',
+                'display_name_plural' => 'Manufacturers',
+                'icon' => 'voyager-shop',
+                'model_name' => 'App\\Manufacturer',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2020-08-25 20:39:59',
+                'updated_at' => '2020-08-25 20:41:01',
             ),
         ));
         

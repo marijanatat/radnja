@@ -53,9 +53,14 @@
                 @endif            
             </div>
             <hr class="bg-gray-500 border-dashed mt-4 mb-2">
-
+            <p class="text-gray-800 uppercase text-sm font-semibold mt-4">
+            O proizvodu :
+             </p> 
               <p class="text-md text-gray-800 mt-4">
-                {!!$product->description!!}
+                {{$product->manufacturer->name}}
+            </p> 
+            <p class="text-md text-gray-800 mt-4">
+                100% pamuk
             </p> 
         </div>
 
