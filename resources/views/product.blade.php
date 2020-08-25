@@ -138,10 +138,10 @@
                 @endif
                 
                 <h3 class="text-gray-800 uppercase text-sm font-semibold">Količina</h3>
-                 <div class="flex items-start mb-4" x-data="counter()">
-                     <button type="button" class="bg-white p-1 mr-1 hover:bg-gray-300" style="border: solid 1px gray" x-on:click="decrement()"><i class="fa fa-minus" aria-hidden="true"  ></i></button>
+                 <div class="flex items-center mb-4" x-data="counter()">
+                     <button type="button" class="bg-white px-1 mr-1 rounded-md hover:bg-gray-400" style="border: solid 1px gray" x-on:click="decrement()"><i class="fa fa-minus" aria-hidden="true"  ></i></button>
                      <input class="bg-white px-2 py-1 mr-1 w-8 text-center" style="border: solid 1px gray;" name="quantity" x-bind:value="count"/>     
-                     <button type="button" class="bg-white p-1 mr-1 hover:bg-gray-300" style="border: solid 1px gray" x-on:click="increment()"><i class="fa fa-plus" aria-hidden="true"  ></i></button>
+                     <button type="button" class="bg-white px-1 rounded-md hover:bg-gray-400" style="border: solid 1px gray" x-on:click="increment()"><i class="fa fa-plus" aria-hidden="true"  ></i></button>
                  </div>
 
                 <button type="submit" class="text-md text-white px-2 py-1 button button-plain transition duration-500 ease-in-out border border-gray-300 shadow-md rounded-md bg-boja hover:bg-bojasvetla transform hover:-translate-y-1 hover:scale-110 ...">Dodaj u korpu</button>
