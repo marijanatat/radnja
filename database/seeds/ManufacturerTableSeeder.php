@@ -17,7 +17,7 @@ class ManufacturerTableSeeder extends Seeder
 
         Manufacturer::insert([
             ['name' => 'Bambino', 'slug' => 'bambino','city'=>'Pančevo', 'created_at' => $now, 'updated_at' => $now],
-            ['name' => 'Models kids', 'slug' => 'model-kids', 'city'=>'Pančevo','created_at' => $now, 'updated_at' => $now],
+            ['name' => 'Model kids', 'slug' => 'model-kids', 'city'=>'Pančevo','created_at' => $now, 'updated_at' => $now],
             ['name' => 'Panter', 'slug' => 'panter', 'city'=>'Beograd', 'created_at' => $now, 'updated_at' => $now],
             ['name' => 'Radović', 'slug' => 'radovic','city'=>'Arilje',  'created_at' => $now, 'updated_at' => $now],
             ['name' => 'Kid Star', 'slug' => 'kid-star','city'=>'Niš',  'created_at' => $now, 'updated_at' => $now],

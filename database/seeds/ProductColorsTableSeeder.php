@@ -329,6 +329,190 @@ class ProductColorsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
+            39 => 
+            array (
+                'id' => 66,
+                'product_id' => 49,
+                'color_id' => 10,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            40 => 
+            array (
+                'id' => 67,
+                'product_id' => 49,
+                'color_id' => 13,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            41 => 
+            array (
+                'id' => 68,
+                'product_id' => 49,
+                'color_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            42 => 
+            array (
+                'id' => 69,
+                'product_id' => 50,
+                'color_id' => 13,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            43 => 
+            array (
+                'id' => 70,
+                'product_id' => 51,
+                'color_id' => 19,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            44 => 
+            array (
+                'id' => 71,
+                'product_id' => 52,
+                'color_id' => 9,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            45 => 
+            array (
+                'id' => 72,
+                'product_id' => 53,
+                'color_id' => 2,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            46 => 
+            array (
+                'id' => 73,
+                'product_id' => 53,
+                'color_id' => 5,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            47 => 
+            array (
+                'id' => 74,
+                'product_id' => 53,
+                'color_id' => 13,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            48 => 
+            array (
+                'id' => 75,
+                'product_id' => 54,
+                'color_id' => 13,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            49 => 
+            array (
+                'id' => 76,
+                'product_id' => 55,
+                'color_id' => 13,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            50 => 
+            array (
+                'id' => 77,
+                'product_id' => 56,
+                'color_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            51 => 
+            array (
+                'id' => 78,
+                'product_id' => 57,
+                'color_id' => 5,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            52 => 
+            array (
+                'id' => 79,
+                'product_id' => 58,
+                'color_id' => 5,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            53 => 
+            array (
+                'id' => 80,
+                'product_id' => 58,
+                'color_id' => 20,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            54 => 
+            array (
+                'id' => 81,
+                'product_id' => 59,
+                'color_id' => 5,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            55 => 
+            array (
+                'id' => 82,
+                'product_id' => 59,
+                'color_id' => 11,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            56 => 
+            array (
+                'id' => 83,
+                'product_id' => 60,
+                'color_id' => 5,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            57 => 
+            array (
+                'id' => 84,
+                'product_id' => 61,
+                'color_id' => 13,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            58 => 
+            array (
+                'id' => 85,
+                'product_id' => 61,
+                'color_id' => 19,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            59 => 
+            array (
+                'id' => 86,
+                'product_id' => 62,
+                'color_id' => 19,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            60 => 
+            array (
+                'id' => 87,
+                'product_id' => 63,
+                'color_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            61 => 
+            array (
+                'id' => 88,
+                'product_id' => 63,
+                'color_id' => 6,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
         ));
         
         
