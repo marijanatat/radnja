@@ -75,7 +75,7 @@ class CategoriesTableSeeder extends Seeder
             5 => 
             array (
                 'id' => 6,
-                'name' => 'Bebi kompletici',
+                'name' => 'Bebi kompletići',
                 'slug' => 'bebe-seke-bebi-kompletići',
                 '_lft' => 9,
                 '_rgt' => 10,
@@ -130,7 +130,7 @@ class CategoriesTableSeeder extends Seeder
             10 => 
             array (
                 'id' => 11,
-                'name' => 'Bodici',
+                'name' => 'Bodići',
                 'slug' => 'bebe-bate-bodići',
                 '_lft' => 19,
                 '_rgt' => 20,
@@ -163,7 +163,7 @@ class CategoriesTableSeeder extends Seeder
             13 => 
             array (
                 'id' => 14,
-                'name' => 'Bebi kompletici',
+                'name' => 'Bebi kompletići',
                 'slug' => 'bebe-bate-bebi-kompletići',
                 '_lft' => 25,
                 '_rgt' => 26,
@@ -284,8 +284,8 @@ class CategoriesTableSeeder extends Seeder
             24 => 
             array (
                 'id' => 25,
-                'name' => 'Nehodajuce cipele',
-                'slug' => 'bebe-ostalo-nehodajuce-cipele',
+                'name' => 'Nehodajuće cipele',
+                'slug' => 'bebe-ostalo-nehodajuće-cipele',
                 '_lft' => 47,
                 '_rgt' => 48,
                 'parent_id' => 17,

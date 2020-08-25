@@ -10,7 +10,7 @@ class Category extends Model
 {
     use NodeTrait;
 
-    public $additional_attributes = ['full_name', 'format_slug'];
+    public $additional_attributes = ['full_name', 'format_slug', 'parent_categories', 'leafs'];
 
     public static function boot()
     {
@@ -56,19 +56,26 @@ class Category extends Model
 
         return $this->name;
     }
-    
-    
-    // if($this->parent_id != null){
-    //     $parent = Category::where('id', $this->parent_id)->get();
-    //     $parentName = $parent->pluck('name');
-    //     if($parent->parent_id !=null){
-    //         $grandParent = Category::where('id', $parent->parent_id)->get();
-    //         $grandParentName = $grandParent->pluck('name');
-    //         return $this->name . " " . strtoupper($grandParentName)."\\" . strtoupper($parentName);
-    //     }  
-    //     return $this->name . " " . strtoupper($parentName);
-    // }
 
-    // return $this->name;
+    public function getParentCategoriesAttribute() 
+    {
+        if(!$this->isLeaf()){
+            if($this->parent_id == null)
+                return $this->name;
+            else {
+                $parent = Category::where('id', $this->parent_id)->first();
+                return $parent->name . "\\" . $this->name;
+            }
+        }
+    }
+
+    public function getLeafsAttribute() 
+    {
+        if($this->isLeaf()){
+            $parent = Category::where('id', $this->parent_id)->first();            
+            $grandparent = Category::where('id', $parent->parent_id)->first();
+            return $grandparent->name . "\\" . $parent->name . "\\" . $this->name;
+        }
+    }
     
 }

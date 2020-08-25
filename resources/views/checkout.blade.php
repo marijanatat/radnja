@@ -36,7 +36,7 @@
                     @csrf
                     <h2 class="font-bold text-gray-600 text-xl -mt-4">Adresa isporuke</h2>
     
-                    <div class="form-group ">
+                    <div class="form-group">
                         <label for="email" class="text-sm md:text-base">E-mail adresa</label>
                         @if (auth()->user())
                         <input type="email" id="email" name="email" value="{{ auth()->user()->email }}"
@@ -46,17 +46,17 @@
                             required>
                         @endif
                     </div>
-                    <div class="form-group p-1 -mt-4">
+                    <div class="form-group -mt-2 mb-0">
                         <label for="name" class="text-sm md:text-base">Ime i prezime</label>
                         <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" requried>
                     </div>
-                    <div class="form-group p-1 -mt-4">
-                        <label for="address">Ulica i broj</label>
+                    <div class="form-group -mt-4">
+                        <label for="address" class="text-sm md:text-base">Ulica i broj</label>
                         <input type="text" id="address" name="address" value="{{ old('address') }}"
                             requried>
                     </div>
     
-                    <div class="half-form p-1 -mt-4 ">
+                    <div class="half-form -mt-2">
                         <div class="form-group ">
                             <label for="city" class="text-sm md:text-base">Mesto</label>
                             <input type="text" class="form-control" id="city" name="city" value="{{ old('city') }}"
@@ -69,7 +69,7 @@
                         </div>
                     </div> <!-- end half-form -->
     
-                    <div class="half-form p-1 -mt-8">
+                    <div class="half-form -mt-10">
                         <div class="form-group">
                             <label for="postalcode" class="text-sm md:text-base">Poštanski broj</label>
                             <input type="text" class="form-control" id="postalcode" name="postalcode"
@@ -84,7 +84,7 @@
     
                 
     
-                    <button type="submit" class="button-primary full-width  -mt-2">Naruči</button>
+                    <button type="submit" class="button-primary full-width -mt-4">Naruči</button>
     
     
                 </form>
@@ -121,16 +121,16 @@
         
                     </div> <!-- end checkout-table -->
          
-                    <div class="checkout-totals mx-4">
+                    <div class="checkout-totals">
                         <div class="checkout-totals-left">
                           
-                            <span class="checkout-totals-total">Ukupno</span>
+                            <span class="checkout-totals-total ml-4">Ukupno</span>
         
                         </div>
         
                         <div class="checkout-totals-right">
                          
-                            <span class="checkout-totals-total">{{ Cart::total() }} RSD</span>
+                            <span class="checkout-totals-total mr-4">{{ Cart::total() }} RSD</span>
         
                         </div>
                     </div> <!-- end checkout-totals -->
