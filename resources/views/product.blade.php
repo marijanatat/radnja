@@ -33,21 +33,24 @@
         </div>
 
     <div class="product-section container grid-cols-1 md:grid-cols-2 p-4 md:p-4 mt-4">
-        <div>
+        <div x-data="{ isImageModalVisible: false, image: ''}">
             <div class="product-section-image">
                 {{-- <img src="{{asset('storage/'.$product->image)}}" alt="product"> --}}
-                <img src="{{productImage($product->image)}}" alt="product" style="height:340px;" class="active" id="currentImage"> 
+                <a href="#" @click.prevent="
+                isImageModalVisible = true
+                image=currentImage()
+                "><img src="{{productImage($product->image)}}" alt="product" class="active" id="currentImage"></a> 
             </div>
          
             <div class="product-section-images ">
                  <div class="product-section-thumbnail selected" >
-                    <img src="{{productImage($product->image)}}" alt="product" style="height:50px;" class="mx-auto"> 
+                    <img src="{{productImage($product->image)}}" alt="product" class="h-14 w-16 mx-auto"> 
                 </div>
 
                 @if ($product->images)
                     @foreach (json_decode($product->images,true)  as $image)  
                      <div class="product-section-thumbnail" >
-                        <img src="{{productImage($image)}}" alt="product" style="height:50px;" class="mx-auto"> 
+                        <img src="{{productImage($image)}}" alt="product" class="h-14 w-16 mx-auto"> 
                      </div>
                     @endforeach
                 @endif            
@@ -62,6 +65,30 @@
             <p class="text-md text-gray-800 mt-4">
                 Sirovinski sastav: 100% pamuk
             </p> 
+
+            <template x-if="isImageModalVisible">
+                <div class="z-50 fixed top-0 left-0 right-0 w-full h-full flex items-center shadow-lg overflow-x-auto"
+                    style="background-color: rgba(0, 0, 0, .5);"
+                >
+                    <div class="container mx-auto lg:max-w-4xl overflow-y-auto">
+                        <div class="bg-transparent"
+                            @click.away="isImageModalVisible = false">
+                            <div class="modal-body relative">
+                                <img :src='image' alt="screenshot" class="w-full h-full">
+                                <button
+                                    class="text-4xl leading-none focus:outline-none px-2 pb-1 absolute top-0 right-0 bg-transparent hover:bg-gray-800 hover:bg-opacity-25"
+                                    @click="isImageModalVisible = false"
+                                    @keydown.window.escape="isImageModalVisible = false"
+                                >
+                                &times;
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+
+
         </div>
 
         <div class="product-section-information -mt-16 lg:mt-1 ml-8 md:ml-4">
@@ -155,6 +182,8 @@
         </div>
     </div> <!-- end product-section -->
 
+
+
     @include('partials.might-like')
     @endsection
   
@@ -177,6 +206,10 @@
             this.classList.add('selected');
         }
     })();
+
+    function currentImage(){
+        return document.querySelector('#currentImage').src;
+    }
 
     function counter() {        
         return {

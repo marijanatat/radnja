@@ -35,16 +35,6 @@
     display: none;
   }
 
-  .expandable{
-    overflow: hidden;
-    transition: all .5s ease-in-out;
-    height: 0;
-  }
-
-  .expandable:target{
-    height: 50px;
-  }
-
   input:checked + svg {
   	display: block;
   }
