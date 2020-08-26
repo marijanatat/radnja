@@ -67,10 +67,16 @@
             </p> 
 
             <template x-if="isImageModalVisible">
-                <div class="z-50 fixed top-0 left-0 right-0 w-full h-full flex items-center shadow-lg overflow-x-auto"
-                    style="background-color: rgba(0, 0, 0, .5);"
+                <div class="hide-scroll z-50 fixed top-0 left-0 right-0 w-full h-full flex items-center shadow-lg overflow-x-auto"
+                    {{-- style="background-color: rgba(0, 0, 0, .5);" --}}
+                    x-transition:enter="transition ease-out duration-200"
+                    x-transition:enter-start="opacity-0 transform scale-95"
+                    x-transition:enter-end="opacity-100 transform scale-100"
+                    x-transition:leave="transition ease-in duration-200"
+                    x-transition:leave-start="opacity-100 transform scale-100"
+                    x-transition:leave-end="opacity-0 transform scale-90"
                 >
-                    <div class="container mx-auto lg:max-w-4xl overflow-y-auto">
+                    <div class="hide-scroll container mx-auto lg:max-w-4xl overflow-y-auto">
                         <div class="bg-transparent"
                             @click.away="isImageModalVisible = false">
                             <div class="modal-body relative">
