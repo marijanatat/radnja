@@ -7,7 +7,7 @@
         }
 
         .slike-proizvoda:hover {
-            -webkit-filter: brightness(80%);    
+            -webkit-filter: brightness(90%);    
         }
     </style>
 @endsection

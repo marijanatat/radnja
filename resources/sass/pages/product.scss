@@ -28,7 +28,10 @@
 
     img.active{
         opacity: 1;
-
+    }
+    img:hover{
+        cursor: url('img/cursor-eye.svg'), pointer;
+        -webkit-filter: brightness(90%);    
     }
 }
 

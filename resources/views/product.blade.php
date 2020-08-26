@@ -82,11 +82,11 @@
                             <div class="modal-body relative">
                                 <img :src='image' alt="screenshot" class="w-full h-full">
                                 <button
-                                    class="text-4xl leading-none focus:outline-none px-2 pb-1 absolute top-0 right-0 bg-transparent hover:bg-gray-800 hover:bg-opacity-25"
+                                    class="text-lg leading-none focus:outline-none px-3 pb-3 pt-3 absolute top-0 right-0 bg-gray-900 bg-opacity-25 hover:bg-gray-900 hover:bg-opacity-50"
                                     @click="isImageModalVisible = false"
                                     @keydown.window.escape="isImageModalVisible = false"
                                 >
-                                &times;
+                                <i class="fa fa-times text-gray-300" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </div>
