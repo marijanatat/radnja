@@ -93,18 +93,8 @@
     </div>
 </div>
 
-{{-- <div class= "ml-4 bg-gray-800 text-white p-2 w-full" style="">
-        <div class="flex  items-center ">
-            <p class=" flex-1 text-sm  xs:text-xl ml-2 xl:ml-20">Designed &amp; Developed by: <a href="" class="text-blue-500">Bane </a><span class="text-blue-500">&</span><a href="" class=" text-blue-500"> Marijana</a></p>
-            <p class=" flex-1 mr-2 md:mr-20">Copyright © 2020 <a href="#" class="text-blue-500">Mob-ing</a>. Sva prava zadržana</p>
-          
-        </div>
-    </div> --}}
 <div>
-    @include('partials.footer')
+    @include('partials.footers.copyright-footer')
 </div>
-
-
-
 
 @endsection

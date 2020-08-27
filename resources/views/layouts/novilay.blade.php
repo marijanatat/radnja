@@ -25,8 +25,7 @@
     <!--<script src="/js/app.js" defer> </script>-->
     
    
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    @livewireStyles
+    {{-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script> --}}
     <style>
         .completed{
             text-decoration: line-through;
@@ -70,7 +69,7 @@
 
 </head>
 <body>
-    <div id="app">
+    <div id="">
         
       
 
@@ -80,6 +79,5 @@
 
     </div>
 
-    @livewireScripts
 </body>
-</html>
+</html> 

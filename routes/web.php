@@ -69,13 +69,13 @@ Route::get('/my-orders/{order}', 'OrdersController@show')->name('orders.show')->
 
 
 //footer 
-Route::view('/porucivanje','porucivanje')->name('porucivanje');
-Route::view('/placanje','placanje')->name('placanje');
-Route::view('/isporuka','isporuka')->name('isporuka');
-Route::view('/reklamacije','reklamacije')->name('reklamacije');
-Route::view('/otkazivanje','otkazivanje')->name('otkazivanje');
-Route::view('/privatnost','privatnost')->name('privatnost');
-Route::view('/about','about')->name('about');
+Route::view('/porucivanje','info-pages.porucivanje')->name('porucivanje');
+Route::view('/placanje','info-pages.placanje')->name('placanje');
+Route::view('/isporuka','info-pages.isporuka')->name('isporuka');
+Route::view('/reklamacije','info-pages.reklamacije')->name('reklamacije');
+Route::view('/otkazivanje','info-pages.otkazivanje')->name('otkazivanje');
+Route::view('/privatnost','info-pages.privatnost')->name('privatnost');
+Route::view('/about','info-pages.about')->name('about');
 
 //Livewire
  Route::livewire('/size', 'size')

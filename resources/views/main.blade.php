@@ -10,6 +10,8 @@
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat%7CRoboto:300,400,700" rel="stylesheet">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Styles -->
@@ -25,25 +27,7 @@
   <script src="{{asset('js/app.js')}}"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   
-  <script>
-    // $(function () {
-    //   $(document).scroll(function () {
-    //     var $nav = $(".navbar");    
-    //     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-    //   });
-    // });
-
-    // window.onscroll = function() {scrollFunction()};
-
-    // function scrollFunction() {
-    //   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    //     document.getElementById("navbar").style.top = "0";
-    //   } else {
-    //     document.getElementById("navbar").style.top = "-65px";
-    //   }
-    // }
-  </script>
-  <style>
+    <style>
     .back-to-top {
   position: fixed;
   display: none;
@@ -176,18 +160,11 @@
                   <a href="" X><i class="fa fa-instagram w-24" aria-hidden="true"></i></a>
                 </div>
 
-                {{-- <a href="http://localhost/testsite/" class="button button-white " style="background-color:rgb(250, 125, 9); ">Facebook</a>
-                              <a href="https://github.com/marijanatat/e-commerce" class="button button-white" style="background-color:rgb(20, 104, 107) !important">Instagram</a> --}}
-              </div>
+               </div>
 
           </div> <!-- end hero-copy -->
 
-          <div class="hero-image">
-            {{-- <img src="img/deca.jpg" alt="deca"> --}}
-
-            {{-- <img src="img/deca.jpg" alt="deca"> --}}
-          </div> <!-- end hero-image -->
-        </div> <!-- end hero -->
+          </div> <!-- end hero -->
     </header>
 
     <div class="featured-section" style="background-color: white">
@@ -199,46 +176,18 @@
           proizvodnje od najkvalitetnijeg 100% pamuka</p>
 
         <div class="mx-2">
-          @include('kategorije')
+          @include('partials.kategorije')
         </div>
 
         <div class="bg-color-white rounded-md border-gray-400  border-transparent opacity-25">
           <hr class="zig-zag">
           <hr>
         </div>
-{{-- 
-        <div class="glide">
-          <div data-glide-el="track" class="glide__track">
-            <ul class="glide__slides">
-              <li class="glide__slide"> <a href="{{route('shop.index')}}">
-                
-                  <div class="relative block h-full w-full  text-white text-5xl text-center" style="height:50vh;"> 
-                  <a href="{{route('shop.index')}}">
-                               <img class=" w-full h-full" src="{{asset('./img/alvin-mahmudov-vKuEhorbvYI-unsplash-1.jpg')}}"  style="background-position: center center">
-                               <div class="centered top-5 text-5xl  font-bold font-red-500"><span>Novi online</span> <br>  shop</div> 
-                           </a> 
-                  </div>
-      
-             </li>
-              <li class="glide__slide">     <a href="{{route('shop.index')}}"><div class="block h-full w-full bg-white text-boja text-2xl md:text-5xl text-center"><h2 class="mx-auto pt-12 text-wrap w-1/2 text-center " ><span class="font-bold ">Besplatna dostava</span> <br> za porudžbine preko 3000 din</h2></div></a></li>
-              <li class="glide__slide"></li>
-            </ul>
-          </div>
-        </div> --}}
 
-          @include('carousel') 
+          @include('partials.carousel') 
       </div>  
         <div class="module">
         <br>
-      
-        
-        {{-- <div class="bg-color-white rounded-md border-gray-400  border-transparent opacity-25">
-          <hr class="zig-zag">
-          <hr>
-        </div> --}}
-        
-        <!-- div-->
-        {{-- <div class="w-full h-full  bg-opacity-25 shadow-md mb-8 p-24 text-center "> --}}
            <div class=" kupovina mt-20 mb-20 text-center">
             <h1 class="text-5xl font-bold text-gray-600 p-4 max-h-12" style="font-family: 'Gochi Hand'" data-aos="fade-right"
             data-aos-offset="300"
@@ -247,19 +196,6 @@
             </h1>
             <br>
           </div> 
-          {{-- <hr class="max-h-64 bg-gray-800 h-2 border-dashed " >
-          <div>
-            <h2 class="text-white font-5xl uppercase p-4 font-bold mt-16 transition ease-in duration-700" style="text-shadow: 2px 2px rgb(112, 112, 112);"> Ovo je samo deo našeg asortimana</h2>
-          </div> --}}
-          
-        {{-- </div> --}}
-        
-        <!-- end div-->
-        {{-- <div class="bg-color-white rounded-md border-gray-400  border-transparent opacity-25">
-          <hr class="zig-zag">
-          <hr>
-        </div>
-        --}}
       </div> 
         
         <div class="products container mx-auto text-center grid grid-cols-2 md:grid-cols-4 mt-2" data-aos="fade-up"
@@ -285,21 +221,11 @@
           
 
     </div> <!-- end featured-section -->
-    
-    {{-- <div class="module">
-    
-      @include('partials.subscribe')
-    </div>   --}}
 
-    {{--      
-          <blog-posts></blog-posts> --}}
-    {{--         
-            @include('partials.footer') --}}
-
-            <a href="#" class="back-to-top"><i class="fa fa-arrow-up" aria-hidden="true"  ></i></a>
+    <a href="#" class="back-to-top"><i class="fa fa-arrow-up" aria-hidden="true"  ></i></a>
            
-    <div class="">
-      @include('footer')
+    <div>
+      @include('partials.footers.footer')
     </div>
   </div>
 

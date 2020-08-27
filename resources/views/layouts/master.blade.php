@@ -97,7 +97,7 @@
       {{-- <livewire:shop-livewire/> --}}
     </div>
     <div class="">
-      @include('footer')
+      @include('partials.footers.footer')
     </div>
     @yield('extra-js')
   </div>
