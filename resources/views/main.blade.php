@@ -167,6 +167,8 @@
     <div>
       @include('partials.footers.footer')
     </div>
+
+    @include('cookieConsent::index')
   </div>
 
   <script>
