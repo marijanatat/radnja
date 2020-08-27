@@ -82,7 +82,7 @@
                             <div class="modal-body relative">
                                 <img :src='image' alt="screenshot" class="w-full h-full">
                                 <button
-                                    class="text-lg leading-none focus:outline-none px-3 pb-3 pt-3 absolute top-0 right-0 bg-gray-900 bg-opacity-25 hover:bg-gray-900 hover:bg-opacity-50"
+                                    class="text-lg leading-none focus:outline-none px-3 pb-2 pt-2 absolute top-0 right-0 bg-gray-900 bg-opacity-25 hover:bg-gray-900 hover:bg-opacity-50"
                                     @click="isImageModalVisible = false"
                                     @keydown.window.escape="isImageModalVisible = false"
                                 >

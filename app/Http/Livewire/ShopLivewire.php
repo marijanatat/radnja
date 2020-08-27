@@ -34,7 +34,7 @@ class ShopLivewire extends Component
     {
         $this->search = $search;
         $this->min = 1;
-        $this->max = 5000;
+        $this->max = 10000;
         $this->requestedSizes = [];
     }
     

@@ -70,11 +70,11 @@
                             <form action="{{route('cart.destroy', $item->rowId)}}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="cart-options">Izbriši</button>
+                                <button type="submit" class="cart-options focus:outline-none">Izbriši</button>
                             </form>
                             <form action="{{route('cart.switchToSaveForLater', $item->rowId)}}" method="POST">
                                 @csrf
-                                <button type="submit" class="cart-options">Sačuvaj za kasnije</button>
+                                <button type="submit" class="cart-options focus:outline-none">Sačuvaj za kasnije</button>
                             </form>
                         </div>
                         <div class="mr-2">
@@ -153,11 +153,11 @@
                             <form action="{{route('saveForLater.destroy', $item->rowId)}}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="cart-options">Izbriši</button>
+                                <button type="submit" class="cart-options focus:outline-none">Izbriši</button>
                             </form>
                             <form action="{{route('saveForLater.switchToCart', $item->rowId)}}" method="POST">
                                 @csrf
-                                <button type="submit" class="cart-options">Ubaci u korpu</button>
+                                <button type="submit" class="cart-options focus:outline-none">Ubaci u korpu</button>
                             </form>
                         </div>
                         {{-- <div>

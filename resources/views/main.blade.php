@@ -26,49 +26,7 @@
 
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
   <script src="{{asset('js/app.js')}}"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-  
-  <script>
-    document.getElementById('nav-toggle').onclick = function(){
-      document.getElementById('nav-content').classList.toggle('hidden');
-    }
-    
-    var specifiedElement = document.getElementById('nav-toggle');
-    var specifiedElement1 = document.getElementById('nav-content');
-    //I'm using "click" but it works with any event
-    document.addEventListener('click', function(event) {
-      var isClickInside = specifiedElement.contains(event.target);
-      var isClickInside1 = specifiedElement1.contains(event.target);
-      if (!isClickInside && !isClickInside1) {
-        document.getElementById('nav-content').classList.add('hidden');
-      }
-    });
-     // Back to top button
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('.back-to-top').fadeIn('slow');
-    } else {
-      $('.back-to-top').fadeOut('slow');
-    }
-  });
-
-  $('.back-to-top').click(function() {
-    $('html, body').animate({
-      scrollTop: 0
-    }, 1500, 'easeInOutExpo');
-    return true;
-  });
-
-  $(window).on('load', function() {
-    if ($('#preloader').length) {
-      $('#preloader').delay(100).fadeOut('slow', function() {
-        $(this).remove();
-      });
-    }
-  });  
-
-  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script> 
 
   <style>
     .completed {
@@ -185,7 +143,7 @@
         @foreach ($products as $product)
         <div class="product pt-12 pb-6">
           <a href="{{route('shop.show',$product->slug)}}"><img class="mx-auto" src="{{productImage($product->image)}}"
-              style="height:140px;" alt="product"></a>
+              style="height:140px; width:140px;" alt="product"></a>
           <a href="{{route('shop.show',$product->slug)}}">
             <div class="mt-2">{{$product->name}}</div>
           </a>
@@ -212,6 +170,44 @@
   </div>
 
   <script>
+    document.getElementById('nav-toggle').onclick = function(){
+      document.getElementById('nav-content').classList.toggle('hidden');
+    }
+    
+    var specifiedElement = document.getElementById('nav-toggle');
+    var specifiedElement1 = document.getElementById('nav-content');
+    //I'm using "click" but it works with any event
+    document.addEventListener('click', function(event) {
+      var isClickInside = specifiedElement.contains(event.target);
+      var isClickInside1 = specifiedElement1.contains(event.target);
+      if (!isClickInside && !isClickInside1) {
+        document.getElementById('nav-content').classList.add('hidden');
+      }
+    });
+     // Back to top button
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('.back-to-top').fadeIn('slow');
+    } else {
+      $('.back-to-top').fadeOut('slow');
+    }
+  });
+
+  $('.back-to-top').click(function() {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 1500, 'easeInOutExpo');
+    return true;
+  });
+
+  $(window).on('load', function() {
+    if ($('#preloader').length) {
+      $('#preloader').delay(100).fadeOut('slow', function() {
+        $(this).remove();
+      });
+    }
+  });  
+  
     AOS.init();
   </script>
 </body>
