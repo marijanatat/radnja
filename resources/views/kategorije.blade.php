@@ -18,7 +18,7 @@
     <figure class=" relative flex items-center ">
       <a href="{{route('shop.index',['category' => 'bebe'])}}">
         <div class="img-wrapper">
-          <img style="" class=" inner-img object-cover w-full h-80"
+          <img class=" inner-img object-cover w-full h-80"
             src="{{asset('./img/bonnie-kittle--f7bKsvOgwU-unsplash.jpg')}}" alt="slika bebe">
         </div>
       </a>
@@ -33,7 +33,7 @@
       <a href="{{route('shop.index',['category' => 'dečaci'])}}">
         <div class="img-wrapper">
           <img class="inner-img object-cover w-full h-80"
-            src="{{asset('./img/silvana-carlos-g9xzTy9qPP0-unsplash.jpg')}}" alt="slika decak">
+            src="{{asset('./img/decak.jpg')}}" alt="slika decak">
         </div>
       </a>
       <figcaption

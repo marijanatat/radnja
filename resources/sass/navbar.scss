@@ -89,7 +89,6 @@
     }
   }
 
-
   .img-wrapper {
 
     overflow: hidden;
@@ -97,10 +96,12 @@
 
   .inner-img {
     transition: 0.3s;
+    -moz-transition: 0.5s;
   }
 
   .inner-img:hover {
     transform: scale(1.1);
+    -moz-transform: scale(1.1);
   }
 
   .zig-zag {
