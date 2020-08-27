@@ -16,11 +16,11 @@
 
 
 <!-- Styles -->
+<link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-<link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
-<link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <livewire:styles>
 
@@ -34,52 +34,87 @@
   [x-cloak]{
     display: none;
   }
-
-  input:checked + svg {
-  	display: block;
+  
+  .completed {
+    text-decoration: line-through;
   }
-
+  
+  img {
+    
+    width: auto;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .maincontainer {
+    /* position: absolute; */
+    width: 450px;
+    height: 520px;
+    background: none;
+    top: 250%;
+    left: 50%;
+    
+    z-index: 20;
+    transform: translate(-50%, -50%);
+    
+  }
+  
+  .ime:hover,
+  .ime:focus {
+    
+    text-transform: capitalize;
+    color: gold;
+    
+    
+    
+  }
+  
+  input:checked+svg {
+    display: block;
+  }
+  
   #proizvodi{
     animation-duration: 1.5s;
-  animation-name: slidein  ;
-  
+    animation-name: slidein  ;
+    
   }
   @keyframes slidein {
-      /* 0%{
+    /* 0%{
       transform: scaleY(1);
     }
     100%{
       transform: scaleY(0)
     }   */
     from {
-    margin-top: 200%;
-    width: 100%; 
-  } 
-
-  to {
-    margin-top: 0%;
-    width: 100%;
-  }  
-
-    }
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
-  [data-aos-delay] {
-    transition-delay: 0 !important;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  [data-aos-delay] {
-    transition-delay: 0 !important;
-  }
-}
-
+      margin-top: 200%;
+      width: 100%; 
+    } 
     
-
-</style>
+    to {
+      margin-top: 0%;
+      width: 100%;
+    }  
+    
+  }
+  /*--------------------------------------------------------------
+  # Disable aos animation delay on mobile devices
+  --------------------------------------------------------------*/
+  @media screen and (max-width: 768px) {
+    [data-aos-delay] {
+      transition-delay: 0 !important;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    [data-aos-delay] {
+      transition-delay: 0 !important;
+    }
+  }
+  
+  
+  
+  </style>
+@yield('extra-js')
 
 </head>
 
@@ -88,7 +123,7 @@
     <header>
       <div class="top-nav">
           <nav class="flex items-center justify-between flex-wrap w-full pin-t fixed z-10 top-0 mt-0 bg-boja">
-              @include('nav')
+              @include('partials.nav')
           </nav>
       </div>
     </header>

@@ -13,224 +13,23 @@
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
 
   <!-- Styles -->
+  <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
   <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
   <script src="{{asset('js/app.js')}}"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  
-    <style>
-    .back-to-top {
-  position: fixed;
-  display: none;
-  right: 15px;
-  bottom: 15px;
-  z-index: 99999;
-}
-
-.back-to-top i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-  background: #ffc451;
-  color: rgb(20, 104, 107);
-  transition: all 0.4s;
-}
-
-.back-to-top i:hover {
-  background: #151515;
-  color: #ffc451;
-}
-
-
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background: rgb(20, 104, 107);
-}
-
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 0px);
-  left: calc(50% - 30px);
-  border: 6px solid #ffc451;
-  border-top-color: rgb(241, 246, 247);
-  border-bottom-color:  rgb(244, 248, 248);
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  -webkit-animation: animate-preloader 1s linear infinite;
-  animation: animate-preloader 1s linear infinite;
-}
-
-@-webkit-keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
-  [data-aos-delay] {
-    transition-delay: 0 !important;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  [data-aos-delay] {
-    transition-delay: 0 !important;
-  }
-}
 
   
-
-  
- /* .grow:hover
-{
-        -webkit-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        transform: scale(1.3);
-} */
-  </style>
-</head>
-
-<body class="">
-  <div id="preloader"></div>
-  <div id="app">
-    <header class="with-background">
-      <div class="top-nav">        
-          <nav class="flex items-center bg-boja justify-between flex-wrap w-full pin-t fixed z-10 mt-0" id="navbar">
-            @include('nav')
-        </nav>
-      </div>
-
-        <div class="hero container ">
-          <div class="hero-copy ">
-            
-             <div id="rotate-words">
-              <h2 class="animate-pulse italic text-4xl  font-bold text-gray-900 tracking-widest">Za porodicu <span class="text-gray-700 text-4xl" style="font-family: 'Gochi Hand'">sa stilom.</span></h2> 
-              <br>
-              <p  class=" italic text-5xl font-mono text-white font-bold tracking-wide pl-8" style="font-family: 'Gochi Hand', cursive;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Proverite naš kvalitet!</p>
-            </div> 
-
-              <div class="md:block w3-animate-fading mb-6 text-2xl text-white lg:text-boja z-10 font-semibold font-mono ml-4 italic -mt-20">
-                Pratite nas na društvenim mrežama.
-                </div>
-              <div class="hero-buttons text-gray-800 items-center flex ml-16 md:ml-40 ">
-                <div id="social">
-                  <a href=""><i class="fa fa-facebook-official" aria-hidden="true" 
-                    ></i></a>
-                </div>
-                <div id="social1">
-                  <a href="" X><i class="fa fa-instagram w-24" aria-hidden="true"></i></a>
-                </div>
-
-               </div>
-
-          </div> <!-- end hero-copy -->
-
-          </div> <!-- end hero -->
-    </header>
-
-    <div class="featured-section" style="background-color: white">
-
-      <div class="container">
-       
-
-        <p class="section-description text-center " style="font-size:30px ">Naši proizvodi su isključivo domaće
-          proizvodnje od najkvalitetnijeg 100% pamuka</p>
-
-        <div class="mx-2">
-          @include('partials.kategorije')
-        </div>
-
-        <div class="bg-color-white rounded-md border-gray-400  border-transparent opacity-25">
-          <hr class="zig-zag">
-          <hr>
-        </div>
-
-          @include('partials.carousel') 
-      </div>  
-        <div class="module">
-        <br>
-           <div class=" kupovina mt-20 mb-20 text-center">
-            <h1 class="text-5xl font-bold text-gray-600 p-4 max-h-12" style="font-family: 'Gochi Hand'" data-aos="fade-right"
-            data-aos-offset="300"
-            data-aos-easing="ease-in-sine" >
-              Ovo je samo deo našeg asortimana !!!
-            </h1>
-            <br>
-          </div> 
-      </div> 
-        
-        <div class="products container mx-auto text-center grid grid-cols-2 md:grid-cols-4 mt-2" data-aos="fade-up"
-        data-aos-duration="3000" >
-          @foreach ($products as $product)
-          <div class="product pt-12 pb-6" >
-            <a href="{{route('shop.show',$product->slug)}}"><img class="mx-auto" src="{{productImage($product->image)}}"
-              style="height:140px;" alt="product"></a>
-              <a href="{{route('shop.show',$product->slug)}}">
-                <div class="mt-2">{{$product->name}}</div>
-              </a>
-              <div class="">{{$product->presentPrice()}}</div>
-            </div>
-            @endforeach
-            
-            
-          </div> <!-- end products -->
-          
-          <div class="text-center button-container text-sm xl:text-lg mt-2 md:mt-16 mb-2 p-1 md:mb-4 md:p-4">
-            <a href="{{route('shop.index')}}" class="example_e bg-boja hover:bg-rgb(20, 104, 107) " style="font-family: 'Gochi Hand'" data-aos="fade-up"
-            data-aos-duration="2000">Pogledajte sve proizvode</a>
-          </div>
-          
-
-    </div> <!-- end featured-section -->
-
-    <a href="#" class="back-to-top"><i class="fa fa-arrow-up" aria-hidden="true"  ></i></a>
-           
-    <div>
-      @include('partials.footers.footer')
-    </div>
-  </div>
-
   <script>
-
     document.getElementById('nav-toggle').onclick = function(){
       document.getElementById('nav-content').classList.toggle('hidden');
     }
@@ -267,27 +66,154 @@
         $(this).remove();
       });
     }
-  });
+  });  
+
+  </script>
+
+  <style>
+    .completed {
+      text-decoration: line-through;
+    }
+
+    img {
+
+      width: auto;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .maincontainer {
+      /* position: absolute; */
+      width: 450px;
+      height: 520px;
+      background: none;
+      top: 250%;
+      left: 50%;
+
+      z-index: 20;
+      transform: translate(-50%, -50%);
+
+    }
+
+    .ime:hover,
+    .ime:focus {
+
+      text-transform: capitalize;
+      color: gold;
+
+    }
+
+    input:checked+svg {
+      display: block;
+    }
+  </style>
+</head>
+
+<body class="">
+  <div id="preloader"></div>
+  <div id="app">
+    <header class="with-background">
+      <div class="top-nav">
+        <nav class="flex items-center bg-boja justify-between flex-wrap w-full pin-t fixed z-10 mt-0" id="navbar">
+          @include('partials.nav')
+        </nav>
+      </div>
+
+      <div class="hero container ">
+        <div class="hero-copy ">
+
+          <div id="rotate-words">
+            <h2 class="animate-pulse italic text-4xl  font-bold text-gray-900 tracking-widest">Za porodicu <span
+                class="text-gray-700 text-4xl" style="font-family: 'Gochi Hand'">sa stilom.</span></h2>
+            <br>
+            <p class=" italic text-5xl font-mono text-white font-bold tracking-wide pl-8"
+              style="font-family: 'Gochi Hand', cursive;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
+              Proverite naš kvalitet!</p>
+          </div>
+
+          <div
+            class="md:block w3-animate-fading mb-6 text-2xl text-white lg:text-boja z-10 font-semibold font-mono ml-4 italic -mt-20">
+            Pratite nas na društvenim mrežama.
+          </div>
+          <div class="hero-buttons text-gray-800 items-center flex ml-16 md:ml-40 ">
+            <div id="social">
+              <a href=""><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+            </div>
+            <div id="social1">
+              <a href="" X><i class="fa fa-instagram w-24" aria-hidden="true"></i></a>
+            </div>
+
+          </div>
+
+        </div> <!-- end hero-copy -->
+
+      </div> <!-- end hero -->
+    </header>
+
+    <div class="featured-section" style="background-color: white">
+
+      <div class="container">
 
 
-  
-    
+        <p class="section-description text-center " style="font-size:30px ">Naši proizvodi su isključivo domaće
+          proizvodnje od najkvalitetnijeg 100% pamuka</p>
 
-    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-          // window.onscroll = function() {scrollFunction()};
-          
-          // function scrollFunction() {
-          //   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-          //     document.getElementById("navbar").style.padding = "30px 10px";
-          //     document.getElementById("logo").style.fontSize = "25px";
-          //   } else {
-          //     document.getElementById("navbar").style.padding = "80px 10px";
-          //     document.getElementById("logo").style.fontSize = "35px";
-          //   }
-          // }
-          AOS.init();
+        <div class="mx-2">
+          @include('partials.kategorije')
+        </div>
 
-        </script>
+        <div class="bg-color-white rounded-md border-gray-400  border-transparent opacity-25">
+          <hr class="zig-zag">
+          <hr>
+        </div>
+
+        @include('partials.carousel')
+      </div>
+      <div class="module">
+        <br>
+        <div class=" kupovina mt-20 mb-20 text-center">
+          <h1 class="text-5xl font-bold text-gray-600 p-4 max-h-12" style="font-family: 'Gochi Hand'"
+            data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+            Ovo je samo deo našeg asortimana !!!
+          </h1>
+          <br>
+        </div>
+      </div>
+
+      <div class="products container mx-auto text-center grid grid-cols-2 md:grid-cols-4 mt-2" data-aos="fade-up"
+        data-aos-duration="3000">
+        @foreach ($products as $product)
+        <div class="product pt-12 pb-6">
+          <a href="{{route('shop.show',$product->slug)}}"><img class="mx-auto" src="{{productImage($product->image)}}"
+              style="height:140px;" alt="product"></a>
+          <a href="{{route('shop.show',$product->slug)}}">
+            <div class="mt-2">{{$product->name}}</div>
+          </a>
+          <div class="">{{$product->presentPrice()}}</div>
+        </div>
+        @endforeach
+
+
+      </div> <!-- end products -->
+
+      <div class="text-center button-container text-sm xl:text-lg mt-2 md:mt-16 mb-2 p-1 md:mb-4 md:p-4">
+        <a data-turbolinks="false" href="{{route('shop.index')}}" class="example_e bg-boja hover:bg-rgb(20, 104, 107) "
+          style="font-family: 'Gochi Hand'" data-aos="fade-up" data-aos-duration="2000">Pogledajte sve proizvode</a>
+      </div>
+
+
+    </div> <!-- end featured-section -->
+
+    <a href="#" class="back-to-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+
+    <div>
+      @include('partials.footers.footer')
+    </div>
+  </div>
+
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

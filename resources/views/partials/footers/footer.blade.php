@@ -1,8 +1,3 @@
-@extends('layouts.novilay')
-
-@section('footer')
-
-
 <div class="w-full py-8" style="background-color: rgb(20, 104, 107);">
     <div class="flex flex-col md:flex-row items-center md:items-start container">
         <div class="md:w-1/3 h-auto">
@@ -96,5 +91,3 @@
 <div>
     @include('partials.footers.copyright-footer')
 </div>
-
-@endsection

@@ -72,6 +72,11 @@ class ShopLivewire extends Component
         $this->categoryQuery = '';
     }
 
+    public function clearSearch()
+    {
+        $this->search = '';
+    }
+
     public function render()
     {
         if($this->requestedCategories){

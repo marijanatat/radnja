@@ -9,6 +9,15 @@
         .slike-proizvoda:hover {
             -webkit-filter: brightness(90%);    
         }
+
+        .close-button-border{
+            border: 1px solid #6e6e6e
+        }
+        /* .close-button-border:hover{
+            -webkit-filter: brightness(80%);
+            background-color: #8f8f8f;
+            color: #ffffff;
+        } */
     </style>
 @endsection
 
@@ -39,8 +48,8 @@
         </div>
         @endif
     </div>
+    
     <div class="container flex justify-center md:justify-end text-sm pt-8 pb-2">
-
         <div class="mr-6">
             <label for="sortiranje" class="font-bold">Sortiraj:</label>
             <select wire:model.debounce.0ms="sort" name="sortiranje" class="border border-gray-700 p-1">
@@ -235,6 +244,16 @@
 
         <div class="w-4/5 mx-auto min-h-screen">
 
+            @if ($search)
+        
+    <div class="flex justify-center md:justify-start items-center text-gray-900 py-2 ml-24">
+        <div class="text-lg">
+             Traženi pojam: 
+             <span class="italic">"{{$search}}"</span><button class="focus:outline-none" title="Obriši pretragu"><i class="close-button-border ml-2 px-1 text-sm text-gray-700 rounded-md hover:bg-boja hover:text-gray-200 fa fa-times" wire:click="clearSearch"></i></button>
+        </div>        
+    </div>
+    @endif
+
             <div id="proizvodi"
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:min-h-0 lg:min-w-0 lg:row-gap-12 text-center lg:w-full pt-4">
                 @forelse ($products as $product)
@@ -270,9 +289,13 @@
 
 @section('extra-js')
 <script>
+//     document.addEventListener('turbolinks:load', () => {
+//     window.livewire.rescan()
+// })
     document.getElementById('otvori').onclick = function(){
-      document.getElementById('all-sizes').classList.toggle('hidden');
-    }
+    document.getElementById('all-sizes').classList.toggle('hidden');
+  }
+
     
 </script>
 @endsection

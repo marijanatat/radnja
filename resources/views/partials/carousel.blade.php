@@ -4,7 +4,7 @@
       <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
         <div class=" carousel-item absolute opacity-0" style="height:50vh;">
             <div class="relative block h-full w-full  text-white text-5xl text-center"> 
-            <a href="{{route('shop.index')}}">
+            <a data-turbolinks="false" href="{{route('shop.index')}}">
                          <img class=" w-full h-full" src="{{asset('./img/alvin-mahmudov-vKuEhorbvYI-unsplash-1.jpg')}}"  style="position: center center">
                          <div class="centered top-5 text-5xl  font-bold font-red-500"><span>Novi online</span> <br>  shop</div> 
                      </a> 
@@ -18,7 +18,7 @@
         <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
         
         <div class="carousel-item absolute opacity-0 " style="height:50vh;">
-        <a href="{{route('shop.index')}}"><div class="block h-full w-full bg-white text-boja text-2xl md:text-5xl text-center"><h2 class="mx-auto pt-12 text-wrap w-1/2 text-center " ><span class="font-bold ">Besplatna dostava</span> <br> za porudžbine preko 3000 din</h2></div></a>
+        <a data-turbolinks="false" href="{{route('shop.index')}}"><div class="block h-full w-full bg-white text-boja text-2xl md:text-5xl text-center"><h2 class="mx-auto pt-12 text-wrap w-1/2 text-center " ><span class="font-bold ">Besplatna dostava</span> <br> za porudžbine preko 3000 din</h2></div></a>
         </div>
         <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-500 hover:text-white rounded-full bg-transparent hover:bg-gray-500 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
         <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-500 hover:text-white rounded-full bg-transparent hover:bg-gray-500 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label> 
@@ -27,7 +27,7 @@
         <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
         <div class="carousel-item  absolute opacity-0 " style="height:50vh;">
             <div class="relative block h-full w-full bg-green-500 text-white text-5xl text-center">
-                <a href="{{route('shop.index')}}"><div class="centered1 top-5 rounded-xl shadow-md bg-boja text-5xl  font-bold  "><span >Biraj najbolje,</span> <br>  kupuj domaće</div>  </a>
+                <a data-turbolinks="false" href="{{route('shop.index')}}"><div class="centered1 top-5 rounded-xl shadow-md bg-boja text-5xl  font-bold  "><span >Biraj najbolje,</span> <br>  kupuj domaće</div>  </a>
             </div>
         </div>
         <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-white hover:text-white rounded-full bg-transparent hover:bg-gray-500 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
