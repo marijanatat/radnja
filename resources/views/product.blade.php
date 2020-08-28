@@ -76,7 +76,7 @@
                     x-transition:leave-start="opacity-100 transform scale-100"
                     x-transition:leave-end="opacity-0 transform scale-90"
                 >
-                    <div class="hide-scroll container mx-auto lg:max-w-4xl overflow-y-auto">
+                    <div class="hide-scroll container mx-auto lg:max-w-4xl overflow-y-auto shadow-lg">
                         <div class="bg-transparent"
                             @click.away="isImageModalVisible = false">
                             <div class="modal-body relative">
@@ -134,7 +134,7 @@
                     
                     @else
                         <label for="{{$product->colors->first()->id}}" class="color-label">
-                            <input type="hidden" id="{{$product->colors->first()->id}}" name="color" value="{{$product->colors->first()->name}}">
+                            <input type="radio" id="{{$product->colors->first()->id}}" name="color" value="{{$product->colors->first()->name}}" checked>
                             <span class="color-custom" style="background-color: {{$product->colors->first()->value}}">
                                 <span class="tooltiptext text-sm font-semibold pt-2">{{$product->colors->first()->name}}</span>
                             </span>
@@ -165,7 +165,7 @@
 
                 @else    
                     <label for="{{$product->sizes->first()->value}}" class="velicina-label">
-                        <input type="hidden" id="{{$product->sizes->first()->value}}" name="size" value="{{$product->sizes->first()->value}}">
+                        <input type="radio" id="{{$product->sizes->first()->value}}" name="size" value="{{$product->sizes->first()->value}}" checked>
                         <span class="velicina-custom text-base bg-gray-400 hover:bg-gray-900 hover:text-white">{{$product->sizes->first()->value}}</span>
                     </label>
                  @endif
