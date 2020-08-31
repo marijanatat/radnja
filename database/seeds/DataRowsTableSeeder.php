@@ -1014,7 +1014,7 @@ class DataRowsTableSeeder extends Seeder
                 'id' => 95,
                 'data_type_id' => 10,
                 'field' => 'id',
-                'type' => 'text',
+                'type' => 'hidden',
                 'display_name' => 'Id',
                 'required' => 1,
                 'browse' => 1,

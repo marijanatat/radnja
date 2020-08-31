@@ -89,6 +89,51 @@ class ManufacturersTableSeeder extends Seeder
                 'created_at' => '2020-08-25 20:43:40',
                 'updated_at' => '2020-08-25 20:43:40',
             ),
+            8 => 
+            array (
+                'id' => 9,
+                'name' => 'Inpro',
+                'slug' => 'inpro',
+                'city' => 'Arilje',
+                'created_at' => '2020-08-28 11:53:53',
+                'updated_at' => '2020-08-28 11:53:53',
+            ),
+            9 => 
+            array (
+                'id' => 10,
+                'name' => 'Jasmil',
+                'slug' => 'jasmil',
+                'city' => 'Arilje',
+                'created_at' => '2020-08-28 11:56:39',
+                'updated_at' => '2020-08-28 11:56:39',
+            ),
+            10 => 
+            array (
+                'id' => 11,
+                'name' => 'Fashion Story',
+                'slug' => 'fashion-story',
+                'city' => 'Trnava',
+                'created_at' => '2020-08-28 11:58:04',
+                'updated_at' => '2020-08-28 11:58:04',
+            ),
+            11 => 
+            array (
+                'id' => 12,
+                'name' => 'Lotos',
+                'slug' => 'lotos',
+                'city' => 'Arilje',
+                'created_at' => '2020-08-28 12:00:40',
+                'updated_at' => '2020-08-28 12:00:40',
+            ),
+            12 => 
+            array (
+                'id' => 13,
+                'name' => 'Boa',
+                'slug' => 'boa',
+                'city' => 'Arilje',
+                'created_at' => '2020-08-28 12:16:00',
+                'updated_at' => '2020-08-28 12:16:00',
+            ),
         ));
         
         

@@ -601,6 +601,86 @@ class ProductColorsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
+            73 => 
+            array (
+                'id' => 100,
+                'product_id' => 73,
+                'color_id' => 2,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            74 => 
+            array (
+                'id' => 101,
+                'product_id' => 74,
+                'color_id' => 2,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            75 => 
+            array (
+                'id' => 102,
+                'product_id' => 75,
+                'color_id' => 7,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            76 => 
+            array (
+                'id' => 103,
+                'product_id' => 76,
+                'color_id' => 13,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            77 => 
+            array (
+                'id' => 104,
+                'product_id' => 77,
+                'color_id' => 14,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            78 => 
+            array (
+                'id' => 105,
+                'product_id' => 78,
+                'color_id' => 11,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            79 => 
+            array (
+                'id' => 106,
+                'product_id' => 79,
+                'color_id' => 15,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            80 => 
+            array (
+                'id' => 107,
+                'product_id' => 80,
+                'color_id' => 16,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            81 => 
+            array (
+                'id' => 108,
+                'product_id' => 80,
+                'color_id' => 19,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            82 => 
+            array (
+                'id' => 109,
+                'product_id' => 81,
+                'color_id' => 20,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
         ));
         
         
