@@ -174,12 +174,15 @@ class ShopLivewire extends Component
 
     private function getSizesForProducts($products)
     {
+        $sizesId = [];
         foreach ($products as $product) {
             $sizesOfProducts[] = DB::table('product_sizes')->where('product_id', $product->id)->pluck('size_id');
                             
             $sizesId = array_unique(Arr::flatten($sizesOfProducts));
         }
-        return Size::whereIn('id', $sizesId)->get();
-
+        if(count($sizesId) > 0){
+            return Size::whereIn('id', $sizesId)->get();
+        }
+        return Size::all();
     }
 }

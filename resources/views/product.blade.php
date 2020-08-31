@@ -129,12 +129,12 @@
                     @endforeach 
                     
                     @error('color')
-                    <div class="absolute right-0 text-red-500 text-sm ">{{ $message }}</div>
+                    <div class="absolute right-0 text-gray-100 text-sm font-semibold bg-red-600 p-1 rounded-md">{{ $message }}</div>
                     @enderror
                     
                     @else
                         <label for="{{$product->colors->first()->id}}" class="color-label">
-                            <input type="radio" id="{{$product->colors->first()->id}}" name="color" value="{{$product->colors->first()->name}}" checked>
+                            <input type="hidden" id="{{$product->colors->first()->id}}" name="color" value="{{$product->colors->first()->name}}">
                             <span class="color-custom" style="background-color: {{$product->colors->first()->value}}">
                                 <span class="tooltiptext text-sm font-semibold pt-2">{{$product->colors->first()->name}}</span>
                             </span>
@@ -160,7 +160,7 @@
                     @endforeach 
                     
                     @error('size')
-                    <div class="absolute right-0 text-red-500 text-sm ">{{ $message }}</div>
+                    <div class="absolute right-0 text-gray-100 text-sm font-semibold bg-red-600 p-1 rounded-md">{{ $message }}</div>
                     @enderror
 
                 @else    
