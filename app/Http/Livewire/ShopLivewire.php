@@ -116,6 +116,8 @@ class ShopLivewire extends Component
             $this->products=$this->products->paginate($this->productsPerPage);
         }
 
+        $this->sizes = $this->getSizesForProducts($this->products);
+       
         return view('livewire.shop-livewire', [
             'products' => $this->products,
         ]);
@@ -168,5 +170,16 @@ class ShopLivewire extends Component
     private function filterByPriceRange($products)
     {
         return $products->whereBetween('price', [$this->min, $this->max]);  
+    }
+
+    private function getSizesForProducts($products)
+    {
+        foreach ($products as $product) {
+            $sizesOfProducts[] = DB::table('product_sizes')->where('product_id', $product->id)->pluck('size_id');
+                            
+            $sizesId = array_unique(Arr::flatten($sizesOfProducts));
+        }
+        return Size::whereIn('id', $sizesId)->get();
+
     }
 }

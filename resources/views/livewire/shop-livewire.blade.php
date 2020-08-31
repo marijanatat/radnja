@@ -1,28 +1,6 @@
 @section('title', 'Proizvodi')
 
-@section('extra-css')
-    <style>
-        .slike-proizvoda {
-            -webkit-filter: brightness(100%);
-        }
-
-        .slike-proizvoda:hover {
-            -webkit-filter: brightness(90%);    
-        }
-
-        .close-button-border{
-            border: 1px solid #6e6e6e
-        }
-        /* .close-button-border:hover{
-            -webkit-filter: brightness(80%);
-            background-color: #8f8f8f;
-            color: #ffffff;
-        } */
-    </style>
-@endsection
-
 <div>
-
     <div>
         @component('components.breadcrumbs')
         <a href="/">Home</a>
@@ -48,7 +26,7 @@
         </div>
         @endif
     </div>
-    
+
     <div class="container flex justify-center md:justify-end text-sm pt-8 pb-2">
         <div class="mr-6">
             <label for="sortiranje" class="font-bold">Sortiraj:</label>
@@ -132,71 +110,74 @@
                     </div>
                     @endforeach
 
-                    <div class="flex flex-1 items-center mt-10 justify-between mr-4">
-                        <h3 class="uppercase text-lg">Veličine</h3>
-                        <div x-data="{otvori:true}">
+                    <div x-data="{otvori : true}">
+                        <div class="flex flex-1 items-center mt-10 justify-between mr-4">
+                            <h3 class="uppercase text-lg">Veličine</h3>
                             <div @click="otvori=!otvori" id="otvori">
                                 <i x-show="otvori" class='fa fa-angle-double-up'></i>
                                 <i x-show="!otvori" class='fa fa-angle-double-down'></i>
 
                             </div>
                         </div>
-                    </div>
 
-                    <hr class="bg-boja h-1 w-32">
-                    <div id="all-sizes" class="w-32 h-auto rounded-lg mt-4"
-                        x-transition:enter="transition-transform transition-opacity ease-out duration-300"
-                        x-transition:enter-start="opacity-0 transform -translate-y-2"
-                        x-transition:enter-end="opacity-100 transform translate-y-0"
-                        x-transition:leave="transition ease-in duration-300"
-                        x-transition:leave-end="opacity-0 transform -translate-y-3">
-                        <div class="flex flex-col  items-start justify-center ">
-                            @foreach ($sizes as $size)
-                            <div class="flex flex-col w-12 max-h-full control-group">
-                                <label class="inline-flex items-center text-sm control control-checkbox">
-                                    <input type="checkbox" class="" id="{{$size->id}}" value="{{$size->id}}"
-                                        wire:model="requestedSizes">
-                                    <div class="control_indicator"></div>
-                                    <li class="list-none ml-2">{{$size->value}}</li>
-                                </label>
-                            </div>
-                            @endforeach
-                        </div>
-
-                        
-                        
-                        
-                        <div x-data="{ open: false }" class="flex flex-col justify-center w-32 h-auto rounded-b-lg">
-                        @foreach ($sizesAll as $size)
-                            <div x-cloak>
-                                
-                                <div class="flex flex-col max-h-full control-group" x-show="open"
-                                x-transition:enter="transition ease-out duration-400"
-                                x-transition:enter-start="opacity-0 transform scale-90"
-                                    x-transition:enter-end="opacity-100 transform scale-100"
-                                    x-transition:leave="transition ease-in duration-400"
-                                    x-transition:leave-start="opacity-100 transform scale-100"
-                                    x-transition:leave-end="opacity-0 transform scale-90">
-                                    <label class="inline-flex items-center text-sm control control-checkbox">
-                                        <input type="checkbox" class="" id="{{$size->id}}" value="{{$size->id}}"
-                                            wire:model="requestedSizes">
+                        <hr class="bg-boja h-1 w-32">
+                        <div id="all-sizes" class="w-32 h-auto rounded-lg mt-4" x-show="otvori"
+                            x-transition:enter="transition-transform transition-opacity ease-out duration-300"
+                            x-transition:enter-start="opacity-0 transform -translate-y-2"
+                            x-transition:enter-end="opacity-100 transform translate-y-0"
+                            x-transition:leave="transition ease-in duration-300"
+                            x-transition:leave-end="opacity-0 transform -translate-y-3">
+                            <div class="flex flex-col  items-start justify-center ">
+                                @for ($i = 0; $i < $sizes->count(); $i++)
+                                    @if ($i == 5)
+                                    @break;
+                                    @endif
+                                    <div class="flex flex-col w-12 max-h-full control-group">
+                                        <label class="inline-flex items-center text-sm control control-checkbox">
+                                            <input type="checkbox" class="" id="{{$sizes[$i]->id}}"
+                                                value="{{$sizes[$i]->id}}" wire:model="requestedSizes">
                                             <div class="control_indicator"></div>
-                                            <li class="list-none ml-2">{{$size->value}}</li>
-                                    </label>
-                                </div>
+                                            <li class="list-none ml-2">{{$sizes[$i]->value}}</li>
+                                        </label>
+                                    </div>
+
+                                    @endfor
                             </div>
-                            
-                            @endforeach
-                            <button @click="open = !open" type="button"
-                            class="bg-boja hover:bg-orange-900 text-white mt-2 rounded"
-                            x-html="open ? `Prikaži manje` :`Prikaži više`">
-                        </button>
+
+
+
+
+                            <div x-data="{ open: false }" class="flex flex-col justify-center w-32 h-auto rounded-b-lg">
+                                @for ($i = 5; $i < $sizes->count(); $i++)
+
+                                    <div x-cloak>
+
+                                        <div class="flex flex-col max-h-full control-group" x-show="open"
+                                            x-transition:enter="transition-transform transition-opacity ease-out duration-300"
+                                            x-transition:enter-start="opacity-0 transform -translate-y-2"
+                                            x-transition:enter-end="opacity-100 transform translate-y-0"
+                                            x-transition:leave="transition ease-in duration-300"
+                                            x-transition:leave-end="opacity-0 transform -translate-y-3">
+                                            <label class="inline-flex items-center text-sm control control-checkbox">
+                                                <input type="checkbox" class="" id="{{$sizes[$i]->id}}"
+                                                    value="{{$sizes[$i]->id}}" wire:model="requestedSizes">
+                                                <div class="control_indicator"></div>
+                                                <li class="list-none ml-2">{{$sizes[$i]->value}}</li>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    @endfor
+
+                                    @if ($sizes->count() > 5)
+
+                                    <button @click="open = !open" type="button"
+                                        class="bg-boja hover:bg-orange-900 text-white mt-2 rounded"
+                                        x-html="open ? `Prikaži manje` :`Prikaži više`">
+                                    </button>
+                                    @endif
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-
-
-
 
                     <div x-data="{otvori:true}">
                         <div class="flex items-center  justify-between mr-4 mt-10">
@@ -245,14 +226,17 @@
         <div class="w-4/5 mx-auto min-h-screen">
 
             @if ($search)
-        
-    <div class="flex justify-center md:justify-start items-center text-gray-900 py-2 ml-24">
-        <div class="text-lg">
-             Traženi pojam: 
-             <span class="italic">"{{$search}}"</span><button class="focus:outline-none" title="Obriši pretragu"><i class="close-button-border ml-2 px-1 text-sm text-gray-700 rounded-md hover:bg-boja hover:text-gray-200 fa fa-times" wire:click="clearSearch"></i></button>
-        </div>        
-    </div>
-    @endif
+
+            <div class="flex justify-center md:justify-start items-center text-gray-900 py-2 ml-24">
+                <div class="text-lg">
+                    Traženi pojam:
+                    <span class="italic">"{{$search}}"</span><button class="focus:outline-none"
+                        title="Obriši pretragu"><i
+                            class="close-button-border ml-2 px-1 text-sm text-gray-700 rounded-md hover:bg-boja hover:text-gray-200 fa fa-times"
+                            wire:click="clearSearch"></i></button>
+                </div>
+            </div>
+            @endif
 
             <div id="proizvodi"
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:min-h-0 lg:min-w-0 lg:row-gap-12 text-center lg:w-full pt-4">
@@ -286,16 +270,3 @@
         {{$products->links('pagination.livewire-tailwind')}}
     </div>
 </div>
-
-@section('extra-js')
-<script>
-//     document.addEventListener('turbolinks:load', () => {
-//     window.livewire.rescan()
-// })
-    document.getElementById('otvori').onclick = function(){
-    document.getElementById('all-sizes').classList.toggle('hidden');
-  }
-
-    
-</script>
-@endsection

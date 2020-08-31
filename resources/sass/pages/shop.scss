@@ -25,6 +25,16 @@
 
 }
 
+.slike-proizvoda {
+    -webkit-filter: brightness(100%);
+}
 
+.slike-proizvoda:hover {
+    -webkit-filter: brightness(90%);    
+}
+
+.close-button-border{
+    border: 1px solid #6e6e6e
+}
 
 

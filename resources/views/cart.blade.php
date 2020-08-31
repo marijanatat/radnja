@@ -118,8 +118,8 @@
             </div> <!-- end cart-totals -->
 
             <div class="cart-buttons">
-                <a href="{{ route('shop.index') }}" class="button rounded-md font-semibold shadow-md">Nastavi kupovinu</a>
-                <a href="{{ route('checkout.index') }}" class="button-primary rounded-md mt-4 md:mt-0 font-semibold shadow-md">                    
+                <a href="{{ route('shop.index') }}" class="button rounded-md font-semibold md:mt-2 shadow-md">Nastavi kupovinu</a>
+                <a href="{{ route('checkout.index') }}" class="button-primary rounded-md mt-4 md:mt-2 font-semibold shadow-md">                    
                 Završite kupovinu
                 </a>
             </div>
