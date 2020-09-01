@@ -136,7 +136,7 @@
     </div>
     @yield('extra-js')
   </div>
-  
+  @include('cookieConsent::index')
     <livewire:scripts>
     <script>
       document.getElementById('nav-toggle').onclick = function(){
