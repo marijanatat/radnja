@@ -162,7 +162,7 @@
 
     </div> <!-- end featured-section -->
 
-    <a href="#" class="back-to-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+    <a href="#" class="back-to-top" title="Povratak na vrh strane"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
 
     <div>
       @include('partials.footers.footer')

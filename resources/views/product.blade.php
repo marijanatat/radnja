@@ -86,7 +86,7 @@
                                     @click="isImageModalVisible = false"
                                     @keydown.window.escape="isImageModalVisible = false"
                                 >
-                                <i class="fa fa-times text-gray-300" aria-hidden="true"></i>
+                                <i class="fa fa-times text-white" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </div>
