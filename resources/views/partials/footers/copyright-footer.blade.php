@@ -10,7 +10,7 @@
         <div class="space-x-8">
             {{-- <ul class=""> --}}
                 {{-- <li class=""> --}}
-                    <a href="#">
+                    <a href="https://portfoliomarijanat.000webhostapp.com/">
                         <i class="fa fa-globe hover:text-gray-900"></i>
                     </a>
                 {{-- </li> --}}

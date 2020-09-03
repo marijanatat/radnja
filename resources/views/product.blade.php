@@ -104,6 +104,8 @@
             {{-- <div>{{$product->quantity}}</div> --}}
             <div class="product-section-price text-base text-red-800 mb-2"><span class="text-sm text-gray-800">Cena:</span>  {{$product->presentPrice()}}</div>
           
+
+          
             <form action="{{route('cart.store')}}" method="POST">
                 @csrf
                 <input type="hidden" name="id" value="{{$product->id}}">
@@ -112,37 +114,42 @@
                 <hr class="bg-gray-500 border-dashed mb-2">
                 <h3 class="text-gray-800 uppercase text-sm font-semibold mb-1">Raspoložive boje</h3>
     
-                 <div class="relative flex items-start pb-2">
+                
                      
-                     @if ($product->colors->count() > 1)
-                     @foreach ($product->colors as $color)
-                     <div class="flex flex-col justify-center mr-4">
-                         
-                         <label for="{{$color->id}}" class="color-label">
-                            <input type="radio" id="{{$color->id}}" name="color" value="{{$color->name}}" {{(old('color') == $color->name) ? 'checked' : ''}}>
-                            <span class="color-custom" style="background-color: {{$color->value}}">
-                                <span class="tooltiptext text-sm font-semibold pt-2">{{$color->name}}</span>
-                            </span>
-                            
-                        </label>
-                    </div>
-                    @endforeach 
-                    
-                    @error('color')
-                    <div class="absolute right-0 text-gray-100 text-sm font-semibold bg-red-600 p-1 rounded-md">{{ $message }}</div>
-                    @enderror
-                    
-                    @else
-                        <label for="{{$product->colors->first()->id}}" class="color-label">
-                            <input type="hidden" id="{{$product->colors->first()->id}}" name="color" value="{{$product->colors->first()->name}}">
-                            <span class="color-custom" style="background-color: {{$product->colors->first()->value}}">
-                                <span class="tooltiptext text-sm font-semibold pt-2">{{$product->colors->first()->name}}</span>
-                            </span>
-                            
-                        </label>
-                    @endif
-                 </div> 
               
+                     <div class="relative flex items-start pb-2">
+                         
+                         @if ($product->colors->count() > 1)
+                         @foreach ($product->colors as $color)
+                         <div class="flex flex-col justify-center mr-4">
+                             
+                             <label for="{{$color->id}}" class="color-label">
+                                <input type="radio" id="{{$color->id}}" name="color" value="{{$color->name}}" {{(old('color') == $color->name) ? 'checked' : ''}}>
+                                <span class="color-custom" style="background-color: {{$color->value}}">
+                                    <span class="tooltiptext text-sm font-semibold pt-2">{{$color->name}}</span>
+                                </span>
+                                
+                            </label>
+                        </div>
+                        @endforeach 
+                        
+                        @error('color')
+                        <div class="absolute right-0 text-gray-100 text-sm font-semibold bg-red-600 p-1 rounded-md">{{ $message }}</div>
+                        @enderror
+                        
+                        @else
+                            <label for="{{$product->colors->first()->id}}" class="color-label">
+                                <input type="hidden" id="{{$product->colors->first()->id}}" name="color" value="{{$product->colors->first()->name}}">
+                                <span class="color-custom" style="background-color: {{$product->colors->first()->value}}">
+                                    <span class="tooltiptext text-sm font-semibold pt-2">{{$product->colors->first()->name}}</span>
+                                </span>
+                                
+                            </label>
+                        @endif
+                     </div> 
+                    
+                         
+                    
       
                  <hr class="bg-gray-500 border-dashed mt-4 mb-2">
                  @if ($product->sizes->count() > 0)
@@ -181,10 +188,15 @@
                      <input class="bg-white px-2 py-1 mr-1 w-8 text-center" style="border: solid 1px gray;" name="quantity" x-bind:value="count"/>     
                      <button type="button" class="bg-white px-1 rounded-md hover:bg-gray-400" style="border: solid 1px gray" x-on:click="increment()"><i class="fa fa-plus" aria-hidden="true"  ></i></button>
                  </div>
-
+                 @if ($product->quantity==0)
+                 <div class="text-red-600 "><i class="fa fa-ban" aria-hidden="true"></i>Proizvod nije trenutno dostupan.</div>     
+                @else
                 <button type="submit" class="text-md text-white px-2 py-1 button button-plain transition duration-500 ease-in-out border border-gray-300 shadow-md rounded-md bg-boja hover:bg-bojasvetla transform hover:-translate-y-1 hover:scale-110 ...">Dodaj u korpu</button>
-
+               
+                @endif
              </form>
+            
+      
         </div>
     </div> <!-- end product-section -->
 

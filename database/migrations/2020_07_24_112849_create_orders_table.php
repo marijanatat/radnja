@@ -23,6 +23,7 @@ class CreateOrdersTable extends Migration
             $table->string('billing_state')->nullable();
             $table->string('billing_postalcode')->nullable();
             $table->string('billing_phone')->nullable();
+            $table->string('billing_napomena')->nullable();
             $table->decimal('billing_total');
             $table->boolean('shipped')->default(false);
             $table->string('error')->nullable();

@@ -80,7 +80,14 @@
                             <input type="text" class="form-control" id="phone" name="phone" value="{{ old('phone') }}"
                                 requried>
                         </div>
+                       
                     </div> <!-- end half-form -->
+                    <div class="form-group -mt-10 mb-2 ">
+                        <label for="napomena" class="text-sm md:text-base">Napomena</label>
+                        {{-- <input type="text" id="napomena" name="napomena" value="{{ old('napomena') }}"
+                          class="h-48 py-0"  > --}}
+                        <textarea class="form-control rounded-md focus:outline-none" rows="10" id="napomena" name="napomena"></textarea>
+                    </div>
     
                 
     

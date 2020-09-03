@@ -26,4 +26,12 @@ form {
     padding: 8px;
     font-size: 16px;
   }
+
+  textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid gray;
+    // border-radius: 5px;
+  }
 }

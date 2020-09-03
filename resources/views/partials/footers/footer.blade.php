@@ -16,9 +16,9 @@
                 <li class="text-white text-base xl:text-xl"><i class="fa fa-home mr-2" aria-hidden="true"></i>Odžaci,
                     Srbija</li>
                 <li class="text-white text-base xl:text-xl"><i class="fa fa-envelope mr-2"
-                        aria-hidden="true"></i>info.mobing@gmail.com</li>
+                        aria-hidden="true"></i>mobing.odzaci@outlook.com</li>
                 <li class="text-white text-base xl:text-xl  "><i class="fa fa-phone-square mr-2"
-                        aria-hidden="true mt-2"></i>063/555-555 </li>
+                        aria-hidden="true mt-2"></i>063/7858499 <br> <span class="ml-6">061/1403692</span> </li>
 
             </ul>
         </div>

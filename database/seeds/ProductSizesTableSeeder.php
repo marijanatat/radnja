@@ -993,6 +993,1014 @@ class ProductSizesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
+            122 => 
+            array (
+                'id' => 149,
+                'product_id' => 82,
+                'size_id' => 14,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            123 => 
+            array (
+                'id' => 150,
+                'product_id' => 83,
+                'size_id' => 14,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            124 => 
+            array (
+                'id' => 151,
+                'product_id' => 83,
+                'size_id' => 15,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            125 => 
+            array (
+                'id' => 152,
+                'product_id' => 83,
+                'size_id' => 16,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            126 => 
+            array (
+                'id' => 153,
+                'product_id' => 85,
+                'size_id' => 14,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            127 => 
+            array (
+                'id' => 154,
+                'product_id' => 85,
+                'size_id' => 15,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            128 => 
+            array (
+                'id' => 155,
+                'product_id' => 86,
+                'size_id' => 30,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            129 => 
+            array (
+                'id' => 156,
+                'product_id' => 86,
+                'size_id' => 31,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            130 => 
+            array (
+                'id' => 157,
+                'product_id' => 86,
+                'size_id' => 32,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            131 => 
+            array (
+                'id' => 158,
+                'product_id' => 86,
+                'size_id' => 33,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            132 => 
+            array (
+                'id' => 159,
+                'product_id' => 87,
+                'size_id' => 28,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            133 => 
+            array (
+                'id' => 160,
+                'product_id' => 87,
+                'size_id' => 30,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            134 => 
+            array (
+                'id' => 161,
+                'product_id' => 87,
+                'size_id' => 31,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            135 => 
+            array (
+                'id' => 162,
+                'product_id' => 88,
+                'size_id' => 28,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            136 => 
+            array (
+                'id' => 163,
+                'product_id' => 88,
+                'size_id' => 30,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            137 => 
+            array (
+                'id' => 164,
+                'product_id' => 88,
+                'size_id' => 31,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            138 => 
+            array (
+                'id' => 165,
+                'product_id' => 88,
+                'size_id' => 32,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            139 => 
+            array (
+                'id' => 166,
+                'product_id' => 89,
+                'size_id' => 14,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            140 => 
+            array (
+                'id' => 167,
+                'product_id' => 89,
+                'size_id' => 15,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            141 => 
+            array (
+                'id' => 168,
+                'product_id' => 89,
+                'size_id' => 16,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            142 => 
+            array (
+                'id' => 169,
+                'product_id' => 89,
+                'size_id' => 17,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            143 => 
+            array (
+                'id' => 170,
+                'product_id' => 89,
+                'size_id' => 18,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            144 => 
+            array (
+                'id' => 171,
+                'product_id' => 90,
+                'size_id' => 19,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            145 => 
+            array (
+                'id' => 172,
+                'product_id' => 90,
+                'size_id' => 20,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            146 => 
+            array (
+                'id' => 173,
+                'product_id' => 90,
+                'size_id' => 34,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            147 => 
+            array (
+                'id' => 174,
+                'product_id' => 90,
+                'size_id' => 35,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            148 => 
+            array (
+                'id' => 175,
+                'product_id' => 90,
+                'size_id' => 36,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            149 => 
+            array (
+                'id' => 176,
+                'product_id' => 90,
+                'size_id' => 37,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            150 => 
+            array (
+                'id' => 177,
+                'product_id' => 94,
+                'size_id' => 8,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            151 => 
+            array (
+                'id' => 178,
+                'product_id' => 95,
+                'size_id' => 21,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            152 => 
+            array (
+                'id' => 179,
+                'product_id' => 95,
+                'size_id' => 22,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            153 => 
+            array (
+                'id' => 180,
+                'product_id' => 96,
+                'size_id' => 7,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            154 => 
+            array (
+                'id' => 181,
+                'product_id' => 97,
+                'size_id' => 2,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            155 => 
+            array (
+                'id' => 182,
+                'product_id' => 97,
+                'size_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            156 => 
+            array (
+                'id' => 183,
+                'product_id' => 97,
+                'size_id' => 5,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            157 => 
+            array (
+                'id' => 184,
+                'product_id' => 97,
+                'size_id' => 6,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            158 => 
+            array (
+                'id' => 185,
+                'product_id' => 97,
+                'size_id' => 7,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            159 => 
+            array (
+                'id' => 186,
+                'product_id' => 97,
+                'size_id' => 8,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            160 => 
+            array (
+                'id' => 187,
+                'product_id' => 98,
+                'size_id' => 6,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            161 => 
+            array (
+                'id' => 188,
+                'product_id' => 98,
+                'size_id' => 7,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            162 => 
+            array (
+                'id' => 189,
+                'product_id' => 99,
+                'size_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            163 => 
+            array (
+                'id' => 190,
+                'product_id' => 99,
+                'size_id' => 5,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            164 => 
+            array (
+                'id' => 191,
+                'product_id' => 99,
+                'size_id' => 6,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            165 => 
+            array (
+                'id' => 192,
+                'product_id' => 100,
+                'size_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            166 => 
+            array (
+                'id' => 193,
+                'product_id' => 100,
+                'size_id' => 6,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            167 => 
+            array (
+                'id' => 194,
+                'product_id' => 100,
+                'size_id' => 7,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            168 => 
+            array (
+                'id' => 195,
+                'product_id' => 101,
+                'size_id' => 7,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            169 => 
+            array (
+                'id' => 196,
+                'product_id' => 102,
+                'size_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            170 => 
+            array (
+                'id' => 197,
+                'product_id' => 102,
+                'size_id' => 5,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            171 => 
+            array (
+                'id' => 198,
+                'product_id' => 102,
+                'size_id' => 6,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            172 => 
+            array (
+                'id' => 199,
+                'product_id' => 103,
+                'size_id' => 6,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            173 => 
+            array (
+                'id' => 200,
+                'product_id' => 103,
+                'size_id' => 8,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            174 => 
+            array (
+                'id' => 201,
+                'product_id' => 104,
+                'size_id' => 6,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            175 => 
+            array (
+                'id' => 202,
+                'product_id' => 104,
+                'size_id' => 7,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            176 => 
+            array (
+                'id' => 203,
+                'product_id' => 104,
+                'size_id' => 9,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            177 => 
+            array (
+                'id' => 204,
+                'product_id' => 106,
+                'size_id' => 2,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            178 => 
+            array (
+                'id' => 205,
+                'product_id' => 106,
+                'size_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            179 => 
+            array (
+                'id' => 206,
+                'product_id' => 106,
+                'size_id' => 5,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            180 => 
+            array (
+                'id' => 207,
+                'product_id' => 106,
+                'size_id' => 6,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            181 => 
+            array (
+                'id' => 208,
+                'product_id' => 107,
+                'size_id' => 6,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            182 => 
+            array (
+                'id' => 209,
+                'product_id' => 107,
+                'size_id' => 7,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            183 => 
+            array (
+                'id' => 210,
+                'product_id' => 107,
+                'size_id' => 8,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            184 => 
+            array (
+                'id' => 211,
+                'product_id' => 108,
+                'size_id' => 6,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            185 => 
+            array (
+                'id' => 212,
+                'product_id' => 108,
+                'size_id' => 7,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            186 => 
+            array (
+                'id' => 213,
+                'product_id' => 109,
+                'size_id' => 1,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            187 => 
+            array (
+                'id' => 214,
+                'product_id' => 109,
+                'size_id' => 2,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            188 => 
+            array (
+                'id' => 215,
+                'product_id' => 109,
+                'size_id' => 3,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            189 => 
+            array (
+                'id' => 216,
+                'product_id' => 110,
+                'size_id' => 5,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            190 => 
+            array (
+                'id' => 217,
+                'product_id' => 110,
+                'size_id' => 6,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            191 => 
+            array (
+                'id' => 218,
+                'product_id' => 111,
+                'size_id' => 7,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            192 => 
+            array (
+                'id' => 219,
+                'product_id' => 111,
+                'size_id' => 8,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            193 => 
+            array (
+                'id' => 220,
+                'product_id' => 111,
+                'size_id' => 9,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            194 => 
+            array (
+                'id' => 221,
+                'product_id' => 112,
+                'size_id' => 22,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            195 => 
+            array (
+                'id' => 222,
+                'product_id' => 112,
+                'size_id' => 24,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            196 => 
+            array (
+                'id' => 223,
+                'product_id' => 113,
+                'size_id' => 25,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            197 => 
+            array (
+                'id' => 224,
+                'product_id' => 114,
+                'size_id' => 25,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            198 => 
+            array (
+                'id' => 225,
+                'product_id' => 115,
+                'size_id' => 2,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            199 => 
+            array (
+                'id' => 226,
+                'product_id' => 115,
+                'size_id' => 3,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            200 => 
+            array (
+                'id' => 227,
+                'product_id' => 115,
+                'size_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            201 => 
+            array (
+                'id' => 228,
+                'product_id' => 116,
+                'size_id' => 5,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            202 => 
+            array (
+                'id' => 229,
+                'product_id' => 116,
+                'size_id' => 6,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            203 => 
+            array (
+                'id' => 230,
+                'product_id' => 116,
+                'size_id' => 7,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            204 => 
+            array (
+                'id' => 231,
+                'product_id' => 116,
+                'size_id' => 8,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            205 => 
+            array (
+                'id' => 232,
+                'product_id' => 117,
+                'size_id' => 5,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            206 => 
+            array (
+                'id' => 233,
+                'product_id' => 117,
+                'size_id' => 6,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            207 => 
+            array (
+                'id' => 234,
+                'product_id' => 117,
+                'size_id' => 7,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            208 => 
+            array (
+                'id' => 235,
+                'product_id' => 117,
+                'size_id' => 8,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            209 => 
+            array (
+                'id' => 236,
+                'product_id' => 118,
+                'size_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            210 => 
+            array (
+                'id' => 237,
+                'product_id' => 118,
+                'size_id' => 5,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            211 => 
+            array (
+                'id' => 238,
+                'product_id' => 118,
+                'size_id' => 6,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            212 => 
+            array (
+                'id' => 239,
+                'product_id' => 119,
+                'size_id' => 2,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            213 => 
+            array (
+                'id' => 240,
+                'product_id' => 119,
+                'size_id' => 3,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            214 => 
+            array (
+                'id' => 241,
+                'product_id' => 119,
+                'size_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            215 => 
+            array (
+                'id' => 242,
+                'product_id' => 120,
+                'size_id' => 2,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            216 => 
+            array (
+                'id' => 243,
+                'product_id' => 120,
+                'size_id' => 3,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            217 => 
+            array (
+                'id' => 244,
+                'product_id' => 120,
+                'size_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            218 => 
+            array (
+                'id' => 245,
+                'product_id' => 121,
+                'size_id' => 23,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            219 => 
+            array (
+                'id' => 246,
+                'product_id' => 121,
+                'size_id' => 24,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            220 => 
+            array (
+                'id' => 247,
+                'product_id' => 122,
+                'size_id' => 1,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            221 => 
+            array (
+                'id' => 248,
+                'product_id' => 122,
+                'size_id' => 2,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            222 => 
+            array (
+                'id' => 249,
+                'product_id' => 122,
+                'size_id' => 3,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            223 => 
+            array (
+                'id' => 250,
+                'product_id' => 122,
+                'size_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            224 => 
+            array (
+                'id' => 251,
+                'product_id' => 122,
+                'size_id' => 23,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            225 => 
+            array (
+                'id' => 252,
+                'product_id' => 123,
+                'size_id' => 1,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            226 => 
+            array (
+                'id' => 253,
+                'product_id' => 123,
+                'size_id' => 2,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            227 => 
+            array (
+                'id' => 254,
+                'product_id' => 123,
+                'size_id' => 3,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            228 => 
+            array (
+                'id' => 255,
+                'product_id' => 123,
+                'size_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            229 => 
+            array (
+                'id' => 256,
+                'product_id' => 123,
+                'size_id' => 23,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            230 => 
+            array (
+                'id' => 257,
+                'product_id' => 124,
+                'size_id' => 1,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            231 => 
+            array (
+                'id' => 258,
+                'product_id' => 124,
+                'size_id' => 2,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            232 => 
+            array (
+                'id' => 259,
+                'product_id' => 124,
+                'size_id' => 3,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            233 => 
+            array (
+                'id' => 260,
+                'product_id' => 124,
+                'size_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            234 => 
+            array (
+                'id' => 261,
+                'product_id' => 124,
+                'size_id' => 23,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            235 => 
+            array (
+                'id' => 262,
+                'product_id' => 125,
+                'size_id' => 1,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            236 => 
+            array (
+                'id' => 263,
+                'product_id' => 125,
+                'size_id' => 2,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            237 => 
+            array (
+                'id' => 264,
+                'product_id' => 125,
+                'size_id' => 3,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            238 => 
+            array (
+                'id' => 265,
+                'product_id' => 126,
+                'size_id' => 1,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            239 => 
+            array (
+                'id' => 266,
+                'product_id' => 126,
+                'size_id' => 2,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            240 => 
+            array (
+                'id' => 267,
+                'product_id' => 126,
+                'size_id' => 3,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            241 => 
+            array (
+                'id' => 268,
+                'product_id' => 126,
+                'size_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            242 => 
+            array (
+                'id' => 269,
+                'product_id' => 126,
+                'size_id' => 23,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            243 => 
+            array (
+                'id' => 270,
+                'product_id' => 127,
+                'size_id' => 1,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            244 => 
+            array (
+                'id' => 271,
+                'product_id' => 127,
+                'size_id' => 2,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            245 => 
+            array (
+                'id' => 272,
+                'product_id' => 127,
+                'size_id' => 3,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            246 => 
+            array (
+                'id' => 273,
+                'product_id' => 127,
+                'size_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            247 => 
+            array (
+                'id' => 274,
+                'product_id' => 127,
+                'size_id' => 23,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
         ));
         
         

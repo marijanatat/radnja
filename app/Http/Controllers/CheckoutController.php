@@ -84,7 +84,7 @@ class CheckoutController extends Controller
             'billing_city' => $request->city,
             'billing_state' => $request->state,
             'billing_postalcode' => $request->postalcode,
-            'billing_phone' => $request->phone,
+            'billing_napomena' => $request->napomena,
             'billing_total' => Cart::total(2, '.', ''),
             'error' => $error,
         ]);

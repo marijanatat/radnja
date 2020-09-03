@@ -16,11 +16,28 @@
     </div>
         
         <div class="w-full container text-gray-700 text-lg pb-5 pt-2">
-            Ova Izjava o poverljivosti podataka (dalje u tekstu: Izjava) odnosi se na poverljivost podataka koji su korišćenjem internet stranice www.mob-ing.rs od strane korisnika, prikupljeni i arhivirani u bazama podataka Mob-ing sztr Odzaci.
+            <h2 class="text-xl font-bold text-boja">
+                VAŠA PORUDŽBINA JE POTPUNO SIGURNA!
+            </h2>
 
+            U kompaniji Mob-ing cenimo Vašu privatnost, zato o Vašim podacima izuzetno pažljivo brinemo. Sve posredovane informacije su sigurne, nećemo ih ni pod kojim uslovima ustupati trećem licu, što Vam osigurava potpuno sigurno i bezbedno poslovanje i saradnju sa kompanijom Mob-ing Odžaci.
+            
+            Zaštita privatnosti podataka
+            
+            U ime Mob-ing Odžaci, obavezujemo se da ćemo čuvati privatnost svih naših kupaca. Da bismo uspešno obradili Vašu narudžbinu potrebni su nam Vaše ime i prezime, adresa, e-mail i telefon. Uz pomoć tih podataka bićemo u mogućnosti da Vam isporučimo željenu robu, kao i da Vas obavestimo o trenutnom statusu narudžbine. Prikupljamo samo neophodne, osnovne podatke o kupcima/ korisnicima i podatke neophodne za poslovanje i informisanje korisnika u skladu sa dobrim poslovnim običajima i u cilju pružanja kvalitetne usluge. 
+           Svi podaci o korisnicima/kupcima se strogo čuvaju i dostupni su samo zaposlenima kojima su ti podaci nužni za obavljanje posla.
+            Svi zaposleni u Mobing Odžaci odgovorni su za poštovanje načela zaštite privatnosti.
+            
+           <div class="spacer"></div>
+            <h2 class="text-xl font-bold text-boja">
+                SAGLASNOST I PROMENA USLOVA
+                
+            </h2>
+            <br>
+             Korišćenje naših servisa podrazumeva saglasnost korisnika sa navedenim uslovima korišćenja. Mob-ing Odžaci se obavezuje da će se pridržavati svega navedenog, a sve promene uslova postaju važeće tek nakon objavljivanja na ovoj stranici.
         </div>
         <div class="w-full container text-gray-700 text-lg pb-5 pt-2">
-            Prikupljeni podaci se dele na lične i opšte infomacije. Mobing kao pružalac usluga internet stranice www.mob-ing.rs ulaže maksimalne napore radi zaštite Vaše privatnosti kad ste "online" kao korisnik. Kako biste lakše razumeli koje informacije prikupljamo i kako koristimo te informacije od Vas se traži da pažljivo pročitate ovu Izjavu. 
+            {{-- Prikupljeni podaci se dele na lične i opšte infomacije. Mobing kao pružalac usluga internet stranice www.mob-ing.rs ulaže maksimalne napore radi zaštite Vaše privatnosti kad ste "online" kao korisnik. Kako biste lakše razumeli koje informacije prikupljamo i kako koristimo te informacije od Vas se traži da pažljivo pročitate ovu Izjavu. 
        
             <div class="w-full container text-gray-700 text-lg pb-5 pt-2">
             Zadržavamo diskreciono pravo da ovu Izjavu možemo izmeniti u svako doba i da tako izmenjen tekst postaje važeći odmah po objavi istog na internet stranici www.mob-ing.rs. Nastavak Vašeg korišćenja ove Internet stranice nakon izmena, podrazumeva da prihvatate sve uslove tako izmenjene Izjave. Stoga savetujemo korisnike da periodično ponovo detaljno pročitaju informacije sadržane u Izjavi, kako bi bili informisani o eventualnim promenama. 
@@ -31,12 +48,13 @@
            </div>
 
            
-        <div class="w-full container  text-gray-700 text-lg pb-5 pt-2  ">
-            Korišćenje naših servisa podrazumeva saglasnost korisnika sa navedenim uslovima korišćenja. Mob-ing sztr Odzaci se obavezuje da će se pridržavati svega navedenog, a sve promene uslova postaju važeće tek nakon objavljivanja na ovoj strani i slanja e-mail obaveštenja svim registrovanim korisnicima.
-        </div>
-       
+        
      
         
-    </div>
+    </div> --}}
+    {{-- <div class="w-full container  text-gray-700 text-lg pb-5 pt-2  ">
+        Korišćenje naših servisa podrazumeva saglasnost korisnika sa navedenim uslovima korišćenja. Mob-ing sztr Odzaci se obavezuje da će se pridržavati svega navedenog, a sve promene uslova postaju važeće tek nakon objavljivanja na ovoj strani i slanja e-mail obaveštenja svim registrovanim korisnicima.
+    </div> --}}
+   
 @endsection
     

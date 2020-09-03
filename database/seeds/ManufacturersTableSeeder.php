@@ -134,6 +134,69 @@ class ManufacturersTableSeeder extends Seeder
                 'created_at' => '2020-08-28 12:16:00',
                 'updated_at' => '2020-08-28 12:16:00',
             ),
+            13 => 
+            array (
+                'id' => 14,
+                'name' => 'Amibo',
+                'slug' => 'amibo',
+                'city' => 'Arilje',
+                'created_at' => '2020-09-02 20:04:24',
+                'updated_at' => '2020-09-02 20:04:24',
+            ),
+            14 => 
+            array (
+                'id' => 15,
+                'name' => 'Falcon',
+                'slug' => 'falcon',
+                'city' => 'Prijepolje',
+                'created_at' => '2020-09-02 20:16:51',
+                'updated_at' => '2020-09-02 20:16:51',
+            ),
+            15 => 
+            array (
+                'id' => 16,
+                'name' => 'Ewox',
+                'slug' => 'ewox',
+                'city' => 'Užice',
+                'created_at' => '2020-09-02 20:19:20',
+                'updated_at' => '2020-09-02 20:19:20',
+            ),
+            16 => 
+            array (
+                'id' => 17,
+                'name' => 'San Tex',
+                'slug' => 'san-tex',
+                'city' => 'Arilje',
+                'created_at' => '2020-09-02 20:39:16',
+                'updated_at' => '2020-09-02 20:39:16',
+            ),
+            17 => 
+            array (
+                'id' => 18,
+                'name' => 'Briliant',
+                'slug' => 'briliant',
+                'city' => 'Novi Pazar',
+                'created_at' => '2020-09-02 21:10:20',
+                'updated_at' => '2020-09-02 21:10:20',
+            ),
+            18 => 
+            array (
+                'id' => 19,
+                'name' => 'Model',
+                'slug' => 'model',
+                'city' => 'Pančevo',
+                'created_at' => '2020-09-02 21:45:02',
+                'updated_at' => '2020-09-02 21:45:02',
+            ),
+            19 => 
+            array (
+                'id' => 20,
+                'name' => 'Wolf',
+                'slug' => 'wolf',
+                'city' => 'Beograd',
+                'created_at' => '2020-09-03 07:59:57',
+                'updated_at' => '2020-09-03 07:59:57',
+            ),
         ));
         
         

@@ -95,10 +95,10 @@
           </div>
           <div class="hero-buttons text-gray-800 items-center flex ml-16 md:ml-40 ">
             <div id="social">
-              <a href=""><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+              <a href="https://www.facebook.com/Butik-KidsFamily-105437284628084"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
             </div>
             <div id="social1">
-              <a href="" X><i class="fa fa-instagram w-24" aria-hidden="true"></i></a>
+              <a href="https://www.instagram.com/butik_kids_and_family/" X><i class="fa fa-instagram w-24" aria-hidden="true"></i></a>
             </div>
 
           </div>

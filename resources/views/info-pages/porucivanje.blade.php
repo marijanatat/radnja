@@ -22,13 +22,12 @@
                 Na strani sa detaljnim prikazom:
                 <li> <i class="fa fa-minus mr-2 text-xs" aria-hidden="true"></i>Možete izabrati koliko komada nekog proizvoda želite da poručite</li>
                 <li><i class="fa fa-minus mr-1 text-xs" aria-hidden="true"></i> Označite boju i veličinu koju želite, kao i broj komada koji želite.Ukoliko je to jedan komad nema potrebe da menjate već zadatu količinu.</li>
-                <li><i class="fa fa-minus mr-2 text-xs" aria-hidden="true"></i>Kako bismo smanjili mogućnost greške pri isporuci preporučujemo da u napomenu unesete podatke o odabranoj boji artikla</li>
                 <li><i class="fa fa-minus mr-2 text-xs" aria-hidden="true"></i>Kliknite na polje „Dodaj u korpu“ da biste ubacili proizvod u svoju korpu za kupovinu</li>
             </ul>
             
         </div>
         <div class=" container w-full text-gray-700 text-lg  pb-2 pt-2">
-            Prikazaće vam se podaci o već naručenom proizvodu.Imate mogućnost da nastavite kupovinu ili da završite kupovinu. Odaberite željenu opciju:
+            Prikazaće vam se podaci o već naručenom proizvodu. Proizvod u svakom trenutku možete da izbrišete ili sačuvate za kasnije. Imate mogućnost da nastavite kupovinu ili da završite kupovinu.Odaberite željenu opciju:
         </div>
         <div class=" container w-full text-gray-700 text-lg  pb-2 pt-2">
             <ul>

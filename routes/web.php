@@ -76,6 +76,7 @@ Route::view('/reklamacije','info-pages.reklamacije')->name('reklamacije');
 Route::view('/otkazivanje','info-pages.otkazivanje')->name('otkazivanje');
 Route::view('/privatnost','info-pages.privatnost')->name('privatnost');
 Route::view('/about','info-pages.about')->name('about');
+Route::view('/cookies','info-pages.cookies')->name('cookies');
 
 //Livewire
  Route::livewire('/size', 'size')
