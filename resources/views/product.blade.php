@@ -189,7 +189,7 @@
                      <button type="button" class="bg-white px-1 rounded-md hover:bg-gray-400" style="border: solid 1px gray" x-on:click="increment()"><i class="fa fa-plus" aria-hidden="true"  ></i></button>
                  </div>
                  @if ($product->quantity==0)
-                 <div class="text-red-600 "><i class="fa fa-ban" aria-hidden="true"></i>Proizvod nije trenutno dostupan.</div>     
+                 <div class="text-red-600 "><i class="fa fa-ban" aria-hidden="true"></i> Proizvod nije trenutno dostupan.</div>     
                 @else
                 <button type="submit" class="text-md text-white px-2 py-1 button button-plain transition duration-500 ease-in-out border border-gray-300 shadow-md rounded-md bg-boja hover:bg-bojasvetla transform hover:-translate-y-1 hover:scale-110 ...">Dodaj u korpu</button>
                

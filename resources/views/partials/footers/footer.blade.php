@@ -26,31 +26,31 @@
             <ul class="list-reset leading-normal mt-8">
                 <a href="{{route('about')}}">
                     <li class="text-white text-base xl:text-xl hover:text-gray-500 "><i
-                            class="fa fa-angle-double-left  mr-2" aria-hidden="true"></i>O nama</li>
+                            class="fa fa-angle-double-right  mr-2" aria-hidden="true"></i>O nama</li>
                 </a>
                 <a href="{{route('porucivanje')}}">
-                    <li class="text-white text-base xl:text-xl hover:text-gray-500"><i
-                            class="fa fa-angle-double-left  mr-2 " aria-hidden="true"></i>Uputstvo za kupovinu</li>
+                    <li class="text-white text-base xl:text-xl hover:text-teal-300"><i
+                            class="fa fa-angle-double-right  mr-2 " aria-hidden="true"></i>Uputstvo za kupovinu</li>
                 </a>
                 <a href="{{route('placanje')}}">
-                    <li class="text-white text-base xl:text-xl hover:text-gray-500"><i
-                            class="fa fa-angle-double-left  mr-2 " aria-hidden="true"></i>Plaćanje</li>
+                    <li class="text-white text-base xl:text-xl hover:text-teal-300"><i
+                            class="fa fa-angle-double-right  mr-2 " aria-hidden="true"></i>Plaćanje</li>
                 </a>
                 <a href="{{route('isporuka')}}">
-                    <li class="text-white text-base xl:text-xl hover:text-gray-500"><i
-                            class="fa fa-angle-double-left  mr-2 " aria-hidden="true"></i>Isporuka</li>
+                    <li class="text-white text-base xl:text-xl hover:text-teal-300"><i
+                            class="fa fa-angle-double-right  mr-2 " aria-hidden="true"></i>Isporuka</li>
                 </a>
                 <a href="{{route('reklamacije')}}">
-                    <li class="text-white text-base xl:text-xl hover:text-gray5700"><i
-                            class="fa fa-angle-double-left  mr-2 " aria-hidden="true"></i>Reklamacije</li>
+                    <li class="text-white text-base xl:text-xl hover:text-teal-300"><i
+                            class="fa fa-angle-double-right  mr-2 " aria-hidden="true"></i>Reklamacije</li>
                 </a>
                 <a href="{{route('otkazivanje')}}">
-                    <li class="text-white text-base xl:text-xl hover:text-gray-500"><i
-                            class="fa fa-angle-double-left  mr-2 " aria-hidden="true"></i>Otkazivanje porudžbine</li>
+                    <li class="text-white text-base xl:text-xl hover:text-teal-300"><i
+                            class="fa fa-angle-double-right  mr-2 " aria-hidden="true"></i>Otkazivanje porudžbine</li>
                 </a>
                 <a href="{{route('privatnost')}}">
-                    <li class="text-white text-base xl:text-xl hover:text-gray-500"><i
-                            class="fa fa-angle-double-left  mr-2 " aria-hidden="true"></i>Politika privatnosti</li>
+                    <li class="text-white text-base xl:text-xl hover:text-teal-300"><i
+                            class="fa fa-angle-double-right  mr-2 " aria-hidden="true"></i>Politika privatnosti</li>
                 </a>
             </ul>
 

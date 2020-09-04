@@ -16,13 +16,15 @@
     </div>
         
         <div class="w-full container text-gray-700 text-lg pb-5 pt-2">
-            <h2 class="text-xl font-bold text-boja">
+            <h2 class="spacer text-xl font-bold text-boja">
                 VAŠA PORUDŽBINA JE POTPUNO SIGURNA!
             </h2>
 
             U kompaniji Mob-ing cenimo Vašu privatnost, zato o Vašim podacima izuzetno pažljivo brinemo. Sve posredovane informacije su sigurne, nećemo ih ni pod kojim uslovima ustupati trećem licu, što Vam osigurava potpuno sigurno i bezbedno poslovanje i saradnju sa kompanijom Mob-ing Odžaci.
-            
-            Zaštita privatnosti podataka
+            <br><br>
+            <div class="spacer font-semibold text-boja">
+                Zaštita privatnosti podataka
+            </div>
             
             U ime Mob-ing Odžaci, obavezujemo se da ćemo čuvati privatnost svih naših kupaca. Da bismo uspešno obradili Vašu narudžbinu potrebni su nam Vaše ime i prezime, adresa, e-mail i telefon. Uz pomoć tih podataka bićemo u mogućnosti da Vam isporučimo željenu robu, kao i da Vas obavestimo o trenutnom statusu narudžbine. Prikupljamo samo neophodne, osnovne podatke o kupcima/ korisnicima i podatke neophodne za poslovanje i informisanje korisnika u skladu sa dobrim poslovnim običajima i u cilju pružanja kvalitetne usluge. 
            Svi podaci o korisnicima/kupcima se strogo čuvaju i dostupni su samo zaposlenima kojima su ti podaci nužni za obavljanje posla.

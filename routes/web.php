@@ -25,7 +25,7 @@ Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin-radnja-mob'], function () {
     Voyager::routes();
 });
 
@@ -75,7 +75,7 @@ Route::view('/isporuka','info-pages.isporuka')->name('isporuka');
 Route::view('/reklamacije','info-pages.reklamacije')->name('reklamacije');
 Route::view('/otkazivanje','info-pages.otkazivanje')->name('otkazivanje');
 Route::view('/privatnost','info-pages.privatnost')->name('privatnost');
-Route::view('/about','info-pages.about')->name('about');
+Route::view('/o-nama','info-pages.about')->name('about');
 Route::view('/cookies','info-pages.cookies')->name('cookies');
 
 //Livewire

@@ -16,7 +16,7 @@
   </div>
         
         <div class="w-full container text-gray-700 text-lg pt-1">
-            <h2 class="text-xl font-semibold text-gray-700">
+            <h2 class="spacer text-xl font-semibold text-gray-700">
                 Reklamacije na oštećenje u transportu
             </h2>
 
@@ -35,7 +35,7 @@
             Prilikom kontakta dogovorićemo se o vraćanju proizvoda putem pošte ili kurirske službe.
             
             U najkraćem mogućem roku, odgovorćemo potrošaču na izjavljenu reklamaciju elektronskim putem (e-mail) tako što ćemo potvrditi prijem reklamacije, odnosno saopštiti broj pod kojim je zavedena Vaša reklamacija u evidenciji primljenih reklamacija i obavestićemo Vas o daljem postupanju.
-            <br> Rok za odgovor na reklamaciju je 8 dana a za rešavanje reklamacije je 15 dana od trenutka prijave iste.
+            <br><br> Rok za odgovor na reklamaciju je 8 dana a za rešavanje reklamacije je 15 dana od trenutka prijave iste.
             
             <br>Reklamacioni list možete preuzeti <a href="./docs/Reklamacioni-list1.xlsx"><span class="font-bold text-boja">ovde</span></a>.
             
