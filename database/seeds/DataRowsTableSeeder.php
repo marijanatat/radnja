@@ -574,7 +574,7 @@ class DataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{"model":"App\\\\Category","table":"categories","type":"belongsTo","column":"category_id","key":"id","label":"leafs","pivot_table":"categories","pivot":"0","taggable":"0"}',
+                'details' => '{"sort":{"field":"leafs","direction":"asc"},"model":"App\\\\Category","table":"categories","type":"belongsTo","column":"category_id","key":"id","label":"leafs","pivot_table":"categories","pivot":"0","taggable":"0"}',
                 'order' => 3,
             ),
             35 => 
@@ -590,7 +590,7 @@ class DataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{"model":"App\\\\Manufacturer","table":"manufacturers","type":"belongsTo","column":"manufacturer_id","key":"id","label":"name","pivot_table":"categories","pivot":"0","taggable":"0"}',
+                'details' => '{"sort":{"field":"name","direction":"asc"},"model":"App\\\\Manufacturer","table":"manufacturers","type":"belongsTo","column":"manufacturer_id","key":"id","label":"name","pivot_table":"categories","pivot":"0","taggable":"0"}',
                 'order' => 5,
             ),
             36 => 

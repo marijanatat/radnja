@@ -197,6 +197,15 @@ class ManufacturersTableSeeder extends Seeder
                 'created_at' => '2020-09-03 07:59:57',
                 'updated_at' => '2020-09-03 07:59:57',
             ),
+            20 => 
+            array (
+                'id' => 21,
+                'name' => 'Slavujak Kids',
+                'slug' => 'slavujak-kids',
+                'city' => 'Virovo',
+                'created_at' => '2020-09-07 20:03:38',
+                'updated_at' => '2020-09-07 20:03:38',
+            ),
         ));
         
         

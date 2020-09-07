@@ -62,9 +62,12 @@
               <p class="text-md text-gray-800 mt-4">
                 Proizvođač: {{$product->manufacturer->name}}
             </p> 
+            @if ($product->details)
+                
             <p class="text-md text-gray-800 mt-4">
-                Sirovinski sastav: 100% pamuk
+                {{$product->details}}
             </p> 
+            @endif
 
             <template x-if="isImageModalVisible">
                 <div class="hide-scroll z-50 fixed top-0 left-0 right-0 w-full h-full flex items-center shadow-lg overflow-x-auto"
