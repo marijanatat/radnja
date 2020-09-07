@@ -16,10 +16,6 @@ use Illuminate\Support\Facades\Mail;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
@@ -32,7 +28,6 @@ Route::group(['prefix' => 'admin-radnja-mob'], function () {
 
 
 Route::get('/', 'ProductController@index')->name('home');
-// Route::get('/shop','ShopController@index')->name('shop.index');
 Route::get('/shop/{product}','ShopController@show')->name('shop.show');
 Route::get('/cart','CartController@index')->name('cart.index');
 Route::post('/cart','CartController@store')->name('cart.store');
@@ -55,13 +50,6 @@ Route::get('empty',function(){
     Cart::destroy();
 });
 
-
-Route::get('/search', 'ShopController@search')->name('search');
-
-// Route::middleware('auth')->group(function(){
-//     Route::get('/my-profile', 'UsersController@edit')->name('users.edit')->middleware('auth');
-// });
-
 Route::get('/my-profile', 'UsersController@edit')->name('users.edit')->middleware('auth');
 Route::patch('/my-profile', 'UsersController@update')->name('users.update')->middleware('auth');
 Route::get('/my-orders', 'OrdersController@index')->name('orders.index')->middleware('auth');
@@ -77,10 +65,6 @@ Route::view('/otkazivanje','info-pages.otkazivanje')->name('otkazivanje');
 Route::view('/privatnost','info-pages.privatnost')->name('privatnost');
 Route::view('/o-nama','info-pages.about')->name('about');
 Route::view('/cookies','info-pages.cookies')->name('cookies');
-
-//Livewire
- Route::livewire('/size', 'size')
-    ->layout('layouts.master');
   
 Route::livewire('/shop', 'shop-livewire')->name('shop.index')
     ->layout('layouts.master');

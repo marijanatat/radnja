@@ -6,7 +6,7 @@
 @section('content')
 
 @component('components.breadcrumbs')
-        <a href="/">Početna strana</a>
+        <a href="/" class="hover:text-teal-600">Početna strana</a>
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
         <span>Moje porudžbine</span>
     @endcomponent

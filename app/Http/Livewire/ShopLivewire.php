@@ -45,9 +45,6 @@ class ShopLivewire extends Component
 
     public function mount()
     {
-        // if(request()->category){
-        //     $this->products = $this->filterProductsByCategories(request()->category);
-        // }
         $this->categoryQuery = request()->category;    
 
         if(request()->search){

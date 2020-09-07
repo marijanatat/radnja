@@ -3,9 +3,9 @@
 
 @section('content') 
 
-<div class="text-gray-700 hover:text-green-900">
+<div>
    @component('components.breadcrumbs')
-  <a href="/">Početna strana</a>
+  <a href="/" class="hover:text-teal-600">Početna strana</a>
   <i class="fa fa-chevron-right breadcrumb-separator"></i>
   <span>Poručivanje</span>
   @endcomponent 

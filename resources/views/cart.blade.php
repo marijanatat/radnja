@@ -7,7 +7,7 @@
 <div class="breadcrumbs text-boja font-bold text-sm">
     <div class="breadcrumbs-container container">
         <div>
-            <a href="#">Početna strana</a>
+            <a href="\" class="hover:text-teal-600">Početna strana</a>
             <i class="fa fa-chevron-right breadcrumb-separator"></i>
             <span>Korpa</span>
         </div>

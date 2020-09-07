@@ -44,18 +44,6 @@
 
         <div class="auth-right hidden md:block" data-aos="fade-left">
             <img src="{{asset('./img/andrej-lisakov-Yy4sN6QzboU-unsplash.jpg')}}" alt="slika ofingeri" class="w-2/3 h-2/3  object-center my-16 mx-16" >
-            {{-- <h2>Benefits</h2>
-            <div class="spacer"></div>
-            <p><strong>Save time now.</strong></p>
-            <p>You don't need an account to checkout.</p>
-            <div class="spacer"></div>
-        
-            &nbsp;
-            <div class="spacer"></div>
-            <h2>Loyality Program</h2>
-            &nbsp;
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.</p> --}}
-
         </div>
     </div>
 </div>

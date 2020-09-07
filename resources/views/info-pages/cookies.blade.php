@@ -3,9 +3,9 @@
 
 @section('content') 
 
-<div class="text-gray-700 hover:text-green-900">
+<div>
    @component('components.breadcrumbs')
-  <a href="/">Početna strana</a>
+  <a href="/" class="hover:text-teal-600">Početna strana</a>
   <i class="fa fa-chevron-right breadcrumb-separator"></i>
   <span>Poručivanje</span>
   @endcomponent 
@@ -37,8 +37,4 @@
           
           Isključivanjem kolačića ne dopuštate arhiviranje istih na vlastitom računaru. Podešavanje kolačića se mogu konfigurisati i menjati u izabranom internet pretraživaču. Kako biste videli podešavanja, odaberite pretraživač koji koristite (Chrome, Firefox, Internet Explorer 9, Internet Explorer 7 i 8, Operu ili Safari (stranice na engleskom jeziku)). Ukoliko onemogućite kolačiće, utoliko nećete biti u mogućnosti koristiti određene funkcionalnosti internet stranica.
         </div>
-        
-        
-
-    
  @endsection 

@@ -6,9 +6,9 @@
 
     <div class="text-gray-700 hover:text-green-900">
         @component('components.breadcrumbs')
-        <a href="/">Početna strana</a>
+        <a href="/" class="hover:text-teal-600">Početna strana</a>
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
-        <span><a href="{{ route('shop.index') }}">Proizvodi</a></span>
+        <span><a href="{{ route('shop.index') }}" class="hover:text-teal-600">Proizvodi</a></span>
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
         <span>{{ $product->name }}</span>
     @endcomponent

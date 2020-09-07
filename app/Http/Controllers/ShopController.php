@@ -17,49 +17,7 @@ class ShopController extends Controller
      */
     public function index(Request $request)
     {
-        $categories = Category::get();
-            if($request->category){
-                $category = Category::find($request->category);
-                $categoryIds = $category->descendants()->pluck('id');
-                $categoryIds[] = $category->getKey();
-          
-            $products = Product::whereIn('category_id', $categoryIds);
-            $categoryName=optional($categories->where('id', $request->category)->first())->name;
-        }else{
-            // $products=Product::where('featured',true);
-           
-            // $categories=Category::all();
-            $categoryName='Svi proizvodi';
-            $products = DB::table('products');
-        }
-
-
-
-        if($request->has('size')) {
-            return Product::where('size',$request->size)->get();
-           
-        }
-        if($request->has('min','max')) {
-            return Product::whereBetween('price',[$request->min,$request->max])->get();
-           
-        }
-
-
-
-      
-        if(request()->sort==='low_high') {
-            $products=$products->orderBy('price')->paginate(9);
-
-        } elseif(request()->sort==='high_low') {
-            $products=$products->orderBy('price','desc')->paginate(9);
-        }else{
-            $products=$products->paginate(9);
-        }
-
-        return view('shop', [
-            'products'=>$products,
-            'categoryName'=>$categoryName
-            ]);
+       
     }
 
     /**
@@ -106,12 +64,6 @@ class ShopController extends Controller
         return view('product',compact('product','mightAlsoLike','stock'));
     }
 
-    // public function show( Product $product)
-    // {
-    //    // $product=Product::where('slug',$slug)->firstOrFail();
-    //     return view('product',compact('product'));
-    // }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -146,23 +98,4 @@ class ShopController extends Controller
         //
     }
 
-    public function search(Request $request)
-    {
-        $request->validate([
-            'query'=>'required|min:3'
-        ]);
-        $query=$request->input('query');
-      //  $products=Product::where('name','like',"%$query%")->get();
-        //ukoliko zelimo paginaciju umesto get ide paginate
-
-
-         $products=Product::where('name','like',"%$query%")
-                         ->orwhere('description','like',"%$query%")
-                         ->orwhere('details','like',"%$query%")  
-                      ->paginate(10);
-
-        //uz paket use Nicolaslopezj\Searchable\SearchableTrait;
-       // $products=Product::search($query)->paginate(10);
-        return view('search-results ')->with('products',$products);
-    }
 }
