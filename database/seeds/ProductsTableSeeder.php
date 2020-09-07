@@ -1188,8 +1188,8 @@ class ProductsTableSeeder extends Seeder
             73 => 
             array (
                 'id' => 102,
-                'name' => 'Duks yza devojčice Love',
-                'slug' => 'duks-yza-devojcice-love',
+                'name' => 'Duks za devojčice Love',
+                'slug' => 'duks-za-devojcice-love',
                 'details' => '95% pamuk, 5% elastan',
                 'price' => 750,
                 'description' => NULL,
@@ -1199,7 +1199,7 @@ class ProductsTableSeeder extends Seeder
                 'image' => 'products\\September2020\\ZzcVUrirzFPMRKUPT2te.jpg',
                 'images' => NULL,
                 'created_at' => '2020-09-03 08:10:03',
-                'updated_at' => '2020-09-03 08:10:03',
+                'updated_at' => '2020-09-07 15:57:42',
             ),
             74 => 
             array (
@@ -1258,12 +1258,12 @@ class ProductsTableSeeder extends Seeder
                 'price' => 970,
                 'description' => NULL,
                 'quantity' => 4,
-                'category_id' => 29,
+                'category_id' => 53,
                 'manufacturer_id' => 19,
                 'image' => 'products\\September2020\\gg4tRb8nrfBCofl21mPW.jpg',
                 'images' => '["products\\\\September2020\\\\HIxZ5IReqKfEWmwYTiWb.jpg","products\\\\September2020\\\\FvvT9Was4WS6Qo7Juq5j.jpg"]',
                 'created_at' => '2020-09-03 08:24:57',
-                'updated_at' => '2020-09-03 08:30:42',
+                'updated_at' => '2020-09-07 15:57:02',
             ),
             78 => 
             array (
@@ -1530,12 +1530,12 @@ class ProductsTableSeeder extends Seeder
                 'price' => 730,
                 'description' => NULL,
                 'quantity' => 5,
-                'category_id' => 45,
+                'category_id' => 28,
                 'manufacturer_id' => 1,
                 'image' => 'products\\September2020\\k8ccZHElbhp9KfIszLOJ.jpg',
                 'images' => NULL,
                 'created_at' => '2020-09-03 09:35:34',
-                'updated_at' => '2020-09-03 09:35:34',
+                'updated_at' => '2020-09-07 14:22:23',
             ),
             95 => 
             array (
@@ -1546,12 +1546,12 @@ class ProductsTableSeeder extends Seeder
                 'price' => 730,
                 'description' => NULL,
                 'quantity' => 5,
-                'category_id' => 28,
+                'category_id' => 45,
                 'manufacturer_id' => 1,
                 'image' => 'products\\September2020\\wFkg0Q5JC2HiSFzZevrX.jpg',
                 'images' => NULL,
                 'created_at' => '2020-09-03 09:36:40',
-                'updated_at' => '2020-09-03 09:36:40',
+                'updated_at' => '2020-09-07 14:25:33',
             ),
             96 => 
             array (

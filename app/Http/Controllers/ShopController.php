@@ -47,10 +47,10 @@ class ShopController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show( $slug)
+    public function show($slug)
     {
         $product=Product::where('slug',$slug)->firstOrFail();
-        $mightAlsoLike=Product::where('slug','!=',$slug)->mightAlsoLike()->get();
+        $mightAlsoLike=Product::where([['slug','!=',$slug],['category_id', $product->category_id]])->mightAlsoLike()->get();
         
 // postavljena vrednost stock_threshold u voyageru na 5
         if($product->quantity>setting('site.stock_threshold')){
