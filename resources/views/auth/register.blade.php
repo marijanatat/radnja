@@ -22,12 +22,12 @@
             <div class="spacer"></div>
 
             <form action="{{ route('register') }}" method="POST" data-aos="zoom-in">
-                {{ csrf_field() }}
-                <input type="text" id="name" name="name" value="{{ old('name') }}" placeholder="Name" required autofocus>
+                @csrf
+                <input type="text" id="name" name="name" value="{{ old('name') }}" placeholder="Ime i prezime" required autofocus>
 
-                <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="Email" required autofocus>
-                <input type="password" id="password" name="password"  placeholder="Password" required>
-                <input type="password" id="password-confirm" name="password_confirmation"  placeholder="Confirm Password" required>
+                <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="Email adresa" required autofocus>
+                <input type="password" id="password" name="password"  placeholder="Lozinka" required>
+                <input type="password" id="password-confirm" name="password_confirmation"  placeholder="Potvrdite lozinku" required>
 
                 <div class="login-container">
                     <button type="submit" class="button-primary rounded-md">Registracija</button>

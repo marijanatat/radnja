@@ -1,11 +1,11 @@
 @component('mail::message')
     
-# Potvrda o prijemu narudžbe
+# Potvrda o prijemu porudžbine
 
-Poštovani, Vaša narudžba je primljena i trenutno je u obradi.
+Poštovani, Vaša porudžbina je primljena i trenutno je u obradi.
 Hvala Vam što kupujete kod nas.
 
-**Broj narudžbe:** {{ $order->id }} <br>
+**Broj porudžbe:** {{ $order->id }} <br>
 **Email naručioca:** {{ $order->billing_email }} <br>
 **Ime naručioca:** {{ $order->billing_name }} <br>
 **Iznos:** {{ presentPrice($order->billing_total) }} <br>
@@ -29,4 +29,6 @@ Hvala na poverenju.
 
 Srdačan pozdrav, <br>
 {{ config('app.name') }}
+Kneza Mihajla 21 <br>
+25250 Odžaci
 @endcomponent

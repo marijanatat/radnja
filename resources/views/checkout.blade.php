@@ -37,7 +37,7 @@
                     <h2 class="font-bold text-gray-600 text-xl -mt-4">Adresa isporuke</h2>
     
                     <div class="form-group">
-                        <label for="email" class="text-sm md:text-base">E-mail adresa</label>
+                        <label for="email" class="text-sm md:text-base">Email adresa</label>
                         @if (auth()->user())
                         <input type="email" id="email" name="email" value="{{ auth()->user()->email }}"
                             readonly>

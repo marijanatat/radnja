@@ -2,26 +2,27 @@
 
 namespace App\Mail;
 
-use App\Order;
+use App\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class OrderPlaced extends Mailable
+class WelcomeMail extends Mailable
 {
     use Queueable, SerializesModels;
-
-    public $order;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Order $order)
+
+    public $user;
+
+    public function __construct(User $user)
     {
-        $this->order = $order;
+        $this->user = $user;
     }
 
     /**
@@ -31,8 +32,8 @@ class OrderPlaced extends Mailable
      */
     public function build()
     {
-        return $this->to($this->order->billing_email, $this->order->billing_name)
-                    ->subject('Potvrda porudžbine')
-                    ->markdown('emails.orders.placed');
+        return $this->from("mobing.odzaci@outlook.com", "Mob-ing olnine shop")
+                    ->subject('Uspešna registracija')
+                    ->markdown('emails.welcome');
     }
 }

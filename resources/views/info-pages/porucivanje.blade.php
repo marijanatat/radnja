@@ -5,7 +5,7 @@
 
 <div class="text-gray-700 hover:text-green-900">
    @component('components.breadcrumbs')
-  <a href="/">Home</a>
+  <a href="/">Početna strana</a>
   <i class="fa fa-chevron-right breadcrumb-separator"></i>
   <span>Poručivanje</span>
   @endcomponent 

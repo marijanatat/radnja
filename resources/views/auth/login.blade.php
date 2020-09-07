@@ -25,7 +25,7 @@
             <form action="{{ route('login') }}" method="POST" data-aos="zoom-in">
                 {{ csrf_field() }}
 
-                <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="Email" required autofocus>
+                <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="Email adresa" required autofocus>
                 <input type="password" id="password" name="password" value="{{ old('password') }}" placeholder="Lozinka" required>
 
                 <div class="login-container text-gray-700">

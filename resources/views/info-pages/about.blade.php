@@ -5,7 +5,7 @@
 
 <div class="">
    @component('components.breadcrumbs')
-  <a href="/">Home</a>
+  <a href="/">Početna strana</a>
   <i class="fa fa-chevron-right breadcrumb-separator"></i>
   <span>O nama</span>
   @endcomponent 

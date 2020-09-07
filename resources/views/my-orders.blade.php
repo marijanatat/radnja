@@ -6,9 +6,9 @@
 @section('content')
 
 @component('components.breadcrumbs')
-        <a href="/">Home</a>
+        <a href="/">Početna strana</a>
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
-        <span>My orders</span>
+        <span>Moje porudžbine</span>
     @endcomponent
 
     <div class="container">
@@ -33,13 +33,13 @@
         <div class="sidebar grid mt-4  ">
 
             <ul class="text-gray-700">
-              <li><a href="{{ route('users.edit') }}">My Profile</a></li>
-              <li class="active"><a href="{{ route('orders.index') }}">My Orders</a></li>
+              <li><a href="{{ route('users.edit') }}">Moj nalog</a></li>
+              <li class="active"><a href="{{ route('orders.index') }}">Moje porudžbine</a></li>
             </ul>
         </div> <!-- end sidebar -->
         <div class="my-profile mt-2 ml-8 md:ml-2">
             <div class="products-header">
-                <h1 class="text-boja font-bold mb-2">My Orders</h1>
+                <h1 class="text-boja font-bold mb-2">Moje poružbine</h1>
             </div>
 
             <div class="mx-8 md:mx-2 -mt-16 md:mt-4">

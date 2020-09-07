@@ -8,12 +8,12 @@ tracking-normal text-gray-700 md:text-gray-200 md:items-center md:space-y-0 spac
 
 
     <li>
-        <a href="{{ route('users.edit') }}" class="ml-8 hover:text-teal-300 py-3 md:py-0">My Account</a>
+        <a href="{{ route('users.edit') }}" class="ml-8 hover:text-teal-300 py-3 md:py-0">Moj nalog</a>
     </li>
     <li>
         <a class="hover:text-teal-300" href="{{ route('logout') }}" onclick="event.preventDefault();
                   document.getElementById('logout-form').submit();">
-            {{ __('Logout') }}
+            {{ __('Odjavite se') }}
         </a>
     </li>
 
