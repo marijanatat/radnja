@@ -8,10 +8,6 @@
         margin-bottom: 30px;
     }
 
-    .cart-table {
-
-    }
-
     .cart-table-row {
         display: flex;
         justify-content:space-between ;
@@ -110,7 +106,6 @@
 
     .cart-totals {
         margin: 20px 0;
-        // padding: 10px;
         display: flex;
         justify-content: space-between;
         background: lighten($color: gray, $amount: 40%);

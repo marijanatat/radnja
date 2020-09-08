@@ -36,7 +36,6 @@
   #social a:hover {
     font-size: 50px;
     transition: 0.1s ease-in;
-    /* color: #fc9700; */
     color:  #3B5998;
    
   }
@@ -54,13 +53,12 @@
   #social1 a:hover {
     font-size: 50px;
     transition: 0.1s ease-in;
-    /* color: rgb(119, 237, 241); */
       color: #fc9700; 
   }
   #rotate-words {
   max-width:400px;
   margin:auto;
-   padding:15% 0;
+  padding:15% 0;
   font-size:2.2em;
   text-transform:uppercase;
   font-family: 'Oswald', sans-serif;
@@ -69,7 +67,7 @@
 #rotate-words span {
   display:block;
   height:80px;
-   font-size:.7em; 
+  font-size:.7em; 
   text-transform:lowercase;
   opacity:.8;
   font-family: 'Rubik', sans-serif;
@@ -80,7 +78,7 @@
  opacity:0;
  overflow:hidden;
  left:10vw;
-  width:80vw; 
+ width:80vw; 
  line-height:1.2em;
  animation: rotate-word 32s linear infinite 0s;
 }

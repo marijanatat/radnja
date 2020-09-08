@@ -10,16 +10,13 @@ div#map {
     .gm-style-iw-d {
       max-width: 451px;
       max-height: 128px;
-      //background-color: #000000c2;
       div {
         div {
           color: $white;
           
           p {
-            // padding-left: .73rem;
             .icon.address-icon { 
               display: none;
-              //background-image: url('/images/baseline_icon/baseline_place.png');
             } 
           }
         }

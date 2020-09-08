@@ -11,15 +11,12 @@
 @media only screen and (max-width : 992px) {
     header.with-background, header {
         .top-nav {
-            // flex-direction: column;
-
             .logo {
                 margin: auto;
             }
 
             ul {
                 margin: 0px auto 0;
-                // width: 80%;
             }
             
         }
@@ -129,7 +126,6 @@
             .cart-table-row-left {
                 width: 30%;
                  justify-content: space-between;
-                // justify-items: left;
                
             }
 
@@ -139,7 +135,6 @@
             }
 
             img {
-                // display: none;
                 max-height: 35px;
             }
            

@@ -194,7 +194,7 @@
                  @if ($product->quantity==0)
                  <div class="text-red-600 "><i class="fa fa-ban" aria-hidden="true"></i> Proizvod nije trenutno dostupan.</div>     
                 @else
-                <button type="submit" class="text-md text-white px-2 py-1 button button-plain transition duration-500 ease-in-out border border-gray-300 shadow-md rounded-md bg-boja hover:bg-bojasvetla transform hover:-translate-y-1 hover:scale-110 ...">Dodaj u korpu</button>
+                <button type="submit" class="text-md text-white px-3 py-1 button button-plain transition duration-500 ease-in-out border border-gray-300 shadow-md rounded-md bg-boja hover:bg-bojasvetla transform hover:-translate-y-1 hover:scale-110 ...">Dodaj u korpu</button>
                
                 @endif
              </form>

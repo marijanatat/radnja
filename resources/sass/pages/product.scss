@@ -1,5 +1,4 @@
 .product-section {
-    //  display: flex;
      display: grid;
      grid-template-columns: 1fr 1fr;
      grid-gap: 120px;
@@ -187,7 +186,6 @@
     top: 0;
     left: 0;
     text-align: center;
-    /* padding-left: 11px; */
     padding-top: 3px;  
 
     height: 30px;

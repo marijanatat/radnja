@@ -33,7 +33,7 @@
                     <button type="submit" class="button-primary rounded-md">Registracija</button>
                     <div class="already-have-container ml-4">
                         <p class="mb-2 text-gray-700 italic lg:-ml-8"><strong>Već imate nalog?</strong></p>
-                        <a href="{{ route('login') }}" class=" font-md font-semibold "><span class="text-bojasvetla">Login</span></a>
+                        <a href="{{ route('login') }}" class=" font-md font-semibold "><span class="text-bojasvetla">Prijavite se</span></a>
                     </div>
                 </div>
 

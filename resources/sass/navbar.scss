@@ -1,22 +1,5 @@
-// .navbar.scrolled {
-//     background-color: rgb(20, 104, 107) !important;
-//     transition: background-color 200ms linear;
-//   } 
- 
-  /* Links inside the navbar */
-  .navbar a {
-    // float: left;
-    // font-size: 16px;
-    // color: rgb(223, 37, 37);
-    // text-align: center;
-    // /* padding: 14px 16px; */
-    // text-decoration: none;
-
-  }
-
   /* The dropdown container */
   .dropdown1 {
-
      float: left; 
      overflow: hidden;
     
@@ -34,9 +17,6 @@
     width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    
-    // transform:translateY(40px);
-
   }
 
   @media only screen and (max-width: 768px) {
@@ -62,12 +42,10 @@
   .dropdown:hover .dropdown-content {
     display: flex;
     position: absolute;    
-    // left: 130px;
     right: 0;
   
     background-color:white;
     color: white;
-    // transform:translateY(0px);
     }
 
     @media only screen and (max-width: 768px) {

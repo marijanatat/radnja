@@ -130,8 +130,20 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'password' => [
+            'required' => 'Lozinka je obavezna.',
+            'min' => 'Lozinka mora imati najmanje :min karaktera.',
+            'confirmed' => 'Potvrda lozinke se ne podudara sa unetom lozinkom.'
+        ],
+        'email' => [
+            'required' => 'Email adresa je obavezna.',
+            'email' => 'Molimo Vas, unesite validnu email adresu.',
+            'unique' => 'Email adresa je već registrovana u sistemu.',
+            'max' => 'Email adresa ne može imati više od :max karaktera.',
+        ],
+        'name' => [
+            'required' => 'Ime i prezime su obavezni.',
+            'max' => 'Ime i prezime ne mogu imati više od :max karaktera.',
         ],
     ],
 

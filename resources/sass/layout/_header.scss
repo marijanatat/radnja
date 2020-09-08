@@ -1,8 +1,5 @@
 header.with-background {
-  // background: url('/img/b.png');
- 
    color: $white;
-      // background: url('./img/alvin-mahmudov-vKuEhorbvYI-unsplash-1.jpg');
        background: url('./img/ramin-talebi-u_b0jWnkgM0-unsplash-1.jpg');
       
      
@@ -13,12 +10,6 @@ header.with-background {
       border-bottom-right-radius: 50% 30%;
       height: 750px;
  
-// z-index: -2;
-      // background: url('./img/ramin-talebi-u_b0jWnkgM0-unsplash-1.jpg');
-      
-
-  
-
   .top-nav {
     display: flex;
     justify-content: space-between;
@@ -41,14 +32,6 @@ header.with-background {
     grid-gap: $gutter;
     padding-top: 20px;
     padding-bottom: 84px;
-
-    .hero-image {
-      //padding-left: 40px;
-   
-    
-      
-
-    }
 
     h1 {
       font-size: 52px;
@@ -82,9 +65,6 @@ header {
 
     ul {
       display: flex;
-      // text-transform: uppercase;
-      // justify-content: space-between;
-      // width: 40%;
       padding-top: 0px;
       font-weight: 400;
 
@@ -96,19 +76,8 @@ header {
         }
       }
 
-      a {
-        // color: $white;
-        // &:hover {
-        //   color: darken($white, 10%);
-        // }
-      }
-
       .cart-count {
         display: inline-block;
-        // position: absolute;
-        // right: 0;
-        // top: -22px;
-        // right: -24px;
         background: $cart-count;
         color: $text-color;
         line-height: 0;

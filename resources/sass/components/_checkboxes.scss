@@ -1,10 +1,7 @@
 .control {
-    // font-family: arial;
     display: block;
     position: relative;
     padding-left: 23px;
-    // margin-bottom: 5px;
-    // padding-top: 3px;
     cursor: pointer;
     font-size: 14px;
 }
@@ -104,9 +101,7 @@
         transform: scale(1);
     }
 }
-// .control-checkbox input + .control_indicator::before {
-//     animation: s-ripple 250ms ease-out;
-// }
+
 .control-checkbox input:checked + .control_indicator::before {
     animation-name: s-ripple-dup;
 }
