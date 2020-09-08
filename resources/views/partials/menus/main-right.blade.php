@@ -30,7 +30,7 @@ tracking-normal text-gray-700 md:text-gray-200 md:items-center md:space-y-0 spac
             </g>           
         </svg>
             @if (Cart::instance('default')->count()>0)
-            <span class="bg-yellow-400 px-1 leading-tight rounded-full text-teal-800 text-sm absolute" style="left: 14px; top: -8px;"><span>{{Cart::instance('default')->count()}}</span>
+            <span class="bg-yellow-400 leading-tight rounded-full text-teal-800 text-sm absolute" style="left: 14px; top: -8px; padding: 1px 5px 1px 5px;"><span>{{Cart::instance('default')->count()}}</span>
                 @endif
         </a></li>
     {{-- @foreach($items as $menu_item)
