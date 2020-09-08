@@ -980,8 +980,8 @@ class ProductsTableSeeder extends Seeder
             60 => 
             array (
                 'id' => 89,
-                'name' => 'Ženskadonji deo pidžame Sloga',
-                'slug' => 'zenskadonji-deo-pidzame-sloga',
+                'name' => 'Donji deo pidžame za žene Sloga',
+                'slug' => 'donji-deo-pidzame-za-zene-sloga',
                 'details' => NULL,
                 'price' => 1050,
                 'description' => NULL,

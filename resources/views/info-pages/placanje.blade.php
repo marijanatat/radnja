@@ -20,7 +20,7 @@
             Proizvode koje želite da poručite putem internet prodavnice, možete platiti na više načina:
             <ul>
                 <li>1. plaćanje pouzećem gotovinom prilikom preuzimanja pošiljke</li>
-                <li> 2. plaćanjem u našem maloprodajnom objektu</li>
+                <li>2. plaćanjem u našem maloprodajnom objektu</li>
                 <li>3. plaćanje preko računa</li>
             </ul>
             

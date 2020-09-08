@@ -209,42 +209,42 @@ class SizesTableSeeder extends Seeder
             27 => 
             array (
                 'id' => 28,
-                'value' => 'm',
+                'value' => 'M',
                 'created_at' => '2020-08-28 12:12:39',
                 'updated_at' => '2020-08-28 12:12:39',
             ),
             28 => 
             array (
                 'id' => 29,
-                'value' => 's',
+                'value' => 'S',
                 'created_at' => '2020-08-28 12:12:45',
                 'updated_at' => '2020-08-28 12:12:45',
             ),
             29 => 
             array (
                 'id' => 30,
-                'value' => 'l',
+                'value' => 'L',
                 'created_at' => '2020-08-28 12:13:07',
                 'updated_at' => '2020-08-28 12:13:07',
             ),
             30 => 
             array (
                 'id' => 31,
-                'value' => 'xl',
+                'value' => 'XL',
                 'created_at' => '2020-08-28 12:13:12',
                 'updated_at' => '2020-08-28 12:13:12',
             ),
             31 => 
             array (
                 'id' => 32,
-                'value' => 'xxl',
+                'value' => 'XXL',
                 'created_at' => '2020-08-28 12:13:17',
                 'updated_at' => '2020-08-28 12:13:17',
             ),
             32 => 
             array (
                 'id' => 33,
-                'value' => '3xl',
+                'value' => '3XL',
                 'created_at' => '2020-09-02 20:16:31',
                 'updated_at' => '2020-09-02 20:16:31',
             ),
