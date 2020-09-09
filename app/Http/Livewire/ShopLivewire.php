@@ -22,8 +22,8 @@ class ShopLivewire extends Component
     public $sort;
     public $sizes = [];
     public $sizesAll = [];
-    public $min = 1;
-    public $max = 10000; 
+    public $min;
+    public $max; 
     public $productsPerPage = 12;
     public $search;
     protected $products;
@@ -33,8 +33,8 @@ class ShopLivewire extends Component
     public function searched($search)
     {
         $this->search = $search;
-        $this->min = 1;
-        $this->max = 10000;
+        $this->min = $this->loadMinPrice();
+        $this->max = $this->loadMinPrice();
         $this->requestedSizes = [];
     }
     
@@ -45,6 +45,9 @@ class ShopLivewire extends Component
 
     public function mount()
     {
+        $this->min = $this->loadMinPrice();
+        $this->max = $this->loadMaxPrice();
+
         $this->categoryQuery = request()->category;    
 
         if(request()->search){
@@ -63,8 +66,8 @@ class ShopLivewire extends Component
     {
         $this->requestedCategories = [];
         $this->search = '';    
-        $this->min = 1;
-        $this->max = 10000;
+        $this->min = $this->loadMinPrice();
+        $this->max = $this->loadMaxPrice();
         $this->requestedSizes = [];
         $this->categoryQuery = '';
     }
@@ -181,5 +184,15 @@ class ShopLivewire extends Component
             return Size::whereIn('id', $sizesId)->get();
         }
         return Size::all();
+    }
+
+    private function loadMaxPrice()
+    {
+        return Product::max('price');
+    }
+
+    private function loadMinPrice()
+    {
+        return Product::min('price');
     }
 }

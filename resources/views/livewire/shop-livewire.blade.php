@@ -209,8 +209,8 @@
                                         <input name="max" type="number" wire:model.debounce.200ms="max" class="" />
                                     </div>
                                 </div>
-                                <input wire:model.debounce.0ms="min" min="1" max="10000" type="range" />
-                                <input wire:model.debounce.0ms="max" min="1" max="10000" type="range" />
+                                <input wire:model.debounce.0ms="min" min="1" max="6000" type="range" />
+                                <input wire:model.debounce.0ms="max" min="1" max="6000" type="range" />
                                 <svg width="100%" height="24">
                                     <line x1="4" y1="0" x2="300" y2="0" stroke="#212121" stroke-width="12"
                                         stroke-dasharray="1 28"></line>
