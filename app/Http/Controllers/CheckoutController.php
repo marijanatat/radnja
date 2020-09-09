@@ -50,8 +50,7 @@ class CheckoutController extends Controller
             $order = $this->addToOrdersTable($request, null);
             Mail::to($request->email)
                 ->to('mobing.odzaci@outlook.com')
-                ->to('tatalovicmarijana@gmail.com')               
-                    ->queue(new OrderPlaced($order));
+                ->queue(new OrderPlaced($order));
 
             Cart::instance('default')->destroy();
 
