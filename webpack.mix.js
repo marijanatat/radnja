@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+require('laravel-mix-purgecss');
 
 /*
  |--------------------------------------------------------------------------
@@ -15,6 +16,10 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/responsive.scss', 'public/css')
     .sass('resources/sass/navbar.scss', 'public/css')
-    .postCss('resources/css/main.css', 'public/css', [
-        require('tailwindcss'),
-      ]);
+    .postCss('resources/css/main.css', 'public/css')
+    .options({
+        postCss: [require('tailwindcss')],
+     })
+     .purgeCss({
+       enabled: true,
+     });
