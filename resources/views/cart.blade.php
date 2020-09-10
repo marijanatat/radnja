@@ -198,7 +198,7 @@
 
                     const productQuantity = element.getAttribute('data-productQuantity')
 
-                    axios.patch(`cart/${id}`, {
+                    axios.patch(`korpa/${id}`, {
                         quantity: this.value,
                         productQuantity: productQuantity
                     })

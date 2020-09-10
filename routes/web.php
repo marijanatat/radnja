@@ -28,44 +28,44 @@ Route::group(['prefix' => 'admin-radnja-mob'], function () {
 
 
 Route::get('/', 'ProductController@index')->name('home');
-Route::get('/shop/{product}','ShopController@show')->name('shop.show');
-Route::get('/cart','CartController@index')->name('cart.index');
-Route::post('/cart','CartController@store')->name('cart.store');
-Route::patch('/cart/{product}','CartController@update')->name('cart.update');
-Route::delete('/destroy/{product}','CartController@destroy')->name('cart.destroy');
+Route::get('/proizvodi/{product}','ShopController@show')->name('shop.show');
+Route::get('/korpa','CartController@index')->name('cart.index');
+Route::post('/korpa','CartController@store')->name('cart.store');
+Route::patch('/korpa/{product}','CartController@update')->name('cart.update');
+Route::delete('/brisanje/{product}','CartController@destroy')->name('cart.destroy');
 
-Route::post('/cart/switchToSaveForLater/{product}', 'CartController@switchToSaveForLater')->name('cart.switchToSaveForLater');
+Route::post('/korpa/switchToSaveForLater/{product}', 'CartController@switchToSaveForLater')->name('cart.switchToSaveForLater');
 
-Route::delete('/saveForLater/{product}', 'SaveForLaterController@destroy')->name('saveForLater.destroy');
-Route::post('/saveForLater/switchToCart/{product}', 'SaveForLaterController@switchToCart')
+Route::delete('/sacuvajZaKasnije/{product}', 'SaveForLaterController@destroy')->name('saveForLater.destroy');
+Route::post('/sacuvajZaKasnije/ubaciUKorpu/{product}', 'SaveForLaterController@switchToCart')
     ->name('saveForLater.switchToCart');
 
 Route::get('/checkout','CheckoutController@index')->name('checkout.index')->middleware('auth');
 Route::post('/checkout', 'CheckoutController@store')->name('checkout.store');
 
-Route::get('/guestCheckout','CheckoutController@index')->name('guestCheckout.index');
-Route::get('/thankyou', 'ConfirmationController@index')->name('confirmation.index');
+Route::get('/poručivanje-bez-registracije','CheckoutController@index')->name('guestCheckout.index');
+Route::get('/hvala', 'ConfirmationController@index')->name('confirmation.index');
 
 Route::get('empty',function(){
     Cart::destroy();
 });
 
-Route::get('/my-profile', 'UsersController@edit')->name('users.edit')->middleware('auth');
-Route::patch('/my-profile', 'UsersController@update')->name('users.update')->middleware('auth');
-Route::get('/my-orders', 'OrdersController@index')->name('orders.index')->middleware('auth');
-Route::get('/my-orders/{order}', 'OrdersController@show')->name('orders.show')->middleware('auth');
+Route::get('/moj-profil', 'UsersController@edit')->name('users.edit')->middleware('auth');
+Route::patch('/moj-profil', 'UsersController@update')->name('users.update')->middleware('auth');
+Route::get('/moje-porudžbine', 'OrdersController@index')->name('orders.index')->middleware('auth');
+Route::get('/moje-porudžbine/{order}', 'OrdersController@show')->name('orders.show')->middleware('auth');
 
 
 //footer 
-Route::view('/porucivanje','info-pages.porucivanje')->name('porucivanje');
+Route::view('/poručivanje','info-pages.porucivanje')->name('porucivanje');
 Route::view('/placanje','info-pages.placanje')->name('placanje');
 Route::view('/isporuka','info-pages.isporuka')->name('isporuka');
 Route::view('/reklamacije','info-pages.reklamacije')->name('reklamacije');
 Route::view('/otkazivanje','info-pages.otkazivanje')->name('otkazivanje');
 Route::view('/privatnost','info-pages.privatnost')->name('privatnost');
 Route::view('/o-nama','info-pages.about')->name('about');
-Route::view('/cookies','info-pages.cookies')->name('cookies');
+Route::view('/kolačići','info-pages.cookies')->name('cookies');
   
-Route::livewire('/shop', 'shop-livewire')->name('shop.index')
+Route::livewire('/proizvodi', 'shop-livewire')->name('shop.index')
     ->layout('layouts.master');
     
