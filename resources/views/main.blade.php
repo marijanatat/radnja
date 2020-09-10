@@ -10,10 +10,10 @@
 
   <title>Prodavnica odeće za decu i odrasle | Mob-ing Odžaci</title>
 
-  <meta name="description" content="Prodavnica sa odećom domaćih i stranih proizvođača. Kvalitetan pamuk i povoljne cene. Naručite iz udobnosti Vašeg doma.">
-  <meta name="keywords" content="odeća, prodaja odeće za decu, oprema za bebe, online prodaja, webshop, odeća za muškarce, odeća za žene, majice, haljine, benkice, zeke, laravel webshop, 
+  <meta name="description" content="Prodavnica sa odećom domaćih proizvođača. Kvalitetan pamuk i povoljne cene. Najbolje za Vašu porodicu. Naručite iz udobnosti Vašeg doma.">
+  <meta name="keywords" content="butik odžaci, butik odzaci‚ dečija garderoba, decija garderoba, bebi garderoba, pokloni za bebe,odeća, prodaja odeće za decu, oprema za bebe, online prodaja, webshop, odeća za muškarce, odeća za žene, majice, haljine, benkice, zeke, laravel webshop, 
   bodići, helanke, suknje, pantalone, farmerke, peškiri, posteljina, gaće, čarape, maske, duksevi, kompleti, trenerke, jakne, mobing odžaci">
-  <meta property="og:description" content="Prodavnica sa odećom domaćih i stranih proizvođača. Kvalitetan pamuk i povoljne cene. Naručite iz udobnosti Vašeg doma.">
+  <meta property="og:description" content="Prodavnica sa odećom domaćih proizvođača. Kvalitetan pamuk i povoljne cene. Najbolje za Vašu porodicu.Naručite iz udobnosti Vašeg doma.">
   <meta property="og:url" content="https://mob-ing.rs">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MOB-ING WEB SHOP">
