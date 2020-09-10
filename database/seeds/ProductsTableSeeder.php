@@ -28,7 +28,7 @@ class ProductsTableSeeder extends Seeder
                 'quantity' => 0,
                 'category_id' => 81,
                 'manufacturer_id' => 6,
-                'image' => 'products\\August2020\\7dxvV6LbV9rF13OMd6YL.jpg',
+                'image' => 'products/August2020/7dxvV6LbV9rF13OMd6YL.jpg',
                 'images' => '["products\\\\August2020\\\\VIi2utj4bVPCTgM35gYX.jpg","products\\\\August2020\\\\yXv3V0jYrttkLSwKWslv.jpg"]',
                 'created_at' => '2020-08-20 11:34:58',
                 'updated_at' => '2020-09-02 19:44:51',
