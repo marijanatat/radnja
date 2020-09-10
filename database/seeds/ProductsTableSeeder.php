@@ -708,7 +708,7 @@ class ProductsTableSeeder extends Seeder
             43 => 
             array (
                 'id' => 71,
-                'name' => 'Dećaci košulja prugice',
+                'name' => 'Dečaci košulja prugice',
                 'slug' => 'decaci-kosulja-prugice',
                 'details' => NULL,
                 'price' => 1500,
@@ -948,8 +948,8 @@ class ProductsTableSeeder extends Seeder
             58 => 
             array (
                 'id' => 87,
-                'name' => 'Muška bodz majica nestruirana Ewox',
-                'slug' => 'muska-bodz-majica-nestruirana-ewox',
+                'name' => 'Muška body majica nestrukirana Ewox',
+                'slug' => 'muska-body-majica-nestrukirana-ewox',
                 'details' => NULL,
                 'price' => 990,
                 'description' => NULL,
@@ -964,8 +964,8 @@ class ProductsTableSeeder extends Seeder
             59 => 
             array (
                 'id' => 88,
-                'name' => 'Muška bodz majica struirana Ewox',
-                'slug' => 'muska-bodz-majica-struirana-ewox',
+                'name' => 'Muška body majica strukirana Ewox',
+                'slug' => 'muska-body-majica-strukirana-ewox',
                 'details' => NULL,
                 'price' => 1100,
                 'description' => NULL,
@@ -1252,8 +1252,8 @@ class ProductsTableSeeder extends Seeder
             77 => 
             array (
                 'id' => 106,
-                'name' => 'Duks za devojčice sivi zvezdice Model',
-                'slug' => 'duks-za-devojcice-sivi-zvezdice-model',
+                'name' => 'Duks za devojčice sivi zvezdice Model Kids',
+                'slug' => 'duks-za-devojcice-sivi-zvezdice-model-kids',
                 'details' => '95% pamuk, 5% elastan',
                 'price' => 970,
                 'description' => NULL,

@@ -33,7 +33,7 @@
       <a data-turbolinks="false" href="{{route('shop.index',['category' => 'dečaci'])}}">
         <div class="img-wrapper">
           <img class="inner-img object-cover w-full h-80"
-            src="{{asset('./img/decak.jpg')}}" alt="slika decak">
+            src="{{asset('./img/Decak.jpg')}}" alt="slika decak">
         </div>
       </a>
       <figcaption
