@@ -28,7 +28,7 @@
                                 </div>
                                     @foreach ($children->children as $ch)
 
-                                    <a href="{{route('shop.index', ['category' => $ch->id])}}">
+                                    <a data-turbolinks="false" href="{{route('shop.index', ['category' => $ch->slug])}}">
                                       <div class="flex-col hover:bg-gray-200 p-2">
                                           <button class="focus:outline-none"> - {{$ch->name}} </button>
                                       </div>
