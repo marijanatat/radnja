@@ -17,9 +17,9 @@ class SearchDropdown extends Component
     public function render()
     {
         if (strlen($this->search) >= 2) {
-            $this->searchResults = Product::where('name','like',"%$this->search%")
-            ->orWhere('description','like',"%$this->search%")
-            ->orWhere('details','like',"%$this->search%")->get();
+            $this->searchResults = Product::where('name','like','%' . $this->search . '%')
+            ->orWhere('description','like','%' . $this->search . '%')
+            ->orWhere('details','like','%' . $this->search . '%')->take(10)->get();
         }
 
         return view('livewire.search-dropdown');

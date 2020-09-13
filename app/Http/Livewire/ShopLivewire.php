@@ -34,7 +34,7 @@ class ShopLivewire extends Component
     {
         $this->search = $search;
         $this->min = $this->loadMinPrice();
-        $this->max = $this->loadMinPrice();
+        $this->max = $this->loadMaxPrice();
         $this->requestedSizes = [];
     }
     
@@ -125,12 +125,12 @@ class ShopLivewire extends Component
 
     public function filterBySearch($products)
     {
-        $searched_products = $products->where('name','like',"%$this->search%")
-                ->orWhere('description','like',"%$this->search%")
-                ->orWhere('details','like',"%$this->search%");
+        $searched_products = $products->where('name','like','%' . $this->search . '%')
+                ->orWhere('description','like','%' . $this->search . '%')
+                ->orWhere('details','like','%' . $this->search . '%');
         $byPrice = $this->filterByPriceRange($searched_products);
         if($this->requestedSizes){
-            $serached_products = $this->filterBySize($byPrice);
+            $searched_products = $this->filterBySize($byPrice);
         }     
         return $searched_products;
     }
