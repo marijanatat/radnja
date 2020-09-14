@@ -1,9 +1,9 @@
-<div style="height: 250px; max-height: 250px; overflow-y: scroll" >
+<div style="height: 430px; max-height: 430px; overflow-y: scroll" >
     <div class="text-gray-700 md:hidden mb-2 h-auto text-lg overflow-hidden">
       @foreach ($categories as $category)
           <div x-data="{open: false}">
                   <div class="">
-                      <div class="flex justify-between active:bg-gray-400 hover:bg-gray-300 items-center" @click="open=!open">
+                      <div class="flex justify-between active:bg-gray-400 hover:bg-gray-300 items-center my-2 py-2" @click="open=!open">
                           {{-- <input class="w-4" type="checkbox" id="{{$category->id}}" value="{{$category->id}}" wire:model="requestedCategories"> --}}
                           <button class="cursor-pointer focus:outline-none uppercase">{{$category->name}}
                           </button>
@@ -43,7 +43,7 @@
                       </div>
             @endforeach
     </div>
-    <hr class=" my-2 bg-gray-300" style="height: 2px;">
+    <hr class="my-4 bg-gray-300" style="height: 2px;">
     <div class="md:hidden">
       @include('partials.menus.main-right-responsive')
     </div>
