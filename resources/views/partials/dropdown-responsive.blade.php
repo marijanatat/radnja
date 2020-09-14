@@ -1,5 +1,5 @@
-<div style="height: 430px; max-height: 430px; overflow-y: scroll" >
-    <div class="text-gray-700 md:hidden mb-2 h-auto text-lg overflow-hidden">
+<div class="text-gray-700 md:hidden mb-2 h-auto text-lg overflow-hidden">
+    <div style="height: 430px; max-height: 430px; overflow-y: scroll" >
       @foreach ($categories as $category)
           <div x-data="{open: false}">
                   <div class="">
