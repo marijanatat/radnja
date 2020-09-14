@@ -3,7 +3,7 @@
       @foreach ($categories as $category)
           <div x-data="{open: false}">
                   <div class="">
-                      <div class="flex justify-between active:bg-gray-400 hover:bg-gray-300 items-center my-2 py-2" @click="open=!open">
+                      <div class="flex justify-between active:bg-gray-400 hover:bg-gray-300 items-center mt-2 py-2" @click="open=!open">
                           {{-- <input class="w-4" type="checkbox" id="{{$category->id}}" value="{{$category->id}}" wire:model="requestedCategories"> --}}
                           <button class="cursor-pointer focus:outline-none uppercase">{{$category->name}}
                           </button>
