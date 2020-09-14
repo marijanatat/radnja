@@ -243,7 +243,7 @@
                 @forelse ($products as $product)
                 <div class="flex flex-col justify-center items-center space-y-2" style="max-height:400px;">
                     <a href="{{route('shop.show',$product->slug)}}"><img
-                            class="slike-proizvoda h-44 w-44 md:h-40 md:w-40 lg:h-44 lg:w-44 xl:h-64 xl:w-64 object-cover"
+                            class="slike-proizvoda h-48 w-64 md:h-40 md:w-40 lg:h-44 lg:w-44 xl:h-64 xl:w-64 object-cover"
                             src="{{productImage($product->image)}}" alt="product"></a>
                     <a href="{{route('shop.show',$product->slug)}}">
                         <div class="">{{$product->name}}</div>

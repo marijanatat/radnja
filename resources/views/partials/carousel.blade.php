@@ -6,7 +6,7 @@
             <div class="relative block h-full w-full  text-white text-5xl text-center"> 
             <a data-turbolinks="false" href="{{route('shop.index')}}">
                          <img class=" w-full h-full" src="{{asset('./img/alvin-mahmudov-vKuEhorbvYI-unsplash.jpg')}}"  style="position: center center">
-                         <div class="centered top-5 text-5xl  font-bold font-red-500"><span>Novi online</span> <br>  shop</div> 
+                         <div class="centered top-5 md:text-5xl text-3xl font-bold"><span>Novi online</span> <br>  shop</div> 
                      </a> 
             </div>
 

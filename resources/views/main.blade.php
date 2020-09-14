@@ -11,7 +11,7 @@
   <title>Prodavnica odeće za decu i odrasle | Mob-ing Odžaci</title>
 
   <meta name="description" content="Prodavnica sa odećom domaćih proizvođača. Kvalitetan pamuk i povoljne cene. Najbolje za Vašu porodicu. Naručite iz udobnosti Vašeg doma.">
-  <meta name="keywords" content="butik odžaci, butik odzaci‚ dečija garderoba, decija garderoba, bebi garderoba, pokloni za bebe,odeća, prodaja odeće za decu, oprema za bebe, online prodaja, webshop, odeća za muškarce, odeća za žene, majice, haljine, benkice, zeke, laravel webshop, 
+  <meta name="keywords" content="butik odžaci, butik odzaci‚ dečija garderoba, kids&family, kids, family, decija garderoba, bebi garderoba, pokloni za bebe,odeća, prodaja odeće za decu, oprema za bebe, online prodaja, webshop, odeća za muškarce, odeća za žene, majice, haljine, benkice, zeke, laravel webshop, 
   bodići, helanke, suknje, pantalone, farmerke, peškiri, posteljina, gaće, čarape, maske, duksevi, kompleti, trenerke, jakne, mobing odžaci">
   <meta property="og:description" content="Prodavnica sa odećom domaćih proizvođača. Kvalitetan pamuk i povoljne cene. Najbolje za Vašu porodicu.Naručite iz udobnosti Vašeg doma.">
   <meta property="og:url" content="https://mob-ing.rs">
@@ -142,7 +142,7 @@
       </div>
       <div class="module">
         <br>
-        <div class=" kupovina mt-20 mb-20 text-center">
+        <div class="kupovina mt-20 mb-20 text-center">
           <h1 class="text-5xl font-bold text-gray-600 p-4 max-h-12" style="font-family: 'Gochi Hand'"
             data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
             Ovo je samo deo našeg asortimana !!!
@@ -154,9 +154,9 @@
       <div class="products container mx-auto text-center grid grid-cols-2 md:grid-cols-4 mt-2" data-aos="fade-up"
         data-aos-duration="3000">
         @foreach ($products as $product)
-        <div class="product pt-12 pb-6">
+        <div class="product pt-8 pb-6">
           <a href="{{route('shop.show',$product->slug)}}"><img class="mx-auto" src="{{productImage($product->image)}}"
-              style="height:140px; width:140px;" alt="product"></a>
+              style="height:200px; width:200px;" alt="product"></a>
           <a href="{{route('shop.show',$product->slug)}}">
             <div class="mt-2">{{$product->name}}</div>
           </a>

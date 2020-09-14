@@ -1,5 +1,19 @@
 <div class="flex flex-col md:flex-row mx-5 mt-5 mb-0">
-  <div class="flex md:w-1/3 ml-3 max-w-md md:max-w-full ">
+  <div class="  flex md:w-1/3 ml-3 max-w-md md:max-w-full">
+    <figure class=" relative flex items-center ">
+      <a data-turbolinks="false" href="{{route('shop.index',['category' => 'bebe'])}}">
+        <div class="img-wrapper">
+          <img class=" inner-img object-cover w-full h-80"
+            src="{{asset('./img/bonnie-kittle--f7bKsvOgwU-unsplash.jpg')}}" alt="slika bebe">
+        </div>
+      </a>
+      <figcaption id="senke"
+        class=" absolute bg-gray-100 text-xl md:ml-8 lg:ml-16 xs:text-3xl  md:bg-opacity-0 md:text-2xl md:font-semibold md:text-white px-16 xl:text-5xl leading-tight xl:p-10  ">
+        <a data-turbolinks="false" href="{{route('shop.index',['category' => 'bebe'])}}"
+          style="color: inherit;text-shadow: 1px 2px rgb(112, 112, 112);">BEBE</a></figcaption>
+      <figure>
+  </div>
+  <div class="flex md:w-1/3 ml-3 my-3 md:my-0 max-w-md md:max-w-full ">
     <figure class="relative flex items-center">
       <a data-turbolinks="false" href="{{route('shop.index',['category' => 'devojčice'])}}">
         <div class="img-wrapper">
@@ -14,20 +28,6 @@
       <figure>
   </div>
 
-  <div class="  flex md:w-1/3 ml-3 my-3 md:my-0 max-w-md md:max-w-full">
-    <figure class=" relative flex items-center ">
-      <a data-turbolinks="false" href="{{route('shop.index',['category' => 'bebe'])}}">
-        <div class="img-wrapper">
-          <img class=" inner-img object-cover w-full h-80"
-            src="{{asset('./img/bonnie-kittle--f7bKsvOgwU-unsplash.jpg')}}" alt="slika bebe">
-        </div>
-      </a>
-      <figcaption id="senke"
-        class=" absolute bg-gray-100 text-xl md:ml-8 lg:ml-16 xs:text-3xl  md:bg-opacity-0 md:text-2xl md:font-semibold md:text-white px-16 xl:text-5xl leading-tight xl:p-10  ">
-        <a data-turbolinks="false" href="{{route('shop.index',['category' => 'bebe'])}}"
-          style="color: inherit;text-shadow: 1px 2px rgb(112, 112, 112);">BEBE</a></figcaption>
-      <figure>
-  </div>
   <div class="flex md:w-1/3 ml-3 md:mr-3 max-w-md md:max-w-full">
     <figure class="relative flex items-center">
       <a data-turbolinks="false" href="{{route('shop.index',['category' => 'dečaci'])}}">
