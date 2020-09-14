@@ -1,4 +1,4 @@
-<div class="md:hidden" style="height: 430px; max-height: 430px; overflow-y: scroll -ms-overflow-style: none; scrollbar-width: none;" >
+<div class="md:hidden" style="dropdown-overflow" >
 <div class="text-gray-700 md:hidden mb-2 h-auto text-lg overflow-hidden">
       @foreach ($categories as $category)
           <div x-data="{open: false}">
