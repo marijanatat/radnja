@@ -16,7 +16,7 @@
     <h2 class=" w-full text-gray-700 text-3xl px-5 font-bold leading-none tracking-widest p-4 my-4 ">Poručivanje</h2>
   </div>
         
-        <div class="container w-full text-gray-700 text-lg  pb-5 pt-2">
+        <div class="container w-full text-gray-700 text-lg px-5 pb-5 pt-2">
             Kada pronađete proizvod koji želite da kupite, kliknite na njegovu sličicu ili naziv pored, kako biste ušli na stranu sa detaljnim prikazom.
             <ul>
                 Na strani sa detaljnim prikazom:
@@ -26,10 +26,10 @@
             </ul>
             
         </div>
-        <div class=" container w-full text-gray-700 text-lg  pb-2 pt-2">
+        <div class=" container w-full text-gray-700 text-lg px-5 pb-2 pt-2">
             Prikazaće vam se podaci o već naručenom proizvodu. Proizvod u svakom trenutku možete da izbrišete ili sačuvate za kasnije. Imate mogućnost da nastavite kupovinu ili da završite kupovinu.Odaberite željenu opciju:
         </div>
-        <div class=" container w-full text-gray-700 text-lg  pb-2 pt-2">
+        <div class=" container w-full text-gray-700 text-lg px-5 pb-2 pt-2">
             <ul>
                 
                     <li style="flex justify-content-between items-center">

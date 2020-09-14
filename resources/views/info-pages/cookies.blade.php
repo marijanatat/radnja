@@ -12,11 +12,11 @@
 </div>
 
 
-<div class="container text-gray-700 mx-1 md:mx-3 my-2 text-md xl:text-xl   p-2 md:p-2 w-full">
+<div class="container text-gray-700 mx-1 md:mx-3 my-2 text-md xl:text-xl p-2 w-full">
     <h2 class=" w-full text-gray-700 text-3xl px-5 font-bold leading-none tracking-widest p-4 my-4 "> Politika upotrebe kolačića</h2>
   </div>
         
-        <div class="container w-full text-gray-700 text-lg  pb-5 pt-2  min-h-screen">
+        <div class="container w-full text-gray-700 text-lg px-5 pb-8 pt-2 min-h-screen">
          
           Ova stranica objašnjava upotrebu kolačića (cookies) na ovom sajtu i politiku privatnosti. Ukoliko nastavite sa korišćenjem ovog sajta, saglasni ste sa našom upotrebom kolačića i politikom privatnosti.
           <br><br>

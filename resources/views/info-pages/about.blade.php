@@ -15,7 +15,7 @@
 <div class="container">
    
 
-    <div class="mb-2 text-gray-700 text-lg">
+    <div class="mb-2 text-gray-700 text-lg px-5 pb-8">
         <br>
         <p>Naša radnja se nalazi u Odžacima. Mi smo već 11 godina tu za vas. Negujemo domaći kvalitet i pristupačne cene za celu porodicu.
             Mi imamo stalne mušterije koje nam veruje i koje nam se uvek vraćaju. <br></p>
@@ -34,7 +34,7 @@
           <span class="font-semibold">PIB:</span> <span class="text-boja">106223247</span> <br>
           <span class="font-semibold">Telefon:</span> <span class="text-boja">0637858499</span>
     </div>
-      <div class="pb-4">
+      <div class="pb-4 hidden md:block">
         <iframe src="https://maps.google.com/maps?q=Kneza%20Mihaila%2021%2C%20%D0%9E%D1%9F%D0%B0%D1%86%D0%B8&t=&z=17&ie=UTF8&iwloc=&output=embed" width="1000" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
        
     </div>  

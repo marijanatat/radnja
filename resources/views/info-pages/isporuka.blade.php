@@ -15,17 +15,17 @@
     <h2 class="w-full text-gray-700 text-3xl px-5 font-bold leading-none tracking-widest p-4 my-2">Isporuka</h2>
 </div>
 
-<div class="container w-full pb-3 pt-2 text-gray-700 text-lg">
+<div class="container w-full pb-3 pt-2 text-gray-700 text-lg px-5">
     U zavisnosti od raspoložive količine određenog artikla i mogućnosti njegovog nabavljanja, a u skladu sa našom
     poslovnom politikom, očekivani rok isporuke proizvoda iz naše ponude od 3-5 radnih dana.
 
 
 </div>
-<div class="container w-full text-gray-700 text-lg">
+<div class="container w-full text-gray-700 text-lg px-5">
     <div class=""><span style="">SVI PROIZVODI IZ ONLINE PONUDE DOSTUPNI SU ZA PORUČIVANJE, A AKO PAK NEKI MODEL NIJE,
             MOŽEMO VAM PONUDITI ZAMENSKI MODEL SLIČNIH KARAKTERISTIKA!<br><br></span></div>
 </div>
-<div class="container w-full text-gray-700 pb-4  text-lg">
+<div class="container w-full text-gray-700 pb-8 text-lg px-5">
     *Napomena: Ukoliko Vam je pošiljka stigla oštećena, najbolje je da u roku od 24 sata kontaktirate kurirsku službu
     koja je isporučila paket, kako bi napravili zapisnik. Ukoliko je roba stigla neoštećena, ali je neispravna,
     kontaktirajte nas kako bi Vam poslali zamenu.

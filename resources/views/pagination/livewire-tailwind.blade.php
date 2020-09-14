@@ -1,23 +1,23 @@
 @if ($paginator->hasPages())
     <nav role="navigation" aria-label="Pagination Navigation" class="flex items-center justify-between">
-        <div class="flex justify-between flex-1 sm:hidden">
+        <div class="flex justify-between flex-1 sm:hidden mr-4">
             @if ($paginator->onFirstPage())
                 <span class="relative inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-gray-500 bg-white border border-gray-300 rounded-md cursor-default">
-                    {!! __('pagination.previous') !!}
+                    {!! __('Prethodna') !!}
                 </span>
             @else
                 <button type="button" wire:click="previousPage" class="relative inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out bg-white border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:bg-gray-100 active:text-gray-700">
-                    {!! __('pagination.previous') !!}
+                    {!! __('Prethodna') !!}
                 </button>
             @endif
 
             @if ($paginator->hasMorePages())
                 <button type="button" wire:click="nextPage" class="relative inline-flex items-center px-4 py-2 ml-3 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out bg-white border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:bg-gray-100 active:text-gray-700">
-                    {!! __('pagination.next') !!}
+                    {!! __('Sledeća') !!}
                 </button>
             @else
                 <span class="relative inline-flex items-center px-4 py-2 ml-3 text-sm font-medium leading-5 text-gray-500 bg-white border border-gray-300 rounded-md cursor-default">
-                    {!! __('pagination.next') !!}
+                    {!! __('Sledeća') !!}
                 </span>
             @endif
         </div>

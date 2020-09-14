@@ -15,7 +15,7 @@
     <h2 class=" w-full text-gray-700 text-3xl px-5 font-bold leading-none tracking-widest p-4 my-2 ">Reklamacije</h2>
   </div>
         
-        <div class="w-full container text-gray-700 text-lg pt-1">
+        <div class="w-full container text-gray-700 text-lg pt-1 px-5">
             <h2 class="spacer text-xl font-semibold text-gray-700">
                 Reklamacije na oštećenje u transportu
             </h2>
