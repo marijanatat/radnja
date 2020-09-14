@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="text-gray-700 hover:text-green-900">
+    <div class="">
         @component('components.breadcrumbs')
         <a href="/" class="hover:text-teal-600">Početna strana</a>
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
@@ -186,10 +186,15 @@
                 @endif
                 
                 <h3 class="text-gray-800 uppercase text-sm font-semibold">Količina</h3>
-                 <div class="flex items-center mb-4" x-data="counter()">
-                     <button type="button" class="bg-white px-1 mr-1 rounded-md hover:bg-gray-400" style="border: solid 1px gray" x-on:click="decrement()"><i class="fa fa-minus" aria-hidden="true"  ></i></button>
-                     <input class="bg-white px-2 py-1 mr-1 w-8 text-center" style="border: solid 1px gray;" name="quantity" x-bind:value="count"/>     
-                     <button type="button" class="bg-white px-1 rounded-md hover:bg-gray-400" style="border: solid 1px gray" x-on:click="increment()"><i class="fa fa-plus" aria-hidden="true"  ></i></button>
+                 <div class="flex relative items-center mb-4" x-data="counter()">
+                     <button type="button" class="bg-white px-1 mr-1 rounded-md hover:bg-gray-400" style="border: solid 1px gray" x-on:click="decrement()"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                 <input class="bg-white px-2 py-1 mr-1 w-8 text-center" style="border: solid 1px gray;" name="quantity" x-bind:value="count"/>     
+                     <button type="button" class="bg-white px-1 rounded-md hover:bg-gray-400" style="border: solid 1px gray" x-on:click="increment()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                     
+                      @if (session()->has('error_quantity'))
+                        <div class="absolute right-0 text-gray-100 text-sm font-semibold bg-red-600 p-1 rounded-md">{{ session()->get('error_quantity') }}</div>
+                      @endif
+                     
                  </div>
                  @if ($product->quantity==0)
                  <div class="text-red-600 "><i class="fa fa-ban" aria-hidden="true"></i> Proizvod nije trenutno dostupan.</div>     
@@ -236,7 +241,9 @@
         return {
           count: 1,
             increment() {
-            this.count++;            
+                if(this.count <5){
+                this.count++;            
+                }
           },
         
           decrement() {

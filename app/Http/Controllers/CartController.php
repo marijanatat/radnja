@@ -46,20 +46,26 @@ class CartController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'quantity' => 'required|numeric|between:1,10',
+            'quantity' => 'required|numeric|between:1,5',
             'size' => 'required',
             'color' => 'required',
         ],
         [
             'size.required' => 'Morate izabrati veličinu!',
-            'color.required' => 'Morate izabrati boju!'
+            'color.required' => 'Morate izabrati boju!',
+            'quantity.between' => 'Količina ne može biti veća od 5',
         ]);
 
         $duplicates=Cart::search(function ($cartItem, $rowId) use ($request) {
             return $cartItem->id === $request->id;
         });
+
         if($duplicates->isNotEmpty()){
             return redirect(route('cart.index'))->with('success_message','Proizvod je već u Vašoj korpi.');
+        }
+
+        if(Product::find($request->id)->quantity < $request->quantity){
+            return redirect()->back()->with('error_quantity','Trenutno nemamo traženu količinu na lageru');
         }
         
         Cart::add(['id' => $request->id, 'name' => $request->name, 'qty' => $request->quantity, 'price' => $request->price, 'weight' => 0, 'options' => ['size' => $request->size, 'color' => $request->color ]])
@@ -104,12 +110,12 @@ class CartController extends Controller
     {
         
         $validator = Validator::make($request->all(), [
-            'quantity' => 'required|numeric|between:1,10',
+            'quantity' => 'required|numeric|between:1,5',
            
         ]);
 
         if ($validator->fails()) {
-            session()->flash('errors', collect(['Količina mora biti između 1 i 10.']));
+            session()->flash('errors', collect(['Količina mora biti između 1 i 5.']));
             return response()->json(['success' => false], 400);
         }
 
