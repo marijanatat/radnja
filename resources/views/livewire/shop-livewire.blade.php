@@ -241,9 +241,9 @@
             <div id="proizvodi"
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:min-h-0 lg:min-w-0 lg:row-gap-12 text-center lg:w-full pt-4">
                 @forelse ($products as $product)
-                <div class="flex flex-col justify-center items-center space-y-2" style="max-height:400px;">
+                <div class="flex flex-col justify-center items-center pt-2 md:pt-0 md:space-y-2" style="max-height:400px;">
                     <a href="{{route('shop.show',$product->slug)}}"><img
-                            class="slike-proizvoda h-48 w-64 md:h-40 md:w-40 lg:h-44 lg:w-44 xl:h-64 xl:w-64 object-cover"
+                            class="slike-proizvoda h-48 w-64 md:h-40 md:w-40 lg:h-44 lg:w-44 xl:h-64 xl:w-64 object-cover pb-2 md:pb-0"
                             src="{{productImage($product->image)}}" alt="product"></a>
                     <a href="{{route('shop.show',$product->slug)}}">
                         <div class="">{{$product->name}}</div>
