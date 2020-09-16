@@ -1,6 +1,6 @@
 <footer>
-    <div class="footer-content container items-center p-2">
-        <div class="made-with px-6"> © 2020 Copyright: Made with <i class="fa fa-heart heart"></i> by <a
+    <div class="footer-content container items-center p-2 text-center">
+        <div class="made-with"> © 2020 Copyright: Made with <i class="fa fa-heart heart"></i> by <a
                 href="https://github.com/marijanatat" target="_blank" class="hover:text-gray-900"><i class="fa fa-github"></i>
                 marijanatat</a> and <a href="https://github.com/branimirradosavljevic" target="_blank" class="hover:text-gray-900"><i
                     class="fa fa-github hover:text-gray-900"></i> bane</a>

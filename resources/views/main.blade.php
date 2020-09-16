@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta name="dc.title" content="Prodavnica odeće za decu i odrasle | Mob-ing Odžaci">
   <meta property="og:title" content="Prodavnica odeće za decu i odrasle | Mob-ing Odžaci">
 

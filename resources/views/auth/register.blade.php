@@ -2,9 +2,9 @@
 
 
 @section('content')
-<div class="container ">
+<div class="container">
     <div class="auth-pages mx-12 md:mx-32 mb-2 md:mb-8">
-        <div class="auth-left">
+        <div class="">
                 @if (session()->has('success_message'))
                 <div class="alert alert-success">
                     {{ session()->get('success_message') }}

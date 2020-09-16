@@ -16,7 +16,7 @@
 
 
 <div class="cart-section container ml-16">
-    <div>
+    <div class="w-full">
         @if (session()->has('success_message'))
         <div class="alert alert-success" data-aos="fade-right">
             {{ session()->get('success_message') }}
@@ -43,25 +43,26 @@
 
             <div class="cart-table-row">
                 <div class="cart-table-row-left ">
-                    <div class="flex justify-start items-center text-sm md:text-lg text-gray-600 space-x-3">
-                        <div class="flex">
+                    <div class="md:flex justify-start items-center text-sm md:text-lg text-gray-600 md:space-x-3">
+                        <div class="">
                             <a href="{{route('shop.show', $item->model->slug)}}"><img
                                     src="{{ productImage($item->model->image) }}" alt="item" class="cart-table-img"></a>
                         </div>
-                        <div class="flex">
+                        <div class="md:ml-4">
                             <div class="cart-item-details">
-                                <div class="cart-table-item"><a
+                                <div class=""><a
                                         href="{{route('shop.show', $item->model->slug)}}">{{ $item->model->name }}</a>
                                 </div>
 
                                 <div class="hidden md:block">
                                     @if ($item->options['size'] != '-')
-                                    <span class="hidden md:block">Veličina: {{$item->options['size']}}</span>
+                                    <span class="hidden md:block">Veličina: {{$item->options['size']}},</span>
                                     @endif
                                     <span class="hidden md:block">Boja: {{$item->options['color']}}</span> </div>
                                 <div><span
-                                     class="block md:hidden">{{$item->options['size']}},{{$item->options['color']}}</span>
-                                </div>
+                                        class="block md:hidden">Vel. {{$item->options['size']}}, {{$item->options['color']}}
+                                    </span>
+                                    </div>
                                 {{-- <div><span class="hidden md:block">Boja:</span> {{$item->options['color']}}
                             </div> --}}
                             {{-- <div class="cart-table-description">{{ $item->model->details }}
@@ -70,8 +71,8 @@
                 </div>
             </div>
         </div>
-        <div class="cart-table-row-right">
-            <div class="cart-table-actions ">
+        <div class="cart-table-row-right space-y-3 md:space-y-0">
+            <div class="cart-table-actions">
                 <form action="{{route('cart.destroy', $item->rowId)}}" method="POST">
                     @csrf
                     @method('DELETE')
