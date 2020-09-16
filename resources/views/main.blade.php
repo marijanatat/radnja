@@ -97,7 +97,7 @@
             <h2 class="animate-pulse italic text-4xl  font-bold text-gray-900 tracking-widest">Za porodicu <span
                 class="text-gray-700 text-4xl" style="font-family: 'Gochi Hand'">sa stilom.</span></h2>
             <br>
-            <p class="italic text-5xl font-mono text-white font-bold tracking-wide md:pl-8"
+            <p class="italic text-4xl  text-white font-bold tracking-wide md:pl-8"
               style="font-family: 'Mali', cursive;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
               Proverite naš kvalitet!</p>
           </div>
@@ -143,7 +143,7 @@
       <div class="module">
         <br>
         <div class="kupovina mt-20 mb-20 text-center">
-          <h1 class="text-5xl font-bold text-gray-600 p-4 max-h-12" style="font-family: 'Mali', cursive;"
+          <h1 class="text-4xl font-bold text-gray-600 p-4 max-h-12" style="font-family: 'Mali', cursive;"
               data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
             Ovo je samo deo našeg asortimana !!!
           </h1>
