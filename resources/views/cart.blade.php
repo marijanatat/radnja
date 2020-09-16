@@ -166,7 +166,7 @@
                     <button type="submit" class="cart-options focus:outline-none hover:text-teal-500 focus:text-teal-500">Ubaci u korpu <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
                 </form>
             </div>
-            <div>{{ $item->model->presentPrice() }}</div>
+            <div class="responsive-align">{{ $item->model->presentPrice() }}</div>
         </div>
     </div> <!-- end cart-table-row -->
     @endforeach
