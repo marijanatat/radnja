@@ -127,7 +127,7 @@
 
 @else
 
-<h3 class="ml-16 text-bojasvetla">Nemate proizvode u korpi!</h3>
+<h3 class="ml-8 text-bojasvetla">Nemate proizvode u korpi!</h3>
 <div class="spacer"></div>
 <a href="{{ route('shop.index') }}" class="button-primary rounded-md p-2 ml-16">Nastavi kupovinu</a>
 <div class="spacer"></div>
@@ -175,7 +175,7 @@
 
 @else
 
-<h3 class="px-16 py-4 mt-2 italic text-bojasvetla">Nemate sačuvanih proizvoda.</h3>
+<h3 class="pl-6 py-4 mt-2 italic text-bojasvetla">Nemate sačuvanih proizvoda.</h3>
 
 @endif
 
