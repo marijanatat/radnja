@@ -26,6 +26,7 @@
   {{-- <link rel="dns-prefetch" href="//fonts.gstatic.com"> --}}
   {{-- <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> --}}
   {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> --}}
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
 
   <!-- Styles -->
@@ -97,16 +98,16 @@
             <h2 class="animate-pulse italic text-4xl  font-bold text-gray-900 tracking-widest">Za porodicu <span
                 class="text-gray-700 text-4xl" style="font-family: 'Gochi Hand'">sa stilom.</span></h2>
             <br>
-            <p class=" italic text-5xl font-mono text-white font-bold tracking-wide pl-8"
-              style="font-family: 'Gochi Hand', cursive;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
+            <p class=" italic text-5xl font-mono text-white font-bold tracking-wide md:pl-8"
+              style="font-family: 'Swanky and Moo Moo', cursive;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
               Proverite naš kvalitet!</p>
           </div>
 
           <div
-            class="md:block w3-animate-fading mb-6 text-2xl text-white lg:text-boja z-10 font-semibold font-mono ml-4 italic -mt-20">
+            class="md:block w3-animate-fading mb-6 text-2xl text-white lg:text-boja z-10 font-semibold font-mono md:ml-4 italic -mt-20">
             Pratite nas na društvenim mrežama.
           </div>
-          <div class="hero-buttons text-gray-800 items-center flex ml-16 md:ml-40 ">
+          <div class="hero-buttons text-gray-800 items-center flex ml-12 md:ml-40 ">
             <div id="social">
               <a href="https://www.facebook.com/Butik-KidsFamily-105437284628084" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
             </div>
@@ -143,8 +144,8 @@
       <div class="module">
         <br>
         <div class="kupovina mt-20 mb-20 text-center">
-          <h1 class="text-5xl font-bold text-gray-600 p-4 max-h-12" style="font-family: 'Gochi Hand'"
-            data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+          <h1 class="text-5xl font-bold text-gray-600 p-4 max-h-12" style="font-family: 'Mali', cursive;"
+              data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
             Ovo je samo deo našeg asortimana !!!
           </h1>
           <br>

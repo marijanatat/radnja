@@ -47,7 +47,7 @@
 
 
 <div class="flex flex-col md:flex-row mx-5 mt-2 mb-0">
-  <div class="flex md:w-1/3 ml-3 max-w-md md:max-w-full ">
+  <div class="flex md:w-1/3 ml-3 mt-1 md:mt-0 max-w-md md:max-w-full ">
     <figure class="relative flex items-center">
       <a data-turbolinks="false" href="{{route('shop.index',['category' => 'žene'])}}">
         <div class="img-wrapper">
