@@ -105,7 +105,7 @@
             <hr class="bg-gray-500 border-dashed mt-3 mb-2">
             {{-- <div>{!!$stock!!}</div> --}}
             {{-- <div>{{$product->quantity}}</div> --}}
-            <div class="product-section-price text-base text-red-800 mb-2"><span class="text-sm text-gray-800">Cena:</span>  {{$product->presentPrice()}}</div>
+            <div class="product-section-price text-xl text-red-800 mb-2"><span class="text-gray-800">Cena:</span>  {{$product->presentPrice()}}</div>
           
 
           
