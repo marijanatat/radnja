@@ -48,7 +48,7 @@
                             <a href="{{route('shop.show', $item->model->slug)}}"><img
                                     src="{{ productImage($item->model->image) }}" alt="item" class="cart-table-img"></a>
                         </div>
-                        <div class="flex ">
+                        <div class="flex">
                             <div class="cart-item-details">
                                 <div class="cart-table-item"><a
                                         href="{{route('shop.show', $item->model->slug)}}">{{ $item->model->name }}</a>
@@ -56,11 +56,11 @@
 
                                 <div class="hidden md:block">
                                     @if ($item->options['size'] != '-')
-                                    <span class="hidden md:block">Veličina: {{$item->options['size']}},</span>
+                                    <span class="hidden md:block">Veličina: {{$item->options['size']}}</span>
                                     @endif
                                     <span class="hidden md:block">Boja: {{$item->options['color']}}</span> </div>
                                 <div><span
-                                        class="block md:hidden">{{$item->options['size']}},{{$item->options['color']}}
+                                     class="block md:hidden">{{$item->options['size']}},{{$item->options['color']}}</span>
                                 </div>
                                 {{-- <div><span class="hidden md:block">Boja:</span> {{$item->options['color']}}
                             </div> --}}
