@@ -76,11 +76,11 @@
                 <form action="{{route('cart.destroy', $item->rowId)}}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="cart-options focus:outline-none">Izbriši</button>
+                    <button type="submit" class="cart-options focus:outline-none -mt-4 md:-mt-0">Izbriši</button>
                 </form>
                 <form action="{{route('cart.switchToSaveForLater', $item->rowId)}}" method="POST">
                     @csrf
-                    <button type="submit" class="cart-options focus:outline-none">Sačuvaj za kasnije</button>
+                    <button type="submit" class="cart-options focus:outline-none mt-2 md:mt-0">Sačuvaj za kasnije</button>
                 </form>
             </div>
             <div class="mr-2">
