@@ -26,7 +26,6 @@
   {{-- <link rel="dns-prefetch" href="//fonts.gstatic.com"> --}}
   {{-- <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> --}}
   {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> --}}
-  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
 
   <!-- Styles -->
@@ -98,8 +97,8 @@
             <h2 class="animate-pulse italic text-4xl  font-bold text-gray-900 tracking-widest">Za porodicu <span
                 class="text-gray-700 text-4xl" style="font-family: 'Gochi Hand'">sa stilom.</span></h2>
             <br>
-            <p class=" italic text-5xl font-mono text-white font-bold tracking-wide md:pl-8"
-              style="font-family: 'Swanky and Moo Moo', cursive;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
+            <p class="italic text-5xl font-mono text-white font-bold tracking-wide md:pl-8"
+              style="font-family: 'Mali', cursive;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
               Proverite naš kvalitet!</p>
           </div>
 
