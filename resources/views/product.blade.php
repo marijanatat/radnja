@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="">
+    <div class="px-2 p-4 lg:pb-0">
         @component('components.breadcrumbs')
         <a href="/" class="hover:text-teal-600">Početna strana</a>
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
@@ -32,7 +32,7 @@
             @endif --}}
         </div>
 
-    <div class="product-section container grid-cols-1 md:grid-cols-2 p-4 md:p-4 mt-4">
+    <div class="product-section container grid-cols-1 md:grid-cols-2 p-4 md:p-4 mt-4 mb-4">
         <div x-data="{ isImageModalVisible: false, image: ''}">
             <div class="product-section-image">
                 {{-- <img src="{{asset('storage/'.$product->image)}}" alt="product"> --}}
@@ -42,7 +42,7 @@
                 "><img src="{{productImage($product->image)}}" alt="product" class="active" id="currentImage"></a> 
             </div>
          
-            <div class="product-section-images ">
+            <div class="product-section-images">
                  <div class="product-section-thumbnail selected" >
                     <img src="{{productImage($product->image)}}" alt="product" class="h-14 w-16 mx-auto"> 
                 </div>
@@ -56,15 +56,15 @@
                 @endif            
             </div>
             <hr class="bg-gray-500 border-dashed mt-4 mb-2">
-            <p class="text-gray-800 uppercase text-sm font-semibold mt-4">
+            <p class="text-gray-800 uppercase text-sm font-semibold mt-4 mx-4 md:mx-0">
             O proizvodu :
              </p> 
-              <p class="text-md text-gray-800 mt-4">
-                Proizvođač: {{$product->manufacturer->name}}
+              <p class="text-md text-gray-800 mt-4 mx-4 md:mx-0">
+                Proizvođač: {{$product->manufacturer->name}} {{$product->manufacturer->city}}
             </p> 
             @if ($product->details)
                 
-            <p class="text-md text-gray-800 mt-4">
+            <p class="text-md text-gray-800 mt-4 mx-4 md:mx-0">
                 {{$product->details}}
             </p> 
             @endif
@@ -100,7 +100,7 @@
 
         </div>
 
-        <div class="product-section-information -mt-16 lg:mt-1 ml-8 md:ml-4">
+        <div class="product-section-information -mt-16 lg:mt-1 mx-4 md:mx-0 md:ml-4">
             <div class="product-section-subtitle text-gray-800 font-semibold ">{{$product->name}}</div>
             <hr class="bg-gray-500 border-dashed mt-3 mb-2">
             {{-- <div>{!!$stock!!}</div> --}}

@@ -23,6 +23,7 @@
         .cart-table-row-left, .cart-table-row-right {
             display: flex;
             justify-content: space-between;
+            align-items: center;
         }
 
         .cart-table-row-left {
@@ -30,12 +31,13 @@
         }
 
         .cart-table-row-right {
-            width: 40%;
+            width: 50%;
             padding-top: 10px;
         }
 
         .cart-table-img {
             max-height: 75px;
+            width: 75px;
         }
 
         @media only screen and (max-width : 768px) {
@@ -67,14 +69,16 @@
 
         .cart-options {
             text-align: left;
-            color: $text-color;
             background: transparent;
             font-size: 14px;
             font-weight: 300;
             padding: 0;
 
-            &:hover {
-                color: lighten($cart-delete, 10%);
+        }
+
+        @media only screen and (max-width:768px){
+            .cart-options {
+                text-align: right;
             }
         }
     }
@@ -137,26 +141,18 @@
             width: 35%;
             text-align: left;
         }
-
-        @media only screen and (max-width : 768px) {
-            .cart-totals-right {
-                display: flex;
-                width: auto;
-                text-align: center;
-            }
-        }
-
+        
         .cart-totals-total {
             font-weight: bold;
             font-size: 20px;
              line-height: 2;
+            }
+
+            
         }
 
-      
-    }
-
-    .cart-buttons {
-        display: flex;
+        .cart-buttons {
+            display: flex;
         justify-content: space-between;
         margin-bottom: 40px;
         padding: 10px;
@@ -172,6 +168,19 @@
 }
 
 
+@media only screen and (max-width : 768px) {
+    .cart-totals-right {
+        display: flex;
+        width: auto;
+        text-align: center;
+    }
+
+    .responsive-align {
+        text-align: right;
+    }
+
+    
+}
 
 
 

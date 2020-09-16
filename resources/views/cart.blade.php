@@ -43,7 +43,7 @@
 
             <div class="cart-table-row">
                 <div class="cart-table-row-left ">
-                    <div class="md:flex justify-start items-center text-sm md:text-lg text-gray-600 md:space-x-3">
+                    <div class="md:flex justify-start items-center text-sm md:text-lg text-gray-700 md:space-x-3">
                         <div class="">
                             <a href="{{route('shop.show', $item->model->slug)}}"><img
                                     src="{{ productImage($item->model->image) }}" alt="item" class="cart-table-img"></a>
@@ -71,26 +71,26 @@
                 </div>
             </div>
         </div>
-        <div class="cart-table-row-right space-y-3 md:space-y-0">
-            <div class="cart-table-actions">
-                <form action="{{route('cart.destroy', $item->rowId)}}" method="POST">
+        <div class="cart-table-row-right space-y-3 md:space-y-0 -mt-3 text-gray-900">
+            <div class="cart-table-actions space-y-3">
+                <form action="{{route('cart.destroy', $item->rowId)}}" method="POST" class="responsive-align">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="cart-options focus:outline-none -mt-4 md:-mt-0">Izbriši</button>
+                    <button type="submit" class="cart-options focus:outline-none hover:text-red-500 focus:text-red-600">Izbaci <i class="fa fa-trash-o" aria-hidden="true"></i></button>
                 </form>
                 <form action="{{route('cart.switchToSaveForLater', $item->rowId)}}" method="POST">
                     @csrf
-                    <button type="submit" class="cart-options focus:outline-none mt-2 md:mt-0">Sačuvaj za kasnije</button>
+                    <button type="submit" class="cart-options focus:outline-none hover:text-teal-500 focus:text-teal-500">Sačuvaj za kasnije <i class="fa fa-star-o" aria-hidden="true"></i></button>
                 </form>
             </div>
-            <div class="mr-2">
-                <select class="quantity border border-1 border-gray-600" data-id="{{ $item->rowId }}"
+            <div class="cart-options">
+                Kom. <select class="quantity border border-1 border-gray-600" data-id="{{ $item->rowId }}"
                     data-productQuantity="{{$item->model->quantity}}">
                     @for($i = 1; $i < 5 + 1; $i++) <option {{ $item->qty == $i ? 'selected' : ''}}>{{ $i }}</option>
                         @endfor
                 </select>
             </div>
-            <div class="text-sm md:text-lg">{{ presentPrice($item->total) }}</div>
+            <div class="text-sm md:text-lg responsive-align">{{ presentPrice($item->total) }}</div>
         </div>
     </div> <!-- end cart-table-row -->
 
@@ -143,24 +143,27 @@
 
     <div class="cart-table-row">
         <div class="cart-table-row-left">
-            <a href="{{ route('shop.show', $item->model->slug) }}"><img src="{{ productImage($item->model->image) }}"
-                    alt="item" class="cart-table-img"></a>
-            <div class="cart-item-details">
-                <div class="cart-table-item"><a
-                        href="{{ route('shop.show', $item->model->slug) }}">{{ $item->model->name }}</a></div>
-                <div class="cart-table-description">{{ $item->model->details }}</div>
+            <div class="md:flex justify-start items-center text-sm md:text-lg text-gray-700 md:space-x-3">
+                <a href="{{ route('shop.show', $item->model->slug) }}"><img src="{{ productImage($item->model->image) }}"
+                        alt="item" class="cart-table-img"></a>
+                <div class="cart-item-details">
+                    <div class="mr-4"><a
+                            href="{{ route('shop.show', $item->model->slug) }}">{{ $item->model->name }}</a></div>
+                    {{-- <div class="cart-table-description">{{ $item->model->details }}</div> --}}
+                </div>
             </div>
         </div>
-        <div class="cart-table-row-right">
-            <div class="cart-table-actions">
-                <form action="{{route('saveForLater.destroy', $item->rowId)}}" method="POST">
+        <div class="cart-table-row-right space-y-2 md:space-y-0">
+            <div class="cart-table-actions space-y-2">
+                <form action="{{route('saveForLater.destroy', $item->rowId)}}" method="POST" class="responsive-align">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="cart-options focus:outline-none">Izbriši</button>
+                    <button type="submit" class="cart-options focus:outline-none hover:text-red-500 focus:text-red-600">Obriši <i class="fa fa-trash-o" aria-hidden="true"></i></button>
+
                 </form>
                 <form action="{{route('saveForLater.switchToCart', $item->rowId)}}" method="POST">
                     @csrf
-                    <button type="submit" class="cart-options focus:outline-none">Ubaci u korpu</button>
+                    <button type="submit" class="cart-options focus:outline-none hover:text-teal-500 focus:text-teal-500">Ubaci u korpu <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
                 </form>
             </div>
             <div>{{ $item->model->presentPrice() }}</div>
