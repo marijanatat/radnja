@@ -14,8 +14,7 @@
 
 
 <div class="container text-gray-700 mx-1 md:mx-3 my-2 text-md xl:text-xl   p-2 md:p-2 w-full">
-    <h2 class=" w-full text-gray-700 text-3xl px-5 font-bold leading-none  p-4 my-4 "> <a
-            href="/docs/obrazac-za-odustanak-od-ugovora-na-daljinu.doc">OBRAZAC ZA ODUSTANAK OD UGOVORA</a>
+    <h2 class=" w-full text-gray-700 text-3xl px-5 font-bold leading-none  p-4 my-4 "> OTKAZIVANJE PORUDŽBINE
     </h2>
 </div>
 
@@ -35,6 +34,11 @@
     slanjem popunjenog obrasca trgovcu u roku od 14 dana od dana prijema robe. U slučaju odustanka potrošač snosi samo
     troškove povraćaja robe.
     <br><br>
+    <div class="pb-8">
+        <a href="/docs/obrazac-za-odustanak-od-ugovora-na-daljinu.doc">
+            <i class="fa fa-file-text-o" aria-hidden="true"></i>
+            Obrazac za odustanak od ugovora</a>
+    </div>
 </div>
 <div></div>
 {{-- <div class="w-full container text-gray-700 text-lg px-5 pb-5 pt-2">
