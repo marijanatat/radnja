@@ -90,23 +90,25 @@
         </nav>
       </div>
 
-      <div class="hero container">
-        <div class="grid grid-cols-1 md:grid-cols-2">
+      <div class="container">
+        <div class="pt-12 md:pt-0 md:-mt-16">
 
-          <div id="rotate-words">
-            <h2 class="animate-pulse italic text-4xl  font-bold text-gray-900 tracking-widest">Za porodicu <span
+          <div id="rotate-words" class="">
+            <h2 class="animate-pulse italic text-4xl text-center md:text-left font-bold text-gray-900 tracking-widest mb-4 -mt-6">Za porodicu <span
                 class="text-gray-700 text-4xl" style="font-family: 'Gochi Hand'">sa stilom.</span></h2>
             <br>
-            <p class="italic text-4xl text-white font-bold tracking-wide md:pl-8"
-              style="font-family: 'Mali', cursive;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
-              Proverite naš kvalitet!</p>
           </div>
-
-          <div
-            class="md:block w3-animate-fading mb-6 text-2xl text-white lg:text-boja z-10 font-semibold font-mono md:ml-4 italic -mt-20">
-            Pratite nas na društvenim mrežama.
-          </div>
-          <div class="hero-buttons text-gray-800 items-center flex ml-12 md:ml-40 ">
+            <div class="space-y-8 md:space-y-20 md:-mt-44 md:pt-6 -mt-8">
+              <div class="md:ml-32 md:pl-6 italic uppercase text-4xl text-white font-bold text-center md:text-left tracking-wide"
+                style="font-family: 'Mali', cursive;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
+                Proverite naš <br> kvalitet!</div>
+  
+            <div
+              class="text-center md:text-left md:ml-20 w3-animate-fading mb-6 md:pb-6 pb-4 text-2xl text-white lg:text-boja z-10 font-semibold font-mono italic -mt-10">
+              Pratite nas na društvenim mrežama:
+            </div>
+            </div>
+          <div class="hero-buttons text-gray-800 items-center flex justify-center md:justify-start md:ml-44">
             <div id="social">
               <a href="https://www.facebook.com/Butik-KidsFamily-105437284628084" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
             </div>
