@@ -143,7 +143,7 @@
       <div class="module">
         <br>
         <div class="kupovina mt-20 mb-20 text-center">
-          <h1 class="text-4xl font-bold text-gray-600 p-4 max-h-12" style="font-family: 'Mali', cursive;"
+          <h1 class="text-3xl font-bold text-gray-600 p-4 max-h-12" style="font-family: 'Mali', cursive;"
               data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
             Ovo je samo deo našeg asortimana !!!
           </h1>
