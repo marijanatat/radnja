@@ -12,7 +12,7 @@
 </div>
 
 <div class="container text-gray-700 mx-1 md:mx-3 my-2 p-2 md:p-2 w-full">
-    <h2 class="w-full text-gray-700 text-3xl px-5 font-bold leading-none tracking-widest p-4 my-2">Isporuka</h2>
+    <h2 class="w-full text-gray-700 text-3xl md:ml-48 font-bold leading-none tracking-widest p-4 my-2">Isporuka</h2>
 </div>
 
 <div class="container w-full pb-3 pt-2 text-gray-700 text-lg px-5">

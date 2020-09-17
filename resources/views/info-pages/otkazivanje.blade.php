@@ -13,8 +13,8 @@
 
 
 
-<div class="container text-gray-700 mx-1 md:mx-3 my-2 text-md xl:text-xl   p-2 md:p-2 w-full">
-    <h2 class=" w-full text-gray-700 text-3xl px-5 font-bold leading-none  p-4 my-4 "> OTKAZIVANJE PORUDŽBINE
+<div class="container text-gray-700 mx-1 md:mx-3 my-2 text-md xl:text-xl p-2 md:p-2 w-full">
+    <h2 class="w-full text-gray-700 text-3xl md:ml-48 font-bold leading-none p-4 my-4 "> OTKAZIVANJE PORUDŽBINE
     </h2>
 </div>
 
@@ -35,7 +35,7 @@
     troškove povraćaja robe.
     <br><br>
     <div class="pb-8">
-        <a href="/docs/obrazac-za-odustanak-od-ugovora-na-daljinu.doc">
+        <a href="/docs/obrazac-za-odustanak-od-ugovora-na-daljinu.doc" class="hover:text-teal-400">
             <i class="fa fa-file-text-o" aria-hidden="true"></i>
             Obrazac za odustanak od ugovora</a>
     </div>
