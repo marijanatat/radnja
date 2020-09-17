@@ -227,10 +227,11 @@
 
             @if ($search)
 
-            <div class="flex justify-center md:justify-start items-center text-gray-900 py-2 ml-24">
-                <div class="text-lg">
+            <div class="flex justify-between md:justify-start items-center text-gray-900 py-2 md:ml-24">
+                <div class="flex text-sm md:text-lg justify-between items-center ">
                     Traženi pojam:
-                    <span class="italic">"{{$search}}"</span><button class="focus:outline-none"
+                    <span class="italic">"{{$search}}"</span>
+                    <button class="focus:outline-none"
                         title="Obriši pretragu"><i
                             class="close-button-border ml-2 px-1 text-sm text-gray-700 rounded-md hover:bg-boja hover:text-gray-200 fa fa-times"
                             wire:click="clearSearch"></i></button>
