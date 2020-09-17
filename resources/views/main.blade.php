@@ -42,6 +42,9 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script> 
 
   <style>
+    .js #app{
+      display: none;
+    }
     .completed {
       text-decoration: line-through;
     }
@@ -78,6 +81,9 @@
       display: block;
     }
   </style>
+  <script>
+     document.documentElement.className = 'js';
+  </script>
 </head>
 
 <body class="">
@@ -187,6 +193,7 @@
   </div>
 
   <script>
+    document.getElementById('app').style.display="block";
     document.getElementById('nav-toggle').onclick = function(){
       document.getElementById('nav-content').classList.toggle('hidden');
     }
