@@ -27,8 +27,8 @@ header.with-background {
   }
 
   .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr; //repeat(2, 1fr)
+    // display: grid;
+    // grid-template-columns: 1fr 1fr; //repeat(2, 1fr)
     grid-gap: $gutter;
     padding-top: 20px;
     padding-bottom: 84px;

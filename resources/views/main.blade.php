@@ -90,14 +90,14 @@
         </nav>
       </div>
 
-      <div class="hero container ">
-        <div class="hero-copy ">
+      <div class="hero container">
+        <div class="grid grid-cols-1 md:grid-cols-2">
 
           <div id="rotate-words">
             <h2 class="animate-pulse italic text-4xl  font-bold text-gray-900 tracking-widest">Za porodicu <span
                 class="text-gray-700 text-4xl" style="font-family: 'Gochi Hand'">sa stilom.</span></h2>
             <br>
-            <p class="italic text-4xl  text-white font-bold tracking-wide md:pl-8"
+            <p class="italic text-4xl text-white font-bold tracking-wide md:pl-8"
               style="font-family: 'Mali', cursive;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
               Proverite naš kvalitet!</p>
           </div>
