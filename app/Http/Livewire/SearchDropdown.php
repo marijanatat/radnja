@@ -27,7 +27,7 @@ class SearchDropdown extends Component
 
     public function searchProducts()
     {
-        if(url()->previous() == url('shop') || request()->search || request()->category){
+        if(url()->previous() == url('proizvodi') || request()->search || request()->category){
             $this->emit('searched', $this->search);
         } else {
             return redirect(route('shop.index', ['search' => $this->search]));

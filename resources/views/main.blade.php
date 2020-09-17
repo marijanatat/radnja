@@ -106,7 +106,7 @@
           </div>
             <div class="space-y-8 md:space-y-20 md:-mt-44 md:pt-6 -mt-8">
               <div class="md:ml-32 md:pl-6 italic uppercase text-4xl text-white font-bold text-center md:text-left tracking-wide"
-                style="font-family: 'Mali', cursive;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
+                style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
                 Proverite naš <br> kvalitet!</div>
   
             <div
