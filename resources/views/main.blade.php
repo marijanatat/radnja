@@ -135,7 +135,7 @@
 
 
         <p class="section-description text-center " style="font-size:30px ">Naši proizvodi su isključivo domaće
-          proizvodnje od najkvalitetnijeg 100% pamuka</p>
+          proizvodnje od najkvalitetnijeg pamuka</p>
 
         <div class="mx-2">
           @include('partials.kategorije')
