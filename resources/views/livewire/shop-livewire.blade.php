@@ -31,12 +31,12 @@
         <div class="mr-6">
             <label for="sortiranje" class="font-bold">Sortiraj:</label>
             <select wire:model.debounce.0ms="sort" name="sortiranje" class="border border-gray-700 p-1">
-                <option value="popular">Najpopularnije</option>
+                <option value="newest">Najnovije</option>
                 <option value="low_high">Po ceni rastuće</option>
                 <option value="high_low">Po ceni opadajuće</option>
                 <option value="a_to_z">Po nazivu (A-Š)</option>
                 <option value="z_to_a">Po nazivu (Š-A)</option>
-                <option value="newest">Najnovije</option>
+                <option value="popular">Najpopularnije</option>
             </select>
         </div>
         <div>

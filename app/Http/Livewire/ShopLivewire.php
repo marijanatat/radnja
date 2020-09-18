@@ -62,6 +62,36 @@ class ShopLivewire extends Component
         $this->resetPage();
     }
 
+    public function updatingSearch()
+    {
+        $this->resetPage();
+    }
+
+    public function updatingSort()
+    {
+        $this->resetPage();
+    }
+
+    public function updatingRequestedCategories()
+    {
+        $this->resetPage();
+    }
+
+    public function updatingRequestedSizes()
+    {
+        $this->resetPage();
+    }
+
+    public function updatingMin()
+    {
+        $this->resetPage();
+    }
+
+    public function updatingMax()
+    {
+        $this->resetPage();
+    }
+
     public function resetQueries()
     {
         $this->requestedCategories = [];
@@ -70,6 +100,8 @@ class ShopLivewire extends Component
         $this->max = $this->loadMaxPrice();
         $this->requestedSizes = [];
         $this->categoryQuery = '';
+        $this->resetPage();
+
     }
 
     public function clearSearch()
@@ -109,11 +141,11 @@ class ShopLivewire extends Component
         }elseif($this->sort==='z_to_a') {
             $this->products=$this->products->orderBy('name','desc')->paginate($this->productsPerPage);
             
-        }elseif($this->sort==='newest') {
-            $this->products=$this->products->orderBy('created_at','desc')->paginate($this->productsPerPage);
-            
+        }elseif($this->sort==='popular') {
+            $this->products=$this->products->orderBy('quantity', 'desc')->paginate($this->productsPerPage);
+
         }else{
-            $this->products=$this->products->paginate($this->productsPerPage);
+            $this->products=$this->products->orderBy('created_at','desc')->paginate($this->productsPerPage);
         }
 
         $this->sizes = $this->getSizesForProducts($this->products);
