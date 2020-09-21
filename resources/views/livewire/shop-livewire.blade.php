@@ -244,7 +244,7 @@
             <span class="font-semibold md:ml-20 md:px-2">Kategorija: </span>
             <div class="md:flex justify-between md:justify-start items-center text-gray-900 md:py-2 md:ml-20">
                 <div class="block md:flex text-sm md:text-base justify-between items-center">
-                    <span class="italic">&nbsp;{{ucwords(preg_replace('/-/', ' \\ ', $categoryQuery, 2))}}</span>
+                    <span class="italic">{{ucwords(preg_replace('/-/', ' \\ ', $categoryQuery, 2))}}</span>
                     <button class="focus:outline-none"
                         title="Obriši kategoriju"><i
                             class="close-button-border ml-2 px-1 text-sm text-gray-700 rounded-md hover:bg-boja hover:text-gray-200 fa fa-times"
@@ -260,7 +260,7 @@
                 @foreach ($requestedCategories as $reqCat)
                 <div class="flex text-sm md:text-base justify-start items-center mr-6">
                         
-                    <span class="italic">&nbsp;{{ucwords(preg_replace('/-/', ' \\ ', $reqCat, 2))}}</span>
+                    <span class="italic">{{ucwords(preg_replace('/-/', ' \\ ', $reqCat, 2))}}</span>
                     <button class="focus:outline-none"
                     title="Obriši kategoriju"><i
                     class="close-button-border ml-2 px-1 text-sm text-gray-700 rounded-md hover:bg-boja hover:text-gray-200 fa fa-times"
