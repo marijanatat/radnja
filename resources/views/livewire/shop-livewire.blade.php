@@ -27,30 +27,40 @@
         @endif
     </div>
 
-    <div class="container flex justify- md:justify-end text-sm px-8 md:px-0 pt-8 pb-2">
-        <div class="mr-6">
-            <label for="sortiranje" class="font-bold">Sortiraj:</label>
-            <select wire:model.debounce.0ms="sort" name="sortiranje" class="border border-gray-700 p-1">
-                <option value="newest">Najnovije</option>
-                <option value="low_high">Po ceni rastuće</option>
-                <option value="high_low">Po ceni opadajuće</option>
-                <option value="a_to_z">Po nazivu (A-Š)</option>
-                <option value="z_to_a">Po nazivu (Š-A)</option>
-                <option value="popular">Najpopularnije</option>
-            </select>
+    <div class="container md:flex md:justify-end text-sm px-8 md:px-0 pt-8 pb-2">
+        <div class="md:mr-6">
+            <div class="flex justify-between md:space-x-44">
+                <label for="sortiranje" class="font-bold">Sortiraj:</label>
+                <label for="prikazi" class="font-bold">Prikaži po strani:</label>
+            </div>
+            <div class="flex justify-between">
+                <select wire:model.debounce.0ms="sort" name="sortiranje" class="border border-gray-700 rounded-md p-1 mr-12">
+                    <option value="newest">Najnovije</option>
+                    <option value="low_high">Po ceni rastuće</option>
+                    <option value="high_low">Po ceni opadajuće</option>
+                    <option value="a_to_z">Po nazivu (A-Š)</option>
+                    <option value="z_to_a">Po nazivu (Š-A)</option>
+                    <option value="popular">Najpopularnije</option>
+                </select>
+                <select name="prikazi" wire:model.debounce0ms="productsPerPage" class="border border-gray-700 rounded-md p-1">
+                    <option value="12">12</option>
+                    <option value="24">24</option>
+                    <option value="36">36</option>
+                    <option value="48">48</option>
+                </select>
+            </div>
         </div>
-        <div>
-            <label for="prikazi" class="font-bold">Prikaži po strani:</label>
-            <select name="prikazi" wire:model.debounce0ms="productsPerPage" class="border border-gray-700 p-1">
-                <option value="12">12</option>
-                <option value="24">24</option>
-                <option value="36">36</option>
-                <option value="48">48</option>
-            </select>
+                                        <div>
         </div>
     </div>
 
     <hr class="mb-3">
+    
+    <div class="sm:hidden spacer mt-2 container flex justify-center">
+        {{$products->links('pagination.livewire-tailwind-ilija')}}
+    </div>        
+
+
 
     <div class="flex px-20 pb-16">
         <div class="hidden md:flex min-h-auto md:w-72 lg:w-1/5">
