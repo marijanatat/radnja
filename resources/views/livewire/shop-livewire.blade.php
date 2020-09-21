@@ -223,7 +223,7 @@
             </div>
         </div>
 
-        <div class="md:w-4/5 mx-auto min-h-screen">
+        <div class="sm:w-4/5 mx-auto min-h-screen">
 
             @if ($search)
 
@@ -256,7 +256,7 @@
         @if ($requestedCategories || ($requestedCategories && $categoryQuery))
 
         <span class="font-semibold md:ml-24">Kategorije: </span>
-            <div class="md:grid grid-cols-3 justify-start md:justify-start items-center text-gray-900 md:py-2 md:ml-24">
+            <div class="md:grid grid-cols-3 justify-start items-center text-gray-900 md:py-2 md:ml-24">
                 @foreach ($requestedCategories as $reqCat)
                 <div class="flex text-sm md:text-base justify-start items-center mr-6">
                         
@@ -275,7 +275,7 @@
                 @forelse ($products as $product)
                 <div class="flex flex-col justify-center items-center pt-2 md:pt-0 md:space-y-2" style="max-height:400px;">
                     <a href="{{route('shop.show',$product->slug)}}"><img
-                            class="slike-proizvoda h-64 w-64 md:h-40 md:w-40 lg:h-44 lg:w-44 xl:h-64 xl:w-64 object-cover pb-2 md:pb-0"
+                            class="slike-proizvoda h-52 w-64 md:h-40 md:w-40 lg:h-44 lg:w-44 xl:h-64 xl:w-64 object-cover pb-2 md:pb-0"
                             src="{{productImage($product->image)}}" alt="product"></a>
                     <a href="{{route('shop.show',$product->slug)}}">
                         <div class="">{{$product->name}}</div>
