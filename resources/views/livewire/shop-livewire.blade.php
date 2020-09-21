@@ -241,7 +241,7 @@
 
             @if ($categoryQuery && !$requestedCategories)
 
-            <span class="font-semibold md:ml-20 md:px-2">Kategorija: </span>
+            <span class="font-semibold md:ml-20">Kategorija: </span>
             <div class="md:flex justify-between md:justify-start items-center text-gray-900 md:py-2 md:ml-20">
                 <div class="block md:flex text-sm md:text-base justify-between items-center">
                     <span class="italic">{{ucwords(preg_replace('/-/', ' \\ ', $categoryQuery, 2))}}</span>
@@ -255,7 +255,7 @@
 
         @if ($requestedCategories || ($requestedCategories && $categoryQuery))
 
-        <span class="font-semibold md:ml-20 md:px-2">Kategorije: </span>
+        <span class="font-semibold md:ml-20">Kategorije: </span>
             <div class="sm:grid grid-cols-3 justify-start items-center text-gray-900 md:py-2 md:ml-20">
                 @foreach ($requestedCategories as $reqCat)
                 <div class="flex text-sm md:text-base justify-start items-center mr-6">
