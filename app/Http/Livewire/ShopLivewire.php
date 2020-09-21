@@ -109,6 +109,18 @@ class ShopLivewire extends Component
         $this->search = '';
     }
 
+    public function clearCategoryQuery()
+    {
+        $this->categoryQuery = '';
+    }
+
+    public function clearRequestedCategories($reqCat)
+    {
+        if (($key = array_search($reqCat, $this->requestedCategories)) !== false) {
+            unset($this->requestedCategories[$key]);
+        }
+    }
+
     public function render()
     {
         if($this->requestedCategories){

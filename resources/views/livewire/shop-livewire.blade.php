@@ -223,7 +223,7 @@
             </div>
         </div>
 
-        <div class="w-4/5 mx-auto min-h-screen">
+        <div class="md:w-4/5 mx-auto min-h-screen">
 
             @if ($search)
 
@@ -239,12 +239,43 @@
             </div>
             @endif
 
+            @if ($categoryQuery && !$requestedCategories)
+
+            <span class="font-semibold md:ml-24">Kategorija: </span>
+            <div class="md:flex justify-between md:justify-start items-center text-gray-900 md:py-2 md:ml-24">
+                <div class="block md:flex text-sm md:text-base justify-between items-center">
+                    <span class="italic">&nbsp;{{ucwords(preg_replace('/-/', ' \\ ', $categoryQuery, 2))}}</span>
+                    <button class="focus:outline-none"
+                        title="Obriši kategoriju"><i
+                            class="close-button-border ml-2 px-1 text-sm text-gray-700 rounded-md hover:bg-boja hover:text-gray-200 fa fa-times"
+                            wire:click="clearCategoryQuery"></i></button>
+                </div>
+            </div>
+            @endif
+
+        @if ($requestedCategories || ($requestedCategories && $categoryQuery))
+
+        <span class="font-semibold md:ml-24">Kategorije: </span>
+            <div class="md:grid grid-cols-3 justify-start md:justify-start items-center text-gray-900 md:py-2 md:ml-24">
+                @foreach ($requestedCategories as $reqCat)
+                <div class="flex text-sm md:text-base justify-start items-center mr-6">
+                        
+                    <span class="italic">&nbsp;{{ucwords(preg_replace('/-/', ' \\ ', $reqCat, 2))}}</span>
+                    <button class="focus:outline-none"
+                    title="Obriši kategoriju"><i
+                    class="close-button-border ml-2 px-1 text-sm text-gray-700 rounded-md hover:bg-boja hover:text-gray-200 fa fa-times"
+                    wire:click="clearRequestedCategories('{{$reqCat}}')"></i></button>
+                    </div>
+                @endforeach
+            </div>
+            @endif
+
             <div id="proizvodi"
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:min-h-0 lg:min-w-0 lg:row-gap-12 text-center lg:w-full pt-4">
                 @forelse ($products as $product)
                 <div class="flex flex-col justify-center items-center pt-2 md:pt-0 md:space-y-2" style="max-height:400px;">
                     <a href="{{route('shop.show',$product->slug)}}"><img
-                            class="slike-proizvoda h-48 w-64 md:h-40 md:w-40 lg:h-44 lg:w-44 xl:h-64 xl:w-64 object-cover pb-2 md:pb-0"
+                            class="slike-proizvoda h-64 w-64 md:h-40 md:w-40 lg:h-44 lg:w-44 xl:h-64 xl:w-64 object-cover pb-2 md:pb-0"
                             src="{{productImage($product->image)}}" alt="product"></a>
                     <a href="{{route('shop.show',$product->slug)}}">
                         <div class="">{{$product->name}}</div>
