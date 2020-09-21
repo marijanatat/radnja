@@ -223,7 +223,7 @@
             </div>
         </div>
 
-        <div class="w-4/5 mx-auto min-h-screen">
+        <div class="w-5/6 sm:w-4/5 mx-auto min-h-screen">
 
             @if ($search)
 
