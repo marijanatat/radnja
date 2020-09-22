@@ -1,5 +1,10 @@
 /* The dropdown container */
 
+.dropdown1 {
+  float: left;
+  overflow: hidden;
+}
+
 .dropdown-content {
   padding-left: 10px;
   padding-right: 10px;
@@ -112,6 +117,11 @@
   padding: 0 1rem;
 }
 
+.stripe-4 {
+  color: white;
+  background: repeating-linear-gradient(-55deg, #4bd8fc, #233 10px, #2dbeb2 10px, #14686b !important);
+}
+
 .example_e {
   border: none;
   background: #404040;
@@ -132,6 +142,12 @@
   -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
   -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
   transition: all 0.3s ease 0s;
+}
+
+.mapa:hover,
+.mapa:focus {
+  width: 300px;
+  height: 300px;
 }
 
 .ime:hover,

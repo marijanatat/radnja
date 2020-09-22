@@ -9,16 +9,31 @@
 /* Medium Devices, Desktops */
 
 @media only screen and (max-width: 992px) {
+  header.with-background .top-nav .logo,
+  header .top-nav .logo {
+    margin: auto;
+  }
 
   header.with-background .top-nav ul,
   header .top-nav ul {
     margin: 0px auto 0;
   }
 
+  header.with-background .top-nav-left,
+  header .top-nav-left {
+    flex-direction: column;
+  }
+
   header.with-background .hero,
   header .hero {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  header.with-background .hero .hero-image,
+  header .hero .hero-image {
+    padding-left: 0;
+    margin-top: 40px;
   }
 
   .featured-section {
@@ -32,6 +47,16 @@
   .products-header {
     flex-direction: column;
     margin-bottom: 48px;
+  }
+
+  .blog-section .blog-posts {
+    grid-template-columns: 1fr;
+    text-align: center;
+    grid-template-areas: "blog3" "blog2" "blog1";
+  }
+
+  .blog-section .blog-posts .blog-post {
+    margin-top: 30px;
   }
 
   .footer-content {
@@ -76,6 +101,10 @@
     grid-template-columns: 1fr;
   }
 
+  .might-like-section .might-like-grid {
+    grid-template-columns: 1fr;
+  }
+
   .cart-section {
     grid-template-columns: 1fr;
   }
@@ -99,6 +128,10 @@
     max-height: 35px;
   }
 
+  .have-code-container {
+    width: 100%;
+  }
+
   .cart-totals {
     flex-direction: column;
   }
@@ -106,6 +139,10 @@
   .cart-totals .cart-totals-left {
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  .cart-totals .cart-totals-right {
+    width: 100%;
   }
 }
 
@@ -115,6 +152,15 @@
 
 .checkout-section .checkout-table-container {
   margin-left: 10px;
+}
+
+.search-results-container-algolia {
+  grid-template-columns: 1fr;
+}
+
+.ais-refinement-list--count {
+  margin-left: auto;
+  margin-right: 10px;
 }
 
 .auth-pages {
@@ -155,6 +201,10 @@
     grid-template-columns: 1fr;
   }
 
+  .might-like-section .might-like-grid {
+    grid-template-columns: 1fr;
+  }
+
   .checkout-section {
     grid-template-columns: 1fr;
   }
@@ -174,6 +224,10 @@
   }
 
   .products-section .products {
+    grid-template-columns: 1fr;
+  }
+
+  .might-like-section .might-like-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -196,7 +250,17 @@
   .products-section .products {
     grid-template-columns: 1fr;
   }
+
+  .might-like-section .might-like-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Custom, iPhone Retina */
+
+@media only screen and (max-width: 320px) {
+  .might-like-section .might-like-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
