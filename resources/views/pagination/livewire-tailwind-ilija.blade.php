@@ -1,6 +1,6 @@
 @if ($paginator->hasPages())
     <div class="flex my-2 text-sm items-center">
-        <div class="mr-12">
+        <div class="mr-16">
             <p class="text-sm leading-5 text-gray-900">
                 Prikaz
                 <span class="font-medium">{{ $paginator->firstItem() }}</span>
