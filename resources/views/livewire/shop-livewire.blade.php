@@ -30,7 +30,7 @@
     <div class="container hidden sm:flex sm:justify-end text-sm px-8 md:px-0 pt-8 pb-2">
         <div class="mr-6">
             <label for="sortiranje" class="font-bold">Sortiraj:</label>
-            <select wire:model.debounce.0ms="sort" name="sortiranje" class="border border-gray-700 p-1">
+            <select wire:model.debounce.0ms="sort" name="sortiranje" class="border border-gray-700 p-1 rounded-md">
                 <option value="newest">Najnovije</option>
                 <option value="low_high">Po ceni rastuće</option>
                 <option value="high_low">Po ceni opadajuće</option>
@@ -41,7 +41,7 @@
         </div>
         <div>
             <label for="prikazi" class="font-bold">Prikaži po strani:</label>
-            <select name="prikazi" wire:model.debounce0ms="productsPerPage" class="border border-gray-700 p-1">
+            <select name="prikazi" wire:model.debounce0ms="productsPerPage" class="border border-gray-700 p-1 rounded-md">
                 <option value="12">12</option>
                 <option value="24">24</option>
                 <option value="36">36</option>
@@ -51,22 +51,13 @@
     </div>
 
     <!-- mobile -->
-    <div class="container sm:hidden text-sm px-8 md:px-0 pt-8 pb-2">
+    <div class="container sm:hidden text-sm px-10 md:px-0 pt-4 pb-2">
         <div class="">
-            <div class="flex justify-between">
-                <label for="sortiranje" class="font-bold">Sortiraj:</label>
+            <div class="flex justify-between pb-1">
                 <label for="prikazi" class="font-bold">Prikaži po strani:</label>
+                <label for="sortiranje" class="font-bold">Sortiraj:</label>
             </div>
             <div class="flex justify-between">
-                <select wire:model.debounce.0ms="sort" name="sortiranje"
-                    class="border border-gray-700 rounded-md p-1 mr-12">
-                    <option value="newest">Najnovije</option>
-                    <option value="low_high">Po ceni rastuće</option>
-                    <option value="high_low">Po ceni opadajuće</option>
-                    <option value="a_to_z">Po nazivu (A-Š)</option>
-                    <option value="z_to_a">Po nazivu (Š-A)</option>
-                    <option value="popular">Najpopularnije</option>
-                </select>
                 <select name="prikazi" wire:model.debounce0ms="productsPerPage"
                     class="border border-gray-700 rounded-md p-1">
                     <option value="12">12</option>
@@ -74,19 +65,26 @@
                     <option value="36">36</option>
                     <option value="48">48</option>
                 </select>
+                <select wire:model.debounce.0ms="sort" name="sortiranje"
+                    class="border border-gray-700 rounded-md p-1">
+                    <option value="newest">Najnovije</option>
+                    <option value="low_high">Po ceni rastuće</option>
+                    <option value="high_low">Po ceni opadajuće</option>
+                    <option value="a_to_z">Po nazivu (A-Š)</option>
+                    <option value="z_to_a">Po nazivu (Š-A)</option>
+                    <option value="popular">Najpopularnije</option>
+                </select>
             </div>
         </div>
         <div>
         </div>
     </div>
 
-    <hr class="mb-3">
+    <hr class="mb-3 mt-1">
 
-    <div class="sm:hidden spacer mt-2 sm:mt-0 container flex justify-center">
+    <div class="sm:hidden mb-2 container flex justify-center">
         {{$products->links('pagination.livewire-tailwind-ilija-responsive')}}
     </div>
-
-
 
     <div class="flex px-20 pb-16">
         <div class="hidden md:flex min-h-auto md:w-72 lg:w-1/5">
@@ -335,7 +333,7 @@
         </div> <!-- end products -->
     </div>
 
-    <div class="sm:hidden spacer mt-2 sm:mt-0 container flex justify-center">
+    <div class="sm:hidden spacer container flex justify-center -mt-16">
         {{$products->links('pagination.livewire-tailwind-ilija-responsive')}}
     </div>
 

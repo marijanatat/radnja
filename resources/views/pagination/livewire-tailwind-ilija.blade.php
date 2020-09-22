@@ -1,13 +1,14 @@
 @if ($paginator->hasPages())
     <div class="flex my-2 text-sm items-center">
-        <div class="mr-2">
+        <div class="mr-12">
             <p class="text-sm leading-5 text-gray-900">
+                Prikaz
                 <span class="font-medium">{{ $paginator->firstItem() }}</span>
-                {!! __('do') !!}
+                {!! __('-') !!}
                 <span class="font-medium">{{ $paginator->lastItem() }}</span>
                 {!! __('od') !!}
                 <span class="font-medium">{{ $paginator->total() }}</span>
-                {!! __('proizvoda') !!}
+                {{-- {!! __('proizvoda') !!} --}}
             </p>
         </div>        
         @if ( ! $paginator->onFirstPage())
@@ -18,13 +19,13 @@
             >
             <<
             </a>
-            @if($paginator->currentPage() > 2)
+            @if($paginator->currentPage() > 1)
             {{-- Previous Page Link --}}
             <a
-                class="mx-1 px-2 py-2 text-boja font-bold text-center hover:text-teal-500 cursor-pointer" title="Prethodna strana"
+                class="mx-1 px-2 py-1 border border-boja rounded-md text-boja font-bold text-center hover:text-teal-500 cursor-pointer" title="Prethodna strana"
                 wire:click="previousPage"
             >
-            <
+            Prethodna
             </a>
             @endif
         @endif        
@@ -64,11 +65,11 @@
         
         {{-- Next Page Link --}}
         @if ($paginator->hasMorePages())
-            @if($paginator->lastPage() - $paginator->currentPage() >= 2)
-                <a class="text-boja mx-1 px-2 py-2 font-bold text-center hover:text-teal-500 cursor-pointer" title="Sledeća strana"
+            @if($paginator->lastPage() - $paginator->currentPage() >= 1)
+                <a class="text-boja border border-boja mx-1 px-2 py-1 font-bold text-center rounded-md hover:text-teal-500 cursor-pointer" title="Sledeća strana"
                 wire:click="nextPage"
                 rel="next">
-                >
+                Sledeća
                 </a>
             @endif
             <a
