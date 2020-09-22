@@ -26,8 +26,8 @@
         </div>
         @endif
     </div>
-
-    <div class="container flex justify- md:justify-end text-sm px-8 md:px-0 pt-8 pb-2">
+    <!-- SM and larger-->
+    <div class="container hidden sm:flex sm:justify-end text-sm px-8 md:px-0 pt-8 pb-2">
         <div class="mr-6">
             <label for="sortiranje" class="font-bold">Sortiraj:</label>
             <select wire:model.debounce.0ms="sort" name="sortiranje" class="border border-gray-700 p-1">
@@ -50,7 +50,43 @@
         </div>
     </div>
 
+    <!-- mobile -->
+    <div class="container sm:hidden text-sm px-8 md:px-0 pt-8 pb-2">
+        <div class="">
+            <div class="flex justify-between">
+                <label for="sortiranje" class="font-bold">Sortiraj:</label>
+                <label for="prikazi" class="font-bold">Prikaži po strani:</label>
+            </div>
+            <div class="flex justify-between">
+                <select wire:model.debounce.0ms="sort" name="sortiranje"
+                    class="border border-gray-700 rounded-md p-1 mr-12">
+                    <option value="newest">Najnovije</option>
+                    <option value="low_high">Po ceni rastuće</option>
+                    <option value="high_low">Po ceni opadajuće</option>
+                    <option value="a_to_z">Po nazivu (A-Š)</option>
+                    <option value="z_to_a">Po nazivu (Š-A)</option>
+                    <option value="popular">Najpopularnije</option>
+                </select>
+                <select name="prikazi" wire:model.debounce0ms="productsPerPage"
+                    class="border border-gray-700 rounded-md p-1">
+                    <option value="12">12</option>
+                    <option value="24">24</option>
+                    <option value="36">36</option>
+                    <option value="48">48</option>
+                </select>
+            </div>
+        </div>
+        <div>
+        </div>
+    </div>
+
     <hr class="mb-3">
+
+    <div class="sm:hidden spacer mt-2 sm:mt-0 container flex justify-center">
+        {{$products->links('pagination.livewire-tailwind-ilija-responsive')}}
+    </div>
+
+
 
     <div class="flex px-20 pb-16">
         <div class="hidden md:flex min-h-auto md:w-72 lg:w-1/5">
@@ -241,10 +277,10 @@
 
             @if ($categoryQuery && !$requestedCategories)
 
-            <span class="font-semibold md:ml-20">Kategorija: </span>
-            <div class="md:flex justify-between md:justify-start items-center text-gray-900 md:py-2 md:ml-20">
-                <div class="block md:flex text-sm md:text-base justify-between items-center">
-                    <span class="italic">{{ucwords(preg_replace('/-/', ' \\ ', $categoryQuery, 2))}}</span>
+            <span class="font-semibold md:ml-20 -ml-16 text-sm">Kategorija: </span>
+            <div class="md:flex justify-between md:justify-start items-center text-gray-900 md:py-2 md:ml-20 w-72 -ml-16">
+                <div class="md:flex text-sm md:text-base justify-center items-center">
+                    <span class="italic text-sm">{{ucwords(preg_replace('/-/', ' \\ ', $categoryQuery, 2))}}</span>
                     <button class="focus:outline-none"
                         title="Obriši kategoriju"><i
                             class="close-button-border ml-2 px-1 text-sm text-gray-700 rounded-md hover:bg-boja hover:text-gray-200 fa fa-times"
@@ -255,10 +291,10 @@
 
         @if ($requestedCategories || ($requestedCategories && $categoryQuery))
 
-        <span class="font-semibold md:ml-20">Kategorije: </span>
+        <span class="font-semibold md:ml-20 text-sm">Kategorije: </span>
             <div class="sm:grid grid-cols-3 justify-start items-center text-gray-900 md:py-2 md:ml-20">
                 @foreach ($requestedCategories as $reqCat)
-                <div class="flex text-sm md:text-base justify-start items-center mr-6">
+                <div class="flex text-sm justify-start items-center mr-6">
                         
                     <span class="italic">{{ucwords(preg_replace('/-/', ' \\ ', $reqCat, 2))}}</span>
                     <button class="focus:outline-none"
@@ -273,12 +309,12 @@
             <div id="proizvodi"
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:min-h-0 lg:min-w-0 lg:row-gap-12 text-center lg:w-full pt-4">
                 @forelse ($products as $product)
-                <div class="flex flex-col justify-center items-center pt-2 md:pt-0 md:space-y-2" style="max-height:400px;">
+                <div class="flex flex-col items-center pt-2 md:pt-0 md:space-y-2" style="max-height:400px;">
                     <a href="{{route('shop.show',$product->slug)}}"><img
                             class="slike-proizvoda h-48 w-64 md:h-40 md:w-40 lg:h-44 lg:w-44 xl:h-64 xl:w-64 object-cover pb-2 md:pb-0"
                             src="{{productImage($product->image)}}" alt="product"></a>
                     <a href="{{route('shop.show',$product->slug)}}">
-                        <div class="">{{$product->name}}</div>
+                        <div class="max-w-md">{{$product->name}}</div>
                     </a>
                     <div class="pb-8 md:pb-0">{{presentPrice($product->price)}}</div>
                 </div>
@@ -291,14 +327,19 @@
                         <i class="fa fa-angle-double-right text-gray-700 cursor-pointer" aria-hidden="true"></i>
                     </button>
 
-                </div> @endforelse
+                </div>
+                 @endforelse
             </div>
 
 
         </div> <!-- end products -->
     </div>
 
-    <div class="spacer container flex justify-end">
-        {{$products->links('pagination.livewire-tailwind')}}
+    <div class="sm:hidden spacer mt-2 sm:mt-0 container flex justify-center">
+        {{$products->links('pagination.livewire-tailwind-ilija-responsive')}}
+    </div>
+
+    <div class="hidden sm:flex spacer container justify-end">
+        {{$products->links('pagination.livewire-tailwind-ilija')}}
     </div>
 </div>
