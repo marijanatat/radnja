@@ -27,7 +27,7 @@
         @endif
     </div>
     <!-- SM and larger-->
-    <div class="container hidden sm:flex sm:justify-end text-sm px-8 md:px-0 pt-8 pb-2">
+    <div class="container hidden sm:flex justify-end text-sm px-8 md:px-0 pt-8 pb-2">
         <div class="mr-6">
             <label for="sortiranje" class="font-bold">Sortiraj:</label>
             <select wire:model.debounce.0ms="sort" name="sortiranje" class="border border-gray-700 p-1 rounded-md">

@@ -1,0 +1,157 @@
+/* The dropdown container */
+
+.dropdown1 {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown-content {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: #f9f9f9;
+  height: auto;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .dropdown-content {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: none;
+    position: absolute;
+    left: 50px;
+    right: 50%;
+    background-color: #f9f9f9;
+    height: auto;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-overflow {
+    height: 430px;
+    max-height: 430px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .dropdown-overflow::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+}
+
+.dropbtn {
+  padding: 30px;
+  font-size: 16px;
+  border: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .dropbtn {
+    padding: 0px;
+  }
+}
+
+.img-wrapper {
+  overflow: hidden;
+}
+
+.inner-img {
+  transition: 0.3s;
+  -moz-transition: 0.5s;
+}
+
+.inner-img:hover {
+  transform: scale(1.1);
+  -moz-transform: scale(1.1);
+}
+
+.zig-zag {
+  border: none;
+  width: 90%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: 5px;
+  background: linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -20px 0, linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -20px 0, linear-gradient(315deg, #ECEDDC 25%, transparent 25%), linear-gradient(45deg, #ECEDDC 25%, transparent 25%);
+  background-size: 10px 10px;
+  background-color: #3c434e;
+}
+
+/* Other styling elements, that are not necessary for the example */
+
+.module {
+  background: white;
+  border: 1px solid #ccc;
+}
+
+.module > h2 {
+  padding: 1rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.module > p {
+  padding: 0 1rem;
+}
+
+.stripe-4 {
+  color: white;
+  background: repeating-linear-gradient(-55deg, #4bd8fc, #233 10px, #2dbeb2 10px, #14686b !important);
+}
+
+.example_e {
+  border: none;
+  background: #404040;
+  color: #ffffff !important;
+  font-weight: 100;
+  padding: 20px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+}
+
+.example_e:hover {
+  color: #fc9700 !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px;
+  background: none;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.3s ease 0s;
+}
+
+.mapa:hover,
+.mapa:focus {
+  width: 300px;
+  height: 300px;
+}
+
+.ime:hover,
+.ime:focus {
+  text-transform: capitalize;
+}
+
