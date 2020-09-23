@@ -14,7 +14,7 @@
         @if ( ! $paginator->onFirstPage())
             {{-- First Page Link --}}
             <a
-            class="text-gray-800 mx-1 px-2 py-1 font-bold text-center hover:text-gray-600 cursor-pointer" title="Prva strana"
+            class="text-gray-700 mx-1 px-2 py-1 font-bold text-center hover:text-gray-600 cursor-pointer" title="Prva strana"
             wire:click="gotoPage(1)"
             >
             <<
@@ -22,7 +22,7 @@
             @if($paginator->currentPage() > 1)
             {{-- Previous Page Link --}}
             <a
-                class="mx-1 px-2 border border-gray-800 rounded-md text-gray-800 text-center hover:text-gray-600 cursor-pointer" title="Prethodna strana"
+                class="mx-1 px-2 border border-gray-700 rounded-md text-gray-700 font-semibold text-center hover:text-gray-600 cursor-pointer" title="Prethodna strana"
                 wire:click="previousPage"
             >
             Prethodna
@@ -37,7 +37,7 @@
                 @foreach ($element as $page => $url)
                     {{-- <!--  Use three dots when current page is greater than 3.  -->
                     @if ($paginator->currentPage() > 2 && $page === 1)
-                        <div class="text-blue-800 mx-1">
+                        <div class="text-blue-700 mx-1">
                             <span class="font-bold">.</span>
                             <span class="font-bold">.</span>
                             <span class="font-bold">.</span>
@@ -46,14 +46,14 @@
 
                     <!--  Show active page two pages before and after it.  -->
                     @if ($page == $paginator->currentPage())
-                        <span class="mx-1 px-2 border border-gray-800 bg-gray-800 text-white text-center rounded-md cursor-pointer">{{ $page }}</span>
+                        <span class="mx-1 px-2 border border-boja bg-boja text-white font-semibold text-center rounded-md cursor-pointer">{{ $page }}</span>
                         @elseif ($page === $paginator->currentPage() + 1 || $page === $paginator->currentPage() + 2 || $page === $paginator->currentPage() - 1 || $page === $paginator->currentPage() - 2)
-                        <a class="mx-1 px-2 border  border-gray-800 text-gray-800 text-center hover:text-gray-600 rounded-md cursor-pointer" wire:click="gotoPage({{$page}})">{{ $page }}</a>
+                        <a class="mx-1 px-2 border  border-gray-700 text-gray-700 text-center font-semibold hover:text-gray-600 rounded-md cursor-pointer" wire:click="gotoPage({{$page}})">{{ $page }}</a>
                     @endif
 
                     {{-- <!--  Use three dots when current page is away from end.  -->
                     @if ($paginator->currentPage() < $paginator->lastPage() - 2  && $page === $paginator->lastPage() - 1)
-                        <div class="text-blue-800 mx-1">
+                        <div class="text-blue-700 mx-1">
                             <span class="font-bold">.</span>
                             <span class="font-bold">.</span>
                             <span class="font-bold">.</span>
@@ -66,14 +66,14 @@
         {{-- Next Page Link --}}
         @if ($paginator->hasMorePages())
             @if($paginator->lastPage() - $paginator->currentPage() >= 1)
-                <a class="text-gray-800 border border-gray-800 mx-1 px-2 text-center rounded-md hover:text-gray-600 cursor-pointer" title="Sledeća strana"
+                <a class="text-gray-700 border border-gray-700 mx-1 px-2 text-center font-semibold rounded-md hover:text-gray-600 cursor-pointer" title="Sledeća strana"
                 wire:click="nextPage"
                 rel="next">
                 Sledeća
                 </a>
             @endif
             <a
-                class="text-gray-800 mx-1 px-2 py-1 font-bold text-center hover:text-gray-600 cursor-pointer" title="Poslednja strana"
+                class="text-gray-700 mx-1 px-2 py-1 font-bold text-center hover:text-gray-600 cursor-pointer" title="Poslednja strana"
                 wire:click="gotoPage({{ $paginator->lastPage() }})"
             >
             >>
