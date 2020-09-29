@@ -5,10 +5,10 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <meta name="dc.title" content="Prodavnica odeće za decu i odrasle | Mob-ing Odžaci">
-  <meta property="og:title" content="Prodavnica odeće za decu i odrasle | Mob-ing Odžaci">
+  <meta name="dc.title" content="Prodavnica odeće za decu i odrasle | Butik Mob-ing Odžaci">
+  <meta property="og:title" content="Prodavnica odeće za decu i odrasle | Butik Mob-ing Odžaci">
 
-  <title>Prodavnica odeće za decu i odrasle | Mob-ing Odžaci</title>
+  <title>Prodavnica odeće za decu i odrasle | Butik Mob-ing Odžaci</title>
 
   <meta name="description" content="Butik i online prodavnica sa odećom domaćih proizvođača. Kvalitetan pamuk i povoljne cene. Najbolje za Vašu porodicu. Naručite iz udobnosti Vašeg doma.">
   <meta name="keywords" content="butik odžaci, butik odzaci‚ dečija garderoba, odeća, odeća za decu, oprema za bebe, kids&family, kids, family, decija garderoba, bebi garderoba, pokloni za bebe, odeća, prodaja odeće za decu, oprema za bebe, online prodaja, webshop, odeća za muškarce, odeća za žene, majice, haljine, benkice, zeke, laravel webshop, 
@@ -16,7 +16,7 @@
   <meta property="og:description" content="Butik i online prodavnica sa odećom domaćih proizvođača. Kvalitetan pamuk i povoljne cene. Najbolje za Vašu porodicu.Naručite iz udobnosti Vašeg doma.">
   <meta property="og:url" content="https://mob-ing.rs">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="MOB-ING WEB SHOP">
+  <meta property="og:site_name" content="BUTIK MOB-ING WEB SHOP">
 
 
   <!-- Fonts -->
