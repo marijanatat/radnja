@@ -1,7 +1,7 @@
 <div class="relative" x-data="{ isVisible: true}" @click.away="isVisible = false">
     <input 
         wire:model.debounce.300ms="search"
-        type="text"
+        type="search"
         class="bg-gray-200 w-64 text-sm rounded-full px-3 py-1 pl-8 focus:outline-none focus:shadow-outline"
         placeholder="Pretraga proizvoda"
         x-ref="search"
