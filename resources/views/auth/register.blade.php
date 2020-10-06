@@ -5,9 +5,9 @@
 <div class="container">
     <div class="auth-pages mx-12 md:mx-32 mb-2 md:mb-8">
         <div class="">
-                @if (session()->has('success_message'))
+                {{-- @if (session('success_message'))
                 <div class="alert alert-success">
-                    {{ session()->get('success_message') }}
+                    {{ session('success_message') }}
                 </div>
                 @endif @if(count($errors) > 0)
             <div class="alert alert-danger">
@@ -17,11 +17,12 @@
                     @endforeach
                 </ul>
             </div>
-            @endif
+            @endif --}}
             <h2 class="text-gray-700 text-lg md:text-xl font-semibold" data-aos="zoom-in">Registracija</h2>
             <div class="spacer"></div>
 
-            <form action="{{ route('register') }}" method="POST" data-aos="zoom-in">
+            <livewire:register-form/>
+            {{-- <form action="{{ route('register') }}" method="POST" data-aos="zoom-in">
                 @csrf
                 <input type="text" id="name" name="name" value="{{ old('name') }}" placeholder="Ime i prezime" required autofocus>
 
@@ -39,7 +40,7 @@
 
                 <div class="spacer"></div>
 
-            </form>
+            </form> --}}
         </div>
 
         <div class="auth-right hidden md:block" data-aos="fade-left">

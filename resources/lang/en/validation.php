@@ -143,6 +143,7 @@ return [
         ],
         'name' => [
             'required' => 'Ime i prezime su obavezni.',
+            'min' => 'Ime i prezime moraju imati najmanje :min karaktera',
             'max' => 'Ime i prezime ne mogu imati više od :max karaktera.',
         ],
     ],
