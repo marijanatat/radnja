@@ -40,7 +40,25 @@ return [
     */
 
     'debug' => (bool) env('APP_DEBUG', false),
+    'debug_hide' => [
+    	'_ENV' => [
+	    'APP_KEY',
+	    'DB_PASSWORD',
+	    'MAIL_PASSWORD',
+	    'MAIL_ENCRYPTION',	    
+	],
+	
+	'_SERVER' => [
+	    'APP_KEY',
+	    'DB_PASSWORD',
+	    'MAIL_PASSWORD',
+	    'MAIL_ENCRYPTION',	    
+	],
 
+	'_POST' => [
+	   'password',
+	],	
+    ],
     /*
     |--------------------------------------------------------------------------
     | Application URL
